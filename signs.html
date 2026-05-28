@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free Karmelo — Print Signs</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #1a0a2e;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.print-instructions {
+  background: #6c3483;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  line-height: 1.7;
+}
+.sign {
+  width: 900px;
+  aspect-ratio: 3/1.4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #6c3483;
+  page-break-after: always;
+}
+
+/* SIGN 1 — FREE KARMELO */
+.sign-1 {
+  background: #3d1f5e;
+}
+.sign-1 .main-text {
+  font-size: 140px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.5);
+  z-index: 2;
+  position: relative;
+}
+.sign-1 .main-text span { color: #c39bd3; }
+.sign-1::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(155,89,182,0.15), transparent);
+}
+
+/* SIGN 2 — JUSTICE FOR KARMELO */
+.sign-2 {
+  background: #0a0612;
+  border-color: #9b59b6;
+}
+.sign-2 .top-line {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9b59b6;
+  text-align: center;
+  margin-bottom: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial', sans-serif;
+}
+.sign-2 .main-line {
+  font-size: 132px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+}
+.sign-2 .sub-line {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c39bd3;
+  text-align: center;
+  margin-top: 8px;
+}
+.sign-2 .border-strip {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 12px;
+  background: linear-gradient(90deg, #6c3483, #9b59b6, #6c3483);
+}
+
+/* SIGN 3 — SELF DEFENSE IS NOT A CRIME */
+.sign-3 {
+  background: #2d1050;
+  border-color: #c39bd3;
+  aspect-ratio: 3/1.6;
+}
+.sign-3 .line1 {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+}
+.sign-3 .line2 {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #c39bd3;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+  line-height: 1;
+  margin: 2px 0;
+}
+.sign-3 .line3 {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+}
+.sign-3 .line4 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #9b59b6;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
+  margin-top: 6px;
+}
+.sign-3 .accent {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, #6c3483, #c39bd3, #6c3483);
+}
+.sign-3 .accent-b {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, #6c3483, #c39bd3, #6c3483);
+}
+
+/* footer tag on all signs */
+.sign-footer {
+  position: absolute;
+  bottom: 16px; right: 20px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  .print-instructions { display: none; }
+  .sign {
+    width: 100%;
+    page-break-after: always;
+    border-radius: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="print-instructions">
+  💜 <strong>PRINT INSTRUCTIONS:</strong> Print on letter paper (8.5×11") or tabloid (11×17") for larger signs. Use color printing. Each sign is on its own page. Right-click → Print or Ctrl+P → Print All Pages.<br/>
+  For outdoor signs: print on cardstock, laminate, and attach to foam board or wooden dowel.
+</div>
+
+<!-- SIGN 1: FREE KARMELO -->
+<div class="sign sign-1">
+  <div class="main-text">Free<br/><span>Karmelo</span></div>
+  <div class="sign-footer">freekarmelo.net · Trial June 1, 2026</div>
+</div>
+
+<!-- SIGN 2: JUSTICE FOR KARMELO -->
+<div class="sign sign-2">
+  <div class="top-line">Justice For</div>
+  <div class="main-line">Karmelo</div>
+  <div class="sub-line">Self Defense Is Not A Crime 💜</div>
+  <div class="border-strip"></div>
+  <div class="sign-footer">freekarmelo.net</div>
+</div>
+
+<!-- SIGN 3: SELF DEFENSE IS NOT A CRIME -->
+<div class="sign sign-3">
+  <div class="accent"></div>
+  <div class="line1">Self Defense</div>
+  <div class="line2">Is Not</div>
+  <div class="line3">A Crime.</div>
+  <div class="line4">#FreeKarmelo · Trial June 1, 2026 · McKinney, TX</div>
+  <div class="accent-b"></div>
+  <div class="sign-footer">freekarmelo.net</div>
+</div>
+
+</body>
+</html>
