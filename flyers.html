@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free Karmelo — Flyer Collection</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0d0820;
+  font-family: 'Open Sans', sans-serif;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+.section-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9b59b6;
+  text-align: center;
+  margin-bottom: -32px;
+}
+.print-bar {
+  background: #3d1f5e;
+  color: #c39bd3;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+/* ── FLYER SHARED BASE ── */
+.flyer {
+  width: 620px;
+  background: #0a0612;
+  border: 2px solid #6c3483;
+  border-radius: 6px;
+  overflow: hidden;
+  page-break-after: always;
+}
+.top-bar {
+  background: #6c3483;
+  padding: 9px 22px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.top-bar .blm { font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.8); }
+.flyer-body { padding: 22px 26px 26px; }
+
+/* ── FLYER 1: GENERAL CALL (Photo hero) ── */
+.f1-hero {
+  position: relative; height: 300px; overflow: hidden;
+}
+.f1-hero img { width:100%; height:100%; object-fit:cover; object-position:top center; filter:brightness(0.5) saturate(0.7); }
+.f1-hero-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(to bottom, transparent 20%, #0a0612 100%);
+}
+.f1-hero-text {
+  position:absolute; bottom:18px; left:22px; right:22px;
+}
+.f1-eyebrow { font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#c39bd3; margin-bottom:6px; }
+.f1-name { font-family:'Oswald',sans-serif; font-size:64px; font-weight:700; line-height:0.88; letter-spacing:-0.02em; color:#fff; text-shadow:0 2px 16px rgba(0,0,0,0.8); }
+.f1-name span { color:#c39bd3; }
+.f1-age { font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-top:5px; }
+.call-headline { font-family:'Oswald',sans-serif; font-size:20px; font-weight:600; color:#fff; text-align:center; margin:0 0 10px; }
+.body-text { font-size:13px; line-height:1.75; color:rgba(255,255,255,0.7); text-align:center; margin-bottom:18px; }
+.body-text strong { color:#fff; }
+.tags { display:flex; flex-wrap:wrap; justify-content:center; gap:7px; margin-bottom:18px; }
+.tag { background:#6c3483; color:#fff; font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; padding:6px 13px; border-radius:4px; }
+.detail-box { background:#12082a; border:1px solid #3d2060; border-radius:6px; padding:15px 18px; margin-bottom:16px; }
+.d-row { display:flex; gap:10px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:12px; }
+.d-row:last-child { border-bottom:none; }
+.d-key { color:#9b59b6; min-width:72px; font-weight:600; font-size:10px; letter-spacing:0.05em; text-transform:uppercase; padding-top:1px; }
+.d-val { color:#f0eefc; font-weight:500; line-height:1.4; }
+.cta-box { background:linear-gradient(135deg,#6c3483,#9b59b6); border-radius:6px; padding:16px 18px; text-align:center; margin-bottom:14px; }
+.cta-main { font-family:'Oswald',sans-serif; font-size:18px; font-weight:700; color:#fff; margin-bottom:3px; }
+.cta-url { font-size:14px; color:rgba(255,255,255,0.85); }
+.cta-sub { font-size:11px; color:rgba(255,255,255,0.6); margin-top:4px; }
+.reply-note { font-size:12px; color:rgba(255,255,255,0.5); text-align:center; line-height:1.6; }
+.reply-note strong { color:rgba(255,255,255,0.8); }
+.purple-footer { background:#3d1f5e; padding:11px 18px; text-align:center; font-family:'Oswald',sans-serif; font-size:14px; font-weight:600; color:#c39bd3; letter-spacing:0.08em; text-transform:uppercase; border-top:1px solid #6c3483; }
+
+/* ── FLYER 2: COURT PRESENCE (Tactical) ── */
+.f2-header {
+  background: #0a0612;
+  padding: 28px 26px 20px;
+  border-bottom: 2px solid #6c3483;
+  text-align: center;
+}
+.f2-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:#3d1f5e; border:1px solid #6c3483; border-radius:999px;
+  padding:5px 14px;
+  font-family:'Oswald',sans-serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase;
+  color:#c39bd3; margin-bottom:14px;
+}
+.f2-headline {
+  font-family:'Oswald',sans-serif; font-size:46px; font-weight:700;
+  line-height:0.92; letter-spacing:-0.03em; color:#fff; margin-bottom:8px;
+}
+.f2-headline span { color:#9b59b6; }
+.f2-sub {
+  font-size:14px; color:rgba(255,255,255,0.6); line-height:1.6;
+}
+.f2-sub strong { color:#fff; }
+.steps-title { font-family:'Oswald',sans-serif; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:#9b59b6; margin:18px 0 12px; }
+.steps { display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.step { display:flex; gap:12px; align-items:flex-start; }
+.step-num { width:26px; height:26px; border-radius:50%; background:#6c3483; display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif; font-size:13px; font-weight:600; color:#fff; flex-shrink:0; }
+.step-text { font-size:13px; color:rgba(255,255,255,0.75); line-height:1.55; padding-top:2px; }
+.step-text strong { color:#fff; }
+
+/* ── FLYER 3: TEXT/SHARE VERSION (Minimal) ── */
+.f3-body {
+  padding: 32px 26px;
+  text-align: center;
+}
+.f3-fist { font-size:56px; margin-bottom:12px; }
+.f3-headline {
+  font-family:'Oswald',sans-serif; font-size:52px; font-weight:700;
+  letter-spacing:-0.03em; line-height:0.9; color:#fff; margin-bottom:4px;
+}
+.f3-headline .purple { color:#c39bd3; }
+.f3-sub { font-size:16px; color:rgba(255,255,255,0.55); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:22px; font-family:'Oswald',sans-serif; }
+.f3-quote {
+  font-style:italic; font-size:17px; line-height:1.7;
+  color:rgba(255,255,255,0.8); border-left:3px solid #9b59b6;
+  padding:12px 0 12px 18px; text-align:left; margin-bottom:22px;
+}
+.f3-facts { text-align:left; margin-bottom:22px; }
+.f3-fact { display:flex; gap:10px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,0.06); font-size:13px; color:rgba(255,255,255,0.7); }
+.f3-fact:last-child { border-bottom:none; }
+.f3-fact .dot { color:#9b59b6; flex-shrink:0; }
+.f3-fact strong { color:#fff; }
+.f3-cta { background:linear-gradient(135deg,#6c3483,#9b59b6); border-radius:8px; padding:18px; margin-bottom:18px; }
+.f3-cta .url { font-family:'Oswald',sans-serif; font-size:24px; font-weight:700; color:#fff; display:block; margin-bottom:4px; }
+.f3-cta .sub { font-size:12px; color:rgba(255,255,255,0.7); }
+.f3-hashtags { font-family:'Oswald',sans-serif; font-size:14px; color:#9b59b6; letter-spacing:0.04em; }
+
+@media print {
+  body { background: white; padding:0; }
+  .section-label, .print-bar { display:none; }
+  .flyer { width:100%; page-break-after:always; border-radius:0; }
+}
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  💜 Three flyer formats: <strong>General Call-Out · Court Presence Guide · Shareable/Textable</strong><br/>
+  Print individually or all at once. Share digitally as screenshots. freekarmelo.net
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- FLYER 1: GENERAL CALL-OUT             -->
+<!-- ══════════════════════════════════════ -->
+<div class="section-label">Flyer 1 of 3 — General Call-Out</div>
+<div class="flyer">
+  <div class="top-bar">
+    <span class="blm">✊🏿 Black Lives Matter Grassroots · In Solidarity</span>
+    <span style="font-size:16px;">💜</span>
+  </div>
+  <div class="f1-hero">
+    <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/8293324cf_IMG_2636.jpg" alt="Karmelo Anthony"/>
+    <div class="f1-hero-overlay"></div>
+    <div class="f1-hero-text">
+      <div class="f1-eyebrow">A Child. An Athlete. A Survivor.</div>
+      <div class="f1-name">Karmelo<br/><span>Anthony</span></div>
+      <div class="f1-age">17 years old at the time of this incident</div>
+    </div>
+  </div>
+  <div class="flyer-body">
+    <div class="call-headline">CAN YOU JOIN US IN COLLIN COUNTY, TEXAS?</div>
+    <div class="body-text">
+      Greetings Fam. You may recall the unjust prosecution of <strong>17-year-old Karmelo Anthony</strong>, who was defending himself against an attack at a high school track meet in Frisco, Texas. <strong>He did not swing first.</strong> The Anthony family has been under constant threat. We want them to know they are not alone.
+    </div>
+    <div class="tags">
+      <span class="tag">Free Karmelo</span>
+      <span class="tag">Justice for Karmelo</span>
+      <span class="tag">Self Defense Is Not a Crime</span>
+    </div>
+    <div class="detail-box">
+      <div class="d-row"><span class="d-key">When</span><span class="d-val">Monday, June 1st, 2026 · 8:00 AM CDT</span></div>
+      <div class="d-row"><span class="d-key">Where</span><span class="d-val">Collin County Courthouse · 2100 Bloomdale Rd, McKinney, TX 75071</span></div>
+      <div class="d-row"><span class="d-key">Week</span><span class="d-val">June 1–5 · Peaceful, Lawful Court Presence</span></div>
+      <div class="d-row"><span class="d-key">Lodging</span><span class="d-val">Sponsored lodging may be available — not guaranteed. Sign up to be considered.</span></div>
+    </div>
+    <div class="cta-box">
+      <div class="cta-main">Sign Up &amp; Read More</div>
+      <div class="cta-url">freekarmelo.net · freekarmelo.today</div>
+      <div class="cta-sub">Or reply to this message to let us know you can make it</div>
+    </div>
+    <div class="reply-note">
+      <strong>Wear purple for Karmelo.</strong> Be there. Be counted. He is not alone.
+    </div>
+  </div>
+  <div class="purple-footer">💜 Wear Purple · June 1–5, 2026 · McKinney, Texas</div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- FLYER 2: COURT PRESENCE GUIDE         -->
+<!-- ══════════════════════════════════════ -->
+<div class="section-label">Flyer 2 of 3 — Court Presence Guide</div>
+<div class="flyer">
+  <div class="top-bar">
+    <span class="blm">✊🏿 Court Support · Peaceful &amp; Lawful · June 1–5</span>
+    <span style="font-size:16px;">⚖️</span>
+  </div>
+  <div class="f2-header">
+    <div class="f2-badge">💜 Trial Begins June 1, 2026</div>
+    <div class="f2-headline">Show Up<br/><span>for Justice.</span></div>
+    <div class="f2-sub">
+      <strong>People v. Karmelo Anthony</strong> · 296th District Court · Collin County, TX<br/>
+      He was 17. He defended himself. He did not swing first. Now he needs us in that courtroom.
+    </div>
+  </div>
+  <div class="flyer-body">
+    <div class="steps-title">How to Show Up</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Arrive at 8:00 AM</strong> — Collin County Courthouse, 2100 Bloomdale Rd, McKinney TX 75071. Parking available on Bloomdale Rd and Louisiana St.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Wear purple.</strong> That's Karmelo's color. No signs inside the courthouse. Signs may be used in designated public areas outside.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Stay peaceful and lawful.</strong> This is a court of law. Our presence is the message. Dignity is the doctrine.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Sign up at freekarmelo.net</strong> to coordinate lodging, carpooling, and updates throughout the week of June 1–5.</div>
+      </div>
+    </div>
+    <div class="detail-box">
+      <div class="d-row"><span class="d-key">Court</span><span class="d-val">296th District Court · Judge John Roach Jr.</span></div>
+      <div class="d-row"><span class="d-key">Address</span><span class="d-val">2100 Bloomdale Rd, McKinney, TX 75071</span></div>
+      <div class="d-row"><span class="d-key">Start Time</span><span class="d-val">June 1, 2026 · 8:00 AM CDT</span></div>
+      <div class="d-row"><span class="d-key">Duration</span><span class="d-val">June 1–5 (full trial week)</span></div>
+      <div class="d-row"><span class="d-key">Lodging</span><span class="d-val">Sponsored lodging may be available — not guaranteed. Register to be considered.</span></div>
+    </div>
+    <div class="cta-box">
+      <div class="cta-main">Register: freekarmelo.net</div>
+      <div class="cta-sub">Information collected for organizing purposes only · Not shared or sold</div>
+    </div>
+  </div>
+  <div class="purple-footer">💜 Free Karmelo · Justice for Karmelo · Self Defense Is Not a Crime</div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- FLYER 3: TEXT / SOCIAL SHARE VERSION  -->
+<!-- ══════════════════════════════════════ -->
+<div class="section-label">Flyer 3 of 3 — Text &amp; Social Share</div>
+<div class="flyer">
+  <div class="top-bar">
+    <span class="blm">✊🏿 Share This · Screenshot · Text It · Post It</span>
+    <span style="font-size:16px;">📲</span>
+  </div>
+  <div class="f3-body">
+    <div class="f3-fist">✊🏿</div>
+    <div class="f3-headline">Free<br/><span class="purple">Karmelo.</span></div>
+    <div class="f3-sub">Trial · June 1, 2026 · McKinney, TX</div>
+    <div class="f3-quote">
+      "He was 17. He was attacked. He did not swing first. He walked to the police and told the truth before anyone asked a single question. That is not the behavior of a murderer. That is a child who knew he did nothing wrong."
+    </div>
+    <div class="f3-facts">
+      <div class="f3-fact"><span class="dot">💜</span><span>Karmelo Anthony was <strong>17 years old</strong> at the time of this incident</span></div>
+      <div class="f3-fact"><span class="dot">💜</span><span><strong>He did not swing first.</strong> He responded to a physical attack on his body.</span></div>
+      <div class="f3-fact"><span class="dot">💜</span><span>He walked to police <strong>unprompted</strong> and told the truth immediately.</span></div>
+      <div class="f3-fact"><span class="dot">💜</span><span>Texas law calls what he did <strong>self-defense.</strong></span></div>
+      <div class="f3-fact"><span class="dot">💜</span><span>We will be at the courthouse <strong>June 1–5</strong> in McKinney, TX. <strong>Wear purple.</strong></span></div>
+    </div>
+    <div class="f3-cta">
+      <span class="url">freekarmelo.net</span>
+      <span class="sub">Add your name · Read the full record · Get court logistics</span>
+    </div>
+    <div class="f3-hashtags">#FreeKarmelo &nbsp;&nbsp; #JusticeForKarmelo &nbsp;&nbsp; #SelfDefenseIsNotACrime</div>
+  </div>
+  <div class="purple-footer">💜 Wear Purple Week of June 1 · Tell Everyone · freekarmelo.net</div>
+</div>
+
+</body>
+</html>
