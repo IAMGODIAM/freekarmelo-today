@@ -301,44 +301,78 @@ a { color: inherit; text-decoration: none; }
 .photo-section-head p {
   font-size: 15px; color: var(--fg-dim); margin-top: 8px;
 }
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 .carousel-track {
-  display: flex; gap: 16px;
+  display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 0 28px 16px;
   scrollbar-width: none;
+  gap: 12px;
+  padding: 0 16px 12px;
+  /* Let content define height — no fixed height here */
 }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-slide {
-  flex: 0 0 280px;
+  flex: 0 0 clamp(220px, 72vw, 300px);
   scroll-snap-align: start;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-2);
   position: relative;
   background: var(--bg-2);
+  /* aspect-ratio drives height, no fixed px */
+  aspect-ratio: 3/4;
+}
+@media (min-width: 600px) {
+  .carousel-slide {
+    flex: 0 0 clamp(240px, 30vw, 300px);
+    aspect-ratio: 2/3;
+  }
 }
 .carousel-slide img {
-  width: 100%; height: 360px;
-  object-fit: cover; object-position: top center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
   transition: transform .3s ease;
+  /* Lazy load via loading attr — added inline */
 }
-.carousel-slide:hover img { transform: scale(1.02); }
+.carousel-slide:hover img { transform: scale(1.03); }
 .slide-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
   background: linear-gradient(to top, rgba(6,4,16,0.92) 0%, transparent 100%);
-  padding: 32px 16px 14px;
+  padding: 28px 14px 12px;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--purple-light);
   line-height: 1.4;
+  pointer-events: none;
+}
+/* Photo counter badge */
+.carousel-counter {
+  position: absolute;
+  bottom: 18px; right: 18px;
+  background: rgba(108,52,131,0.85);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 10;
+  display: none; /* shown by JS */
 }
 .carousel-hint {
   max-width: 1200px; margin: 0 auto;
-  padding: 10px 28px 0;
+  padding: 8px 16px 0;
   font-family: var(--mono); font-size: 10px;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--fg-dimmer); text-align: center;
@@ -741,7 +775,8 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <button class="nav-tab active" onclick="switchTab('manifesto')">Who He Is</button>
       <button class="nav-tab" onclick="switchTab('credo')">What Happened</button>
       <button class="nav-tab" onclick="switchTab('facts')">The Law</button>
-      <button class="nav-tab" onclick="switchTab('truth')">The Truth</button>
+      <button class="nav-tab" onclick="switchTab('charge')">The Charge</button>
+          <button class="nav-tab" onclick="switchTab('truth')">The Truth</button>
     </div>
     <button class="nav-cta-btn" onclick="switchTab('signup')">Sign Up →</button>
   </div>
@@ -1001,6 +1036,72 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 </div>
 
 <!-- §04 TRUTH -->
+<div id="pane-charge" class="tab-pane" role="tabpanel">
+  <div class="section-header">
+    <div class="sect-lbl">§05 · The Charge</div>
+    <h2 class="sect-title">What Austin Metcalf Did.<br/><span class="italic-sub">What the Law Says About It.</span></h2>
+    <p class="sect-sub">We are Karmelo Anthony's defense. These are the facts. The law is not complicated. The only question is whether it will be applied equally.</p>
+  </div>
+  <div class="truth-body">
+
+    <div class="truth-block" style="border-left:3px solid var(--purple);padding-left:20px;">
+      <div class="truth-label" style="color:var(--purple);font-size:10px;letter-spacing:0.16em;">Texas Penal Code § 22.01 — Assault</div>
+      <div class="truth-text">
+        <strong>Austin Metcalf committed assault first.</strong><br/><br/>
+        Under Texas Penal Code § 22.01, a person commits assault when they intentionally, knowingly, or recklessly cause bodily injury to another. Austin Metcalf pushed Karmelo Anthony twice. Both pushes were unprovoked. Both pushes were physical contact initiated by Metcalf against Karmelo's body.<br/><br/>
+        That is assault under Texas law. It happened first. It happened before anything else on that field. The prosecution knows this.
+      </div>
+    </div>
+
+    <div class="truth-block" style="border-left:3px solid var(--purple);padding-left:20px;">
+      <div class="truth-label" style="color:var(--purple);font-size:10px;letter-spacing:0.16em;">Texas Penal Code § 22.02 · Disparity of Force</div>
+      <div class="truth-text">
+        <strong>The assault Karmelo faced rises to aggravated assault.</strong><br/><br/>
+        Under TPC § 22.02, assault becomes aggravated when committed in a manner that creates a reasonable fear of death or serious bodily harm. Reports document a significant disparity in size between Metcalf and Karmelo — approximately 140 lbs against a larger attacker.<br/><br/>
+        Under Texas self-defense doctrine, disparity of force is legally sufficient to justify the use of deadly force in response. Karmelo was smaller. He was being physically attacked by a larger person. The law already has a name for that scenario. It is called self-defense.
+      </div>
+    </div>
+
+    <div class="truth-block" style="border-left:3px solid var(--purple);padding-left:20px;">
+      <div class="truth-label" style="color:var(--purple);font-size:10px;letter-spacing:0.16em;">Texas Penal Code § 9.32 — Deadly Force in Defense of Person</div>
+      <div class="truth-text">
+        <strong>Texas law authorized what Karmelo did.</strong><br/><br/>
+        Section 9.32 permits a person to use deadly force when they reasonably believe it is immediately necessary to protect against another's use of deadly force. It does not require the other party have a weapon. It requires that the fear be <em>reasonable.</em><br/><br/>
+        Karmelo was being physically attacked by a larger individual in a public space. His fear was reasonable. His response was a single act. He issued a verbal warning — a factor TPC § 9.32 expressly recognizes as evidence of measured response. He stopped the moment the threat stopped.
+      </div>
+    </div>
+
+    <div class="truth-block" style="border-left:3px solid var(--purple);padding-left:20px;">
+      <div class="truth-label" style="color:var(--purple);font-size:10px;letter-spacing:0.16em;">Texas Penal Code § 9.32(c) — No Duty to Retreat</div>
+      <div class="truth-text">
+        <strong>He had no obligation to run. None. Zero.</strong><br/><br/>
+        The legislature of Texas has already answered whether Karmelo should have walked away. The answer is in the statute: when lawfully present in a place and not engaged in criminal activity, a person has no duty to retreat before using force in self-defense.<br/><br/>
+        Karmelo Anthony was at a public UIL District Championship track meet. He was a student-athlete representing Centennial High School. He was exactly where he had every right to be. The State of Texas cannot stand in front of a jury and ask why a Black teenager didn't run from a public event he was legally attending. They cannot. The law does not allow it.
+      </div>
+    </div>
+
+    <div class="truth-block" style="border-left:3px solid var(--purple);padding-left:20px;">
+      <div class="truth-label" style="color:var(--purple);font-size:10px;letter-spacing:0.16em;">The Statement They Called a Confession</div>
+      <div class="truth-text">
+        <strong>"I was protecting myself." That is not a murder confession. That is a self-defense declaration.</strong><br/><br/>
+        Karmelo Anthony walked to the nearest police officer — before being approached, before being questioned, before being detained. He said: <em>"I was protecting myself."</em> He surrendered. He told the complete truth.<br/><br/>
+        The State of Texas has taken that statement and filed a first-degree murder charge. We call it what it is: a 17-year-old child exercising his rights, telling the truth, and trusting that the system would see what actually happened.<br/><br/>
+        That trust is now on trial. June 1. McKinney, Texas. We will be there.
+      </div>
+    </div>
+
+    <div class="truth-block final" style="background:linear-gradient(135deg,rgba(108,52,131,0.15),rgba(155,89,182,0.08));border:1px solid rgba(155,89,182,0.3);border-radius:8px;padding:28px;">
+      <div class="truth-label" style="color:var(--purple);">The Bottom Line</div>
+      <div class="truth-text" style="font-size:clamp(14px,2vw,17px);line-height:1.75;">
+        <strong>The State of Texas is prosecuting a 17-year-old Black child for first-degree murder because he defended himself from a physical assault — once — after being pushed twice — by a larger peer — in a public place where he had every legal right to be — after issuing a verbal warning — and then surrendering immediately and telling the complete truth to law enforcement.</strong><br/><br/>
+        Read that again. That is the prosecution's entire case.<br/><br/>
+        <em style="color:#c39bd3;">We will be in that courthouse on June 1. Wearing purple. Peacefully and lawfully. Because the law is on Karmelo's side — and we intend to make sure everyone in that building knows it.</em>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div id="pane-truth" class="tab-pane">
   <div class="section-narrow">
     <div class="section-head">
@@ -1254,7 +1355,8 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <a href="#" onclick="switchTab('manifesto');return false;">Who He Is</a>
       <a href="#" onclick="switchTab('credo');return false;">What Happened</a>
       <a href="#" onclick="switchTab('facts');return false;">The Law</a>
-      <a href="#" onclick="switchTab('truth');return false;">The Truth</a>
+      <a href="#" onclick="switchTab('charge');return false;">The Charge</a>
+          &nbsp;·&nbsp; <a href="#" onclick="switchTab('truth');return false;">The Truth</a>
       <a href="#signup" onclick="switchTab('signup');return false;">Sign Up</a>
     </div>
     <div class="foot-col">
@@ -1389,6 +1491,106 @@ function copyLink() {
     alert('Link copied! Share it everywhere. #FreeKarmelo');
   });
 }
+
+
+// ── EYE CANDY: AUTO-PLAY CAROUSEL ──
+(function() {
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
+  const slides = track.querySelectorAll('.carousel-slide');
+  if (!slides.length) return;
+  let current = 0;
+  let paused = false;
+  let interval;
+
+  function advance() {
+    if (paused) return;
+    current = (current + 1) % slides.length;
+    slides[current].scrollIntoView({behavior:'smooth', block:'nearest', inline:'start'});
+  }
+
+  interval = setInterval(advance, 3200);
+  track.addEventListener('mouseenter', () => { paused = true; });
+  track.addEventListener('mouseleave', () => { paused = false; });
+  track.addEventListener('touchstart', () => { paused = true; clearInterval(interval); }, {passive:true});
+})();
+
+// ── EYE CANDY: TOUCH SWIPE on carousel ──
+(function() {
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) {
+      track.scrollBy({left: dx < 0 ? 280 : -280, behavior:'smooth'});
+    }
+  }, {passive:true});
+})();
+
+// ── EYE CANDY: ANIMATED STAT COUNTERS ──
+(function() {
+  function countUp(el, target, duration) {
+    let start = 0;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target).toLocaleString() + el.dataset.suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        countUp(el, target, 1800);
+        observer.unobserve(el);
+      }
+    });
+  }, {threshold: 0.5});
+  document.querySelectorAll('[data-count]').forEach(el => observer.observe(el));
+})();
+
+// ── EYE CANDY: PULSE CTA BUTTON ──
+(function() {
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(155,89,182,0.5); }
+      50% { box-shadow: 0 0 0 12px rgba(155,89,182,0); }
+    }
+    .submit-btn, button[type="submit"] {
+      animation: ctaPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes tabCharge {
+      0%, 100% { border-color: var(--purple); }
+      50% { border-color: #c39bd3; box-shadow: 0 0 8px rgba(195,155,211,0.4); }
+    }
+    .nav-tab[onclick*="charge"] {
+      animation: tabCharge 2s ease-in-out infinite;
+      border-color: var(--purple) !important;
+    }
+  `;
+  document.head.appendChild(style);
+})();
+
+// ── switchTab must include charge pane ──
+// Patch switchTab to handle charge
+const _origSwitch = window.switchTab;
+window.switchTab = function(tab) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+  const pane = document.getElementById('pane-' + tab);
+  if (pane) pane.classList.add('active');
+  const btn = document.querySelector('.nav-tab[onclick*="' + tab + '"]');
+  if (btn) btn.classList.add('active');
+};
+
+
 </script>
 </body>
 </html>
