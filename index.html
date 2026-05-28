@@ -318,15 +318,23 @@ a { color: inherit; text-decoration: none; }
 }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-slide {
-  flex: 0 0 clamp(220px, 72vw, 300px);
+  flex: 0 0 clamp(200px, 65vw, 260px);
   scroll-snap-align: start;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-2);
   position: relative;
   background: var(--bg-2);
-  /* aspect-ratio drives height, no fixed px */
-  aspect-ratio: 3/4;
+  /* NO aspect-ratio on flex child — breaks Safari */
+}
+@media (min-width: 520px) {
+  .carousel-slide { flex: 0 0 clamp(220px, 30vw, 280px); }
+}
+/* Padding-top trick: universal cross-browser aspect ratio */
+.carousel-slide::before {
+  content: '';
+  display: block;
+  padding-top: 130%; /* ~3:4 portrait */
 }
 @media (min-width: 600px) {
   .carousel-slide {
@@ -335,13 +343,14 @@ a { color: inherit; text-decoration: none; }
   }
 }
 .carousel-slide img {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 15%;
   display: block;
-  transition: transform .3s ease;
-  /* Lazy load via loading attr — added inline */
+  transition: transform .35s ease;
 }
 .carousel-slide:hover img { transform: scale(1.03); }
 .slide-caption {
@@ -742,6 +751,133 @@ textarea.f-input { resize: vertical; min-height: 78px; }
   font-family: var(--mono); font-size: 10px;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-dimmer);
 }
+
+/* ══════════════════════════════════════════
+   PAGE-WIDE ANIMATIONS & TRANSITIONS
+   ══════════════════════════════════════════ */
+
+/* Fade-in on scroll — attach to key blocks */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes borderPulse {
+  0%, 100% { border-color: var(--purple-3); }
+  50%       { border-color: var(--purple); }
+}
+
+/* Scroll-reveal utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+/* Fact rows animate in */
+.fact-row {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.fact-row:hover {
+  background: var(--purple-soft);
+  transform: translateX(4px);
+}
+
+/* Truth blocks animate in */
+.truth-block {
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+/* Nav tab transitions */
+.nav-tab {
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease !important;
+}
+
+/* Hero strip items */
+.strip-item {
+  transition: color 0.2s ease;
+}
+.strip-item:hover { color: var(--fg); }
+
+/* Sign Up button shimmer on hover */
+.hero-cta:hover, .nav-cta:hover {
+  background: linear-gradient(90deg, var(--purple), #b86bff, var(--purple));
+  background-size: 200% auto;
+  animation: shimmer 1.5s linear infinite;
+}
+
+/* Carousel slide entrance */
+.carousel-slide {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.carousel-slide:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(108,52,131,0.3);
+}
+
+/* Section header fade */
+.section-header { animation: fadeInUp 0.6s ease both; }
+
+/* Credo cards */
+.credo-card {
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.credo-card:hover {
+  border-color: var(--purple-3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108,52,131,0.2);
+}
+
+/* Smooth tab pane switch */
+.tab-pane {
+  animation: fadeInUp 0.35s ease both;
+}
+
+/* Form field focus glow */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--purple) !important;
+  box-shadow: 0 0 0 3px rgba(108,52,131,0.18);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Submit button transition */
+.submit-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease !important;
+}
+.submit-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(108,52,131,0.4);
+}
+.submit-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .reveal { transform: translateY(12px); }
+  .fact-row:hover { transform: none; }
+  .credo-card:hover { transform: none; }
+}
+
 </style>
 </head>
 <body>
@@ -1592,5 +1728,22 @@ window.switchTab = function(tab) {
 
 
 </script>
+
+<script>
+// ── SCROLL REVEAL ──
+(function() {
+  const revealEls = document.querySelectorAll('.fact-row, .truth-block, .credo-card, .section-header, .timeline-item');
+  revealEls.forEach((el, i) => {
+    el.classList.add('reveal');
+    if (i % 3 === 1) el.classList.add('reveal-d1');
+    if (i % 3 === 2) el.classList.add('reveal-d2');
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
+
 </body>
 </html>
