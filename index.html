@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free Karmelo Anthony — Stand With Him · Trial June 1, 2026</title>
+<meta name="description" content="Karmelo Anthony was 17 when he defended himself at a track meet. He is now on trial for it. Wear purple. Add your name. Trial begins June 1, 2026 in Collin County, TX."/>
+<meta property="og:title" content="Free Karmelo — Stand With Him"/>
+<meta property="og:description" content="He was attacked. He warned them. He survived. Now he's on trial. Add your name to the record."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://freekarmelo.today/"/>
+<style>
+
+  :root {
+    --bg:        #000000;
+    --bg-1:      #0a0a0a;
+    --bg-2:      #111111;
+    --fg:        #ededed;
+    --fg-dim:    #a1a1a1;
+    --fg-dimmer: #6b6b6b;
+    --fg-ghost:  #3a3a3a;
+    --border:    #1c1c1c;
+    --border-2:  #2a2a2a;
+    --border-3:  #3f3f3f;
+    --accent:    #ffffff;
+    --signal:    #9b59b6;
+    --accent:    #9b59b6;
+    --accent-2:  #7d3c98;
+    --accent-light: #c39bd3;
+    --accent-glow: rgba(155,89,182,0.12);
+    --signal-2:  #7d3c98;
+
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'Geist Mono', ui-monospace, 'SF Mono', 'Menlo', monospace;
+    --serif: 'Instrument Serif', 'Times New Roman', serif;
+
+    --container: 1280px;
+    --gutter: 32px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-feature-settings: "ss01", "ss03", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--fg); color: var(--bg); }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ───────── LAYOUT PRIMITIVES ───────── */
+  .wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    position: relative;
+  }
+
+  .rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
+
+  .mono {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+
+  /* ───────── TICKER BAR ───────── */
+  .ticker {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  .ticker-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    gap: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .ticker-left, .ticker-right { display: flex; align-items: center; gap: 18px; min-width: 0; }
+  .ticker-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 0;
+    color: var(--fg);
+  }
+  .ticker-pill .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 0 rgba(255,77,77,0.55);
+    animation: pulse 1.8s infinite;
+  }
+  .ticker-divider { color: var(--fg-ghost); }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,77,77,0.6); }
+    70%  { box-shadow: 0 0 0 8px rgba(255,77,77,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,77,77,0); }
+  }
+  @media (max-width: 720px) {
+    .ticker-right { display: none; }
+  }
+
+  /* ───────── NAV ───────── */
+  .nav {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky;
+    top: 40px;
+    z-index: 45;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg);
+  }
+  .brand-mark {
+    width: 28px; height: 28px;
+    border: 1px solid var(--border-3);
+    display: grid; place-items: center;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .brand-mark span { color: var(--fg-dimmer); }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 28px;
+  }
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    transition: color .15s ease;
+  }
+  .nav-links a:hover { color: var(--fg); }
+  .nav-cta {
+    border: 1px solid var(--border-3);
+    padding: 8px 14px;
+    color: var(--fg) !important;
+    transition: background .15s ease, border-color .15s ease;
+  }
+  .nav-cta:hover { background: var(--fg); color: var(--bg) !important; border-color: var(--fg); }
+
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* ───────── HERO ───────── */
+  .hero {
+    position: relative;
+    padding: 96px 0 64px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: center top;
+    mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 60% at 50% 0%, rgba(255,255,255,0.06), transparent 60%),
+      radial-gradient(40% 40% at 80% 20%, rgba(155,89,182,0.06), transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    padding: 6px 12px;
+    border: 1px solid var(--border-2);
+    border-radius: 999px;
+    background: var(--bg-1);
+  }
+  .eyebrow .glyph { color: var(--fg); }
+
+  .hero h1 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(56px, 11.5vw, 184px);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    margin: 28px 0 32px;
+    color: var(--fg);
+  }
+  .hero h1 .italic {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .hero h1 .dim { color: var(--fg-dimmer); }
+
+  .hero-sub {
+    max-width: 720px;
+    font-size: clamp(17px, 1.6vw, 21px);
+    line-height: 1.5;
+    color: var(--fg-dim);
+    margin-bottom: 40px;
+  }
+  .hero-sub strong { color: var(--fg); font-weight: 600; }
+
+  .cta-row {
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    margin-bottom: 56px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    padding: 13px 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;
+    line-height: 1;
+  }
+  .btn-primary {
+    background: var(--signal);
+    color: #fff;
+    border-color: var(--signal);
+  }
+  .btn-primary:hover { background: #fff; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--fg);
+    border-color: var(--border-3);
+  }
+  .btn-ghost:hover { border-color: var(--fg); background: var(--bg-1); }
+  .btn .arrow {
+    font-family: var(--mono);
+    font-size: 14px;
+    transform: translateX(0);
+    transition: transform .15s ease;
+  }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* hero metadata strip */
+  .case-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .case-strip .cell {
+    padding: 24px 22px;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 10px;
+    min-height: 110px;
+  }
+  .case-strip .cell:last-child { border-right: 0; }
+  .case-strip .k {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-dimmer);
+  }
+  .case-strip .v {
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .case-strip .v .sub {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    color: var(--fg-dim);
+    margin-top: 4px;
+    font-weight: 400;
+    text-transform: none;
+  }
+  @media (max-width: 880px) {
+    .case-strip { grid-template-columns: repeat(2, 1fr); }
+    .case-strip .cell:nth-child(2) { border-right: 0; }
+    .case-strip .cell:nth-child(1), .case-strip .cell:nth-child(2) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  /* ───────── COUNTDOWN STRIPE ───────── */
+  .countdown {
+    border-bottom: 1px solid var(--border);
+    background:
+      linear-gradient(180deg, rgba(155,89,182,0.04), transparent 80%),
+      var(--bg);
+    padding: 56px 0 64px;
+  }
+  .countdown-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr;
+    gap: 48px;
+    align-items: end;
+  }
+  .countdown-label .mono { color: var(--signal); margin-bottom: 16px; display: inline-block; }
+  .countdown-label h2 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 44px);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    color: var(--fg);
+  }
+  .countdown-label h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--fg-dim);
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border-2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-1);
+  }
+  .clock .unit {
+    padding: 22px 18px 18px;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 10px;
+    position: relative;
+  }
+  .clock .unit:last-child { border-right: 0; }
+  .clock .num {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: clamp(40px, 6.4vw, 84px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+    font-variant-numeric: tabular-nums;
+  }
+  .clock .lbl {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  @media (max-width: 880px) {
+    .countdown-grid { grid-template-columns: 1fr; gap: 32px; }
+    .clock .unit { padding: 18px 14px 14px; }
+  }
+  @media (max-width: 520px) {
+    .clock { grid-template-columns: repeat(2, 1fr); }
+    .clock .unit:nth-child(2) { border-right: 0; }
+    .clock .unit:nth-child(1), .clock .unit:nth-child(2) { border-bottom: 1px solid var(--border); }
+  }
+
+  /* ───────── SECTION HEADER (§) ───────── */
+  .section {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .section.tight { padding: 72px 0; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: baseline;
+    margin-bottom: 56px;
+  }
+  .section-head .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    position: sticky;
+    top: 80px;
+  }
+  .section-head .meta .num {
+    color: var(--fg);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .section-head h2 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 60px);
+    letter-spacing: -0.04em;
+    line-height: 1.02;
+    color: var(--fg);
+    max-width: 900px;
+  }
+  .section-head h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--fg-dim);
+  }
+  @media (max-width: 880px) {
+    .section-head { grid-template-columns: 1fr; gap: 18px; }
+    .section-head .meta { position: static; }
+  }
+
+  /* ───────── EDITORIAL BODY ───────── */
+  .editorial {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 48px;
+  }
+  .editorial .col-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-dimmer);
+    line-height: 1.7;
+  }
+  .editorial .col-meta .item { margin-bottom: 16px; }
+  .editorial .col-meta .item b { display: block; color: var(--fg-dim); font-weight: 500; margin-bottom: 2px; }
+
+  .editorial .col-body { max-width: 720px; }
+  .editorial .col-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: #cfcfcf;
+    margin-bottom: 22px;
+    letter-spacing: -0.005em;
+  }
+  .editorial .col-body p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 78px;
+    line-height: 0.85;
+    float: left;
+    padding: 6px 14px 0 0;
+    color: var(--fg);
+  }
+  .editorial .col-body p strong {
+    color: var(--fg);
+    font-weight: 600;
+  }
+  .editorial .col-body p em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--fg);
+    font-size: 1.05em;
+  }
+  .pullquote {
+    border-left: 2px solid var(--fg);
+    margin: 36px 0;
+    padding: 6px 0 6px 24px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .pullquote cite {
+    display: block;
+    margin-top: 16px;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  @media (max-width: 880px) {
+    .editorial { grid-template-columns: 1fr; gap: 24px; }
+    .editorial .col-body p:first-of-type::first-letter { font-size: 56px; padding: 4px 10px 0 0; }
+  }
+
+  /* ───────── FACTS GRID ───────── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    margin-top: 64px;
+  }
+  .fact {
+    padding: 32px 28px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 14px;
+    background: var(--bg);
+    transition: background .2s ease;
+  }
+  .fact:hover { background: var(--bg-1); }
+  .fact .ix {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--fg-dim);
+    display: flex; justify-content: space-between;
+  }
+  .fact .ix .tag { color: var(--fg-dimmer); }
+  .fact .claim {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .fact .src {
+    margin-top: auto;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--fg-dimmer);
+    text-transform: uppercase;
+  }
+  @media (max-width: 980px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }
+
+  /* ───────── LEGAL BRIEF ───────── */
+  .brief {
+    border: 1px solid var(--border-2);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%),
+      var(--bg-1);
+    padding: 0;
+    overflow: hidden;
+  }
+  .brief-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  .brief-head .left { display: flex; gap: 12px; align-items: center; }
+  .brief-head .stamp {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--signal);
+  }
+  .brief-head .stamp .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--signal); }
+  .brief-body { padding: 36px 32px 40px; }
+  .brief-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+  }
+  .brief-grid:first-child { border-top: 0; padding-top: 0; }
+  .brief-grid .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    line-height: 1.6;
+  }
+  .brief-grid .label .cite { display: block; color: var(--fg-dimmer); margin-top: 4px; }
+  .brief-grid .arg {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #d7d7d7;
+    letter-spacing: -0.005em;
+  }
+  .brief-grid .arg strong { color: var(--fg); font-weight: 600; }
+  .brief-grid .arg em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--fg);
+    font-size: 1.05em;
+  }
+  @media (max-width: 720px) {
+    .brief-grid { grid-template-columns: 1fr; gap: 12px; }
+    .brief-body { padding: 26px 22px 30px; }
+  }
+
+  /* ───────── FORM ───────── */
+  .form-section {
+    padding: 96px 0 120px;
+    position: relative;
+  }
+  .form-shell {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .form-aside {
+    position: sticky;
+    top: 80px;
+  }
+  .form-aside .eyebrow { margin-bottom: 22px; }
+  .form-aside h2 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(36px, 4.4vw, 56px);
+    line-height: 1.0;
+    letter-spacing: -0.045em;
+    color: var(--fg);
+    margin-bottom: 22px;
+  }
+  .form-aside h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--fg-dim);
+  }
+  .form-aside p {
+    font-size: 16px;
+    color: var(--fg-dim);
+    line-height: 1.6;
+    max-width: 420px;
+    margin-bottom: 26px;
+  }
+  .form-aside .meta-list {
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+  .form-aside .meta-list .row {
+    display: flex; justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .form-aside .meta-list .row .k { color: var(--fg-dim); }
+  .form-aside .meta-list .row .v { color: var(--fg); }
+
+  .form-card {
+    border: 1px solid var(--border-2);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.018), transparent 50%),
+      var(--bg-1);
+    padding: 36px;
+  }
+  .form-card-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-card-head .t {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  .form-card-head .step {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--fg-dimmer);
+    text-transform: uppercase;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field.full { grid-column: 1 / -1; }
+  .field.third { grid-column: span 1; }
+
+  label.f-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    font-weight: 500;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  label.f-label .req { color: var(--signal); }
+  label.f-label .hint { color: var(--fg-dimmer); text-transform: none; letter-spacing: 0; font-family: var(--sans); font-size: 12px; }
+
+  input.f-input,
+  select.f-select,
+  textarea.f-textarea {
+    background: var(--bg);
+    border: 1px solid var(--border-2);
+    border-radius: 8px;
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
+    -webkit-appearance: none; appearance: none;
+    width: 100%;
+  }
+  input.f-input::placeholder, textarea.f-textarea::placeholder { color: var(--fg-ghost); }
+  input.f-input:focus, select.f-select:focus, textarea.f-textarea:focus {
+    border-color: var(--fg);
+    background: var(--bg-1);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.06);
+  }
+  textarea.f-textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+
+  select.f-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23a1a1a1' d='M5 6 0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  select.f-select option { background: #0a0a0a; color: var(--fg); }
+
+  /* Segmented control */
+  .segmented {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+    border: 1px solid var(--border-2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .segmented label {
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    padding: 11px 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    border-right: 1px solid var(--border-2);
+    transition: background .15s ease, color .15s ease;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .segmented label:last-child { border-right: 0; }
+  .segmented input { position: absolute; opacity: 0; pointer-events: none; }
+  .segmented input:checked + label,
+  .segmented label:has(input:checked) {
+    background: var(--fg);
+    color: var(--bg);
+  }
+  .segmented .opt {
+    display: flex; align-items: center; justify-content: center;
+    padding: 11px 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    border-right: 1px solid var(--border-2);
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    user-select: none;
+    transition: background .15s ease, color .15s ease;
+  }
+  .segmented .opt:last-child { border-right: 0; }
+  .segmented .opt.active { background: var(--fg); color: var(--bg); }
+
+  .check {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-2);
+    border-radius: 8px;
+    background: var(--bg);
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .check:hover { border-color: var(--border-3); }
+  .check input[type="checkbox"] {
+    appearance: none; -webkit-appearance: none;
+    width: 18px; height: 18px;
+    border: 1px solid var(--border-3);
+    border-radius: 4px;
+    background: var(--bg-1);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: background .15s ease, border-color .15s ease;
+  }
+  .check input[type="checkbox"]:checked {
+    background: var(--fg);
+    border-color: var(--fg);
+  }
+  .check input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px; top: 1px;
+    width: 5px; height: 10px;
+    border: solid var(--bg);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .check .body { display: flex; flex-direction: column; gap: 2px; }
+  .check .ttl { font-size: 14px; color: var(--fg); font-weight: 500; }
+  .check .sub { font-size: 13px; color: var(--fg-dim); }
+
+  .submit-row { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .submit-btn {
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--fg);
+    color: var(--bg);
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    border: 1px solid var(--fg);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .1s ease, background .15s ease, box-shadow .15s ease;
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .submit-btn:hover { background: #fff; box-shadow: 0 0 0 6px rgba(255,255,255,0.05); }
+  .submit-btn:active { transform: translateY(1px); }
+  .submit-btn:disabled { background: var(--border-2); color: var(--fg-dim); border-color: var(--border-2); cursor: not-allowed; box-shadow: none; }
+  .submit-btn .arrow { font-family: var(--mono); font-weight: 500; }
+
+  .form-note {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    color: var(--fg-dimmer);
+    text-align: center;
+    line-height: 1.7;
+    text-transform: uppercase;
+  }
+  .form-note a { color: var(--fg-dim); text-decoration: underline; text-underline-offset: 3px; }
+
+  .error-msg {
+    display: none;
+    background: rgba(255,77,77,0.08);
+    border: 1px solid rgba(255,77,77,0.3);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #ff8585;
+    margin-bottom: 16px;
+  }
+
+  /* Success state */
+  .success {
+    display: none;
+    border: 1px solid var(--border-2);
+    border-radius: 14px;
+    background:
+      radial-gradient(80% 80% at 50% 0%, rgba(255,255,255,0.05), transparent 70%),
+      var(--bg-1);
+    padding: 56px 36px;
+    text-align: center;
+  }
+  .success .stamp {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg);
+    padding: 6px 12px;
+    border: 1px solid var(--border-3);
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .success .stamp .dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+  .success h3 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    color: var(--fg);
+    margin-bottom: 14px;
+  }
+  .success h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--fg-dim); }
+  .success p {
+    font-size: 17px;
+    color: var(--fg-dim);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 960px) {
+    .form-shell { grid-template-columns: 1fr; gap: 36px; }
+    .form-aside { position: static; }
+    .form-card { padding: 26px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .field.third { grid-column: 1 / -1; }
+  }
+
+  /* ───────── FOOTER ───────── */
+  footer.foot {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--border);
+  }
+  .foot-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .foot-brand {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--fg);
+    line-height: 1.55;
+    letter-spacing: -0.005em;
+  }
+  .foot-brand .small {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin-top: 14px;
+  }
+  .foot-col h4 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .foot-col a {
+    display: block;
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--fg);
+    margin-bottom: 8px;
+    transition: color .15s ease;
+  }
+  .foot-col a:hover { color: var(--fg-dim); }
+  .foot-bottom {
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; gap: 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-dimmer);
+    flex-wrap: wrap;
+  }
+  @media (max-width: 720px) {
+    .foot-inner { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* Print resilience for the section anchors */
+  section[id] { scroll-margin-top: 96px; }
+
+
+/* ── LEGAL PACKAGE OVERRIDES ── */
+.doc-status {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 12px;
+}
+.doc-status .dot { width:6px;height:6px;border-radius:50%;background:var(--signal-2); }
+
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-1);
+  position: sticky;
+  top: 104px;
+  z-index: 40;
+}
+.tab-btn {
+  flex: 1;
+  padding: 18px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dimmer);
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+  margin-bottom: -1px;
+}
+.tab-btn.active { color: var(--fg); border-bottom-color: var(--fg); }
+.tab-btn:hover { color: var(--fg-dim); }
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+.manifesto-body p {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--fg-dim);
+  margin-bottom: 22px;
+  max-width: 760px;
+}
+.manifesto-body p strong { color: var(--fg); }
+.manifesto-body p em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--fg);
+}
+
+.manifesto-body h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sig-block {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+.sig-block h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 20px;
+}
+.sig-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.sig-line .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-ghost);
+  width: 24px;
+  flex-shrink: 0;
+}
+.sig-line .name {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.005em;
+}
+.sig-line .org {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-dimmer);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sig-line.pending .name { color: var(--fg-ghost); font-style: italic; }
+
+.press-body {
+  max-width: 760px;
+}
+.press-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--fg-dim);
+  margin-bottom: 18px;
+}
+.press-body p strong { color: var(--fg); }
+.press-body h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin: 36px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.dateline {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--fg-dimmer);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.press-head {
+  font-family: var(--sans);
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--fg);
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+.press-subhead {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--fg-dim);
+  font-style: italic;
+  border-left: 2px solid var(--border-3);
+  padding-left: 20px;
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+.contact-block {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 36px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--fg-dim);
+  line-height: 1.8;
+}
+.contact-block strong { color: var(--fg); display: block; margin-bottom: 8px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* ══════════════════════════════════════════
+   ANNOUNCEMENT BANNER
+══════════════════════════════════════════ */
+.court-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 500;
+  background: linear-gradient(90deg, #8b1a1a, #b91c1c);
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+  font-size: 13px;
+}
+.banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.banner-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #fff;
+  animation: pulse 1.5s ease infinite;
+  flex-shrink: 0;
+}
+.banner-sep { opacity: 0.5; }
+.banner-cta {
+  background: #fff;
+  color: #8b1a1a;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.banner-cta:hover { background: #fff7f7; }
+.banner-close {
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 16px; cursor: pointer; padding: 4px 8px;
+  flex-shrink: 0;
+}
+.banner-close:hover { color: #fff; }
+@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.6; transform:scale(1.3); } }
+
+/* ══════════════════════════════════════════
+   POPUP MODAL
+══════════════════════════════════════════ */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.popup-overlay.open { display: flex; }
+.popup-card {
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-top: 3px solid #8b1a1a;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.popup-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none; border: none;
+  color: #6b6b6b; font-size: 18px;
+  cursor: pointer;
+}
+.popup-close:hover { color: #fff; }
+.popup-eyebrow {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8b1a1a; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.dot-live {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #8b1a1a; animation: pulse 1.5s ease infinite;
+  flex-shrink: 0;
+}
+.popup-title {
+  font-size: 1.6rem; font-weight: 800;
+  color: #fff; line-height: 1.2; margin-bottom: 12px;
+}
+.popup-title em { font-style: italic; color: #aaa; }
+.popup-sub {
+  font-size: 14px; color: #7a7a7a; line-height: 1.6; margin-bottom: 24px;
+}
+.popup-form { display: flex; flex-direction: column; gap: 14px; }
+.pf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pf-field { display: flex; flex-direction: column; gap: 6px; }
+.pf-field label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b6b; }
+.pf-field input {
+  background: #1a1a1a; border: 1px solid #2a2a2a;
+  color: #ededed; padding: 12px 14px; border-radius: 6px;
+  font-size: 14px; font-family: inherit;
+  transition: border-color .2s;
+}
+.pf-field input:focus { outline: none; border-color: #8b1a1a; }
+.popup-submit {
+  background: #8b1a1a; color: #fff; border: none;
+  padding: 14px 24px; border-radius: 6px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  letter-spacing: 0.04em; transition: background .2s;
+  width: 100%; margin-top: 4px;
+}
+.popup-submit:hover { background: #a01e1e; }
+.popup-privacy { font-size: 11px; color: #4a4a4a; text-align: center; }
+.popup-success { text-align: center; padding: 20px 0; }
+.success-stamp {
+  font-size: 2rem; margin-bottom: 12px;
+}
+.popup-success p { color: #7a7a7a; font-size: 14px; line-height: 1.6; }
+
+/* ══════════════════════════════════════════
+   LODGING ALERT BOX
+══════════════════════════════════════════ */
+.lodging-alert {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: rgba(139,26,26,0.1);
+  border: 1px solid rgba(139,26,26,0.3);
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+.la-icon { font-size: 22px; flex-shrink: 0; }
+.lodging-alert strong { display: block; color: #ededed; font-size: 14px; margin-bottom: 4px; }
+.lodging-alert p { font-size: 13px; color: #7a7a7a; line-height: 1.5; }
+
+/* ══════════════════════════════════════════
+   DATE CHIPS
+══════════════════════════════════════════ */
+.form-section-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #6b6b6b; margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.date-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.date-chip { cursor: pointer; }
+.date-chip input { display: none; }
+.date-chip span {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2px;
+  border: 1px solid var(--border-2);
+  border-radius: 8px;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 14px; font-weight: 600; color: var(--fg-dim);
+  transition: all .2s;
+  min-height: 70px;
+}
+.date-chip span small {
+  font-size: 10px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--fg-dimmer);
+}
+.date-chip.full-week span { grid-column: span 3; flex-direction: row; gap: 8px; }
+.date-chip:hover span { border-color: var(--border-3); color: var(--fg); }
+.date-chip input:checked + span {
+  border-color: #8b1a1a;
+  background: rgba(139,26,26,0.12);
+  color: #fff;
+}
+.date-chip input:checked + span small { color: #a87070; }
+.date-chip.full-week { grid-column: span 3; }
+.date-chip.full-week span { justify-content: center; min-height: 50px; }
+
+/* ══════════════════════════════════════════
+   LODGING OPTIONS
+══════════════════════════════════════════ */
+.lodge-cards {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+}
+.lodge-option { cursor: pointer; }
+.lodge-option input { display: none; }
+.lodge-option span {
+  display: flex; flex-direction: column; gap: 4px;
+  border: 1px solid var(--border-2);
+  border-radius: 8px; padding: 16px;
+  transition: all .2s;
+}
+.lodge-option span strong { font-size: 13px; color: var(--fg-dim); }
+.lodge-option span small { font-size: 11px; color: var(--fg-dimmer); }
+.lodge-option:hover span { border-color: var(--border-3); }
+.lodge-option input:checked + span {
+  border-color: #8b1a1a;
+  background: rgba(139,26,26,0.12);
+}
+.lodge-option input:checked + span strong { color: #fff; }
+
+/* ══════════════════════════════════════════
+   GROUP TRAVEL SECTION
+══════════════════════════════════════════ */
+.group-travel-section {
+  border: 1px solid rgba(139,26,26,0.2);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(139,26,26,0.05);
+  animation: fadeIn .25s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+
+@media (max-width: 640px) {
+  .date-picker-grid { grid-template-columns: repeat(2,1fr); }
+  .lodge-cards { grid-template-columns: 1fr; }
+  .pf-row { grid-template-columns: 1fr; }
+  .court-banner { font-size: 12px; }
+}
+
+
+  /* ── NEW SECTION BLOCKS ── */
+  .doc-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 28px;
+    color: var(--fg-dimmer);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .doc-divider::before, .doc-divider::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--border-2);
+  }
+  .doc-divider span {
+    color: var(--signal);
+    white-space: nowrap;
+  }
+
+  .finding-block {
+    border-left: 2px solid var(--border-2);
+    padding: 0 0 32px 24px;
+    margin-bottom: 8px;
+  }
+  .finding-block:last-child { border-left-color: var(--signal); }
+
+  .finding-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin-bottom: 12px;
+  }
+
+  .finding-text {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.72;
+    color: var(--fg);
+  }
+
+  .statute-quote {
+    border-left: 3px solid var(--signal);
+    padding: 14px 20px;
+    margin: 0 0 14px;
+    background: rgba(155,89,182,0.04);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.72;
+    color: var(--fg);
+  }
+  .statute-quote strong { font-style: normal; color: var(--fg); font-weight: 600; }
+
+  .statute-plain {
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--fg-dim);
+    padding: 10px 14px;
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="wrap ticker-inner">
+    <div class="ticker-left">
+      <span class="ticker-pill"><span class="dot"></span> Trial Begins June 1, 2026 · Collin County Courthouse · McKinney, TX</span>
+      <span class="ticker-divider">/</span>
+      <span>People v. Anthony · 296th District Court · Judge John Roach Jr. Presiding</span>
+    </div>
+    <div class="ticker-right">
+      <span>✊🏿 In Solidarity · Black Lives Matter Grassroots</span>
+      <span class="ticker-divider">/</span>
+      <a href="#support" style="color:#c39bd3;">Sign Court Support →</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand" style="color:#c39bd3;">
+      <div class="brand-mark" style="border-color:#3d3858;color:#c39bd3;">FK<span style="color:#6b6b6b;">·</span></div>
+      Free Karmelo · 2026
+    </div>
+    <div class="nav-links">
+      <a href="#manifesto" onclick="showTab('manifesto',0)">Manifesto</a>
+      <a href="#forensic" onclick="showTab('forensic',1)">Case Record</a>
+      <a href="#legal-record" onclick="showTab('forensic',1)">The Law</a>
+      <a href="#who-wasnt-charged" onclick="showTab('forensic',1)">Not Charged</a>
+      <a href="#who-came-to-town" onclick="showTab('forensic',1)">Who Came</a>
+      <a href="#support" class="nav-cta">Sign Court Support →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BLM SOLIDARITY BADGE -->
+<div style="background:rgba(155,89,182,0.06);border-bottom:1px solid var(--border);padding:10px 0;">
+  <div class="wrap" style="display:flex;align-items:center;gap:10px;">
+    <span style="font-size:18px;">✊🏿</span>
+    <span style="font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-dimmer);">Sponsored by Black Lives Matter Grassroots · In Solidarity with Karmelo and All Black Lives</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="eyebrow"><span class="glyph">💜</span> Wear Purple For Karmelo · Trial Begins June 1, 2026</div>
+    <h1>The <span class="italic">Record.</span><br/><span class="dim">The Law. The Truth.</span></h1>
+    <p class="hero-sub">
+      A forensic case review built from arrest reports, witness testimony, court filings, and public interviews.
+      <strong>June 1, 2026 — eleven days away.</strong> Every fact on this page is sourced.
+    </p>
+    <div class="cta-row">
+      <button class="btn btn-primary" onclick="showTab('manifesto',0)">The Manifesto <span class="arrow">→</span></button>
+      <button class="btn btn-ghost" onclick="showTab('forensic',1)">Forensic Case Record</button>
+    </div>
+    <div class="case-strip">
+      <div class="cell"><span class="k">Defendant</span><span class="v">Karmelo Sincere Anthony<span class="sub">Age 17 at time of incident</span></span></div>
+      <div class="cell"><span class="k">Charge</span><span class="v">First-Degree Murder · Texas</span></div>
+      <div class="cell"><span class="k">Trial Date</span><span class="v">June 1, 2026 · McKinney, TX</span></div>
+      <div class="cell"><span class="k">Indicted</span><span class="v">June 24, 2025 · Grand Jury</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:1px solid var(--border);padding:36px 0;background:linear-gradient(180deg,rgba(155,89,182,0.07),transparent);">
+  <div class="wrap" style="text-align:center;">
+    <p style="font-size:clamp(20px,3vw,32px);font-weight:600;letter-spacing:-0.03em;color:#c39bd3;margin-bottom:10px;">💜 Wear Purple for Karmelo.</p>
+    <p style="font-size:clamp(14px,1.8vw,18px);color:var(--fg-dim);max-width:600px;margin:0 auto;">Purple is his color. Whether you're at the courthouse, at home, or on your feed — wear purple the week of June 1. Let it be seen. Let it be counted.</p>
+  </div>
+</section>
+<hr class="rule" />
+
+<!-- TAB BAR — 3 TABS -->
+<div class="tab-bar">
+  <button class="tab-btn active" id="tab-manifesto" onclick="showTab('manifesto',0)">§01 · The Manifesto</button>
+  <button class="tab-btn" id="tab-forensic" onclick="showTab('forensic',1)">§02 · Forensic Case Record</button>
+  <!-- press tab hidden on public page -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §01 — MANIFESTO (REWRITTEN — FACTUALLY EXPANDED)      -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="pane-manifesto" class="tab-pane active">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="meta"><span class="num">§01</span> The Manifesto</div>
+      <h2>He Was the Victim.<br/>He Defended His Life.<br/><em>He Is Being Prosecuted For It.</em></h2>
+    </div>
+
+    <div class="manifesto-body">
+
+      <div class="doc-status"><span class="dot"></span> Open · Circulating for Co-Signatures · Restitution Edition · May 25, 2026</div>
+
+      <p>This is a case about a boy who was attacked and chose to live.</p>
+
+      <p>Karmelo Sincere Anthony — 17 years old, 5 feet 9 inches tall, 140 pounds — was sitting at a public track meet in the rain when two large athletes approached him, demanded he move, attempted to take his belongings, made physical contact with his body, and committed battery against him. He issued a verbal warning they ignored. He defended himself. He did not run. He walked directly to the nearest officer and told the truth: <em>"I was protecting myself."</em></p>
+
+      <p>For that act of survival, the State of Texas charged him with first-degree murder and set his bond at one million dollars. He was made the villain in the story of his own attack.</p>
+
+      <p><strong>We stand with Karmelo Anthony. Fully. Without equivocation. Without asterisks.</strong></p>
+
+      <h3>The Scene — What You Need to See</h3>
+
+      <p>It is the morning of April 2, 2025. Kuykendall Stadium, Frisco, Texas. A UIL District Championship track meet. <strong>It is raining — not misting, not drizzling — torrential rain.</strong> The bleachers are concrete and steel. The surfaces are wet. Athletes at this level know what bleachers do to a body: coaches use bleacher runs as conditioning exercises so punishing they are called <em>suicides</em>. To be thrown down a set of rain-soaked concrete bleachers by someone twice your size is not just humiliating. It can be fatal.</p>
+
+      <p>Karmelo is seated near the Memorial High School team tent, taking cover from the rain. Two young men approach him: <strong>Austin Metcalf and his identical twin brother, Hunter Metcalf.</strong> Austin is 6 feet tall and weighs 225 pounds — a football player, built and trained. Hunter Metcalf is his identical twin: same height, same build, same 225 pounds. Together they weigh 450 pounds. Karmelo weighs 140. He is outnumbered and outweighed by a ratio that no court should call equal.</p>
+
+      <p>They tell him to move. This is not a polite request. A family member present at the scene described what followed: they attempted to take Karmelo's bag. They broke his phone and stomped on it. One witness told police that Austin Metcalf "aggressively grabbed" a bag. What Karmelo was facing was not a seating dispute. Under Texas law, it was <strong>strong-arm robbery</strong> — a felony. And it was being committed against him by two people who together constituted a physical force three times his own body weight.</p>
+
+      <p>Karmelo did not swing first. He issued one warning. That warning was heard. And the aggressor moved forward anyway. What happened next is what the law calls self-defense.</p>
+
+      <h3>The Law — Applied to Reality</h3>
+
+      <p>The State of Texas wrote its self-defense law for exactly this situation. <strong>Texas Penal Code § 9.32</strong> says a person is justified in using deadly force when they reasonably believe it is immediately necessary to protect themselves. Under <strong>§ 9.32(c)</strong>, there is no duty to retreat if you have a right to be at the location, are not engaged in criminal activity, and did not provoke the confrontation. Karmelo Anthony satisfies every element.</p>
+
+      <p><strong>He had a right to be there.</strong> It was a public school track meet.</p>
+      <p><strong>He was not engaged in criminal activity.</strong> He was sitting in the rain.</p>
+      <p><strong>He did not provoke the confrontation.</strong> He was approached, not approaching.</p>
+      <p><strong>He issued a verbal warning.</strong> His warning was ignored.</p>
+      <p><strong>He was physically assaulted.</strong> That is not disputed.</p>
+
+      <p>Then there is the doctrine of <strong>Disparity of Force</strong> — one of the most established principles in American self-defense law. It holds that when an attacker is substantially larger, stronger, more numerous, or more physically capable than the defender, the defender is legally justified in responding with a level of force beyond what the attacker's apparent weapon would suggest. A 225-pound football player grabbing a 140-pound teenager on rain-soaked concrete bleachers, while that teenager's personal property is simultaneously being taken, constitutes a lethal threat. Period. The law recognizes this. The law was written to recognize this.</p>
+
+      <p>The prosecution will argue that Karmelo's verbal warning was provocation. It was not. It was de-escalation — the last attempt to resolve a confrontation without violence. The warning failed because Austin Metcalf chose not to heed it. That choice belongs to Austin Metcalf. Its consequences belong to Austin Metcalf.</p>
+
+      <h3>The Verdict That Karmelo Rendered on Himself</h3>
+
+      <p>After defending his life, Karmelo Sincere Anthony did not run. He did not discard his clothing. He did not call a lawyer before talking to police. He walked to an officer — <em>before being approached, before being questioned</em> — and said: <em>"I was protecting myself."</em> When the officer called him the alleged suspect, he corrected the record: <em>"I'm not alleged. I did it."</em> Walking to the squad car, he said: <em>"He put his hands on me. I told him not to."</em> Then he asked: <em>"Is he going to be OK?"</em></p>
+
+      <p>That is not the behavior of a murderer. That is the behavior of a young man with a clear conscience who knew exactly what happened and was not afraid to say it. No defense attorney wrote those words. No coaching produced that response. That was Karmelo Anthony, 17 years old, standing in the rain, telling the truth about the moment he chose to survive.</p>
+
+      <h3>What Was Done to Him After</h3>
+
+      <p>The State of Texas set Karmelo's bond at <strong>one million dollars</strong> — a figure designed not to ensure appearance but to incarcerate. He was a 17-year-old with no criminal record, no history of violence, and multiple witnesses corroborating his account of being attacked first. The bond was later reduced to $250,000 after public and legal pressure. He was released under ankle monitor and house arrest — a teenager, in his own home, surveilled and constrained for the act of surviving a violent assault.</p>
+
+      <p>His family began receiving death threats. His 13-year-old sister became afraid to sleep in her own room. His mother had to address a press conference under police escort while the victim's father attempted to disrupt it. A million-dollar fundraiser organized on behalf of the other family. A fabricated medical examiner's report circulated online to inflame public opinion against him. <strong>The full machinery of public outrage was aimed at the person who was attacked.</strong></p>
+
+      <p>That is not justice. That is punishment for being a Black teenager who refused to be a victim.</p>
+
+      <h3>The Opening Statement the Defense Must Make</h3>
+
+      <p style="border-left:2px solid var(--fg);padding:8px 0 8px 24px;font-style:italic;font-size:19px;line-height:1.5;color:var(--fg);margin:32px 0;">"Ladies and gentlemen of the jury — this is a case about a boy who was attacked, who warned his attacker to stop, who was not listened to, and who chose to live. The State of Texas will spend the next several days asking you to punish him for that choice. We will spend that same time asking you to see what he saw: two large, physical young men coming at a teenager who weighed less than half of what they weighed together, on wet concrete bleachers, in the rain, while they took his property. Ask yourself — not what you would have done from the comfort of this courtroom — but what any reasonable human being would do with 450 pounds of aggression coming at them and no place to go. The law calls it self-defense. Karmelo called it survival. They are the same thing."</p>
+
+      <h3>The Closing Argument the Defense Must Win With</h3>
+
+      <p style="border-left:2px solid var(--fg);padding:8px 0 8px 24px;font-style:italic;font-size:19px;line-height:1.5;color:var(--fg);margin:32px 0;">"The State of Texas must prove to you — not beyond a shadow of doubt, not to a moral certainty — but beyond a <em>reasonable</em> doubt that Karmelo Anthony did not act in lawful self-defense. They have not done that. They cannot do that. Because two independent witnesses told the police that Austin Metcalf made physical contact first. Because Karmelo Anthony was outnumbered, outweighed, and had his property taken from him on slippery bleachers designed to break bodies. Because the law of this state says that a person who is not the aggressor, who is not engaged in criminal activity, and who has a right to be at a location has no duty to retreat. Karmelo had no duty to retreat. He had a duty to survive. He fulfilled that duty. The only verdict consistent with the evidence, the law, and your conscience is not guilty."</p>
+
+      <h3>What We Ask of You</h3>
+
+      <p>We are not asking you to celebrate anyone's death. We grieve every young life lost to violence. But grief does not suspend the law. Grief does not transform a victim into a villain. Grief does not give the State the right to imprison a teenager for surviving a felony assault.</p>
+
+      <p>We are asking the legal community to examine this case before trial. We are asking civil rights attorneys to make themselves known to the Anthony family's legal team. We are asking people of conscience to be present in Collin County, Texas on June 1, 2026 — to sit in those courtroom seats and bear witness to what happens when the law is tested by the facts.</p>
+
+      <p><strong>Karmelo Anthony is not on trial for what he did. He is on trial for who he is, where he was, and what that was worth to a system that has always treated Black boys as threats before it treats them as children.</strong></p>
+
+      <p>We will be there. We ask you to stand with us.</p>
+
+      <p style="margin-top:36px;font-size:13px;color:var(--fg-dimmer);border-top:1px solid var(--border);padding-top:20px;"><em>Sources: WFAA arrest affidavit (April 3, 2025) · KERA News forensic report · Fox4 News arrest documentation · NY Post (April 3, 2025) · Newsweek (Austin Metcalf Hudl profile) · Reddit/TrueUnpopularOpinion (confirmed size data) · Kevin Hayes public statement · Texas Penal Code §§ 9.31, 9.32 · Disparity of Force doctrine, USCCA · Collin County DA indictment statement (June 24, 2025)</em></p>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §02 — FORENSIC CASE RECORD                            -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="pane-forensic" class="tab-pane">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="meta"><span class="num">§02</span> Forensic Record</div>
+      <h2>Every Sourced Fact.<br/><em>The Record as It Stands.</em></h2>
+    </div>
+
+    <div class="manifesto-body">
+
+      <div class="doc-status"><span class="dot"></span> Forensic Intelligence · All Facts Sourced · Updated May 25, 2026</div>
+
+      <h3>The Physical Reality — What the Jury Will See</h3>
+
+      <p><strong>Karmelo Sincere Anthony:</strong> 17 years old at time of incident. 5'9". Approximately 140 lbs. Senior, Centennial High School. 3.7–4.0 GPA (multiple reports). Works two jobs. Zero prior criminal record. Zero history of violence. <em>Source: Andrew Anthony, NY Post April 3, 2025; Kevin Hayes public statement; arrest report.</em></p>
+
+      <p><strong>Austin Metcalf:</strong> 17 years old. 6'0". 225 lbs. Hudl profile confirmed height and weight. Junior, Memorial High School. Football player. <strong>85 pounds heavier than Karmelo. Trained athlete.</strong> <em>Source: Hudl athletic profile (Newsweek); KERA News; Fox4.</em></p>
+
+      <p><strong>Hunter Metcalf (present at scene):</strong> Austin's identical twin brother. Same build: 6'0", approximately 225 lbs. Present during the altercation. <strong>Combined weight of both Metcalf brothers: approximately 450 lbs — more than three times Karmelo's body weight.</strong> The state will call Hunter Metcalf as a witness. He is the most biased witness possible — he watched his twin brother die. His testimony must be weighed accordingly against two independent eyewitness accounts that contradict his version of the sequence. <em>Source: WFAA; KERA News.</em></p>
+
+      <p><strong>The environmental factor:</strong> It was raining heavily — not misting, heavily — at Kuykendall Stadium at the time of the incident. The bleachers where the confrontation took place are constructed of concrete and steel. Wet bleachers at a high school stadium are a documented physical hazard. Athletes who train at this level know the term "suicides" — bleacher sprint drills used for conditioning precisely because of how punishing the surface is. To be physically thrown or forced off rain-soaked bleachers by someone with an 85-pound weight advantage is a potentially lethal scenario, independent of any weapon. The prosecution will ask the jury to ignore this environment. The defense must not let them. <em>Source: general athletic training knowledge; stadium design records.</em></p>
+
+      <h3>Verified Timeline — April 2, 2025</h3>
+
+      <p><strong>Approximately 10:00 AM CDT:</strong> UIL District 11-5A Championship at Kuykendall Stadium, Frisco, TX. Heavy rain. Karmelo Anthony (Centennial HS) is seated near the Memorial HS team tent, taking cover. Austin Metcalf approaches and tells him to move. <em>Source: WFAA arrest affidavit; KERA News; Fox4.</em></p>
+
+      <p><strong>The confrontation sequence (per arrest affidavit and witness accounts):</strong> Austin tells Karmelo he needs to move. Karmelo reaches into his bag — a warning gesture. He says: <em>"Touch me and see what happens."</em> This is a verbal warning, not a provocation. Austin was being told explicitly that physical contact would have consequences. He chose to make physical contact anyway. A witness told police Austin "aggressively grabbed" Karmelo's bag — attempting to take his belongings. Multiple family/community accounts describe Austin and Hunter as having tried to take Karmelo's property, broken his phone, and stomped on it. Under Texas law, taking someone's property by physical force is strong-arm robbery — a felony. Karmelo was the victim of a felony before he drew his knife. <em>Source: WFAA arrest affidavit; Fox4 arrest report; Kevin Hayes public statement; Reddit/news accounts.</em></p>
+
+      <p><strong>The stabbing:</strong> After Austin made physical contact — grabbed or pushed Karmelo — Karmelo drew a knife and stabbed Austin once in the chest. Austin Metcalf collapsed. The knife was later found in the bleachers — Karmelo threw it there after the stabbing. Despite CPR and blood administration by first responders, Austin Metcalf died from his injuries. This outcome is a tragedy. It is also the legal consequence of the choice Austin Metcalf made when he ignored a clear, explicit verbal warning and put his hands on a smaller person. <em>Source: KERA News; WFAA; Fox4.</em></p>
+
+      <p><strong>Immediately after:</strong> Karmelo Anthony did not run. He walked to police. Before any officer questioned him, he said unprompted: <em>"I was protecting myself."</em> When called the "alleged suspect" he said: <em>"I'm not alleged. I did it."</em> Walking to the squad car he said: <em>"He put his hands on me. I told him not to."</em> He also asked: <em>"Is he going to be OK?"</em> And: <em>"Could this be considered self-defense?"</em> These are not the words or actions of a person fleeing guilt. They are a complete, consistent, unprompted account of self-defense delivered to law enforcement immediately and voluntarily. <em>Source: Official arrest report, KERA News.</em></p>
+
+      <p><strong>April 2, 2025 — booking:</strong> Karmelo Anthony charged with first-degree murder. Bond set at <strong>$1,000,000</strong>. <em>Source: Frisco PD; Collin County records.</em></p>
+
+      <h3>The Witnesses — What the Jury Will Hear</h3>
+
+      <p><strong>Independent eyewitnesses (multiple, unnamed):</strong> Witnesses told police that Metcalf physically grabbed or pushed Karmelo after receiving a verbal warning. Two witnesses told police they did not realize Karmelo had a weapon before he drew it — consistent with Karmelo's account that his knife was a response to being physically touched, not a pre-meditated weapon display. One witness described Austin as "aggressively grabbing" a bag. The independent witnesses corroborate Karmelo's account. <em>Source: WFAA arrest affidavit; KERA News; WKYC.</em></p>
+
+      <p><strong>Kevin Hayes (Karmelo's family member, public statement):</strong> Described Karmelo as having "defended himself against violent aggressors." Said the Metcalf brothers tried to "JUMP him," tried to take his belongings, broke his phone, and stomped on it. This account has not been refuted by the arrest affidavit. <em>Source: Kevin Hayes Facebook post, reported by WFAA.</em></p>
+
+      <p><strong>Andrew Anthony (Karmelo's father):</strong> NY Post, April 3, 2025: <em>"He was not the aggressor. He was not the one who started it."</em> Described his son as a good kid, a hard worker, and a student who maintains high academic standing. This statement reflects what the evidence also shows. <em>Source: NY Post, April 3, 2025.</em></p>
+
+      <h3>Texas Self-Defense Law — The Legal Standard</h3>
+
+      <p><strong>Texas Penal Code § 9.31:</strong> A person is justified in using force when they reasonably believe it is immediately necessary to protect against another's use or attempted use of unlawful force.</p>
+
+      <p><strong>Texas Penal Code § 9.32:</strong> A person is justified in using deadly force when they reasonably believe it is immediately necessary to protect themselves against the use or attempted use of deadly force — or to prevent robbery, aggravated robbery, murder, or related offenses.</p>
+
+      <p><strong>§ 9.32(c) — No Duty to Retreat:</strong> A person who has the right to be at a location, is not engaged in criminal activity, and is not the initial aggressor has no duty to retreat before using force in self-defense. Karmelo Anthony was at a public track meet. He was not engaged in any criminal activity. He was not the initial aggressor — multiple witnesses confirm that Austin Metcalf made physical contact first. All three elements are satisfied. Karmelo had no legal obligation to retreat.</p>
+
+      <p><strong>Disparity of Force Doctrine:</strong> Established in American self-defense law and recognized by Texas courts. When an attacker presents a significant size, strength, or numbers advantage over a defender, the defender is justified in responding with a level of force that accounts for that disparity — including deadly force — even when the attacker appears to be "unarmed." Austin Metcalf was 6'0" and 225 lbs. Hunter Metcalf was physically present at the scene. The wet concrete bleachers compounded the threat. A 140-pound teenager facing two football-build athletes in that environment faced a potentially lethal threat without a weapon. The knife was the equalizer the law permits. <em>Source: USCCA Disparity of Force doctrine; Texas self-defense case law.</em></p>
+
+      <p><strong>The Prosecution's burden:</strong> The State does not need to prove Karmelo is guilty. The State must prove beyond a reasonable doubt that Karmelo was NOT acting in lawful self-defense. Given two independent witnesses, the documented size and numbers disparity, the physical environment, and Karmelo's immediate and voluntary self-declaration to police, the prosecution faces a high evidentiary bar. The defense does not need to win the argument. The defense only needs to raise reasonable doubt.</p>
+
+      <h3>Key Legal Timeline</h3>
+
+      <p><strong>April 14, 2025:</strong> Judge Emily Miskel reduces bond from $1,000,000 to $250,000. Karmelo released under ankle monitor and house arrest. <em>Source: Fox4; WFAA.</em></p>
+
+      <p><strong>June 24, 2025:</strong> Collin County Grand Jury returns first-degree murder indictment. DA Greg Willis states publicly: <em>"A defendant is presumed innocent unless and until proven guilty in a court of law."</em> <em>Source: Collin County DA, collincountyda.com.</em></p>
+
+      <p><strong>July 28, 2025:</strong> Judge John Roach Jr. issues sweeping gag order. All parties — attorneys, law enforcement, witnesses, experts — barred from public statements or social media posts about the case without prior court approval. <em>Source: WFAA; Dallas Morning News.</em></p>
+
+      <p><strong>June 1, 2026:</strong> Trial begins. 296th District Court, Collin County. 2100 Bloomdale Rd, McKinney, TX 75071. Judge John Roach Jr. presiding. <em>Source: Collin County District Court records.</em></p>
+
+      <p><strong>Potential sentence if wrongly convicted:</strong> First-degree murder in Texas: 5 to 99 years, or life, in state prison. Optional fine up to $10,000. Because Karmelo was 17 at the time of the offense, the death penalty and life without parole are not available under state and federal constitutional law. Parole eligibility: after 30 years or half the sentence, whichever is less. The stakes for Karmelo Sincere Anthony are the entirety of his adult life.</p>
+
+    </div>
+  </div>
+
+
+      <!-- ══ §02-A · THE LEGAL RECORD ═══════════════════════════════ -->
+      <div class="doc-divider" id="legal-record"><span>§02-A · The Legal Record</span></div>
+
+      <div class="finding-block">
+        <div class="finding-label">Tex. Penal Code § 9.31 — Self-Defense (Force)</div>
+        <blockquote class="statute-quote">
+          "A person is justified in using force against another when and to the degree the actor <strong>reasonably believes the force is immediately necessary</strong> to protect the actor against the other's use or attempted use of unlawful force."
+        </blockquote>
+        <div class="statute-plain">In plain English: If someone is coming at you with force you didn't start, you have the legal right to defend yourself — using as much force as necessary to stop it.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">Tex. Penal Code § 9.32 — Deadly Force in Defense of Person</div>
+        <blockquote class="statute-quote">
+          "A person is justified in using deadly force against another… if the actor <strong>reasonably believes the deadly force is immediately necessary</strong> to protect the actor against the other's use or attempted use of unlawful deadly force."
+        </blockquote>
+        <div class="statute-plain">In plain English: When the threat is serious enough that a reasonable person would fear death or serious bodily injury, deadly force is legally justified.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">Tex. Penal Code § 9.32(c) — No Duty to Retreat</div>
+        <blockquote class="statute-quote">
+          "A person who has a right to be present at the location where the deadly force is used, who has not provoked the person against whom the deadly force is used, and who is not engaged in criminal activity… <strong>has no duty to retreat before using deadly force</strong>."
+        </blockquote>
+        <div class="statute-plain">In plain English: Texas law does not require you to run. If you belong where you are, did not start the confrontation, and were not breaking the law — you may stand your ground. Karmelo was at a public track meet. He was not engaged in criminal activity. He did not start the confrontation. Texas law gave him no obligation to retreat.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">Disparity of Force Doctrine — Established Principle of American Self-Defense Law</div>
+        <div class="finding-text">When an attacker is substantially larger, stronger, more numerous, or physically superior, the defender is legally justified in responding with a higher level of force than the attack itself would imply. Karmelo Anthony: 5'9", 140 lbs. Austin Metcalf: 6'0", 225 lbs. Hunter Metcalf (also present): 6'0", approximately 225 lbs. Combined weight of both Metcalf brothers present at the scene: approximately 450 lbs — more than three times Karmelo's body weight. The doctrine exists precisely for this scenario.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">Environmental Amplifier — The Bleachers</div>
+        <div class="finding-text">The confrontation occurred on rain-soaked concrete and steel bleachers during a torrential downpour. Athletes at this level know what bleachers do to a body. Coaches use bleacher-sprint conditioning drills so physically punishing they are called "suicides." Being thrown or forced down a set of wet concrete bleachers by someone with an 85-pound weight advantage is a potentially fatal scenario — independent of any weapon. The prosecution will ask the jury to evaluate this case as if it happened on a dry gymnasium floor. The defense must not allow it.</div>
+      </div>
+
+      <!-- ══ §02-B · WHO WASN'T CHARGED ═══════════════════════════════ -->
+      <div class="doc-divider" id="who-wasnt-charged"><span>§02-B · Who Wasn't Charged</span></div>
+
+      <div class="finding-block">
+        <div class="finding-label">Hunter Metcalf — Present. Not Charged.</div>
+        <div class="finding-text">Hunter Metcalf is the identical twin brother of Austin Metcalf. Same height: 6'0". Same weight: approximately 225 lbs. He was present at the scene during the altercation. He is not charged with any crime in connection with the incident of April 2, 2025.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">What the Record Shows</div>
+        <div class="finding-text">Multiple family and community accounts describe both Austin and Hunter Metcalf as participants in the confrontation with Karmelo Anthony — attempting to take his bag, breaking his phone, and stomping on it. The arrest report obtained by KERA News lists witnesses who placed the confrontation in the context of physical aggression initiated by the Metcalf brothers. Hunter Metcalf is the prosecution's witness. He is the most biased witness possible — he watched his twin brother die. That is the factual context in which his testimony must be evaluated.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">The Charging Disparity</div>
+        <div class="finding-text">One person at that scene is charged with first-degree murder, held on a $1,000,000 bond. One person at that scene — who witnesses place as present and physically involved — faces no charges. That person is now the prosecution's star witness. The jury will decide this case. They will also see who is sitting at the defendant's table and who is sitting in the witness box.</div>
+      </div>
+
+      <!-- ══ §02-C · WHO CAME TO TOWN ═══════════════════════════════ -->
+      <div class="doc-divider" id="who-came-to-town"><span>§02-C · Who Came to Town</span></div>
+
+      <div class="finding-block">
+        <div class="finding-label">Jake Lang — Background</div>
+        <div class="finding-text">Jake Lang was among the individuals pardoned by President Donald Trump following the January 6, 2021 attack on the U.S. Capitol. He is a Republican candidate for U.S. Senate in Florida. In the weeks following Austin Metcalf's death, Lang traveled to Frisco, Texas, and hosted a rally he named "Protect White Americans" — staged at David Kuykendall Stadium, the exact location where Austin Metcalf died.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">What He Said</div>
+        <div class="finding-text">Lang posted about the case repeatedly on X (formerly Twitter), calling Karmelo Anthony a "black thug" and describing Austin Metcalf as "another victim of Black Violence in America." His posts received thousands of likes and shares. In a video that went viral, Lang publicly chastised Jeff Metcalf — the father of the boy who died.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">What the School District Said</div>
+        <div class="finding-text">Frisco ISD stated that Lang's video was "entirely inaccurate" and filmed from the wrong side of the stadium — not the area where the fatal incident occurred. The district announced it is pursuing trespassing charges against Lang.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">What Jeff Metcalf Said</div>
+        <div class="finding-text">Jeff Metcalf, the father of Austin Metcalf, called Lang and his group "race baiters" who "wanna spew their narrative for their own agenda." Metcalf has stated publicly, multiple times, that his son's death was not about race.</div>
+      </div>
+
+      <div class="finding-block">
+        <div class="finding-label">The Record</div>
+        <div class="finding-text">A Jan. 6 Capitol participant traveled to the site of a Black teenager's self-defense prosecution, held a rally called "Protect White Americans," posted racially inflammatory content about the defendant, filmed inaccurate footage from the wrong location, and was publicly disavowed by the victim's own father. This is not commentary. This is the documented record of who showed up — and why it matters to understanding the environment in which Karmelo Anthony will stand trial.</div>
+      </div>
+
+
+    </section>
+
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §03 — PRESS RELEASE                                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="pane-press" class="tab-pane">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="meta"><span class="num">§03</span> Press Release</div>
+      <h2>For Immediate Release — <em>Upon Authorization.</em></h2>
+    </div>
+
+    <div class="press-body">
+
+      <div class="contact-block">
+        <strong>Media Contact</strong>
+        Free Karmelo Justice Coalition<br/>
+        press@e5enclave.com · (305) 967-0200 · e5enclave.com/justice
+      </div>
+
+      <div class="dateline">For Immediate Release · [Date Upon Authorization] · Liberty City, Miami, Florida</div>
+
+      <div class="press-head">Coalition Declares Full Support for Karmelo Anthony Ahead of June 1 Murder Trial — Calls on Civil Rights Legal Community to Act Now</div>
+
+      <div class="press-subhead">The Miami-based nonprofit and Black Dragons Initiative assert that Karmelo Anthony was the victim of a felony assault, exercised lawful self-defense under Texas law, and is now facing prosecution in what they describe as a textbook example of systemic racial injustice. Trial begins June 1, 2026 in Collin County, Texas.</div>
+
+      <p><strong>MIAMI, FLORIDA —</strong> A justice coalition a 501(c)(3) nonprofit headquartered in Liberty City, Miami, today released a full forensic case review and advocacy position on behalf of Karmelo Sincere Anthony, an 18-year-old Black man facing a first-degree murder trial beginning June 1, 2026 in Collin County District Court, McKinney, Texas.</p>
+
+      <p>Our position is unambiguous: <strong>Karmelo Anthony was the victim of a violent assault on April 2, 2025, exercised his legal right to self-defense under Texas Penal Code §§ 9.31 and 9.32, and has been erroneously and unjustly charged with murder for surviving that assault.</strong></p>
+
+      <h3>The Facts the Public Deserves to Know</h3>
+
+      <p>On April 2, 2025, Karmelo Anthony — 17 years old, 5'9", 140 pounds, with a 3.7+ GPA and no criminal record — was seated at a public track meet in torrential rain when he was confronted by two physically large football athletes. According to the official arrest affidavit and multiple independent witnesses, one of the athletes grabbed or pushed Karmelo after he issued an explicit verbal warning. Family accounts, consistent with witness testimony, describe an attempted taking of Karmelo's personal belongings — a felony under Texas law. The physical size disparity was extreme: the two individuals together outweighed Karmelo by more than 310 pounds and were positioned on wet concrete bleachers in rain. Karmelo drew a knife and defended himself. He then walked directly to police and stated, before being questioned: <em>"I was protecting myself."</em></p>
+
+      <p>The record shows that what occurred on April 2, 2025 was a lawful act of self-defense under Texas's Stand Your Ground statute, the Disparity of Force doctrine, and any reasonable application of the facts. The prosecution of Karmelo Anthony represents a continuation of a documented pattern in which Black youth who survive attacks are treated as the perpetrators of those attacks by a system that was not designed to protect them.</p>
+
+      <h3>The Call to the Legal Community</h3>
+
+      <p>"This trial begins in six days," said a coalition organizer. "We are calling on every civil rights attorney, every defense specialist, every legal voice with standing — to make themselves known to Karmelo Anthony's legal team before those courtroom doors open. The evidence is there. The law is there. What is needed is advocacy equal to the injustice he faces."</p>
+
+      <p>This coalition is organizing peaceful, lawful court-presence support for the week of June 1–5 in McKinney, Texas. Individuals and organizations seeking to participate may register at e5enclave.com/justice/karmelo-anthony or contact press@e5enclave.com.</p>
+
+      <h3>About This Coalition</h3>
+      <p>This coalition is an independent advocacy group organized in support of Karmelo Anthony and the principle that self-defense is a legal riami, Florida. E5 operates three program verticals: the McCartney Academy (youth development), FarmBlock (food sovereignty), and the Black Dragons Initiative (civic engagement and justice advocacy). Registered in SAM.gov (CAGE: 07E88). Microsoft Nonprofit and Google for Nonprofits partner.</p>
+
+      <p><em>###</em></p>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="court-banner" id="courtBanner">
+  <div class="banner-inner">
+    <span class="banner-dot"></span>
+    <strong>June 1–5 · McKinney, TX</strong>
+    <span class="banner-sep">·</span>
+    Court support organized · Lodging available while occupancy lasts
+    <span class="banner-sep">·</span>
+    <button class="banner-cta" onclick="openSignupPopup()">Add Your Name →</button>
+  </div>
+  <button class="banner-close" onclick="document.getElementById('courtBanner').style.display='none'" aria-label="Close">✕</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHOTO GALLERY — Carousel (photos to be added)         -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section style="border-bottom:1px solid var(--border);padding:56px 0;" id="gallery">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="mono" style="color:var(--signal);margin-bottom:12px;">Gallery · Karmelo Anthony</div>
+      <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:600;letter-spacing:-0.04em;color:var(--fg);">Karmelo Anthony</h2>
+      <p style="font-size:15px;color:var(--fg-dim);margin-top:8px;">Photos coming soon. We are sourcing flattering, accurate images of Karmelo.</p>
+    </div>
+    <!-- CAROUSEL: photos load here when ready -->
+    <div id="karmeloCarousel" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch;">
+      <!-- Placeholder slots — replace with actual images -->
+      <div style="flex:0 0 280px;height:340px;background:var(--bg-2);border:1px solid var(--border-2);border-radius:12px;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;flex-direction:column;gap:8px;">
+        <span style="font-size:32px;">📸</span>
+        <span style="font-size:11px;color:var(--fg-dimmer);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Photo Slot 1</span>
+      </div>
+      <div style="flex:0 0 280px;height:340px;background:var(--bg-2);border:1px solid var(--border-2);border-radius:12px;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;flex-direction:column;gap:8px;">
+        <span style="font-size:32px;">📸</span>
+        <span style="font-size:11px;color:var(--fg-dimmer);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Photo Slot 2</span>
+      </div>
+      <div style="flex:0 0 280px;height:340px;background:var(--bg-2);border:1px solid var(--border-2);border-radius:12px;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;flex-direction:column;gap:8px;">
+        <span style="font-size:32px;">📸</span>
+        <span style="font-size:11px;color:var(--fg-dimmer);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Photo Slot 3</span>
+      </div>
+      <div style="flex:0 0 280px;height:340px;background:var(--bg-2);border:1px solid var(--border-2);border-radius:12px;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;flex-direction:column;gap:8px;">
+        <span style="font-size:32px;">📸</span>
+        <span style="font-size:11px;color:var(--fg-dimmer);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Photo Slot 4</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--fg-dimmer);text-align:center;margin-top:16px;font-family:var(--mono);">← Swipe to scroll →</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SIGNUP POPUP MODAL                                     -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="popup-overlay" id="signupPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closeSignupPopup()" aria-label="Close">✕</button>
+    <div class="popup-eyebrow"><span class="dot-live"></span> Trial begins June 1 · Collin County TX</div>
+    <h2 class="popup-title" id="popupTitle">Stand With Karmelo.<br/><em>Show Up for Justice.</em></h2>
+    <p class="popup-sub">We are organizing peaceful, lawful court presence June 1–5. Lodging support available while occupancy lasts.</p>
+
+    <a class="popup-submit" href="#support" onclick="closeSignupPopup()">
+      Sign Up Below — Takes 60 Seconds →
+    </a>
+    <p class="popup-privacy">Scroll down to the full form. Choose your dates, lodging needs, and more.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SUPPORT FORM (FULL)                                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section tight" id="support">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="meta"><span class="num">§04</span> Court Support</div>
+      <h2>Add Your Name.<br/><em>Show Up for Justice.</em></h2>
+    </div>
+
+    <div class="form-shell">
+      <div class="form-aside">
+        <p style="font-size:17px;line-height:1.7;color:var(--fg-dim);margin-bottom:24px;">Trial begins June 1, 2026 at the Collin County Courthouse in McKinney, Texas. We are organizing a peaceful, lawful court presence June 1–5. <strong style="color:var(--fg);">Lodging support is available while occupancy lasts.</strong> Add your name to be notified of logistics and updates.</p>
+
+        <div class="lodging-alert">
+          <div class="la-icon">🏨</div>
+          <div>
+            <strong>Lodging Available</strong>
+            <p>This coalition is coordinating group lodging for court support participants. Indicate below if you need accommodations. First come, first served.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:20px;border:1px solid var(--border-2);border-radius:8px;background:var(--bg-1);">
+          <div class="mono" style="margin-bottom:12px;">Trial Details</div>
+          <div style="font-size:14px;color:var(--fg-dim);line-height:2.2;">
+            <strong style="color:var(--fg);">Case:</strong> People v. Karmelo Sincere Anthony<br/>
+            <strong style="color:var(--fg);">Court:</strong> 296th District Court, Collin County<br/>
+            <strong style="color:var(--fg);">Location:</strong> 2100 Bloomdale Rd, McKinney, TX 75071<br/>
+            <strong style="color:var(--fg);">Judge:</strong> John Roach Jr.<br/>
+            <strong style="color:var(--fg);">Starts:</strong> June 1, 2026 · 9:00 AM CDT<br/>
+            <strong style="color:var(--fg);">Week:</strong> June 1 · June 2 · June 3 · June 4 · June 5
+          </div>
+        </div>
+
+        <p style="font-size:13px;color:var(--fg-dimmer);line-height:1.6;margin-top:20px;">All form submissions are recorded securely. Your information will not be shared with any third party. You will only be contacted regarding Karmelo Anthony court support.</p>
+      </div>
+
+      <div>
+        <div class="form-card">
+          <form id="supportForm">
+
+            <!-- ── IDENTITY ── -->
+            <div class="form-section-label">Your Information</div>
+            <div class="form-grid">
+              <div class="field">
+                <label class="label" for="firstName">First Name *</label>
+                <input class="input" type="text" id="firstName" name="firstName" required placeholder="First" />
+              </div>
+              <div class="field">
+                <label class="label" for="lastName">Last Name *</label>
+                <input class="input" type="text" id="lastName" name="lastName" required placeholder="Last" />
+              </div>
+              <div class="field full">
+                <label class="label" for="email">Email Address *</label>
+                <input class="input" type="email" id="email" name="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label class="label" for="phone">Phone</label>
+                <input class="input" type="tel" id="phone" name="phone" placeholder="(305) 000-0000" />
+              </div>
+              <div class="field">
+                <label class="label" for="city">City</label>
+                <input class="input" type="text" id="city" name="city" placeholder="City" />
+              </div>
+              <div class="field third">
+                <label class="label" for="state">State</label>
+                <input class="input" type="text" id="state" name="state" placeholder="TX" maxlength="2" />
+              </div>
+              <div class="field full">
+                <label class="label" for="commitment">How do you want to support?</label>
+                <select class="input" id="commitment" name="commitment">
+                  <option value="">Select commitment type</option>
+                  <option value="court_presence">Physical court presence (McKinney, TX)</option>
+                  <option value="co_signatory">Co-sign the open manifesto</option>
+                  <option value="legal_network">Legal professional — available to consult</option>
+                  <option value="remote_solidarity">Remote solidarity action</option>
+                  <option value="media_press">Press / media inquiry</option>
+                  <option value="organization">Representing an organization</option>
+                  <option value="updates_only">Keep me updated</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="texasLogisticsFields">
+            <!-- ── ATTENDANCE DATES ── -->
+            <div class="form-section-label" style="margin-top:28px;">Which days can you attend?</div>
+            <div class="date-picker-grid">
+              <label class="date-chip">
+                <input type="checkbox" name="attendance_dates" value="June 1" />
+                <span>June 1<small>Mon</small></span>
+              </label>
+              <label class="date-chip">
+                <input type="checkbox" name="attendance_dates" value="June 2" />
+                <span>June 2<small>Tue</small></span>
+              </label>
+              <label class="date-chip">
+                <input type="checkbox" name="attendance_dates" value="June 3" />
+                <span>June 3<small>Wed</small></span>
+              </label>
+              <label class="date-chip">
+                <input type="checkbox" name="attendance_dates" value="June 4" />
+                <span>June 4<small>Thu</small></span>
+              </label>
+              <label class="date-chip">
+                <input type="checkbox" name="attendance_dates" value="June 5" />
+                <span>June 5<small>Fri</small></span>
+              </label>
+              <label class="date-chip full-week">
+                <input type="checkbox" name="attendance_dates" value="Full Week" id="fullWeekChk" />
+                <span>Full Week<small>June 1–5</small></span>
+              </label>
+            </div>
+
+            <!-- ── LODGING ── -->
+            <div class="form-section-label" style="margin-top:28px;">Lodging Support</div>
+            <div class="lodge-cards">
+              <label class="lodge-option">
+                <input type="radio" name="needs_lodging" value="No" checked />
+                <span>
+                  <strong>No lodging needed</strong>
+                  <small>I have my own accommodations</small>
+                </span>
+              </label>
+              <label class="lodge-option">
+                <input type="radio" name="needs_lodging" value="Yes - Single" />
+                <span>
+                  <strong>Yes — single room</strong>
+                  <small>Requesting one room</small>
+                </span>
+              </label>
+              <label class="lodge-option">
+                <input type="radio" name="needs_lodging" value="Yes - Group" />
+                <span>
+                  <strong>Yes — group lodging</strong>
+                  <small>Traveling with others</small>
+                </span>
+              </label>
+            </div>
+
+            <!-- ── GROUP TRAVEL ── -->
+            <div class="group-travel-section" id="groupSection" style="display:none;">
+              <div class="form-section-label" style="margin-top:24px;">Group Travel Details</div>
+              <div class="form-grid">
+                <div class="field full">
+                  <label class="label" for="groupSize">Number of people in your group (including you)</label>
+                  <select class="input" id="groupSize" name="group_size">
+                    <option value="">Select group size</option>
+                    <option value="2">2 people</option>
+                    <option value="3">3 people</option>
+                    <option value="4">4 people</option>
+                    <option value="5">5 people</option>
+                    <option value="6+">6 or more</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label class="label" for="groupMembers">List your group members (first name + last name, one per line)</label>
+                  <textarea class="input" id="groupMembers" name="group_members" rows="4" placeholder="Jane Smith&#10;Marcus Johnson&#10;Aisha Williams"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── STATEMENT + ORG ── -->
+            <div class="form-grid" style="margin-top:24px;">
+              <div class="field full">
+                <label class="label" for="organization">Organization (if applicable)</label>
+                <input class="input" type="text" id="organization" name="organization" placeholder="Organization name" />
+              </div>
+              <div class="field full">
+                <label class="label" for="message">Your statement (optional)</label>
+                <textarea class="input" id="message" name="message" rows="3" placeholder="Why you stand with truth and legal process..."></textarea>
+              </div>
+            </div>
+
+            </div><!-- /texasLogisticsFields -->
+
+            <div id="formError" style="display:none;background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.3);color:#c39bd3;padding:12px 16px;border-radius:6px;font-size:13px;margin-top:16px;"></div>
+
+            <button type="submit" class="submit-btn">
+              Stand With Karmelo →
+            </button>
+          </form>
+
+          <div class="success" id="successMsg" style="display:none;">
+            <div class="stamp"><span class="dot"></span> Recorded</div>
+            <h3>Your name is on the record. <em>Thank you.</em></h3>
+            <p>We will be in touch with logistics and action updates before June 1. You are part of this.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        Free Karmelo · Justice Coalition<br/>
+        <div class="small">freekarmelo.net · freekarmelo.today</div>
+      </div>
+      <div class="foot-col">
+        <h4>This Page</h4>
+        <a href="#manifesto" onclick="showTab('manifesto',0)">The Manifesto</a>
+        <a href="#forensic" onclick="showTab('forensic',1)">Case Record</a>
+        <a href="#support">Court Support Sign-Up</a>
+      </div>
+      <div class="foot-col">
+        <h4>In Solidarity</h4>
+        <span style="color:var(--fg-dimmer);font-size:13px;">✊🏿 Black Lives Matter Grassroots</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Free Karmelo Coalition · All Rights Reserved</span>
+      <span>People v. Anthony · Collin County, TX · Trial June 1, 2026</span>
+      <span>Wear Purple for Karmelo. 💜</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── TAB SYSTEM ───
+function showTab(name, idx) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('pane-' + name).classList.add('active');
+  document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+  window.scrollTo({ top: document.querySelector('.tab-bar').offsetTop - 60, behavior: 'smooth' });
+}
+
+// ─── TRIAL COUNTDOWN ───
+function updateCountdown() {
+  const trial = new Date('2026-06-01T09:00:00-05:00');
+  const now = new Date();
+  const diff = trial - now;
+  if (diff <= 0) return;
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  const ticker = document.querySelector('.ticker-pill');
+  if (ticker) ticker.innerHTML = `<span class="dot"></span> Trial in ${d}d ${h}h ${m}m ${s}s · June 1, 2026`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ─── POPUP ───────────────────────────────────────────────
+function openSignupPopup() {
+  document.getElementById('signupPopup').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSignupPopup() {
+  document.getElementById('signupPopup').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('signupPopup').addEventListener('click', function(e) {
+  if (e.target === this) closeSignupPopup();
+});
+
+// Show popup after 30–45 seconds if not already signed up
+if (!sessionStorage.getItem('karmelo_signed')) {
+  var _delay = Math.floor(Math.random() * 15000) + 30000; // 30–45 seconds
+  setTimeout(openSignupPopup, _delay);
+}
+
+// ─── LODGING → GROUP SECTION ─────────────────────────────
+document.querySelectorAll('input[name="needs_lodging"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    var section = document.getElementById('groupSection');
+    if (this.value === 'Yes - Group') {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+});
+
+// ─── COMMITMENT TYPE → SHOW/HIDE TEXAS FIELDS ────────────
+// Co-signatory only = hide travel/lodging/dates (they are remote)
+// Court presence / any in-person = show travel fields
+function updateFieldVisibility() {
+  var commitEl = document.getElementById('commitment');
+  if (!commitEl) return;
+  var val = commitEl.value;
+  var texasFields = document.getElementById('texasLogisticsFields');
+  if (!texasFields) return;
+  var inPersonTypes = ['court_presence', 'organization', 'legal_network'];
+  var showTexas = inPersonTypes.includes(val) || val === '';
+  texasFields.style.display = showTexas ? 'block' : 'none';
+  // Also update form button label
+  var btn = document.querySelector('#supportForm .submit-btn');
+  if (btn) {
+    if (val === 'co_signatory') {
+      btn.textContent = 'Sign the Manifesto →';
+    } else if (val === 'court_presence') {
+      btn.textContent = 'Register for Court →';
+    } else {
+      btn.textContent = 'Add My Name →';
+    }
+    btn.dataset.origText = btn.textContent;
+  }
+}
+var commitSelect = document.getElementById('commitment');
+if (commitSelect) {
+  commitSelect.addEventListener('change', updateFieldVisibility);
+  updateFieldVisibility(); // run on load
+}
+
+// ─── LIVE CO-SIGNATORY LOADER ─────────────────────────────
+// Fetches live co-signatories from the E5FP backend
+// Only shows those who selected co_signatory commitment type
+async function loadLiveSignatories() {
+  try {
+    var resp = await fetch('https://sue-45c3e283.base44.app/functions/karmeloSignup');
+    if (!resp.ok) return;
+    var data = await resp.json();
+    var container = document.getElementById('liveSignatories');
+    var countEl = document.getElementById('cosigCount');
+    if (!container || !data.signatories) return;
+    var sigs = data.signatories;
+    // Update count (Israel + live sigs)
+    if (countEl) countEl.textContent = (1 + sigs.length);
+    // Render each
+    container.innerHTML = sigs.map(function(sig, idx) {
+      var num = String(idx + 2).padStart(2, '0');
+      var org = sig.organization ? ' · ' + sig.organization : (sig.city && sig.state ? sig.city + ', ' + sig.state : '');
+      return '<div class="sig-line"><span class="num">' + num + '</span><div>' +
+        '<div class="name">' + sig.name + '</div>' +
+        '<div class="org">' + org + '</div>' +
+        '</div></div>';
+    }).join('');
+  } catch(e) {
+    // Silent fail — static fallback already visible
+  }
+}
+loadLiveSignatories();
+
+// ─── FULL WEEK CHECKBOX ──────────────────────────────────
+document.getElementById('fullWeekChk').addEventListener('change', function() {
+  var allChips = document.querySelectorAll('input[name="attendance_dates"]');
+  allChips.forEach(function(chk) {
+    if (chk.value !== 'Full Week') chk.checked = this.checked;
+  }.bind(this));
+});
+
+// ─── SHARED SUBMIT FUNCTION ──────────────────────────────
+async function submitKarmeloForm(formEl, successEl, btnEl) {
+  const fd = new FormData(formEl);
+  const data = Object.fromEntries(fd.entries());
+
+  // Collect multi-check dates
+  const dates = Array.from(formEl.querySelectorAll('input[name="attendance_dates"]:checked'))
+    .map(c => c.value).filter(v => v !== 'Full Week');
+  data.availability = dates.join(', ') || 'Not specified';
+  data.can_travel = (data.commitment === 'court_presence' || dates.length > 0) ? 'YES' : 'NO';
+  data.source = 'freekarmelo-public-page';
+
+  btnEl.textContent = 'Recording...';
+  btnEl.disabled = true;
+
+  try {
+    const resp = await fetch('https://sue-45c3e283.base44.app/functions/karmeloSignup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await resp.json().catch(() => ({}));
+    if (!resp.ok) throw new Error(result.error || 'Server error ' + resp.status);
+
+    sessionStorage.setItem('karmelo_signed', '1');
+    formEl.style.display = 'none';
+    successEl.style.display = 'block';
+
+    // Update any supporter counters
+    if (result.count) {
+      document.querySelectorAll('[data-supporter-count]').forEach(function(el) {
+        el.textContent = result.count;
+      });
+    }
+  } catch (err) {
+    console.error('[karmelo-signup]', err);
+    btnEl.textContent = btnEl.dataset.origText || 'Add My Name →';
+    btnEl.disabled = false;
+    const errBox = formEl.querySelector('[id$="Error"]') || formEl.querySelector('.form-error');
+    if (errBox) {
+      errBox.textContent = err.message || 'Network error. Please try again.';
+      errBox.style.display = 'block';
+    }
+  }
+}
+
+// ─── MAIN FORM ───────────────────────────────────────────
+document.getElementById('supportForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.submit-btn');
+  btn.dataset.origText = btn.textContent;
+  await submitKarmeloForm(this, document.getElementById('successMsg'), btn);
+});
+
+// popup redirects to #support — no separate form submission
+
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the Karmelo Anthony case about?","acceptedAnswer":{"@type":"Answer","text":"Karmelo Anthony is a Black teen from Dallas, Texas charged with first-degree murder after fatally stabbing Austin Metcalf at a UIL track meet on April 2, 2025. Anthony argues self-defense under Texas Penal Code § 9.32. The trial begins June 1, 2026 in Collin County."}},
+{"@type":"Question","name":"When is Karmelo Anthony\'s trial?","acceptedAnswer":{"@type":"Answer","text":"The Karmelo Anthony trial begins June 1, 2026 in Collin County, Texas. Judge Emily Miskel is presiding."}},
+{"@type":"Question","name":"What happened at the Karmelo Anthony case in Collin County?","acceptedAnswer":{"@type":"Answer","text":"On April 2, 2025 at a UIL track meet in Frisco, Texas, Karmelo Anthony was physically confronted by Austin Metcalf and his twin brother. After physical contact, Anthony fatally stabbed Austin Metcalf then surrendered immediately to police. His defense argues lawful self-defense under Texas Stand Your Ground law."}},
+{"@type":"Question","name":"What happened to Karmelo Anthony?","acceptedAnswer":{"@type":"Answer","text":"Karmelo Anthony was arrested April 2, 2025 and charged with first-degree murder. His bond was reduced from $1M to $250,000. He was released and has maintained his self-defense claim. Trial begins June 1, 2026."}},
+{"@type":"Question","name":"What is the latest Karmelo Anthony trial update?","acceptedAnswer":{"@type":"Answer","text":"As of May 2026, jury selection is underway in Collin County. Trial starts June 1, 2026. This coalition is tracking all updates and providing ongoing public coverage."}}
+]}
+</script>
+<!-- CF-REBUILD: 2026-05-24 -->
+
+
+</body>
+</html>
