@@ -301,90 +301,70 @@ a { color: inherit; text-decoration: none; }
 .photo-section-head p {
   font-size: 15px; color: var(--fg-dim); margin-top: 8px;
 }
-.carousel-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 .carousel-track {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  gap: 12px;
-  padding: 0 16px 12px;
-  /* Let content define height — no fixed height here */
+  gap: 10px;
+  padding: 0 16px 16px;
 }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-slide {
-  flex: 0 0 clamp(200px, 65vw, 260px);
+  flex-shrink: 0;
+  width: clamp(180px, 60vw, 260px);
   scroll-snap-align: start;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-2);
-  position: relative;
   background: var(--bg-2);
-  /* NO aspect-ratio on flex child — breaks Safari */
+  position: relative;
+  cursor: pointer;
+  /* No height/aspect-ratio on the flex child itself */
 }
-@media (min-width: 520px) {
-  .carousel-slide { flex: 0 0 clamp(220px, 30vw, 280px); }
+@media (min-width: 540px) {
+  .carousel-slide { width: clamp(220px, 28vw, 280px); }
 }
-/* Padding-top trick: universal cross-browser aspect ratio */
+/* Universal aspect-ratio via padding-bottom on ::before */
 .carousel-slide::before {
   content: '';
   display: block;
-  padding-top: 130%; /* ~3:4 portrait */
+  padding-bottom: 130%;
 }
-@media (min-width: 600px) {
-  .carousel-slide {
-    flex: 0 0 clamp(240px, 30vw, 300px);
-    aspect-ratio: 2/3;
-  }
-}
+/* Absolute fill — covers the ::before spacer */
 .carousel-slide img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 10%;
   display: block;
-  transition: transform .35s ease;
+  transition: transform 0.4s ease;
 }
-.carousel-slide:hover img { transform: scale(1.03); }
+.carousel-slide:hover img { transform: scale(1.05); }
 .slide-caption {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(6,4,16,0.92) 0%, transparent 100%);
-  padding: 28px 14px 12px;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(4,2,12,0.95) 0%, rgba(4,2,12,0.5) 60%, transparent 100%);
+  padding: 36px 14px 12px;
   font-family: var(--serif);
   font-style: italic;
   font-size: 13px;
   color: var(--purple-light);
   line-height: 1.4;
+  z-index: 2;
   pointer-events: none;
 }
-/* Photo counter badge */
-.carousel-counter {
-  position: absolute;
-  bottom: 18px; right: 18px;
-  background: rgba(108,52,131,0.85);
-  color: #fff;
+.carousel-hint {
+  text-align: center;
+  padding: 8px 0 0;
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.1em;
-  padding: 4px 10px;
-  border-radius: 999px;
-  pointer-events: none;
-  z-index: 10;
-  display: none; /* shown by JS */
-}
-.carousel-hint {
-  max-width: 1200px; margin: 0 auto;
-  padding: 8px 16px 0;
-  font-family: var(--mono); font-size: 10px;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--fg-dimmer); text-align: center;
+  text-transform: uppercase;
+  color: var(--fg-dimmer);
 }
 
 /* ── MANIFESTO BODY ── */
@@ -898,7 +878,7 @@ textarea.f-input { resize: vertical; min-height: 78px; }
     <div class="ticker-right">
       <span>Wear Purple for Karmelo 💜</span>
       <span class="ticker-sep">/</span>
-      <a class="ticker-cta" href="#signup" onclick="switchTab('signup')">Add Your Name →</a>
+      <a class="ticker-cta" href="#signup" onclick="event.preventDefault();document.getElementById('signup').scrollIntoView({behavior:'smooth',block:'start'})">Add Your Name →</a>
     </div>
   </div>
 </div>
@@ -914,7 +894,7 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <button class="nav-tab" onclick="switchTab('charge')">The Charge</button>
           <button class="nav-tab" onclick="switchTab('truth')">The Truth</button>
     </div>
-    <button class="nav-cta-btn" onclick="switchTab('signup')">Sign Up →</button>
+    <button class="nav-cta-btn" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth',block:'start'})">Sign Up →</button>
   </div>
 </nav>
 
@@ -1513,6 +1493,7 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 <script>
 // ── TAB SYSTEM ──
 function switchTab(name) {
+  if (name === 'signup') { var el = document.getElementById('signup'); if (el) el.scrollIntoView({behavior:'smooth',block:'start'}); return; }
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
   const pane = document.getElementById('pane-' + name);
@@ -1553,7 +1534,9 @@ setInterval(updateTicker, 1000);
 updateTicker();
 
 // ── COMMITMENT → show/hide Texas fields ──
-document.querySelectorAll('input[name="commitment"]').forEach(function(r) {
+document.document.addEventListener('DOMContentLoaded', function() {
+
+querySelectorAll('input[name="commitment"]').forEach(function(r) {
   r.addEventListener('change', function() {
     var inPerson = ['court_presence','legal_network','organization',''].includes(this.value);
     document.getElementById('texasFields').style.display = inPerson ? 'block' : 'none';
@@ -1614,6 +1597,8 @@ document.getElementById('supportForm').addEventListener('submit', async function
     err.style.display = 'block';
   }
 });
+
+}); // end DOMContentLoaded
 
 // ── SHARE ──
 function shareTwitter() {
