@@ -1,220 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Free Karmelo — Print Signs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Karmelo — Printable Signs & Downloads</title>
+<meta name="description" content="Download FREE Karmelo Anthony protest signs. Print-ready PNG, PDF, SVG. Trial June 1, 2026 — McKinney TX."/>
+<meta property="og:title" content="Free Karmelo — Printable Signs"/>
+<meta property="og:description" content="Download FREE protest signs for the Karmelo Anthony trial. June 1, McKinney TX. Self-defense is not a crime."/>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background: #1a0a2e;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: center;
-}
-.print-instructions {
-  background: #6c3483;
-  color: #fff;
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 14px;
-  text-align: center;
-  width: 100%;
-  max-width: 900px;
-  line-height: 1.7;
-}
-.sign {
-  width: 900px;
-  aspect-ratio: 3/1.4;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  border: 4px solid #6c3483;
-  page-break-after: always;
-}
-
-/* SIGN 1 — FREE KARMELO */
-.sign-1 {
-  background: #3d1f5e;
-}
-.sign-1 .main-text {
-  font-size: 140px;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.88;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-  text-shadow: 0 4px 32px rgba(0,0,0,0.5);
-  z-index: 2;
-  position: relative;
-}
-.sign-1 .main-text span { color: #c39bd3; }
-.sign-1::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(155,89,182,0.15), transparent);
-}
-
-/* SIGN 2 — JUSTICE FOR KARMELO */
-.sign-2 {
-  background: #0a0612;
-  border-color: #9b59b6;
-}
-.sign-2 .top-line {
-  font-size: 52px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #9b59b6;
-  text-align: center;
-  margin-bottom: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial', sans-serif;
-}
-.sign-2 .main-line {
-  font-size: 132px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 0.85;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-}
-.sign-2 .sub-line {
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #c39bd3;
-  text-align: center;
-  margin-top: 8px;
-}
-.sign-2 .border-strip {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 12px;
-  background: linear-gradient(90deg, #6c3483, #9b59b6, #6c3483);
-}
-
-/* SIGN 3 — SELF DEFENSE IS NOT A CRIME */
-.sign-3 {
-  background: #2d1050;
-  border-color: #c39bd3;
-  aspect-ratio: 3/1.6;
-}
-.sign-3 .line1 {
-  font-size: 72px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-}
-.sign-3 .line2 {
-  font-size: 72px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: #c39bd3;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-  line-height: 1;
-  margin: 2px 0;
-}
-.sign-3 .line3 {
-  font-size: 72px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-}
-.sign-3 .line4 {
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-  color: #9b59b6;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Arial Black', Arial, sans-serif;
-  margin-top: 6px;
-}
-.sign-3 .accent {
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 10px;
-  background: linear-gradient(90deg, #6c3483, #c39bd3, #6c3483);
-}
-.sign-3 .accent-b {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 10px;
-  background: linear-gradient(90deg, #6c3483, #c39bd3, #6c3483);
-}
-
-/* footer tag on all signs */
-.sign-footer {
-  position: absolute;
-  bottom: 16px; right: 20px;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-}
-
-@media print {
-  body {
-    background: white;
-    padding: 0;
-  }
-  .print-instructions { display: none; }
-  .sign {
-    width: 100%;
-    page-break-after: always;
-    border-radius: 0;
-  }
-}
+:root{--bg:#07070f;--bg1:#0f0a18;--border:#2a1a3e;--purple:#9b59b6;--purple-light:#c39bd3;--fg:#f0eaf8;--fg-dim:#8a6fa0;--mono:'Courier New',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;min-height:100vh}
+.top-bar{background:#0a0a0f;border-bottom:1px solid var(--border);padding:10px 0;text-align:center}
+.top-bar span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--purple)}
+nav{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a{color:var(--purple-light);font-size:13px;text-decoration:none;font-family:var(--mono);letter-spacing:.08em}
+.hero{padding:56px 24px 32px;text-align:center;max-width:800px;margin:0 auto}
+.hero .tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.hero h1{font-size:clamp(28px,5vw,52px);font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px}
+.hero h1 em{color:var(--purple);font-style:normal}
+.hero p{font-size:14px;color:var(--fg-dim);line-height:1.7;max-width:580px;margin:0 auto 24px}
+.instructions{background:var(--bg1);border:1px solid var(--border);border-radius:8px;padding:20px 24px;max-width:760px;margin:0 auto 48px;font-size:13px;color:var(--fg-dim);line-height:1.7}
+.instructions strong{color:var(--fg)}
+.instructions ul{padding-left:1.4em;margin-top:8px}
+.signs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:1100px;margin:0 auto;padding:0 24px 80px}
+.sign-card{background:var(--bg1);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.sign-preview{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-weight:900;letter-spacing:-.03em;text-align:center;padding:20px;line-height:1.1}
+.sign-info{padding:16px}
+.sign-info h3{font-size:14px;font-weight:600;color:var(--fg);margin-bottom:6px}
+.sign-info p{font-size:12px;color:var(--fg-dim);line-height:1.5;margin-bottom:14px}
+.dl-btns{display:flex;gap:8px;flex-wrap:wrap}
+.dl-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:4px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-weight:600;cursor:pointer;border:none;transition:opacity .2s}
+.dl-btn:hover{opacity:.85}
+.dl-png{background:rgba(155,89,182,.18);color:var(--purple-light);border:1px solid var(--border)}
+.dl-pdf{background:rgba(155,89,182,.18);color:var(--purple-light);border:1px solid var(--border)}
+.dl-svg{background:rgba(155,89,182,.18);color:var(--purple-light);border:1px solid var(--border)}
+.coming-soon{opacity:.5;cursor:not-allowed}
+.footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--fg-dim);letter-spacing:.06em}
+.footer a{color:var(--purple);text-decoration:none}
 </style>
 </head>
 <body>
 
-<div class="print-instructions">
-  💜 <strong>PRINT INSTRUCTIONS:</strong> Print on letter paper (8.5×11") or tabloid (11×17") for larger signs. Use color printing. Each sign is on its own page. Right-click → Print or Ctrl+P → Print All Pages.<br/>
-  For outdoor signs: print on cardstock, laminate, and attach to foam board or wooden dowel.
+<div class="top-bar">
+  <span>✊🏿 Free Karmelo · Trial June 1–5 · McKinney TX · In Solidarity with BLM Grassroots 💜</span>
 </div>
 
-<!-- SIGN 1: FREE KARMELO -->
-<div class="sign sign-1">
-  <div class="main-text">Free<br/><span>Karmelo</span></div>
-  <div class="sign-footer">freekarmelo.net · Trial June 1, 2026</div>
+<nav>
+  <a href="https://freekarmelo.net">← freekarmelo.net</a>
+  <a href="https://freekarmelo.today">freekarmelo.today</a>
+</nav>
+
+<div class="hero">
+  <div class="tag">Print · Share · Show Up</div>
+  <h1>Free <em>Karmelo</em><br/>Sign Downloads</h1>
+  <p>Download and print protest signs for the Karmelo Anthony trial. Bring them to the courthouse in McKinney, TX on June 1–5, 2026, share on social media, or display in your community.</p>
 </div>
 
-<!-- SIGN 2: JUSTICE FOR KARMELO -->
-<div class="sign sign-2">
-  <div class="top-line">Justice For</div>
-  <div class="main-line">Karmelo</div>
-  <div class="sub-line">Self Defense Is Not A Crime 💜</div>
-  <div class="border-strip"></div>
-  <div class="sign-footer">freekarmelo.net</div>
+<div class="instructions" style="max-width:760px;margin:0 auto 40px">
+  <strong>🖨️ Print Instructions</strong>
+  <ul>
+    <li><strong>For outdoor signs:</strong> Print on cardstock (110 lb), laminate, and attach to foam board or a wooden dowel</li>
+    <li><strong>For standard letter paper:</strong> Print at 8.5"x11" — still visible and effective</li>
+    <li><strong>Best print size:</strong> 11"x17" (tabloid) for maximum impact at the courthouse</li>
+    <li><strong>Color recommended</strong> — use purple and black for solidarity with the Karmelo coalition</li>
+    <li><strong>Social media:</strong> PNG files are optimized for Instagram, Twitter/X, and Facebook</li>
+  </ul>
 </div>
 
-<!-- SIGN 3: SELF DEFENSE IS NOT A CRIME -->
-<div class="sign sign-3">
-  <div class="accent"></div>
-  <div class="line1">Self Defense</div>
-  <div class="line2">Is Not</div>
-  <div class="line3">A Crime.</div>
-  <div class="line4">#FreeKarmelo · Trial June 1, 2026 · McKinney, TX</div>
-  <div class="accent-b"></div>
-  <div class="sign-footer">freekarmelo.net</div>
+<div class="signs-grid">
+
+  <!-- Sign 1 -->
+  <div class="sign-card">
+    <div class="sign-preview" style="background:#0a0010;color:#fff;font-size:clamp(28px,6vw,42px)">
+      FREE<br/><span style="color:#9b59b6">KARMELO</span>
+    </div>
+    <div class="sign-info">
+      <h3>FREE KARMELO</h3>
+      <p>The primary movement sign. Bold, direct, unambiguous.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/free-karmelo.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/free-karmelo.pdf" download>↓ PDF</a>
+        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/free-karmelo.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign 2 -->
+  <div class="sign-card">
+    <div class="sign-preview" style="background:#0d0020;color:#c39bd3;font-size:clamp(16px,3.5vw,26px)">
+      SELF DEFENSE<br/><span style="color:#fff">IS NOT</span><br/>A CRIME
+    </div>
+    <div class="sign-info">
+      <h3>SELF DEFENSE IS NOT A CRIME</h3>
+      <p>The core legal argument. Texas Penal Code §9.32 — he had every right.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/self-defense.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/self-defense.pdf" download>↓ PDF</a>
+        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/self-defense.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign 3 -->
+  <div class="sign-card">
+    <div class="sign-preview" style="background:#050510;color:#fff;font-size:clamp(13px,2.8vw,20px)">
+      <div>140 LBS<br/><span style="color:#9b59b6">vs</span><br/>450 LBS</div>
+      <div style="font-size:.55em;color:#8a6fa0;margin-top:8px;font-weight:400">3:1 DISPARITY OF FORCE</div>
+    </div>
+    <div class="sign-info">
+      <h3>HE WAS 140 LBS vs 450 LBS</h3>
+      <p>The disparity of force argument. Two attackers. 3:1 body weight ratio. No choice.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/disparity.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/disparity.pdf" download>↓ PDF</a>
+        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/disparity.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign 4 -->
+  <div class="sign-card">
+    <div class="sign-preview" style="background:#08000f;color:#fff;font-size:clamp(13px,2.8vw,20px)">
+      HERO AT 14<br/><span style="color:#9b59b6">MURDERER</span><br/>AT 17?
+    </div>
+    <div class="sign-info">
+      <h3>HERO AT 14, MURDERER AT 17?</h3>
+      <p>He saved a 6-year-old from drowning in 2021. His picture was in the local paper. Now they want to put him in prison.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/hero-at-14.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/hero-at-14.pdf" download>↓ PDF</a>
+        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/hero-at-14.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Sign 6 -->
+  <div class="sign-card">
+    <div class="sign-preview" style="background:#050010;color:#fff;font-size:clamp(16px,3.5vw,28px)">
+      JUSTICE<br/>FOR<br/><span style="color:#9b59b6">KARMELO</span>
+    </div>
+    <div class="sign-info">
+      <h3>JUSTICE FOR KARMELO</h3>
+      <p>Simple. Powerful. The movement's core demand.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/justice-for-karmelo.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/justice-for-karmelo.pdf" download>↓ PDF</a>
+        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/justice-for-karmelo.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div style="margin-bottom:8px">Produced by <a href="https://e5enclave.com/justice/karmelo-anthony/">E5 Enclave INCORPORATED</a> · <a href="https://freekarmelo.net">freekarmelo.net</a> · <a href="https://freekarmelo.today">freekarmelo.today</a></div>
+  <div>✊🏿 In Solidarity with Black Lives Matter Grassroots · June 1–5, 2026 · McKinney, TX 💜</div>
 </div>
 
 </body>
