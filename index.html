@@ -963,65 +963,251 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 </section>
 
 <!-- PHOTOS -->
-<section class="photo-section">
-  <div class="photo-section-head">
-    <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:10px;">Who He Is</div>
-    <h2>Look at Him.</h2>
-    <p>Not a headline. Not a charge. A child. An athlete. A student. A teammate. A brother. Someone's son.</p>
+<section class="photo-section" id="photos">
+
+    <style>
+    /* ── PREMIUM PHOTO WALL ── */
+    .pw-section {
+      max-width: 1200px; margin: 0 auto; padding: 0 28px 56px;
+    }
+    .pw-head {
+      text-align: center; margin-bottom: 28px;
+    }
+    .pw-head .pw-tag {
+      font-family: monospace; font-size: 10px; letter-spacing: .22em;
+      text-transform: uppercase; color: #9b59b6; display: block; margin-bottom: 12px;
+    }
+    .pw-head h2 { font-size: clamp(26px,4vw,40px); font-weight:800; letter-spacing:-.03em; margin:0 0 10px; }
+    .pw-head p  { font-size:14px; color:#8a6fa0; line-height:1.7; max-width:520px; margin:0 auto; }
+
+    /* ── GRID ── */
+    .pw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 4px;                        /* tight editorial gap */
+      background: #07070f;             /* gap colour = page bg = invisible seam */
+    }
+    /* Tall hero cell spans 2 rows */
+    .pw-cell.tall  { grid-row: span 2; }
+    /* Wide accent cell spans 2 cols */
+    .pw-cell.wide  { grid-column: span 2; }
+
+    /* Each cell is a positioned container — the image fills it completely */
+    .pw-cell {
+      position: relative;
+      overflow: hidden;
+      background: #0f0a18;
+      cursor: pointer;
+    }
+    /* Enforce fixed aspect ratio per cell type */
+    .pw-cell::before {
+      content: '';
+      display: block;
+      padding-top: 75%;                /* 4:3 default */
+    }
+    .pw-cell.tall::before  { padding-top: 151%; } /* 2 rows ≈ 2×75% + gap */
+    .pw-cell.wide::before  { padding-top: 37%;  } /* 2 cols wide = shorter */
+    .pw-cell.sq::before    { padding-top: 100%; } /* 1:1 square */
+
+    /* Image fills the cell — absolutely positioned inside */
+    .pw-cell img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform .45s ease, filter .45s ease;
+    }
+    /* Hover: subtle lift, not dramatic zoom */
+    .pw-cell:hover img {
+      transform: scale(1.04);
+      filter: brightness(1.08);
+    }
+    /* Frame: 2px purple border revealed on hover */
+    .pw-cell::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 2px solid transparent;
+      transition: border-color .3s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .pw-cell:hover::after {
+      border-color: rgba(155,89,182,.7);
+    }
+    /* Caption: gradient overlay, always at bottom, never floats */
+    .pw-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent 0%, rgba(7,7,15,.9) 100%);
+      padding: 32px 14px 12px;
+      font-family: monospace;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #c39bd3;
+      line-height: 1.4;
+      z-index: 1;
+      transition: opacity .3s ease;
+    }
+
+    /* ── LIGHTBOX ── */
+    .pw-lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.95);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .pw-lightbox.open { display: flex; }
+    .pw-lightbox-img {
+      max-width: 92vw; max-height: 88vh;
+      object-fit: contain;
+      border: 1px solid rgba(155,89,182,.3);
+      border-radius: 4px;
+    }
+    .pw-lightbox-caption {
+      margin-top: 14px;
+      font-family: monospace; font-size: 11px;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: #9b59b6; text-align: center;
+    }
+    .pw-lightbox-close {
+      position: absolute; top: 20px; right: 28px;
+      color: #9b59b6; font-size: 28px;
+      cursor: pointer; font-family: monospace; line-height: 1;
+      background: none; border: none; padding: 0;
+    }
+    .pw-lightbox-close:hover { color: #fff; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .pw-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .pw-cell.tall  { grid-row: span 1; }
+      .pw-cell.wide  { grid-column: span 1; }
+      .pw-cell::before       { padding-top: 100%; }
+      .pw-cell.tall::before  { padding-top: 100%; }
+      .pw-cell.wide::before  { padding-top: 100%; }
+    }
+    </style>
+
+
+  <div class="pw-section">
+    <div class="pw-head">
+      <span class="pw-tag">Who He Is</span>
+      <h2>Look at Him.</h2>
+      <p>Not a headline. Not a charge. A child. An athlete. A student. A teammate. A brother. Someone's son.</p>
+    </div>
+
+    <div class="pw-grid">
+
+      <!-- Row 1, Col 1 — TALL HERO: spans 2 rows -->
+      <div class="pw-cell tall" onclick="pwOpen(this)">
+        <img src="https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/4be2bc6af_karmelo_hero2.jpg"
+             alt="Karmelo Anthony — Titans school portrait, navy blazer, red and blue striped tie"
+             loading="eager"/>
+        <div class="pw-caption">A student. A Titan.</div>
+      </div>
+
+      <!-- Row 1, Col 2 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/8293324cf_IMG_2636.jpg"
+             alt="Karmelo Anthony in Centennial High School football uniform, #6"
+             loading="lazy"/>
+        <div class="pw-caption">An athlete. #6.</div>
+      </div>
+
+      <!-- Row 1, Col 3 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/ae59458d7_IMG_2641.jpg"
+             alt="Karmelo Anthony in baseball uniform, running bases"
+             loading="lazy"/>
+        <div class="pw-caption">A ballplayer.</div>
+      </div>
+
+      <!-- Row 2, Col 2+3 — WIDE: spans 2 cols -->
+      <div class="pw-cell wide" onclick="pwOpen(this)">
+        <img src="https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/ae70260d0_karmelo_hero1.jpg"
+             alt="Karmelo Anthony in cream suit at formal event, arms crossed, poised and confident"
+             style="object-position: center 20%;"
+             loading="lazy"/>
+        <div class="pw-caption">Composed. Dignified. 17 years old.</div>
+      </div>
+
+      <!-- Row 3, Col 1 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/2edce5022_IMG_2643.jpg"
+             alt="Karmelo Anthony laughing with teammate in baseball dugout"
+             loading="lazy"/>
+        <div class="pw-caption">A kid who made everyone smile.</div>
+      </div>
+
+      <!-- Row 3, Col 2 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/61278a9ae_IMG_2642.jpg"
+             alt="Karmelo Anthony with teammates in red baseball uniforms"
+             loading="lazy"/>
+        <div class="pw-caption">A teammate.</div>
+      </div>
+
+      <!-- Row 3, Col 3 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/f61cd3cc9_IMG_2646.jpg"
+             alt="Karmelo Anthony as a child with younger siblings in matching plaid shirts"
+             loading="lazy"/>
+        <div class="pw-caption">A brother.</div>
+      </div>
+
+      <!-- Row 4, Col 1+2 — WIDE -->
+      <div class="pw-cell wide" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/1c4c30d1c_IMG_2708.jpg"
+             alt="Karmelo Anthony with family"
+             loading="lazy"/>
+        <div class="pw-caption">A son. A family man.</div>
+      </div>
+
+      <!-- Row 4, Col 3 -->
+      <div class="pw-cell" onclick="pwOpen(this)">
+        <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/be0b85bfc_IMG_2640.jpg"
+             alt="Karmelo Anthony at school, smiling"
+             loading="lazy"/>
+        <div class="pw-caption">A student with a future.</div>
+      </div>
+
+    </div>
   </div>
-  <div class="carousel-track" id="carouselTrack">
 
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/8293324cf_IMG_2636.jpg" alt="Karmelo Anthony in football uniform at Centennial High School, David Kuykendall Stadium" loading="lazy"/>
-      <div class="slide-caption">An athlete. Centennial High School, #6.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/ae59458d7_IMG_2641.jpg" alt="Karmelo Anthony in baseball uniform, running bases" loading="lazy"/>
-      <div class="slide-caption">A ballplayer. Running. Free.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/2edce5022_IMG_2643.jpg" alt="Karmelo Anthony laughing with teammate in baseball dugout" loading="lazy"/>
-      <div class="slide-caption">A kid who made everybody smile.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/61278a9ae_IMG_2642.jpg" alt="Karmelo Anthony with teammates in red baseball uniforms in the dugout" loading="lazy"/>
-      <div class="slide-caption">A teammate.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/f61cd3cc9_IMG_2646.jpg" alt="Karmelo Anthony as a child with younger siblings, wearing plaid shirts" loading="lazy"/>
-      <div class="slide-caption">A brother.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/1c4c30d1c_IMG_2708.jpg" alt="Young Karmelo Anthony dressed up at formal event with lanyards" loading="lazy"/>
-      <div class="slide-caption">A child, dressed up, looking up.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/55c9b3b07_IMG_2709.jpg" alt="Young Karmelo Anthony in LSU Tigers shirt, smiling in selfie" loading="lazy"/>
-      <div class="slide-caption">A kid who loved people.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/e70e6185a_IMG_2645.jpg" alt="Young Karmelo Anthony in red plaid shirt at hotel lobby" loading="lazy"/>
-      <div class="slide-caption">Someone's son.</div>
-    </div>
-
-    <div class="carousel-slide">
-      <img src="https://media.base44.com/images/public/69d7dd5e015cd1aa45c3e283/be0b85bfc_IMG_2640.jpg" alt="Karmelo Anthony smiling at arcade in striped shirt" loading="lazy"/>
-      <div class="slide-caption">A 17-year-old on trial for surviving.</div>
-    </div>
-
+  <!-- ── PREMIUM LIGHTBOX ── -->
+  <div class="pw-lightbox" id="pw-lightbox" onclick="pwClose()">
+    <button class="pw-lightbox-close" onclick="pwClose()" aria-label="Close">&#x2715;</button>
+    <img class="pw-lightbox-img" id="pw-lb-img" src="" alt=""/>
+    <div class="pw-lightbox-caption" id="pw-lb-cap"></div>
   </div>
 
+  <script>
+    function pwOpen(cell) {
+      var img = cell.querySelector('img');
+      var cap = cell.querySelector('.pw-caption');
+      document.getElementById('pw-lb-img').src = img.src;
+      document.getElementById('pw-lb-img').alt = img.alt;
+      document.getElementById('pw-lb-cap').textContent = cap ? cap.textContent : '';
+      document.getElementById('pw-lightbox').classList.add('open');
+    }
+    function pwClose() {
+      document.getElementById('pw-lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') pwClose();
+    });
+  </script>
 
-
-  </div>
-  <div class="carousel-hint">← Swipe to scroll →</div>
 </section>
 
 <!-- ════════════════════════════════════ -->
