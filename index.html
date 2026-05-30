@@ -868,6 +868,15 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 </style>
 </head>
 <body>
+  <!-- ✊🏿 BLM GRASSROOTS SOLIDARITY BADGE -->
+  <div style="background:#0a0a0f;border-bottom:1px solid #2a1a3e;padding:10px 0;text-align:center;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <span style="font-size:1.3rem;">✊🏿</span>
+      <span style="font-family:monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#9b59b6;font-weight:600;">In Solidarity with Black Lives Matter Grassroots</span>
+      <span style="font-family:monospace;font-size:10px;color:#5a3a6a;letter-spacing:0.1em;">· Court Support · June 1–5, 2026 · McKinney, TX ·</span>
+      <span style="font-size:1.3rem;">💜</span>
+    </div>
+  </div>
 
 <!-- SOLIDARITY STRIP -->
 <div class="solidarity-strip">
@@ -906,6 +915,19 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 </nav>
 
 <!-- HERO -->
+
+  <!-- HERO PHOTOS -->
+  <div style="background:#07070f;padding:40px 28px 0;max-width:1200px;margin:0 auto;">
+    <div style="font-family:monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#9b59b6;margin-bottom:16px;text-align:center;">He Is a Child · He Is a Hero</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto;">
+      <figure style="margin:0;border-radius:8px;overflow:hidden;border:1px solid #2a1a3e;">
+        <img src="https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/4be2bc6af_karmelo_hero2.jpg" alt="Karmelo Anthony — Titans school portrait, navy blazer, red and blue striped tie" style="width:100%;height:340px;object-fit:cover;object-position:top;display:block;" loading="eager"/>
+      </figure>
+      <figure style="margin:0;border-radius:8px;overflow:hidden;border:1px solid #2a1a3e;">
+        <img src="https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/ae70260d0_karmelo_hero1.jpg" alt="Karmelo Anthony in cream suit at formal event, arms crossed, poised and confident" style="width:100%;height:340px;object-fit:cover;object-position:top;display:block;" loading="eager"/>
+      </figure>
+    </div>
+  </div>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">💜 Trial · June 1, 2026 · Wear Purple</div>
@@ -1194,7 +1216,7 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <div class="truth-text">
         <strong>Texas law authorized what Karmelo did.</strong><br/><br/>
         Section 9.32 permits a person to use deadly force when they reasonably believe it is immediately necessary to protect against another's use of deadly force. It does not require the other party have a weapon. It requires that the fear be <em>reasonable.</em><br/><br/>
-        Karmelo was being physically attacked by a larger individual in a public space. His fear was reasonable. His response was a single act. He issued a verbal warning — a factor TPC § 9.32 expressly recognizes as evidence of measured response. He stopped the moment the threat stopped.
+        Karmelo was being physically attacked by a larger individual in a public space. His fear was reasonable. His response was a single act. He  — a factor TPC § 9.32 expressly recognizes as evidence of measured response. He stopped the moment the threat stopped.
       </div>
     </div>
 
@@ -1329,135 +1351,370 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       </div>
       <div class="form-body">
         <div class="form-error" id="formError"></div>
-        <form id="supportForm">
-          <div class="form-grid">
-            <div class="field">
-              <label class="f-label" for="firstName">First Name <span class="req">*</span></label>
-              <input class="f-input" type="text" id="firstName" name="firstName" required placeholder="First"/>
-            </div>
-            <div class="field">
-              <label class="f-label" for="lastName">Last Name <span class="req">*</span></label>
-              <input class="f-input" type="text" id="lastName" name="lastName" required placeholder="Last"/>
-            </div>
-            <div class="field full">
-              <label class="f-label" for="email">Email <span class="req">*</span></label>
-              <input class="f-input" type="email" id="email" name="email" required placeholder="you@example.com"/>
-            </div>
-            <div class="field">
-              <label class="f-label" for="phone">Phone</label>
-              <input class="f-input" type="tel" id="phone" name="phone" placeholder="(305) 000-0000"/>
-            </div>
-            <div class="field">
-              <label class="f-label" for="city">City</label>
-              <input class="f-input" type="text" id="city" name="city" placeholder="City"/>
-            </div>
-            <div class="field">
-              <label class="f-label" for="state">State</label>
-              <input class="f-input" type="text" id="state" name="state" placeholder="TX" maxlength="2"/>
-            </div>
-          </div>
+        <!-- ═══════════════════════════════════════════════════════════════
+     FREE KARMELO — SOVEREIGN FORM v2.0
+     Logic rules:
+     1. Full Week → disables individual day chips (they auto-check, go dim)
+     2. Court presence selected → show Texas fields (dates, lodging)
+     3. Remote solidarity selected → hide Texas fields entirely
+     4. Group lodging → show group size + members
+     5. Submit button label morphs based on manifesto / court / remote
+     ═══════════════════════════════════════════════════════════════ -->
 
-          <!-- AXIS A: HOW WILL YOU BE THERE (radio — required, mutually exclusive) -->
-          <span class="sect-lbl">How will you be there? <span class="req">*</span></span>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="commitment_type" value="court_presence" id="pres_court"/> &#127963;&#65039; I&#39;ll be at the courthouse</label>
-            <label class="chip"><input type="radio" name="commitment_type" value="remote_solidarity" id="pres_remote" checked/> &#128227; I&#39;m with you in spirit — remote solidarity</label>
-          </div>
+<form id="supportForm">
+  <!-- ── PERSONAL INFO ── -->
+  <div class="form-grid">
+    <div class="field">
+      <label class="f-label" for="firstName">First Name <span class="req">*</span></label>
+      <input class="f-input" type="text" id="firstName" name="firstName" required placeholder="First"/>
+    </div>
+    <div class="field">
+      <label class="f-label" for="lastName">Last Name <span class="req">*</span></label>
+      <input class="f-input" type="text" id="lastName" name="lastName" required placeholder="Last"/>
+    </div>
+    <div class="field full">
+      <label class="f-label" for="email">Email <span class="req">*</span></label>
+      <input class="f-input" type="email" id="email" name="email" required placeholder="you@example.com"/>
+    </div>
+    <div class="field">
+      <label class="f-label" for="phone">Phone</label>
+      <input class="f-input" type="tel" id="phone" name="phone" placeholder="(305) 000-0000"/>
+    </div>
+    <div class="field">
+      <label class="f-label" for="city">City</label>
+      <input class="f-input" type="text" id="city" name="city" placeholder="City"/>
+    </div>
+    <div class="field">
+      <label class="f-label" for="state">State</label>
+      <input class="f-input" type="text" id="state" name="state" placeholder="TX" maxlength="2"/>
+    </div>
+  </div>
 
-          <!-- COURT LOGISTICS (conditional on court_presence) -->
-          <div id="texasFields" style="display:none;">
-            <span class="sect-lbl">Which days can you attend?</span>
-            <div class="date-chips">
-              <label class="d-chip"><input type="checkbox" name="attendance_dates" value="June 1"/>June 1<small>Mon</small></label>
-              <label class="d-chip"><input type="checkbox" name="attendance_dates" value="June 2"/>June 2<small>Tue</small></label>
-              <label class="d-chip"><input type="checkbox" name="attendance_dates" value="June 3"/>June 3<small>Wed</small></label>
-              <label class="d-chip"><input type="checkbox" name="attendance_dates" value="June 4"/>June 4<small>Thu</small></label>
-              <label class="d-chip"><input type="checkbox" name="attendance_dates" value="June 5"/>June 5<small>Fri</small></label>
-              <label class="d-chip all"><input type="checkbox" name="attendance_dates" value="Full Week" id="fullWeekChk"/>Full Week <small>June 1&#8211;5</small></label>
-            </div>
-            <span class="sect-lbl">Lodging Support</span>
-            <div class="lodge-opts">
-              <label class="lodge-opt"><input type="radio" name="needs_lodging" value="No" checked/><div><strong>No lodging needed</strong><small>I have my own accommodations</small></div></label>
-              <label class="lodge-opt"><input type="radio" name="needs_lodging" value="Yes - Single"/><div><strong>Yes &#8212; single room</strong><small>Requesting one room</small></div></label>
-              <label class="lodge-opt"><input type="radio" name="needs_lodging" value="Yes - Group"/><div><strong>Yes &#8212; group lodging</strong><small>Traveling with others</small></div></label>
-            </div>
-            <div id="groupSection" style="display:none;">
-              <div class="form-grid" style="margin-top:10px;">
-                <div class="field full">
-                  <label class="f-label" for="groupSize">Group size (including you)</label>
-                  <select class="f-input" id="groupSize" name="group_size">
-                    <option value="">Select</option>
-                    <option>2</option><option>3</option><option>4</option><option>5</option><option value="6+">6 or more</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <label class="f-label" for="groupMembers">Group members (first + last, one per line)</label>
-                  <textarea class="f-input" id="groupMembers" name="group_members" rows="3" placeholder="Jane Smith&#10;Marcus Johnson"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- ── AXIS A: HOW WILL YOU BE THERE ── -->
+  <span class="sect-lbl">How will you be there? <span class="req">*</span></span>
+  <div class="chips">
+    <label class="chip">
+      <input type="radio" name="commitment_type" value="court_presence" id="pres_court"/>
+      🏛️ I'll be at the courthouse
+    </label>
+    <label class="chip">
+      <input type="radio" name="commitment_type" value="remote_solidarity" id="pres_remote" checked/>
+      📣 I'm with you in spirit — remote solidarity
+    </label>
+  </div>
 
-          <!-- AXIS B: WHO ARE YOU (checkboxes — multi-select, optional) -->
-          <span class="sect-lbl">Who are you? <span style="font-weight:400;opacity:.6;">(Select all that apply)</span></span>
-          <div class="chips">
-            <label class="chip"><input type="checkbox" name="roles[]" value="legal_professional"/> &#9878;&#65039; Legal professional</label>
-            <label class="chip"><input type="checkbox" name="roles[]" value="press_media"/> &#128240; Press / media</label>
-            <label class="chip"><input type="checkbox" name="roles[]" value="organizer_activist"/> &#9994; Organizer / activist</label>
-            <label class="chip"><input type="checkbox" name="roles[]" value="educator"/> &#127891; Educator</label>
-            <label class="chip"><input type="checkbox" name="roles[]" value="supporter"/> &#128156; Supporter</label>
-          </div>
+  <!-- ── COURT LOGISTICS (only shown when court_presence selected) ── -->
+  <div id="texasFields" style="display:none;">
 
-          <!-- AXIS C: SIGN THE MANIFESTO (standalone checkbox — fully independent) -->
-          <div id="manifestoBlock" style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.3);border-radius:10px;padding:16px 18px;margin-top:6px;">
-            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;">
-              <input type="checkbox" id="signManifesto" name="sign_manifesto" value="true"
-                style="margin-top:3px;accent-color:var(--purple);flex-shrink:0;width:18px;height:18px;"/>
-              <div>
-                <strong style="color:var(--fg);font-size:14px;">&#9997;&#65039; Sign the Manifesto</strong>
-                <p style="margin:4px 0 0;font-size:12px;color:var(--fg-dim);line-height:1.6;">
-                  Your first name, last initial, and location will appear publicly on this page &#8212; alongside <strong style="color:var(--purple);">Israel Armstead</strong> and every other signatory standing with Karmelo. This is your public declaration that self-defense is not a crime.
-                </p>
-              </div>
-            </label>
-          </div>
+    <!-- WHICH DAYS — with Full Week logic -->
+    <span class="sect-lbl">Which days can you attend?</span>
+    <div class="date-chips" id="dateChipsGrid">
+      <label class="d-chip" id="chip_june1">
+        <input type="checkbox" name="attendance_dates" value="June 1" class="day-chk"/>
+        June 1<small>Mon</small>
+      </label>
+      <label class="d-chip" id="chip_june2">
+        <input type="checkbox" name="attendance_dates" value="June 2" class="day-chk"/>
+        June 2<small>Tue</small>
+      </label>
+      <label class="d-chip" id="chip_june3">
+        <input type="checkbox" name="attendance_dates" value="June 3" class="day-chk"/>
+        June 3<small>Wed</small>
+      </label>
+      <label class="d-chip" id="chip_june4">
+        <input type="checkbox" name="attendance_dates" value="June 4" class="day-chk"/>
+        June 4<small>Thu</small>
+      </label>
+      <label class="d-chip" id="chip_june5">
+        <input type="checkbox" name="attendance_dates" value="June 5" class="day-chk"/>
+        June 5<small>Fri</small>
+      </label>
+      <label class="d-chip all" id="chip_fullweek">
+        <input type="checkbox" name="attendance_dates" value="Full Week" id="fullWeekChk"/>
+        ✊🏿 Full Week<small>June 1–5</small>
+      </label>
+    </div>
 
-          <div class="form-grid" style="margin-top:14px;">
-            <div class="field full">
-              <label class="f-label" for="organization">Organization (if applicable)</label>
-              <input class="f-input" type="text" id="organization" name="organization" placeholder="Organization name"/>
-            </div>
-            <div class="field full">
-              <label class="f-label" for="message">Your statement (optional)</label>
-              <textarea class="f-input" id="message" name="message" rows="3" placeholder="Why you stand with Karmelo..."></textarea>
-            </div>
-          </div>
+    <!-- LODGING -->
+    <span class="sect-lbl">Lodging Support</span>
+    <div class="lodge-opts">
+      <label class="lodge-opt">
+        <input type="radio" name="needs_lodging" value="No" checked/>
+        <div><strong>No lodging needed</strong><small>I have my own accommodations</small></div>
+      </label>
+      <label class="lodge-opt">
+        <input type="radio" name="needs_lodging" value="Yes - Single"/>
+        <div><strong>Yes — single room</strong><small>Requesting one room</small></div>
+      </label>
+      <label class="lodge-opt">
+        <input type="radio" name="needs_lodging" value="Yes - Group"/>
+        <div><strong>Yes — group lodging</strong><small>Traveling with others</small></div>
+      </label>
+    </div>
 
-          <div style="background:rgba(155,89,182,0.06);border:1px solid rgba(155,89,182,0.18);border-radius:8px;padding:14px 16px;margin-top:14px;margin-bottom:14px;">
-            <p style="font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;">Privacy Notice</p>
-            <p class="form-fine" style="text-align:left;font-size:11.5px;line-height:1.7;">
-              Information collected here is for <strong style="color:var(--fg);">organizing purposes only</strong> and will not be shared or sold under any circumstances.
-              You will only be contacted about Karmelo Anthony court support and related justice organizing.
-              If you sign the manifesto, only your <strong style="color:var(--fg);">first name, last initial, and location</strong> will be displayed publicly.
-              You may opt out at any time by replying STOP to any text or clicking unsubscribe in any email.
-            </p>
-          </div>
-          <div style="border-top:1px solid var(--border-2);padding-top:14px;margin-bottom:14px;">
-            <span class="sect-lbl" style="margin-top:0;">Stay Connected (Optional)</span>
-            <div style="display:flex;flex-direction:column;gap:8px;">
-              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--fg-dim);line-height:1.5;">
-                <input type="checkbox" name="opt_in_newsletter" value="yes" style="margin-top:2px;accent-color:var(--purple);flex-shrink:0;"/>
-                <span>Subscribe to the <strong style="color:var(--fg);">BLM Grassroots newsletter</strong> &#8212; updates on cases, campaigns, and justice actions.</span>
-              </label>
-              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--fg-dim);line-height:1.5;">
-                <input type="checkbox" name="opt_in_sms" value="yes" style="margin-top:2px;accent-color:var(--purple);flex-shrink:0;"/>
-                <span>Receive <strong style="color:var(--fg);">text message updates</strong> about the trial, logistics, and organizing actions. (Standard message rates apply.)</span>
-              </label>
-            </div>
-          </div>
+    <!-- GROUP DETAILS (only shown when group lodging selected) -->
+    <div id="groupSection" style="display:none;">
+      <div class="form-grid" style="margin-top:10px;">
+        <div class="field full">
+          <label class="f-label" for="groupSize">Group size (including you)</label>
+          <select class="f-input" id="groupSize" name="group_size">
+            <option value="">Select</option>
+            <option>2</option><option>3</option><option>4</option><option>5</option>
+            <option value="6+">6 or more</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label class="f-label" for="groupMembers">Group members (first + last, one per line)</label>
+          <textarea class="f-input" id="groupMembers" name="group_members" rows="3"
+            placeholder="Jane Smith&#10;Marcus Johnson"></textarea>
+        </div>
+      </div>
+    </div>
 
-          <button type="submit" class="submit-btn" id="submitBtn">Stand With Karmelo &#8594;</button>
-        </form>
+  </div><!-- end #texasFields -->
+
+  <!-- ── AXIS B: WHO ARE YOU ── -->
+  <span class="sect-lbl">Who are you? <span style="font-weight:400;opacity:.6;">(Select all that apply)</span></span>
+  <div class="chips">
+    <label class="chip"><input type="checkbox" name="roles[]" value="legal_professional"/> ⚖️ Legal professional</label>
+    <label class="chip"><input type="checkbox" name="roles[]" value="press_media"/> 📰 Press / media</label>
+    <label class="chip"><input type="checkbox" name="roles[]" value="organizer_activist"/> ✊ Organizer / activist</label>
+    <label class="chip"><input type="checkbox" name="roles[]" value="educator"/> 🎓 Educator</label>
+    <label class="chip"><input type="checkbox" name="roles[]" value="supporter"/> 💜 Supporter</label>
+  </div>
+
+  <!-- ── AXIS C: SIGN THE MANIFESTO ── -->
+  <div id="manifestoBlock" style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.3);border-radius:10px;padding:16px 18px;margin-top:6px;">
+    <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;">
+      <input type="checkbox" id="signManifesto" name="sign_manifesto" value="true"
+        style="margin-top:3px;accent-color:var(--purple);flex-shrink:0;width:18px;height:18px;"/>
+      <div>
+        <strong style="color:var(--fg);font-size:14px;">✍️ Sign the Manifesto</strong>
+        <p style="margin:4px 0 0;font-size:12px;color:var(--fg-dim);line-height:1.6;">
+          Your first name, last initial, and location will appear publicly on this page —
+          alongside <strong style="color:var(--purple);">Israel Armstead</strong> and every
+          other signatory standing with Karmelo. This is your public declaration that
+          self-defense is not a crime.
+        </p>
+      </div>
+    </label>
+  </div>
+
+  <!-- ── STATEMENT ── -->
+  <div class="form-grid" style="margin-top:14px;">
+    <div class="field full">
+      <label class="f-label" for="organization">Organization (if applicable)</label>
+      <input class="f-input" type="text" id="organization" name="organization" placeholder="Organization name"/>
+    </div>
+    <div class="field full">
+      <label class="f-label" for="message">Your statement (optional)</label>
+      <textarea class="f-input" id="message" name="message" rows="3"
+        placeholder="Why you stand with Karmelo..."></textarea>
+    </div>
+  </div>
+
+  <!-- ── PRIVACY ── -->
+  <div style="background:rgba(155,89,182,0.06);border:1px solid rgba(155,89,182,0.18);border-radius:8px;padding:14px 16px;margin-top:14px;margin-bottom:14px;">
+    <p style="font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;">Privacy Notice</p>
+    <p style="text-align:left;font-size:11.5px;line-height:1.7;color:var(--fg-dim);">
+      Information collected here is for <strong style="color:var(--fg);">organizing purposes only</strong>
+      and will not be shared or sold. You will only be contacted about Karmelo Anthony court support and
+      related justice organizing. If you sign the manifesto, only your
+      <strong style="color:var(--fg);">first name, last initial, and location</strong> will be displayed publicly.
+      You may opt out at any time.
+    </p>
+  </div>
+
+  <!-- ── STAY CONNECTED ── -->
+  <div style="border-top:1px solid var(--border-2);padding-top:14px;margin-bottom:14px;">
+    <span class="sect-lbl" style="margin-top:0;">Stay Connected (Optional)</span>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--fg-dim);line-height:1.5;">
+        <input type="checkbox" name="opt_in_newsletter" value="yes"
+          style="margin-top:2px;accent-color:var(--purple);flex-shrink:0;"/>
+        <span>Subscribe to the <strong style="color:var(--fg);">BLM Grassroots newsletter</strong> —
+          updates on cases, campaigns, and justice actions.</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--fg-dim);line-height:1.5;">
+        <input type="checkbox" name="opt_in_sms" value="yes"
+          style="margin-top:2px;accent-color:var(--purple);flex-shrink:0;"/>
+        <span>Receive <strong style="color:var(--fg);">text message updates</strong> about the trial,
+          logistics, and organizing actions. (Standard message rates apply.)</span>
+      </label>
+    </div>
+  </div>
+
+  <div id="formError" style="display:none;color:#ff8a80;font-size:13px;margin-bottom:10px;padding:10px 14px;background:rgba(200,0,0,0.1);border-radius:6px;border:1px solid rgba(200,0,0,0.3);"></div>
+  <button type="submit" class="submit-btn" id="submitBtn">Stand With Karmelo →</button>
+</form>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SMART FORM JS — all logic in one clean block
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // ── AXIS A: court vs remote → show/hide Texas fields ────────
+    document.querySelectorAll('input[name="commitment_type"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        var isCourt = this.value === 'court_presence';
+        document.getElementById('texasFields').style.display = isCourt ? 'block' : 'none';
+        updateSubmitBtn();
+      });
+    });
+
+    // ── FULL WEEK LOGIC ──────────────────────────────────────────
+    // Selecting Full Week: checks all day chips AND disables them (no redundancy)
+    // Deselecting Full Week: unchecks and re-enables all day chips
+    var fullWeekChk = document.getElementById('fullWeekChk');
+    if (fullWeekChk) {
+      fullWeekChk.addEventListener('change', function() {
+        var isFullWeek = this.checked;
+        document.querySelectorAll('.day-chk').forEach(function(c) {
+          c.checked = isFullWeek;
+          c.disabled = isFullWeek;
+          // Visual: dim individual chips when full week locks them
+          var chip = c.closest('.d-chip');
+          if (chip) {
+            chip.style.opacity = isFullWeek ? '0.55' : '1';
+            chip.style.pointerEvents = isFullWeek ? 'none' : 'auto';
+          }
+        });
+      });
+    }
+
+    // ── GROUP LODGING → show group details ──────────────────────
+    document.querySelectorAll('input[name="needs_lodging"]').forEach(function(r) {
+      r.addEventListener('change', function() {
+        document.getElementById('groupSection').style.display =
+          this.value === 'Yes - Group' ? 'block' : 'none';
+      });
+    });
+
+    // ── MANIFESTO CHECKBOX → update button label ─────────────────
+    var manifestoChk = document.getElementById('signManifesto');
+    if (manifestoChk) {
+      manifestoChk.addEventListener('change', updateSubmitBtn);
+    }
+
+    // ── DYNAMIC SUBMIT BUTTON ────────────────────────────────────
+    function updateSubmitBtn() {
+      var btn = document.getElementById('submitBtn');
+      var manifesto = document.getElementById('signManifesto').checked;
+      var presEl = document.querySelector('input[name="commitment_type"]:checked');
+      var pres = presEl ? presEl.value : '';
+      if (manifesto) {
+        btn.textContent = 'Sign the Manifesto →';
+      } else if (pres === 'court_presence') {
+        btn.textContent = 'Register for Court →';
+      } else {
+        btn.textContent = 'Stand With Karmelo →';
+      }
+    }
+
+    // ── FORM SUBMIT ──────────────────────────────────────────────
+    document.getElementById('supportForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('submitBtn');
+      var err = document.getElementById('formError');
+      err.style.display = 'none';
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Recording…';
+
+      // Collect all fields
+      var get = function(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var data = {
+        firstName:    get('firstName'),
+        lastName:     get('lastName'),
+        email:        get('email'),
+        phone:        get('phone'),
+        city:         get('city'),
+        state:        get('state'),
+        organization: get('organization'),
+        message:      get('message'),
+        source:       'freekarmelo-public-page'
+      };
+
+      // AXIS A: presence
+      var presEl = document.querySelector('input[name="commitment_type"]:checked');
+      data.commitment_type = presEl ? presEl.value : 'remote_solidarity';
+
+      // AXIS B: roles
+      data.roles = Array.from(document.querySelectorAll('input[name="roles[]"]:checked'))
+        .map(function(c) { return c.value; }).join(', ');
+
+      // AXIS C: manifesto
+      data.sign_manifesto = document.getElementById('signManifesto').checked;
+
+      // Court logistics — only relevant if court_presence
+      if (data.commitment_type === 'court_presence') {
+        var fullWeek = document.getElementById('fullWeekChk').checked;
+        if (fullWeek) {
+          data.availability = 'Full Week June 1-5';
+          data.can_travel = 'YES';
+        } else {
+          var dates = Array.from(document.querySelectorAll('.day-chk:checked'))
+            .map(function(c) { return c.value; });
+          data.availability = dates.length ? dates.join(', ') : 'Not specified';
+          data.can_travel = dates.length > 0 ? 'YES' : 'NO';
+        }
+        var lodgeEl = document.querySelector('input[name="needs_lodging"]:checked');
+        data.needs_lodging = lodgeEl ? lodgeEl.value : 'No';
+        var gsEl = document.getElementById('groupSize');
+        var gmEl = document.getElementById('groupMembers');
+        if (gsEl) data.group_size    = gsEl.value;
+        if (gmEl) data.group_members = gmEl.value.trim();
+      } else {
+        // Remote supporter — no travel/lodging data needed
+        data.availability  = 'Remote solidarity';
+        data.can_travel    = 'NO';
+        data.needs_lodging = 'No';
+      }
+
+      // Opt-ins
+      data.opt_in_newsletter = document.querySelector('input[name="opt_in_newsletter"]:checked') ? 'yes' : '';
+      data.opt_in_sms        = document.querySelector('input[name="opt_in_sms"]:checked')        ? 'yes' : '';
+
+      try {
+        var resp = await fetch('https://sue-45c3e283.base44.app/functions/karmeloSignup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        var result = await resp.json().catch(function() { return {}; });
+        if (!resp.ok) throw new Error(result.error || 'Error ' + resp.status);
+
+        document.getElementById('supportForm').style.display = 'none';
+        var ss = document.getElementById('successState');
+        if (ss) {
+          ss.style.display = 'block';
+          var msg = document.getElementById('successMsg');
+          if (msg) {
+            if (data.sign_manifesto) {
+              msg.textContent = 'Your name will appear in the signatories below. Thank you for standing with Karmelo.';
+            } else if (data.commitment_type === 'court_presence') {
+              msg.textContent = 'You are registered. We will send court logistics before June 1. You are part of this.';
+            } else {
+              msg.textContent = 'Thank you. Your name is on the record. Every voice matters.';
+            }
+          }
+        }
+        // Refresh signatory list
+        if (typeof loadSignatories === 'function') setTimeout(loadSignatories, 1800);
+      } catch(ex) {
+        btn.disabled = false;
+        btn.textContent = origText;
+        err.textContent = ex.message || 'Network error. Please try again.';
+        err.style.display = 'block';
+      }
+    });
+
+  }); // end DOMContentLoaded
+})();
+</script>
+
 
         <div class="success-state" id="successState" style="display:none;">
           <div class="s-check">&#10003;</div>
@@ -1495,6 +1752,13 @@ textarea.f-input { resize: vertical; min-height: 78px; }
   <div class="foot-inner">
     <div>
       <div class="foot-brand">Free Karmelo · Justice Coalition</div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(155,89,182,0.2);">
+        <span style="font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#5a3a6a;">Produced by</span><br/>
+        <a href="https://e5enclave.com/justice/karmelo-anthony/" target="_blank" rel="noopener"
+           style="font-size:13px;font-weight:700;color:#9b59b6;text-decoration:none;">E5 Enclave INCORPORATED</a><br/>
+        <a href="https://e5enclave.com/justice/karmelo-anthony/" target="_blank" rel="noopener"
+           style="font-family:monospace;font-size:10px;color:#5a3a6a;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;">Full Forensic Case Record →</a>
+      </div>
       <div class="foot-brand sub">freekarmelo.net · freekarmelo.today<br/>✊🏿 In Solidarity with Black Lives Matter Grassroots<br/>Court Support · June 1–5, 2026 · McKinney, TX</div>
     </div>
     <div class="foot-col">
