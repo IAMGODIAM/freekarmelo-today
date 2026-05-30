@@ -866,6 +866,35 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 }
 
 </style>
+<style>
+    /* ── PRINT A SIGN CTA ── */
+    .print-sign-cta {
+      display: flex; align-items: center; gap: 20px;
+      max-width: 820px; margin: 18px auto 0;
+      background: linear-gradient(135deg, rgba(155,89,182,.22), rgba(155,89,182,.08));
+      border: 2px solid rgba(155,89,182,.55);
+      border-radius: 12px; padding: 22px 26px;
+      text-decoration: none; color: inherit;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      box-shadow: 0 0 0 rgba(155,89,182,0);
+    }
+    .print-sign-cta:hover {
+      transform: translateY(-3px);
+      border-color: rgba(155,89,182,.95);
+      box-shadow: 0 12px 36px rgba(155,89,182,.32);
+    }
+    .print-sign-cta .psc-icon { font-size: 42px; line-height: 1; flex-shrink: 0; }
+    .print-sign-cta .psc-text { display: flex; flex-direction: column; gap: 5px; }
+    .psc-kicker {
+      font-family: monospace; font-size: 10px; letter-spacing: .18em;
+      text-transform: uppercase; color: #c39bd3;
+    }
+    .psc-title { font-size: clamp(17px,2.6vw,22px); font-weight: 800; color: #f0eaf8; letter-spacing: -.02em; }
+    .psc-sub { font-size: 13px; color: #a886c0; line-height: 1.55; }
+    @media (max-width: 540px) {
+      .print-sign-cta { flex-direction: column; text-align: center; gap: 12px; padding: 20px; }
+    }
+</style>
 </head>
 <body>
   <!-- ✊🏿 BLM GRASSROOTS SOLIDARITY BADGE -->
@@ -959,6 +988,16 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <div class="icon">💜</div>
       <p><strong>Wear purple for Karmelo.</strong> Purple is his color. At the courthouse, in your neighborhood, on your feed — wear purple the week of June 1. Let it be counted. Let it be seen.</p>
     </div>
+
+    <!-- ── PRINT A SIGN — PROMINENT CTA ── -->
+    <a href="/signs" class="print-sign-cta">
+      <div class="psc-icon">🪧</div>
+      <div class="psc-text">
+        <span class="psc-kicker">Standing with us at the courthouse?</span>
+        <strong class="psc-title">Print a Sign &amp; Bring It With You →</strong>
+        <span class="psc-sub">Free, print-ready protest signs. Download, print, and carry it June 1 in McKinney. Let them see purple everywhere.</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -1839,8 +1878,9 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <a href="#" onclick="switchTab('credo');return false;">What Happened</a>
       <a href="#" onclick="switchTab('facts');return false;">The Law</a>
       <a href="#" onclick="switchTab('charge');return false;">The Charge</a>
-          &nbsp;·&nbsp; <a href="#" onclick="switchTab('truth');return false;">The Truth</a>
+      <a href="#" onclick="switchTab('truth');return false;">The Truth</a>
       <a href="#signup" onclick="switchTab('signup');return false;">Sign Up</a>
+      <a href="/signs" style="color:#c39bd3;">🪧 Print a Sign</a>
     </div>
     <div class="foot-col">
       <h4>Messaging</h4>
