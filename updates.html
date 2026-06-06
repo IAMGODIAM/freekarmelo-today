@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updates &amp; The Evidence — Free Karmelo Anthony</title>
+<meta name="description" content="The Karmelo Anthony case on the record: daily trial updates plus the primary-source evidence — the Metcalfs' own words, the Frisco police affidavit, and Texas self-defense law. Sourced. Without varnish.">
+<link rel="canonical" href="https://freekarmelo.net/updates">
+<meta property="og:title" content="Updates &amp; The Evidence — Free Karmelo Anthony">
+<meta property="og:description" content="Daily trial updates and the primary-source evidence — in their own words. He was the victim. He is being prosecuted for it.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFhMGEyZSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM5YjU5YjYiPkZLPC90ZXh0Pgo8L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#060410; --bg-1:#0d0a1e; --bg-2:#141028; --bg-evidence:#08070c;
+    --fg:#f0eefc; --fg-dim:#9d98c0; --fg-dimmer:#5a5478;
+    --border:#1a1630; --border-2:#252040; --border-3:#342e58;
+    --purple:#9b59b6; --purple-2:#7d3c98; --purple-light:#c39bd3;
+    --purple-glow:rgba(155,89,182,0.13); --purple-soft:rgba(155,89,182,0.06);
+    --gold:#c9a84c; --gold-light:#d4b96a;
+    --signal:#ff4d4d; --signal-soft:rgba(255,77,77,0.08);
+    --green:#4caf7d; --green-soft:rgba(76,175,125,0.08);
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono','Menlo',monospace;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --container:920px;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:rgba(6,4,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  nav .brand{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.3px}
+  nav .brand b{color:var(--purple-light)}
+  nav .links{display:flex;gap:22px;font-size:14px;color:var(--fg-dim)}
+  nav .links a:hover{color:var(--fg)}
+  nav .cta{background:var(--purple);color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600}
+  @media(max-width:680px){nav .links{display:none}}
+
+  /* HERO */
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--border);background:radial-gradient(120% 100% at 50% -10%,var(--purple-soft),transparent 60%)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--purple-light);margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-size:clamp(40px,7vw,68px);line-height:1.02;font-weight:700;letter-spacing:-.5px}
+  .hero h1 .accent{background:linear-gradient(100deg,var(--purple-light),var(--gold-light));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p.sub{margin-top:20px;font-size:18px;color:var(--fg-dim);max-width:640px}
+  .livebar{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;color:var(--fg-dim);border:1px solid var(--border-2);border-radius:999px;padding:8px 16px;background:var(--bg-1)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(255,77,77,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,77,.55)}70%{box-shadow:0 0 0 9px rgba(255,77,77,0)}100%{box-shadow:0 0 0 0 rgba(255,77,77,0)}}
+
+  /* SECTION SHELL */
+  section{padding:54px 0}
+  .sec-kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:var(--fg-dimmer);margin-bottom:10px}
+  .sec-title{font-family:var(--serif);font-size:clamp(28px,4.5vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.3px}
+  .sec-lead{margin-top:14px;color:var(--fg-dim);font-size:16.5px;max-width:680px}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border-3),transparent)}
+
+  /* TIMELINE (dynamic zone) */
+  #timeline{background:linear-gradient(180deg,var(--bg),var(--bg-1))}
+  .tl-empty{margin-top:30px;border:1px dashed var(--border-3);border-radius:14px;padding:34px;text-align:center;color:var(--fg-dim);background:var(--purple-soft)}
+  .tl-empty b{color:var(--fg)}
+  .feed{margin-top:30px;display:grid;gap:18px}
+  .post{border:1px solid var(--border-2);border-radius:14px;background:var(--bg-2);overflow:hidden}
+  .post .meta{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:12px;color:var(--fg-dim)}
+  .post .meta .tag{color:var(--purple-light);border:1px solid var(--border-3);border-radius:6px;padding:2px 8px}
+  .post .body{padding:18px}
+  .post h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:8px}
+  .post p{color:var(--fg-dim);font-size:15.5px}
+  .post video,.post img{width:100%;border-radius:10px;margin-top:14px;background:#000}
+
+  /* EVIDENCE (permanent zone) */
+  #evidence{background:var(--bg-evidence);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  #evidence .sec-title{color:var(--gold-light)}
+  .source{margin-top:30px;border:1px solid var(--border-2);border-radius:16px;background:#0b0910;overflow:hidden}
+  .source-head{padding:22px 24px;border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(201,168,76,.06),transparent)}
+  .source-head .src-no{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .source-head h3{font-family:var(--serif);font-size:30px;font-weight:700}
+  .source-head .src-cite{margin-top:6px;font-size:13.5px;color:var(--fg-dimmer)}
+  .source-head .src-cite a{color:var(--purple-light);border-bottom:1px solid var(--border-3)}
+  .quotes{padding:10px 24px 24px}
+  .q{border-left:2px solid var(--border-3);padding:16px 0 16px 18px;margin-top:18px}
+  .q .qt{font-family:var(--serif);font-size:22px;line-height:1.35;color:var(--fg)}
+  .q .ts{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--fg-dimmer);margin-top:8px;text-transform:uppercase}
+  .q .note{margin-top:12px;font-size:14.5px;color:var(--fg-dim)}
+  .q .note b{color:var(--purple-light)}
+  .callout{margin:22px 24px 26px;border-radius:12px;padding:18px 20px;font-size:15px}
+  .callout.crit{background:var(--green-soft);border:1px solid rgba(76,175,125,.3)}
+  .callout.crit b{color:var(--green)}
+  .callout.ctx{background:var(--signal-soft);border:1px solid rgba(255,77,77,.25);color:var(--fg-dim)}
+  .callout.ctx b{color:var(--signal)}
+  .seq{margin:0 24px 6px;border-radius:12px;background:var(--purple-soft);border:1px solid var(--border-2);padding:18px 22px}
+  .seq h4{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--purple-light);margin-bottom:10px}
+  .seq ol{margin-left:18px;color:var(--fg-dim);font-size:15px}
+  .seq ol li{margin:5px 0}
+
+  /* LAW + CTA */
+  #law .grid{margin-top:30px;display:grid;gap:16px}
+  @media(min-width:720px){#law .grid{grid-template-columns:1fr 1fr}}
+  .lawcard{border:1px solid var(--border-2);border-radius:14px;background:var(--bg-1);padding:22px}
+  .lawcard .code{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:1px}
+  .lawcard h4{font-family:var(--serif);font-size:24px;font-weight:600;margin:6px 0 8px}
+  .lawcard p{color:var(--fg-dim);font-size:15px}
+  .cta-block{margin-top:40px;text-align:center;border:1px solid var(--border-2);border-radius:18px;padding:40px 24px;background:radial-gradient(100% 120% at 50% 0%,var(--purple-soft),transparent)}
+  .cta-block h3{font-family:var(--serif);font-size:32px;font-weight:600}
+  .cta-block p{color:var(--fg-dim);margin:12px auto 22px;max-width:520px}
+  .btn{display:inline-block;background:var(--purple);color:#fff;font-weight:600;padding:13px 28px;border-radius:10px;font-size:15px}
+  .btn:hover{background:var(--purple-2)}
+
+  footer{border-top:1px solid var(--border);padding:38px 0;color:var(--fg-dimmer);font-size:13px;text-align:center}
+  footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:1px;margin-top:8px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="/" class="brand">Free <b>Karmelo</b></a>
+    <div class="links">
+      <a href="/#whoheis">Who He Is</a>
+      <a href="/#whathappened">What Happened</a>
+      <a href="/#thelaw">The Law</a>
+      <a href="/updates">Updates</a>
+    </div>
+    <a href="/#signup" class="cta">Sign Up →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Updates · The Evidence · On the Record</div>
+    <h1>The Truth, <span class="accent">Without Varnish.</span></h1>
+    <p class="sub">Daily updates from the trial, and the primary-source evidence the State would rather you not read — in their own words. He was the victim. He is being prosecuted for it.</p>
+    <div class="livebar"><span class="dot"></span> TRIAL IN SESSION · Collin County Courthouse, McKinney TX · Updated daily</div>
+  </div>
+</header>
+
+<!-- ZONE 1: LIVE TIMELINE (dynamic — fed from gated Drive intake, reviewed before publish) -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-kicker">Zone 01 — Live</div>
+    <h2 class="sec-title">The Truth Timeline</h2>
+    <p class="sec-lead">Daily recaps from organizers on the ground and our attributed accounts of what happened in court. Every update is reviewed before it&rsquo;s posted. Newest first.</p>
+
+    <div class="feed" id="feed">
+      <!-- Updates render here. Empty-state shown until the first reviewed update is published. -->
+    </div>
+
+    <div class="tl-empty" id="tlEmpty">
+      <b>Daily updates begin with the trial.</b><br>
+      Organizers on the ground are filing recaps now. Reviewed updates will appear here as the trial proceeds &mdash; bookmark this page and check back daily.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ZONE 2: THE EVIDENCE — primary sources (permanent, LEX-cleared) -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="sec-kicker">Zone 02 — The Record</div>
+    <h2 class="sec-title">In Their Own Words</h2>
+    <p class="sec-lead">Not our spin &mdash; the primary sources. The Metcalf family&rsquo;s own on-camera interviews and the State&rsquo;s own arrest affidavit. Read them yourself.</p>
+
+    <!-- SOURCE I -->
+    <article class="source">
+      <div class="source-head">
+        <div class="src-no">Source I — On Camera</div>
+        <h3>Hunter Metcalf Interview</h3>
+        <div class="src-cite">WFAA &middot; April 3, 2025 &mdash; 24 hours after the incident. The twin brother, in his own words.</div>
+      </div>
+      <div class="quotes">
+        <div class="q">
+          <div class="qt">&ldquo;There was this kid sitting under our tent at track. <b>We</b> asked him to move.&rdquo;</div>
+          <div class="ts">5:11 — Hunter Metcalf (CC transcription)</div>
+          <div class="note"><b>&ldquo;We.&rdquo;</b> Both twins. By the family&rsquo;s own account, the confrontation was initiated together &mdash; not by one person, not by a coach. Two approached one.</div>
+        </div>
+        <div class="q">
+          <div class="qt">&ldquo;He started getting aggressive&hellip; and my brother stepped in and said, &lsquo;You need to move.&rsquo;&rdquo;</div>
+          <div class="ts">5:15–5:20 — Hunter Metcalf</div>
+          <div class="note">Sequence in Hunter&rsquo;s words: Hunter approaches &rarr; Karmelo declines &rarr; Austin &ldquo;steps in&rdquo; and escalates.</div>
+        </div>
+        <div class="q">
+          <div class="qt">&ldquo;And he&rsquo;s like, &lsquo;Make me move.&rsquo; <b>Austin grabbed his backpack.</b>&rdquo;</div>
+          <div class="ts">5:22 — Hunter Metcalf</div>
+          <div class="note"><b>Austin put hands on Karmelo&rsquo;s property first.</b> Not his arm &mdash; his backpack. Under Texas law, that physical interference is the kind of unlawful force that triggers the right to defend yourself.</div>
+        </div>
+        <div class="q">
+          <div class="qt">&ldquo;I tried to whip around as fast as I could, but <b>I didn&rsquo;t see the stab.</b>&rdquo;</div>
+          <div class="ts">5:28 — Hunter Metcalf</div>
+          <div class="note">The brother &mdash; the State&rsquo;s most prominent witness &mdash; says on camera he did not see the critical moment.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOURCE II -->
+    <article class="source">
+      <div class="source-head">
+        <div class="src-no">Source II — On Camera</div>
+        <h3>Jeff Metcalf Interview</h3>
+        <div class="src-cite">FOX 4 News &middot; April 3, 2025 &mdash; Austin&rsquo;s father.</div>
+      </div>
+      <div class="quotes">
+        <div class="q">
+          <div class="qt">&ldquo;This guy was just sitting in the wrong spot and <b>they</b> asked him to move&hellip;&rdquo;</div>
+          <div class="ts">7:29–7:32 — Jeff Metcalf</div>
+          <div class="note">A second family member confirms it was <b>&ldquo;they&rdquo;</b> &mdash; both twins. Jeff was not present; his account comes from Hunter.</div>
+        </div>
+        <div class="q">
+          <div class="qt">&ldquo;I&rsquo;ve already forgiven the person who stabbed him. God&rsquo;s going to take care of everything.&rdquo;</div>
+          <div class="ts">1:40 — Jeff Metcalf</div>
+          <div class="note">We honor Mr. Metcalf&rsquo;s grace toward Karmelo. We grieve with this family. Forgiveness and a child&rsquo;s legal right to defend himself are not in conflict.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOURCE III -->
+    <article class="source">
+      <div class="source-head">
+        <div class="src-no">Source III — The State's Own Document</div>
+        <h3>Frisco Police Affidavit</h3>
+        <div class="src-cite">Arrest Warrant / Affidavit &middot; April 2, 2025</div>
+      </div>
+      <div class="seq">
+        <h4>Sequence, per the affidavit</h4>
+        <ol>
+          <li>Karmelo was under a tent at a UIL track meet during a rain delay.</li>
+          <li>He was told to leave the area.</li>
+          <li>He reached into his backpack and said &ldquo;Touch me and see what happens&rdquo; &mdash; a warning.</li>
+          <li><b>Austin then put hands on Karmelo.</b></li>
+          <li>Karmelo used a knife once, in what he states was self-defense.</li>
+          <li>Karmelo did not deny it &mdash; he told police he was protecting himself.</li>
+        </ol>
+      </div>
+      <div class="quotes">
+        <div class="q">
+          <div class="qt">&ldquo;I&rsquo;m not alleged, I did it. <b>He put his hands on me after I told him not to.</b> I was protecting myself.&rdquo;</div>
+          <div class="ts">Per Frisco Police Affidavit — April 2, 2025</div>
+          <div class="note">Immediate. Consistent. He didn&rsquo;t wait for a lawyer and he didn&rsquo;t deny the act &mdash; he admitted it <i>and</i> claimed justification in the same breath. That is what a self-defense account looks like.</div>
+        </div>
+      </div>
+      <div class="callout crit"><b>The critical finding:</b> The prosecution&rsquo;s own affidavit confirms that Austin put hands on Karmelo <b>first</b>, after Karmelo warned him not to. That directly supports the self-defense claim under Texas Penal Code &sect;9.31(a).</div>
+    </article>
+
+    <div class="callout ctx" style="margin-top:30px"><b>What the video shows:</b> Video evidence, as widely reported, shows Austin and Hunter Metcalf approaching Karmelo together with two additional companions. We present this as reported from the video record; the courtroom will weigh it. Even by the Metcalf family&rsquo;s own on-camera words above, this was not one person and one boy &mdash; it was a group, and a seated 17-year-old.</div>
+  </div>
+</section>
+
+<!-- ZONE 3: THE LAW + CTA -->
+<section id="law">
+  <div class="wrap">
+    <div class="sec-kicker">Zone 03 — The Law, In Plain Terms</div>
+    <h2 class="sec-title">A child has the right to defend himself.</h2>
+    <p class="sec-lead">Texas wrote these statutes. They apply to Karmelo Anthony exactly as they apply to anyone else.</p>
+    <div class="grid">
+      <div class="lawcard">
+        <div class="code">TEX. PENAL CODE &sect;9.31(a)</div>
+        <h4>Self-Defense</h4>
+        <p>A person is justified in using force when and to the degree they reasonably believe it is immediately necessary to protect against another&rsquo;s use of unlawful force. Austin put hands on Karmelo first &mdash; the affidavit confirms it.</p>
+      </div>
+      <div class="lawcard">
+        <div class="code">TEX. PENAL CODE &sect;9.32(b)</div>
+        <h4>No Duty to Retreat</h4>
+        <p>If you are somewhere you have a right to be and are not committing a crime, you have no duty to retreat before defending yourself. Karmelo was lawfully present at a public school event.</p>
+      </div>
+      <div class="lawcard">
+        <div class="code">DISPARITY OF FORCE</div>
+        <h4>Seated. Outnumbered.</h4>
+        <p>Established American self-defense doctrine recognizes that numbers and position matter. Karmelo was seated; a group was standing over him. That imbalance is part of what &ldquo;reasonable&rdquo; means in law.</p>
+      </div>
+      <div class="lawcard">
+        <div class="code">THE RECORD</div>
+        <h4>No priors. Cooperated.</h4>
+        <p>Honor-roll student. No prior offenses. Turned himself in. A judge later found the original $1,000,000 bond excessive and reduced it. This is not the record of a danger to the community.</p>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h3>Add your name. Be in the room.</h3>
+      <p>The internet convicted this boy before a jury was even seated. Stand on the record with us. Sign, share, and keep the truth louder than the noise.</p>
+      <a href="/#signup" class="btn">Stand With Karmelo →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Free Karmelo Anthony &middot; A child has the right to defend himself.<br>
+    <span class="mono">Primary sources quoted from public interviews (WFAA, FOX 4) and the Frisco Police arrest affidavit. Our account, on the record.</span>
+  </div>
+</footer>
+
+<script>
+// Dynamic Timeline loader — pulls reviewed/published updates from the feed function.
+// Until the feed endpoint is wired, the empty-state stands. No update is shown unless it is published & cleared.
+(async function(){
+  try{
+    const FEED_URL = "/updates/feed.json"; // static fallback manifest; swap to live function when wired
+    const res = await fetch(FEED_URL, {cache:"no-store"});
+    if(!res.ok) return;
+    const items = await res.json();
+    if(!Array.isArray(items) || !items.length) return;
+    const feed = document.getElementById("feed");
+    const empty = document.getElementById("tlEmpty");
+    feed.innerHTML = items.map(function(it){
+      var media = it.video_url ? '<video controls preload="metadata" poster="'+(it.thumbnail_url||'')+'"><source src="'+it.video_url+'"></video>'
+                : it.image_url ? '<img src="'+it.image_url+'" alt="">' : '';
+      return '<article class="post"><div class="meta"><span class="tag">'+(it.tag||'UPDATE')+'</span><span>'+(it.date||'')+'</span>'
+        +(it.organizer?'<span>&middot; '+it.organizer+'</span>':'')+'</div>'
+        +'<div class="body"><h3>'+(it.title||'')+'</h3><p>'+(it.body||'')+'</p>'+media+'</div></article>';
+    }).join("");
+    if(empty) empty.style.display="none";
+  }catch(e){/* keep empty-state */}
+})();
+</script>
+</body>
+</html>
