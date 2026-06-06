@@ -2330,8 +2330,9 @@ function loadSignatories() {
       (d.signatories || []).forEach(function(s) {
         var card = document.createElement('div');
         card.className = 'sig-card';
-        card.innerHTML = '<span class="sig-name">' + s.name + '</span>' +
-          (s.location ? '<span class="sig-loc">' + s.location + '</span>' : '');
+        var nm = document.createElement('span'); nm.className = 'sig-name'; nm.textContent = s.name || '';
+        card.appendChild(nm);
+        if (s.location) { var lc = document.createElement('span'); lc.className = 'sig-loc'; lc.textContent = s.location; card.appendChild(lc); }
         list.appendChild(card);
       });
       var countEl = document.getElementById('sigCount');
