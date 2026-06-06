@@ -18,14 +18,19 @@ nav a{color:var(--purple-light);font-size:13px;text-decoration:none;font-family:
 .hero{padding:56px 24px 32px;text-align:center;max-width:800px;margin:0 auto}
 .hero .tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
 .hero h1{font-size:clamp(28px,5vw,52px);font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px}
-.hero h1 em{color:var(--purple);font-style:normal}
+.hero h1{background:linear-gradient(120deg,#F4C24B 0%,#FFE9A8 30%,#c39bd3 70%,#B06FE0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 em{font-style:normal}
 .hero p{font-size:14px;color:var(--fg-dim);line-height:1.7;max-width:580px;margin:0 auto 24px}
 .instructions{background:var(--bg1);border:1px solid var(--border);border-radius:8px;padding:20px 24px;max-width:760px;margin:0 auto 48px;font-size:13px;color:var(--fg-dim);line-height:1.7}
 .instructions strong{color:var(--fg)}
 .instructions ul{padding-left:1.4em;margin-top:8px}
 .signs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:1100px;margin:0 auto;padding:0 24px 80px}
 .sign-card{background:var(--bg1);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.sign-preview{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-weight:900;letter-spacing:-.03em;text-align:center;padding:20px;line-height:1.1}
+.sign-preview{width:100%;aspect-ratio:3/4;display:block;background:#05010a}
+.sign-preview img{width:100%;height:100%;object-fit:cover;display:block}
+.dl-png{background:linear-gradient(135deg,rgba(244,194,75,.22),rgba(200,144,31,.15));color:#F4C24B;border:1px solid rgba(244,194,75,.4)}
+.dl-pdf{background:linear-gradient(135deg,rgba(176,111,224,.22),rgba(122,47,176,.15));color:#c39bd3;border:1px solid rgba(176,111,224,.4)}
+.sign-info h3{background:linear-gradient(90deg,#F4C24B,#c39bd3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:16px!important}
 .sign-info{padding:16px}
 .sign-info h3{font-size:14px;font-weight:600;color:var(--fg);margin-bottom:6px}
 .sign-info p{font-size:12px;color:var(--fg-dim);line-height:1.5;margin-bottom:14px}
@@ -70,93 +75,103 @@ nav a{color:var(--purple-light);font-size:13px;text-decoration:none;font-family:
 
 <div class="signs-grid">
 
-  <!-- Sign 1 -->
   <div class="sign-card">
-    <div class="sign-preview" style="background:#0a0010;color:#fff;font-size:clamp(28px,6vw,42px)">
-      FREE<br/><span style="color:#9b59b6">KARMELO</span>
-    </div>
+    <div class="sign-preview"><img src="/signs/free-karmelo.png" alt="FREE KARMELO protest sign" loading="lazy"/></div>
     <div class="sign-info">
       <h3>FREE KARMELO</h3>
-      <p>The primary movement sign. Bold, direct, unambiguous.</p>
+      <p>The core sign. Gold &amp; purple gradient lettering, print-ready.</p>
       <div class="dl-btns">
-        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/free-karmelo.png" download>↓ PNG</a>
-        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/free-karmelo.pdf" download>↓ PDF</a>
-        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/free-karmelo.svg" download>↓ SVG</a>
+        <a class="dl-btn dl-png" href="/signs/free-karmelo.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/free-karmelo.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/free-karmelo.svg" download>↓ SVG</a>
       </div>
     </div>
   </div>
 
-  <!-- Sign 2 -->
   <div class="sign-card">
-    <div class="sign-preview" style="background:#0d0020;color:#c39bd3;font-size:clamp(16px,3.5vw,26px)">
-      SELF DEFENSE<br/><span style="color:#fff">IS NOT</span><br/>A CRIME
-    </div>
+    <div class="sign-preview"><img src="/signs/all-out-for-karmelo.png" alt="ALL OUT FOR KARMELO protest sign" loading="lazy"/></div>
     <div class="sign-info">
-      <h3>SELF DEFENSE IS NOT A CRIME</h3>
-      <p>The core legal argument. Texas Penal Code §9.32 — he had every right.</p>
+      <h3>ALL OUT FOR KARMELO</h3>
+      <p>Rally call. Stand up, show up, speak up.</p>
       <div class="dl-btns">
-        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/self-defense.png" download>↓ PNG</a>
-        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/self-defense.pdf" download>↓ PDF</a>
-        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/self-defense.svg" download>↓ SVG</a>
+        <a class="dl-btn dl-png" href="/signs/all-out-for-karmelo.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/all-out-for-karmelo.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/all-out-for-karmelo.svg" download>↓ SVG</a>
       </div>
     </div>
   </div>
 
-  <!-- Sign 3 -->
   <div class="sign-card">
-    <div class="sign-preview" style="background:#050510;color:#fff;font-size:clamp(13px,2.8vw,20px)">
-      <div>140 LBS<br/><span style="color:#9b59b6">vs</span><br/>450 LBS</div>
-      <div style="font-size:.55em;color:#8a6fa0;margin-top:8px;font-weight:400">3:1 DISPARITY OF FORCE</div>
-    </div>
+    <div class="sign-preview"><img src="/signs/self-defense.png" alt="SELF-DEFENSE IS NOT A CRIME protest sign" loading="lazy"/></div>
     <div class="sign-info">
-      <h3>HE WAS 140 LBS vs 450 LBS</h3>
-      <p>The disparity of force argument. Two attackers. 3:1 body weight ratio. No choice.</p>
+      <h3>SELF-DEFENSE IS NOT A CRIME</h3>
+      <p>He was shoved first. The law protects the defender.</p>
       <div class="dl-btns">
-        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/disparity.png" download>↓ PNG</a>
-        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/disparity.pdf" download>↓ PDF</a>
-        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/disparity.svg" download>↓ SVG</a>
+        <a class="dl-btn dl-png" href="/signs/self-defense.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/self-defense.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/self-defense.svg" download>↓ SVG</a>
       </div>
     </div>
   </div>
 
-  <!-- Sign 4 -->
   <div class="sign-card">
-    <div class="sign-preview" style="background:#08000f;color:#fff;font-size:clamp(13px,2.8vw,20px)">
-      HERO AT 14<br/><span style="color:#9b59b6">MURDERER</span><br/>AT 17?
-    </div>
+    <div class="sign-preview"><img src="/signs/shoved-first.png" alt="HE WAS SHOVED FIRST protest sign" loading="lazy"/></div>
     <div class="sign-info">
-      <h3>HERO AT 14, MURDERER AT 17?</h3>
-      <p>He saved a 6-year-old from drowning in 2021. His picture was in the local paper. Now they want to put him in prison.</p>
+      <h3>HE WAS SHOVED FIRST</h3>
+      <p>Seated. Surrounded. Defended himself.</p>
       <div class="dl-btns">
-        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/hero-at-14.png" download>↓ PNG</a>
-        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/hero-at-14.pdf" download>↓ PDF</a>
-        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/hero-at-14.svg" download>↓ SVG</a>
+        <a class="dl-btn dl-png" href="/signs/shoved-first.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/shoved-first.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/shoved-first.svg" download>↓ SVG</a>
       </div>
     </div>
   </div>
 
-    <!-- Sign 6 -->
   <div class="sign-card">
-    <div class="sign-preview" style="background:#050010;color:#fff;font-size:clamp(16px,3.5vw,28px)">
-      JUSTICE<br/>FOR<br/><span style="color:#9b59b6">KARMELO</span>
+    <div class="sign-preview"><img src="/signs/child-not-criminal.png" alt="A CHILD, NOT A CRIMINAL protest sign" loading="lazy"/></div>
+    <div class="sign-info">
+      <h3>A CHILD, NOT A CRIMINAL</h3>
+      <p>17 years old. No priors. A student.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="/signs/child-not-criminal.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/child-not-criminal.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/child-not-criminal.svg" download>↓ SVG</a>
+      </div>
     </div>
+  </div>
+
+  <div class="sign-card">
+    <div class="sign-preview"><img src="/signs/justice-for-karmelo.png" alt="JUSTICE FOR KARMELO protest sign" loading="lazy"/></div>
     <div class="sign-info">
       <h3>JUSTICE FOR KARMELO</h3>
-      <p>Simple. Powerful. The movement's core demand.</p>
+      <p>The whole truth. Nothing less.</p>
       <div class="dl-btns">
-        <a class="dl-btn dl-png" href="https://freekarmelo.net/signs/justice-for-karmelo.png" download>↓ PNG</a>
-        <a class="dl-btn dl-pdf" href="https://freekarmelo.net/signs/justice-for-karmelo.pdf" download>↓ PDF</a>
-        <a class="dl-btn dl-svg" href="https://freekarmelo.net/signs/justice-for-karmelo.svg" download>↓ SVG</a>
+        <a class="dl-btn dl-png" href="/signs/justice-for-karmelo.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/justice-for-karmelo.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/justice-for-karmelo.svg" download>↓ SVG</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sign-card">
+    <div class="sign-preview"><img src="/signs/only-one-charged.png" alt="WHY IS HE THE ONLY ONE CHARGED? protest sign" loading="lazy"/></div>
+    <div class="sign-info">
+      <h3>WHY IS HE THE ONLY ONE CHARGED?</h3>
+      <p>A group came. One boy stands trial.</p>
+      <div class="dl-btns">
+        <a class="dl-btn dl-png" href="/signs/only-one-charged.png" download>↓ PNG</a>
+        <a class="dl-btn dl-pdf" href="/signs/only-one-charged.pdf" download>↓ PDF (Print)</a>
+        <a class="dl-btn dl-svg" href="/signs/only-one-charged.svg" download>↓ SVG</a>
       </div>
     </div>
   </div>
 
 </div>
 
-<div class="footer">
+<footer class="footer">
   <div style="margin-bottom:8px">Produced by <a href="https://e5enclave.com/justice/karmelo-anthony/">E5 Enclave INCORPORATED</a> · <a href="https://freekarmelo.net">freekarmelo.net</a> · <a href="https://freekarmelo.today">freekarmelo.today</a></div>
-  <div>✊🏿 In Solidarity with Black Lives Matter Grassroots · June 1–5, 2026 · McKinney, TX 💜</div>
-</div>
+  <div>Self-defense is not a crime. · Print · Share · Show Up</div>
+</footer>
 
 </body>
 </html>
