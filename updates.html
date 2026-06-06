@@ -131,6 +131,16 @@
   .case-seq li b{color:var(--fg)}
   .case-src{font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--fg-dimmer);border-top:1px solid var(--border);padding-top:12px;margin-top:6px}
 
+
+  /* Truth Timeline items */
+  .tl-item{position:relative;border-left:2px solid var(--border-3);padding:4px 0 22px 22px;margin-left:6px}
+  .tl-item::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--bg)}
+  .tl-date{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--purple-light);text-transform:uppercase;margin-bottom:8px}
+  .tl-head{font-family:var(--serif);font-size:23px;font-weight:700;line-height:1.15;margin-bottom:9px}
+  .tl-item p{color:var(--fg-dim);font-size:15.5px;margin-bottom:11px}
+  .tl-item p b{color:var(--fg)}
+  .tl-src{font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--fg-dimmer)}
+
 </style>
 </head>
 <body>
@@ -166,10 +176,24 @@
     <p class="sec-lead">Daily recaps from organizers on the ground and our attributed accounts of what happened in court. Every update is reviewed before it&rsquo;s posted. Newest first.</p>
 
     <div class="feed" id="feed">
-      <!-- Updates render here. Empty-state shown until the first reviewed update is published. -->
+
+      <article class="tl-item">
+        <div class="tl-date">June 6, 2026 &middot; Day 2 Testimony</div>
+        <h3 class="tl-head">The State&rsquo;s own witness says Austin pushed first.</h3>
+        <p>In testimony widely reported as skeptical of self-defense, a student witness for the prosecution described the sequence plainly: <b>&ldquo;Austin leans in to push him, and Karmelo stabs him.&rdquo;</b> By the State&rsquo;s own account, the physical contact began with Austin &mdash; while Karmelo sat with his hand resting in his bag.</p>
+        <div class="tl-src">Source: CBS Texas, trial testimony (June 6, 2026)</div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-date">June 6, 2026 &middot; The Record</div>
+        <h3 class="tl-head">Witnesses dispute the force &mdash; not the shove itself.</h3>
+        <p>Across two days of testimony, six student witnesses took the stand. Their accounts <b>differ on how hard Austin shoved</b> Karmelo &mdash; one hand or two &mdash; but not on the fact of the shove. The first contact is not in question. Only its degree.</p>
+        <div class="tl-src">Source: Fort Worth Star-Telegram &middot; FOX 4 (June 6, 2026)</div>
+      </article>
+
     </div>
 
-    <div class="tl-empty" id="tlEmpty">
+    <div class="tl-empty" id="tlEmpty" style="display:none">
       <b>Daily updates begin with the trial.</b><br>
       Organizers on the ground are filing recaps now. Reviewed updates will appear here as the trial proceeds &mdash; bookmark this page and check back daily.
     </div>
