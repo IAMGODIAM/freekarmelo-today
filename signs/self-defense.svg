@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" width="1080" height="1440">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE9A8"/><stop offset="0.5" stop-color="#F4C24B"/><stop offset="1" stop-color="#C8901F"/>
+    </linearGradient>
+    <linearGradient id="gPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E4C7F5"/><stop offset="0.5" stop-color="#B06FE0"/><stop offset="1" stop-color="#7A2FB0"/>
+    </linearGradient>
+    <linearGradient id="gFire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD27A"/><stop offset="0.45" stop-color="#F08A3C"/><stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="gPlum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0322"/><stop offset="1" stop-color="#05010a"/>
+    </linearGradient>
+    <radialGradient id="gGlow" cx="0.5" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#2a0a3a"/><stop offset="1" stop-color="#05010a"/>
+    </radialGradient>
+    <linearGradient id="gIvory" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C9B7D8"/>
+    </linearGradient>
+  </defs><rect width="1080" height="1440" fill="url(#gGlow)"/><rect x="28" y="28" width="1024" height="1384" rx="22" fill="none" stroke="url(#gGold)" stroke-width="3" opacity="0.55"/><text x="540" y="440" font-family='"Arial Black", Arial, sans-serif' font-size="150" font-weight="900" letter-spacing="1" fill="url(#gPurple)" text-anchor="middle" >SELF-DEFENSE</text><text x="540" y="620" font-family='"Arial Black", Arial, sans-serif' font-size="170" font-weight="800" letter-spacing="4" fill="url(#gIvory)" text-anchor="middle" >IS NOT</text><text x="540" y="820" font-family='"Arial Black", Arial, sans-serif' font-size="230" font-weight="900" letter-spacing="2" fill="url(#gFire)" text-anchor="middle" >A CRIME</text><text x="540" y="1010" font-family='"Arial Black", Arial, sans-serif' font-size="48" font-weight="700" letter-spacing="3" fill="url(#gGold)" text-anchor="middle" >HE WAS SHOVED FIRST.</text><text x="540" y="1370" font-family='"Arial Black", Arial, sans-serif' font-size="30" font-weight="700" letter-spacing="6" fill="url(#gGold)" text-anchor="middle" >FREEKARMELO.NET</text></svg>
