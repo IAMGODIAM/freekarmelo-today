@@ -114,6 +114,23 @@
 
   footer{border-top:1px solid var(--border);padding:38px 0;color:var(--fg-dimmer);font-size:13px;text-align:center}
   footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:1px;margin-top:8px}
+  /* THE CASE — attack cards */
+  #thecase{background:linear-gradient(180deg,var(--bg-1),var(--bg))}
+  .case-grid{margin-top:32px;display:grid;gap:18px}
+  @media(min-width:760px){.case-grid{grid-template-columns:1fr 1fr}}
+  .case-card{position:relative;border:1px solid var(--border-2);border-radius:16px;background:var(--bg-2);padding:26px 24px 22px;overflow:hidden}
+  .case-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--purple),var(--gold))}
+  .case-no{font-family:var(--mono);font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:10px}
+  .case-card h3{font-family:var(--serif);font-size:27px;font-weight:700;line-height:1.1;margin-bottom:12px}
+  .case-card p{color:var(--fg-dim);font-size:15.5px;margin-bottom:12px}
+  .case-card p b{color:var(--fg)}
+  .case-punch{border-left:2px solid var(--border-3);padding:12px 0 12px 16px;color:var(--purple-light)!important;font-size:15.5px}
+  .case-punch b{color:var(--gold-light)!important}
+  .case-seq{margin:0 0 14px 20px;color:var(--fg-dim);font-size:15px}
+  .case-seq li{margin:6px 0}
+  .case-seq li b{color:var(--fg)}
+  .case-src{font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--fg-dimmer);border-top:1px solid var(--border);padding-top:12px;margin-top:6px}
+
 </style>
 </head>
 <body>
@@ -125,6 +142,7 @@
       <a href="/#whoheis">Who He Is</a>
       <a href="/#whathappened">What Happened</a>
       <a href="/#thelaw">The Law</a>
+      <a href="/updates#thecase">The Case</a>
       <a href="/updates">Updates</a>
     </div>
     <a href="/#signup" class="cta">Sign Up →</a>
@@ -227,6 +245,61 @@
     </article>
 
     <div class="callout ctx" style="margin-top:30px"><b>What the video shows:</b> Video evidence, as widely reported, shows Austin and Hunter Metcalf approaching Karmelo together with two additional companions. We present this as reported from the video record; the courtroom will weigh it. Even by the Metcalf family&rsquo;s own on-camera words above, this was not one person and one boy &mdash; it was a group, and a seated 17-year-old.</div>
+  </div>
+</section>
+
+
+<!-- ZONE 2.5: THE CASE — 4 attack cards (Israel-voice, question-framed, sourced) -->
+<section id="thecase">
+  <div class="wrap">
+    <div class="sec-kicker">Zone 03 — The Case, On the Record</div>
+    <h2 class="sec-title">Four Questions the State Has Not Answered.</h2>
+    <p class="sec-lead">We are not in the courtroom. We are in the court of public opinion &mdash; and here the record speaks plainly. Read it for yourself, then ask the questions out loud.</p>
+
+    <div class="case-grid">
+
+      <!-- CARD 1 -->
+      <article class="case-card">
+        <div class="case-no">01</div>
+        <h3>Why is he the only one charged?</h3>
+        <p>A boy sat under a tent in the rain. By the family&rsquo;s own words, a group approached him &mdash; <b>&ldquo;WE asked him to move.&rdquo;</b> By the State&rsquo;s own witness, <b>Austin pushed first.</b> By the State&rsquo;s own affidavit, hands were put on a seated child who had said only, <i>&ldquo;touch me and see what happens.&rdquo;</i></p>
+        <p class="case-punch">The short read &mdash; <b>Good:</b> they have video, witnesses, a coroner. <b>Not good:</b> their own evidence says he was shoved first. So why is the boy who was pushed the only one in chains?</p>
+        <div class="case-src">Sources: Frisco Police affidavit &middot; WFAA &middot; CBS Texas trial testimony</div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="case-card">
+        <div class="case-no">02</div>
+        <h3>What the video shows.</h3>
+        <p>Prosecutors told the jury the surveillance footage <b>&ldquo;captured the entire incident&rdquo;</b> &mdash; from the moment Karmelo stepped under the tent to the moment he ran. So let the record state the sequence it shows:</p>
+        <ol class="case-seq">
+          <li>Karmelo, <b>seated</b>, hand resting in his bag.</li>
+          <li>A confrontation at the tent &mdash; a group, one child.</li>
+          <li><b>Austin shoves him first</b> &mdash; the shoulder, by witness reenactment.</li>
+          <li>Only then does Karmelo stand.</li>
+        </ol>
+        <div class="case-src">Sources: Dallas Morning News (prosecutor Wirskye) &middot; FOX 4 trial coverage</div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="case-card">
+        <div class="case-no">03</div>
+        <h3>The shove is not in dispute.</h3>
+        <p>Read the testimony carefully. The witnesses do not argue over <i>whether</i> Austin shoved Karmelo. They argue only over <b>how hard</b> &mdash; one hand or two. The first physical contact is settled. It came from the other side.</p>
+        <p class="case-punch">Yes, Austin was unarmed. And yes &mdash; one boy, seated, cornered by a standing group, with no duty to retreat on public ground. The law measures &ldquo;reasonable&rdquo; from where the cornered child stood, not from a comfortable chair.</p>
+        <div class="case-src">Sources: FOX 4 (witnesses differ only on force) &middot; Tex. Penal Code &sect;9.31, &sect;9.32</div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="case-card">
+        <div class="case-no">04</div>
+        <h3>Who is in the jury box?</h3>
+        <p>Before a single fact was weighed, every Black juror was struck. A Black child stands trial in a racially-charged case &mdash; and not one juror of his own community remains to weigh his life. National outlets have named it. We name it too.</p>
+        <p class="case-punch">A fair trial is not only about the evidence. It is about who is permitted to judge it. There may be a day the truth shall fall &mdash; but not this day.</p>
+        <div class="case-src">Sources: Fox News &middot; theGrio &middot; NewsNation</div>
+      </article>
+
+    </div>
   </div>
 </section>
 
