@@ -1228,6 +1228,39 @@ textarea.f-input { resize: vertical; min-height: 78px; }
 </section>
 
 <!-- ════════════════════════════════════ -->
+<!-- ════════════════════════════════════ -->
+<!-- BLM GRASSROOTS STATEMENT BAND          -->
+<!-- ════════════════════════════════════ -->
+<style>
+.stmt-band{position:relative;padding:84px 24px;background:radial-gradient(120% 130% at 50% -20%,rgba(155,89,182,.10),transparent 62%),var(--bg);border-top:1px solid var(--border,#1a1630);border-bottom:1px solid var(--border,#1a1630);overflow:hidden}
+.stmt-band .inner{max-width:760px;margin:0 auto;text-align:center;opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.stmt-band.in .inner{opacity:1;transform:none}
+.stmt-band .badge{display:inline-flex;align-items:center;gap:9px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:#c39bd3;border:1px solid #342e58;border-radius:999px;padding:8px 18px;margin-bottom:26px;background:rgba(13,10,30,.6)}
+.stmt-band .badge .d{width:7px;height:7px;border-radius:50%;background:#9b59b6;box-shadow:0 0 10px #9b59b6}
+.stmt-band h2{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(34px,6vw,60px);line-height:1.04;letter-spacing:-.5px;color:#f0eefc;margin:0}
+.stmt-band h2 .accent{background:linear-gradient(100deg,#c39bd3,#d4b96a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stmt-band .src{margin-top:22px;font-style:italic;font-family:Georgia,serif;font-size:clamp(16px,2.4vw,19px);color:#9d98c0;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.55}
+.stmt-band .attrib{margin-top:14px;font-size:13px;color:#5a5478;letter-spacing:.5px}
+.stmt-band .cta{display:inline-flex;align-items:center;gap:9px;margin-top:32px;background:#9b59b6;color:#fff;font-weight:600;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 30px -8px rgba(155,89,182,.55)}
+.stmt-band .cta:hover{transform:translateY(-2px);box-shadow:0 14px 40px -8px rgba(155,89,182,.7)}
+@media(prefers-reduced-motion:reduce){.stmt-band .inner{opacity:1!important;transform:none!important;transition:none}}
+</style>
+<section class="stmt-band" id="statement-band">
+  <div class="inner">
+    <div class="badge"><span class="d"></span> Official Statement · Black Lives Matter Grassroots</div>
+    <h2>The System Is Guilty.<br><span class="accent">Karmelo Is Not.</span></h2>
+    <p class="src">&ldquo;We will continue to fight to free Karmelo and every Black child that the system intends to chew up and spit out.&rdquo;</p>
+    <p class="attrib">— Dr. Melina Abdullah, Co-Founder &amp; Director, Black Lives Matter Grassroots</p>
+    <a class="cta" href="/statement">Read the Full Statement &nbsp;&rarr;</a>
+  </div>
+</section>
+<script>
+(function(){var b=document.getElementById('statement-band');if(!b)return;
+if(!('IntersectionObserver'in window)){b.classList.add('in');return;}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:0.2});
+io.observe(b);})();
+</script>
+
 <!-- TAB PANES                           -->
 <!-- ════════════════════════════════════ -->
 <div class="tab-section">
