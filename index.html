@@ -1642,185 +1642,148 @@ io.observe(b);})();
 <!-- ════════════════════════════════════ -->
 <!-- SIGN UP                             -->
 <section class="signup-section" id="signup">
-  <div class="signup-inner">
+  <div class="signup-wrap">
+    <div class="signup-head">
+      <span class="eyebrow">✍️ Stand With Karmelo</span>
+      <h2 class="signup-title">Leave him a message. <em>The world will see he's not alone.</em></h2>
+      <p class="signup-sub">Write a word of support and it posts straight to the public wall below — Karmelo and everyone watching will see it. Want to mail him a physical letter too? One tap and we'll send you his verified mailing address.</p>
+    </div>
+
     <div class="form-card">
-      <div class="form-card-hd">
-        <h3>The Trial Is Over. The Fight Is Not.</h3>
-        <p>Karmelo was convicted and sentenced to 35 years for defending himself. We do not stop until he is free and made whole. Choose how you stand.</p>
-      </div>
-      <div class="form-body">
-        <div class="form-error" id="formError" style="display:none;"></div>
+      <div class="form-error" id="formError" style="display:none;"></div>
 
-<form id="supportForm" novalidate>
+      <form id="supportForm" novalidate>
+        <!-- THE MESSAGE IS THE HERO -->
+        <div class="field">
+          <label class="f-label" for="message">Your message to Karmelo <span class="req">*</span></label>
+          <textarea class="f-input" id="message" name="message" rows="4" required placeholder="Karmelo, I'm standing with you because…"></textarea>
+          <span class="f-hint" style="font-size:12px;opacity:.6;">Posts publicly to the wall after a quick safety check. Keep it warm — this is for him.</span>
+        </div>
 
-  <!-- ── HOW DO YOU WANT TO STAND? (3 LANES) ── -->
-  <div class="lane-pick">
-    <label class="f-label" style="margin-bottom:10px;display:block;">How do you want to stand with Karmelo? <span class="req">*</span></label>
-    <div class="lane-grid">
-      <label class="lane-card">
-        <input type="radio" name="lane" value="letter" checked>
-        <span class="lane-emoji">✉️</span>
-        <span class="lane-title">Mail Him a Letter</span>
-        <span class="lane-sub">Join the daily physical-mail campaign. We email you his verified address &amp; a guided prompt so he gets real mail every day.</span>
-      </label>
-      <label class="lane-card">
-        <input type="radio" name="lane" value="appeal">
-        <span class="lane-emoji">📣</span>
-        <span class="lane-title">Join the Appeal &amp; Advocacy</span>
-        <span class="lane-sub">Add your name to the movement fighting for his appeal and his freedom.</span>
-      </label>
-      <label class="lane-card">
-        <input type="radio" name="lane" value="family">
-        <span class="lane-emoji">🛡️</span>
-        <span class="lane-title">Protect the Family</span>
-        <span class="lane-sub">Stand with the Anthony family as they face threats and legal pressure.</span>
-      </label>
-    </div>
-  </div>
-
-  <!-- ── MINIMAL CORE: name + email only ── -->
-  <div class="form-grid">
-    <div class="field">
-      <label class="f-label" for="firstName">First Name <span class="req">*</span></label>
-      <input class="f-input" type="text" id="firstName" name="firstName" required placeholder="First"/>
-    </div>
-    <div class="field">
-      <label class="f-label" for="lastName">Last Name <span class="req">*</span></label>
-      <input class="f-input" type="text" id="lastName" name="lastName" required placeholder="Last"/>
-    </div>
-  </div>
-  <div class="field">
-    <label class="f-label" for="email">Email <span class="req">*</span></label>
-    <input class="f-input" type="email" id="email" name="email" required placeholder="you@example.com"/>
-  </div>
-
-  <!-- ── PROGRESSIVE: only shows for letter lane ── -->
-  <div class="field lane-detail" id="laneLetter" style="display:none;">
-    <div class="lane-info">
-      <strong>📬 The Daily Letter Campaign.</strong> After you sign up, we email you Karmelo's verified mailing address and a short guided prompt so your letter lands with impact. The goal: he receives mail <em>every single day</em>. You're never writing alone.
-    </div>
-  </div>
-
-  <div class="field lane-detail" id="laneAppeal" style="display:none;">
-    <label class="f-label">I can offer (optional)</label>
-    <div class="chip-row" id="roleChips">
-      <label class="chip"><input type="checkbox" name="roles[]" value="legal_professional"/> ⚖️ Legal professional</label>
-      <label class="chip"><input type="checkbox" name="roles[]" value="press_media"/> 📰 Press / media</label>
-      <label class="chip"><input type="checkbox" name="roles[]" value="organizer_activist"/> ✊ Organizer / activist</label>
-      <label class="chip"><input type="checkbox" name="roles[]" value="donor"/> 💵 Donor / funder</label>
-      <label class="chip"><input type="checkbox" name="roles[]" value="supporter"/> 💜 Supporter</label>
-    </div>
-  </div>
-
-  <!-- optional location — single optional row, never required -->
-  <div class="form-grid">
-    <div class="field">
-      <label class="f-label" for="city">City <span style="opacity:.5;font-weight:400;">(optional)</span></label>
-      <input class="f-input" type="text" id="city" name="city" placeholder="City"/>
-    </div>
-    <div class="field">
-      <label class="f-label" for="state">State <span style="opacity:.5;font-weight:400;">(optional)</span></label>
-      <input class="f-input" type="text" id="state" name="state" placeholder="TX" maxlength="2"/>
-    </div>
-  </div>
-
-  <!-- ── SIGN THE STATEMENT ── -->
-  <label class="manifesto-check">
-    <input type="checkbox" id="signManifesto" name="sign_manifesto" value="true" checked/>
-    <span>Add my name to the public record of supporters standing with Karmelo.</span>
-  </label>
-
-  <!-- optional message -->
-  <div class="field">
-    <label class="f-label" for="message">A word of support <span style="opacity:.5;font-weight:400;">(optional)</span></label>
-    <textarea class="f-input" id="message" name="message" rows="2" placeholder="Why you stand with Karmelo..."></textarea>
-  </div>
-
-  <!-- opt-ins -->
-  <label class="opt-line"><input type="checkbox" name="opt_in_newsletter" value="yes" checked/> Email me appeal updates &amp; ways to help.</label>
-
-  <button type="submit" class="submit-btn" id="submitBtn">Stand With Karmelo →</button>
-  <p style="text-align:center;font-size:12px;opacity:.5;margin-top:10px;">Free. No spam. Unsubscribe anytime. We never sell your data.</p>
-</form>
-
-        <div class="success-state" id="successState" style="display:none;">
-          <div class="s-check">&#10003;</div>
-          <h3 id="successHd">Your name is on the record.</h3>
-          <p id="successMsg">Thank you for standing with Karmelo. The fight continues until he is free.</p>
-          <div class="share-row">
-            <button class="share-btn" onclick="shareTwitter()">&#128038; Share on X</button>
-            <button class="share-btn" onclick="shareFacebook()">&#128280; Share on Facebook</button>
-            <button class="share-btn" onclick="copyLink()">&#128279; Copy Link</button>
+        <!-- IDENTITY (minimal) -->
+        <div class="form-grid">
+          <div class="field">
+            <label class="f-label" for="firstName">First Name <span class="req">*</span></label>
+            <input class="f-input" type="text" id="firstName" name="firstName" required placeholder="First"/>
           </div>
+          <div class="field">
+            <label class="f-label" for="lastName">Last Name <span class="req">*</span></label>
+            <input class="f-input" type="text" id="lastName" name="lastName" required placeholder="Last"/>
+          </div>
+        </div>
+        <div class="field">
+          <label class="f-label" for="email">Email <span class="req">*</span></label>
+          <input class="f-input" type="email" id="email" name="email" required placeholder="you@example.com"/>
+          <span class="f-hint" style="font-size:12px;opacity:.6;">The wall shows only your first name + last initial. Your email is never shown.</span>
+        </div>
+
+        <!-- optional location -->
+        <div class="form-grid">
+          <div class="field">
+            <label class="f-label" for="city">City <span style="opacity:.5;font-weight:400;">(optional)</span></label>
+            <input class="f-input" type="text" id="city" name="city" placeholder="City"/>
+          </div>
+          <div class="field">
+            <label class="f-label" for="state">State <span style="opacity:.5;font-weight:400;">(optional)</span></label>
+            <input class="f-input" type="text" id="state" name="state" placeholder="TX" maxlength="2"/>
+          </div>
+        </div>
+
+        <!-- HOW ELSE TO STAND (optional lane) -->
+        <div class="field">
+          <label class="f-label">How else do you want to stand? <span style="opacity:.5;font-weight:400;">(optional)</span></label>
+          <div class="lane-grid" id="fkLanes" style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="lane-card" data-lane="appeal" style="cursor:pointer;flex:1;min-width:160px;text-align:left;">
+              <span class="lane-emoji">📣</span> <span class="lane-title">Join the Appeal</span>
+            </button>
+            <button type="button" class="lane-card" data-lane="family" style="cursor:pointer;flex:1;min-width:160px;text-align:left;">
+              <span class="lane-emoji">🛡️</span> <span class="lane-title">Protect the Family</span>
+            </button>
+          </div>
+          <input type="hidden" id="laneVal" name="lane" value="letter_writer"/>
+        </div>
+
+        <!-- GET HIS ADDRESS — A BUTTON, NOT A SEPARATE FORM -->
+        <label class="manifesto-check" style="align-items:flex-start;">
+          <input type="checkbox" id="wantAddress" name="want_address" value="yes"/>
+          <span><strong>✉️ Also email me his verified mailing address.</strong><br/><span style="font-size:13px;opacity:.7;">Join the daily mail campaign — we send his address + a guided prompt so he gets real mail every day.</span></span>
+        </label>
+
+        <label class="manifesto-check">
+          <input type="checkbox" id="signManifesto" name="sign_manifesto" value="true" checked/>
+          <span>Add my name to the public record of supporters standing with Karmelo.</span>
+        </label>
+        <label class="opt-line"><input type="checkbox" name="opt_in_newsletter" value="yes" checked/> Email me appeal updates &amp; ways to help.</label>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Post My Message →</button>
+        <p style="text-align:center;font-size:12px;opacity:.5;margin-top:10px;">Free. No spam. Your message posts publicly; your contact info never does.</p>
+      </form>
+
+      <div class="success-state" id="successState" style="display:none;">
+        <div class="s-check">&#10003;</div>
+        <h3 id="successHd">Your message is on the wall.</h3>
+        <p id="successMsg">Karmelo will know you stood with him. Thank you.</p>
+        <div class="share-row">
+          <button class="share-btn" onclick="shareTwitter()">&#128038; Share on X</button>
+          <button class="share-btn" onclick="shareFacebook()">&#128280; Share on Facebook</button>
+          <button class="share-btn" onclick="copyLink()">&#128279; Copy Link</button>
         </div>
       </div>
     </div>
   </div>
+</section>
 
 <script>
 (function(){
-  var form=document.getElementById('supportForm');
-  if(!form) return;
-  var lanes={letter:document.getElementById('laneLetter'),appeal:document.getElementById('laneAppeal'),family:null};
-  function syncLane(){
-    var v=(document.querySelector('input[name="lane"]:checked')||{}).value||'letter';
-    document.querySelectorAll('.lane-detail').forEach(function(d){d.style.display='none';});
-    if(v==='letter'&&lanes.letter) lanes.letter.style.display='block';
-    if(v==='appeal'&&lanes.appeal) lanes.appeal.style.display='block';
-    var btn=document.getElementById('submitBtn');
-    btn.textContent = v==='letter' ? 'Send Me His Mailing Address →'
-                    : v==='appeal' ? 'Join the Appeal →'
-                    : v==='family' ? 'Stand With the Family →'
-                    : 'Stand With Karmelo →';
-  }
-  document.querySelectorAll('input[name="lane"]').forEach(function(r){r.addEventListener('change',syncLane);});
-  syncLane();
-
+  var form=document.getElementById('supportForm'); if(!form) return;
+  var laneInput=document.getElementById('laneVal');
+  document.querySelectorAll('#fkLanes .lane-card').forEach(function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.contains('active');
+      document.querySelectorAll('#fkLanes .lane-card').forEach(function(x){x.classList.remove('active');});
+      if(on){laneInput.value='letter_writer';}
+      else{b.classList.add('active');laneInput.value=b.dataset.lane==='appeal'?'appeal_advocacy':'family_protection';}
+    });
+  });
   form.addEventListener('submit', async function(e){
     e.preventDefault();
-    var btn=document.getElementById('submitBtn'); var origText=btn.textContent;
+    var btn=document.getElementById('submitBtn'); var orig=btn.textContent;
     var err=document.getElementById('formError'); err.style.display='none';
-    var get=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
-    var lane=(document.querySelector('input[name="lane"]:checked')||{}).value||'letter';
-    if(!get('firstName')||!get('lastName')||!get('email')){
-      err.textContent='Please enter your name and email.'; err.style.display='block'; return;
-    }
-    btn.disabled=true; btn.textContent='Sending…';
-    var roles=Array.from(document.querySelectorAll('input[name="roles[]"]:checked')).map(function(c){return c.value;});
-    var laneMap={letter:'letter_writer',appeal:'appeal_advocacy',family:'family_protection'};
+    var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    if(!g('message')){err.textContent='Please write your message to Karmelo.';err.style.display='block';return;}
+    if(!g('firstName')||!g('lastName')||!g('email')){err.textContent='Please add your name and email.';err.style.display='block';return;}
+    btn.disabled=true; btn.textContent='Posting…';
+    var wantAddr=document.getElementById('wantAddress').checked;
     var data={
-      first_name:get('firstName'), last_name:get('lastName'), email:get('email'),
-      city:get('city'), state:get('state'), message:get('message'),
-      commitment_type:laneMap[lane]||lane,
-      roles:roles.join(', '),
+      first_name:g('firstName'), last_name:g('lastName'), email:g('email'),
+      city:g('city'), state:g('state'), message:g('message'),
+      commitment_type:laneInput.value, roles: wantAddr?'letter_writer':'',
       sign_manifesto:document.getElementById('signManifesto').checked,
       opt_in_newsletter:document.querySelector('input[name="opt_in_newsletter"]:checked')?'yes':'',
-      source:'freekarmelo_postconviction_form', lane:lane
+      want_address: wantAddr?'yes':'', source:'freekarmelo_unified_hero'
     };
     try{
-      var resp=await fetch('https://sue-45c3e283.base44.app/functions/karmeloSignup',{
-        method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
-      });
-      var result=await resp.json().catch(function(){return {};});
-      if(!resp.ok) throw new Error(result.error||'Could not submit. Please try again.');
+      var resp=await fetch('https://sue-45c3e283.base44.app/functions/karmeloSignup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      var j=await resp.json();
+      if(!resp.ok||j.error){throw new Error(j.error||'Something went wrong.');}
       form.style.display='none';
-      var ss=document.getElementById('successState'); ss.style.display='block';
+      var s=document.getElementById('successState'); s.style.display='block';
       var hd=document.getElementById('successHd'), msg=document.getElementById('successMsg');
-      if(lane==='letter'){ hd.textContent='Check your email — his address is on the way.';
-        msg.textContent="We just sent Karmelo's mailing address and a guided prompt. Write today. The goal is mail every single day."; }
-      else if(lane==='appeal'){ hd.textContent='You\u2019ve joined the appeal.';
-        msg.textContent='Your name is on the record. We\u2019ll keep you in the loop as the appeal moves forward.'; }
-      else if(lane==='family'){ hd.textContent='You stand with the family.';
-        msg.textContent='Thank you. The Anthony family is not facing this alone.'; }
-      if(typeof loadSignatories==='function') setTimeout(loadSignatories,1800);
+      if(j.wall_status==='approved'){hd.textContent='Your message is live on the wall.';msg.textContent='Karmelo will know you stood with him.';}
+      else if(j.wall_status==='held'){hd.textContent='Thank you — your message is in review.';msg.textContent='It will appear on the wall shortly after a quick board glance.';}
+      else{hd.textContent='Your name is on the record.';msg.textContent='Thank you for standing with Karmelo. The fight continues until he is free.';}
+      if(wantAddr){msg.textContent+=' Check your email — his mailing address and a guided prompt are on the way.';}
+      if(typeof loadWall==='function') setTimeout(loadWall,1500);
     }catch(ex){
-      btn.disabled=false; btn.textContent=origText;
       err.textContent=ex.message||'Network error. Please try again.'; err.style.display='block';
+      btn.disabled=false; btn.textContent=orig;
     }
   });
 })();
+function shareTwitter(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('I stand with Karmelo Anthony. Add your name and your message: ')+encodeURIComponent(location.href),'_blank');}
+function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank');}
+function copyLink(){navigator.clipboard.writeText(location.href);}
 </script>
-
 
 <!-- ══ LIVING LETTER WALL ══ -->
 <section class="letterwall" id="letters">
@@ -1866,31 +1829,8 @@ io.observe(b);})();
   <div class="lw-inner">
     <div class="lw-eyebrow">💜 The Living Letter Wall</div>
     <h1 class="lw-title">Post Him a <em>Public Word.</em></h1>
-    <p class="lw-sub">Different from the mail campaign above — this is instant. Leave a public message and it appears on the wall right away, so Karmelo and the whole world can see he is not alone. <span style="color:var(--purple-light)">Want to mail him a physical letter too? <a href="#supportForm" style="color:var(--purple-light);text-decoration:underline">Get his address ↑</a></span></p>
+    <p class="lw-sub">Every message left above appears here, so Karmelo and the whole world can see he is not alone. <a href="#signup" style="color:var(--purple-light);text-decoration:underline">Add your message ↑</a></p>
     <div class="lw-counter"><b id="lwCount">—</b> letters and counting</div>
-
-    <div class="lw-write">
-      <h3>Leave your letter</h3>
-      <p class="hint">Keep it kind, keep it about him. Anything hateful, prejudicial, or off-topic is filtered out before it ever posts.</p>
-      <form id="lwForm" autocomplete="off">
-        <div class="lw-row">
-          <div class="lw-field"><label>First name *</label><input name="first_name" maxlength="40" required placeholder="First"></div>
-          <div class="lw-field" style="max-width:90px"><label>Last initial</label><input name="last_initial" maxlength="1" placeholder="L"></div>
-        </div>
-        <div class="lw-row">
-          <div class="lw-field"><label>Email * (private)</label><input name="email" type="email" required placeholder="you@example.com"></div>
-        </div>
-        <div class="lw-row">
-          <div class="lw-field"><label>City</label><input name="city" maxlength="60" placeholder="City"></div>
-          <div class="lw-field" style="max-width:110px"><label>State</label><input name="state" maxlength="20" placeholder="ST"></div>
-        </div>
-        <div class="lw-field"><label>Your letter to Karmelo *</label><textarea name="letter_text" maxlength="2000" required placeholder="Karmelo, I'm standing with you because…"></textarea></div>
-        <input class="lw-hp" tabindex="-1" autocomplete="off" name="hp_field" placeholder="Leave this empty">
-        <button class="lw-btn" type="submit" id="lwBtn">Post My Letter to the Wall →</button>
-        <div class="lw-note">Your email stays private — used only to keep the wall free of spam and trolls. Your first name + city show publicly.</div>
-        <div class="lw-msg" id="lwMsg"></div>
-      </form>
-    </div>
 
     <div class="lw-wall" id="lwWall"><div class="lw-empty">Loading the wall…</div></div>
     <button class="lw-more" id="lwMore" style="display:none">Show more letters</button>
@@ -1911,7 +1851,7 @@ io.observe(b);})();
       var slice=ALL.slice(0,rendered+PAGE);
       wall.innerHTML = slice.length? slice.map(card).join("") : '<div class="lw-empty">Be the first to write Karmelo a letter. 💜</div>';
       rendered=slice.length;
-      document.getElementById("lwMore").style.display = rendered<ALL.length? "block":"none";
+      var _m=document.getElementById("lwMore"); if(_m) _m.style.display = rendered<ALL.length? "block":"none";
     }
     var lastSig="";
     function load(){
@@ -1923,24 +1863,13 @@ io.observe(b);})();
         lastSig=sig; ALL=letters; rendered=0; paint();
       }).catch(function(){ if(!ALL.length) document.getElementById("lwWall").innerHTML='<div class="lw-empty">Wall is loading…</div>'; });
     }
-    document.getElementById("lwMore").onclick=paint;
+    var _lwMore=document.getElementById("lwMore"); if(_lwMore) _lwMore.onclick=paint;
     // ── LIVE POLLING: keep the wall + count real-time ──
     var POLL_MS=15000, pollTimer=null;
     function startPoll(){ if(pollTimer) return; pollTimer=setInterval(function(){ if(!document.hidden) load(); }, POLL_MS); }
     function stopPoll(){ if(pollTimer){ clearInterval(pollTimer); pollTimer=null; } }
     document.addEventListener("visibilitychange", function(){ if(document.hidden){ stopPoll(); } else { load(); startPoll(); } });
-    document.getElementById("lwForm").onsubmit=function(e){
-      e.preventDefault();
-      var f=e.target, btn=document.getElementById("lwBtn"), msg=document.getElementById("lwMsg");
-      var data={first_name:f.first_name.value,last_initial:f.last_initial.value,email:f.email.value,city:f.city.value,state:f.state.value,letter_text:f.letter_text.value,hp_field:f.hp_field.value,t:Date.now()-formShown};
-      btn.disabled=true; btn.textContent="Posting…"; msg.className="lw-msg";
-      fetch(FN,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
-        .then(function(r){return r.json();}).then(function(d){
-          btn.disabled=false; btn.textContent="Post My Letter to the Wall →";
-          if(d.ok){ msg.className="lw-msg ok"; msg.textContent=d.message||"Thank you 💜"; f.reset(); formShown=Date.now(); if(d.status==="approved") setTimeout(load,600); }
-          else { msg.className="lw-msg err"; msg.textContent=d.error||"Something went wrong — try again."; }
-        }).catch(function(){ btn.disabled=false; btn.textContent="Post My Letter to the Wall →"; msg.className="lw-msg err"; msg.textContent="Network error — try again."; });
-    };
+    /* lwForm retired — submissions now flow through the unified hero form (#supportForm). */
     load();
     startPoll();
   })();
