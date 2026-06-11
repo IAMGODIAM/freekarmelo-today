@@ -1081,11 +1081,11 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       </div>
       <div class="stat-cell">
         <span class="stat-k">Charge</span>
-        <span class="stat-v">First-Degree Murder<span class="sub">State of Texas</span></span>
+        <span class="stat-v">Murder<span class="sub">State of Texas · On Appeal</span></span>
       </div>
       <div class="stat-cell">
-        <span class="stat-k">Trial Date</span>
-        <span class="stat-v">Underway<span class="sub">Began June 1 · McKinney, TX</span></span>
+        <span class="stat-k">Status</span>
+        <span class="stat-v">Convicted · Appealing<span class="sub">35 yrs · Verdict June 9, 2026</span></span>
       </div>
       <div class="stat-cell">
         <span class="stat-k">His Record</span>
@@ -1343,7 +1343,7 @@ io.observe(b);})();
       <p><strong>We believe Karmelo Anthony acted in lawful self-defense under the laws of the State of Texas.</strong></p>
       <p>We believe he is a child who had the right to defend himself.</p>
       <p>We believe this trial is a test of whether that right means the same thing for a Black 17-year-old as it does for anyone else.</p>
-      <p>We believe the answer matters. And we will be there on June 1 to say so.</p>
+      <p>We believe the answer matters. The verdict is in — and the fight moves to the appeal. We do not stop until he is free.</p>
     </div>
   </div>
 </div>
@@ -1537,7 +1537,7 @@ io.observe(b);})();
       <div class="truth-block final">
         <div class="truth-label">What We Know</div>
         <div class="truth-text">
-          <strong>He is a child. He had the right to defend himself. He did not swing first. The law is on his side. And we will be there on June 1 to say so out loud, in public, peacefully and lawfully — wearing purple.</strong>
+          <strong>He is a child. He had the right to defend himself. He did not swing first. The law is on his side. The verdict will not stand unanswered — we carry this through the appeal, out loud, in public, peacefully and lawfully — wearing purple.</strong>
         </div>
       </div>
     </div>
@@ -1612,9 +1612,9 @@ io.observe(b);})();
     <div class="lane-grid">
       <label class="lane-card">
         <input type="radio" name="lane" value="letter" checked>
-        <span class="lane-emoji">✍️</span>
-        <span class="lane-title">Write Karmelo a Letter</span>
-        <span class="lane-sub">Flood him with support, day after day. We'll send you his address &amp; a guided prompt.</span>
+        <span class="lane-emoji">✉️</span>
+        <span class="lane-title">Mail Him a Letter</span>
+        <span class="lane-sub">Join the daily physical-mail campaign. We email you his verified address &amp; a guided prompt so he gets real mail every day.</span>
       </label>
       <label class="lane-card">
         <input type="radio" name="lane" value="appeal">
@@ -1721,7 +1721,7 @@ io.observe(b);})();
     if(v==='letter'&&lanes.letter) lanes.letter.style.display='block';
     if(v==='appeal'&&lanes.appeal) lanes.appeal.style.display='block';
     var btn=document.getElementById('submitBtn');
-    btn.textContent = v==='letter' ? 'Start Writing → Send Me His Address'
+    btn.textContent = v==='letter' ? 'Send Me His Mailing Address →'
                     : v==='appeal' ? 'Join the Appeal →'
                     : v==='family' ? 'Stand With the Family →'
                     : 'Stand With Karmelo →';
@@ -1818,8 +1818,8 @@ io.observe(b);})();
   </style>
   <div class="lw-inner">
     <div class="lw-eyebrow">💜 The Living Letter Wall</div>
-    <h1 class="lw-title">Write Karmelo a <em>Letter.</em></h1>
-    <p class="lw-sub">Until he is settled and we begin the physical writing campaign, this wall <em>is</em> his mail. Leave him a word of strength — it posts publicly so he, and the world, can see he is not alone.</p>
+    <h1 class="lw-title">Post Him a <em>Public Word.</em></h1>
+    <p class="lw-sub">Different from the mail campaign above — this is instant. Leave a public message and it appears on the wall right away, so Karmelo and the whole world can see he is not alone. <span style="color:var(--purple-light)">Want to mail him a physical letter too? <a href="#supportForm" style="color:var(--purple-light);text-decoration:underline">Get his address ↑</a></span></p>
     <div class="lw-counter"><b id="lwCount">—</b> letters and counting</div>
 
     <div class="lw-write">
@@ -1866,13 +1866,22 @@ io.observe(b);})();
       rendered=slice.length;
       document.getElementById("lwMore").style.display = rendered<ALL.length? "block":"none";
     }
+    var lastSig="";
     function load(){
       fetch(FN+"?mode=feed").then(function(r){return r.json();}).then(function(d){
-        ALL=d.letters||[]; document.getElementById("lwCount").textContent=(d.count||0).toLocaleString();
-        rendered=0; paint();
-      }).catch(function(){document.getElementById("lwWall").innerHTML='<div class="lw-empty">Wall is loading…</div>';});
+        var letters=d.letters||[];
+        var sig=(d.count||0)+"|"+(letters[0]?letters[0].text:"");
+        document.getElementById("lwCount").textContent=(d.count||0).toLocaleString();
+        if(sig===lastSig) return;            // nothing new — skip repaint to avoid flicker
+        lastSig=sig; ALL=letters; rendered=0; paint();
+      }).catch(function(){ if(!ALL.length) document.getElementById("lwWall").innerHTML='<div class="lw-empty">Wall is loading…</div>'; });
     }
     document.getElementById("lwMore").onclick=paint;
+    // ── LIVE POLLING: keep the wall + count real-time ──
+    var POLL_MS=15000, pollTimer=null;
+    function startPoll(){ if(pollTimer) return; pollTimer=setInterval(function(){ if(!document.hidden) load(); }, POLL_MS); }
+    function stopPoll(){ if(pollTimer){ clearInterval(pollTimer); pollTimer=null; } }
+    document.addEventListener("visibilitychange", function(){ if(document.hidden){ stopPoll(); } else { load(); startPoll(); } });
     document.getElementById("lwForm").onsubmit=function(e){
       e.preventDefault();
       var f=e.target, btn=document.getElementById("lwBtn"), msg=document.getElementById("lwMsg");
@@ -1886,6 +1895,7 @@ io.observe(b);})();
         }).catch(function(){ btn.disabled=false; btn.textContent="Post My Letter to the Wall →"; msg.className="lw-msg err"; msg.textContent="Network error — try again."; });
     };
     load();
+    startPoll();
   })();
   </script>
 </section>
@@ -1929,7 +1939,7 @@ io.observe(b);})();
   </div>
   <div class="foot-bottom">
     <span>© 2026 Free Karmelo Coalition · Produced by <a href="https://e5enclave.com/justice/karmelo-anthony/" style="color:#9b59b6;text-decoration:none;">E5 Enclave INCORPORATED</a> · All Rights Reserved</span>
-    <span>Karmelo Anthony Trial · People v. Anthony · Collin County, TX · June 1, 2026</span>
+    <span>Karmelo Anthony · People v. Anthony · Collin County, TX · Convicted June 9, 2026 · On Appeal</span>
     <span>He was a child. He had the right to defend himself. 💜</span>
   </div>
 </footer>
