@@ -1058,6 +1058,7 @@ textarea.f-input { resize: vertical; min-height: 78px; }
       <button class="nav-tab" onclick="switchTab('facts', true)">The Law</button>
       <button class="nav-tab" onclick="switchTab('charge', true)">The Charge</button>
           <button class="nav-tab" onclick="switchTab('truth', true)">The Truth</button>
+      <a class="nav-tab" href="#letters" style="text-decoration:none;display:inline-block" onclick="document.getElementById('letters').scrollIntoView({behavior:'smooth'})">💜 Write Him</a>
       <a class="nav-tab" href="/statement" style="text-decoration:none;display:inline-block">The Statement</a>
     </div>
     <button class="nav-cta-btn" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth',block:'start'})">Sign Up →</button>
@@ -1772,6 +1773,122 @@ io.observe(b);})();
   });
 })();
 </script>
+
+
+<!-- ══ LIVING LETTER WALL ══ -->
+<section class="letterwall" id="letters">
+  <style>
+    .letterwall{padding:72px 24px;background:linear-gradient(180deg,#060410,#0c0820);border-top:1px solid var(--border);}
+    .lw-inner{max-width:1100px;margin:0 auto;}
+    .lw-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--purple-light);text-align:center;}
+    .lw-title{font-family:var(--serif);font-size:38px;line-height:1.1;color:var(--fg);text-align:center;margin:10px 0 6px;}
+    .lw-title em{color:var(--purple-light);font-style:italic;}
+    .lw-sub{text-align:center;color:var(--fg-dim);max-width:560px;margin:0 auto 8px;font-size:15px;line-height:1.6;}
+    .lw-counter{text-align:center;font-family:var(--mono);font-size:13px;color:var(--purple-light);letter-spacing:0.08em;margin:14px 0 34px;}
+    .lw-counter b{font-size:22px;color:var(--fg);}
+    /* write box */
+    .lw-write{max-width:620px;margin:0 auto 48px;background:var(--purple-soft);border:1px solid var(--border);border-radius:16px;padding:26px;}
+    .lw-write h3{font-family:var(--serif);font-size:22px;color:var(--fg);margin:0 0 4px;}
+    .lw-write p.hint{color:var(--fg-dimmer);font-size:13px;margin:0 0 18px;}
+    .lw-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
+    .lw-field{flex:1;min-width:120px;}
+    .lw-field label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-dimmer);margin-bottom:5px;}
+    .lw-field input,.lw-field textarea{width:100%;box-sizing:border-box;background:#0a0716;border:1px solid var(--border);border-radius:9px;color:var(--fg);padding:11px 13px;font-size:14px;font-family:var(--sans);}
+    .lw-field textarea{resize:vertical;min-height:120px;line-height:1.5;}
+    .lw-field input:focus,.lw-field textarea:focus{outline:none;border-color:var(--purple);}
+    .lw-hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+    .lw-btn{width:100%;background:linear-gradient(135deg,#9b59b6,#6b3fa0);color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.02em;}
+    .lw-btn:hover{filter:brightness(1.08);}
+    .lw-btn:disabled{opacity:0.6;cursor:wait;}
+    .lw-note{font-size:11px;color:var(--fg-dimmer);text-align:center;margin-top:10px;line-height:1.5;}
+    .lw-msg{text-align:center;padding:12px;border-radius:9px;margin-top:14px;font-size:14px;display:none;}
+    .lw-msg.ok{display:block;background:rgba(155,89,182,0.12);color:var(--purple-light);}
+    .lw-msg.err{display:block;background:rgba(180,60,60,0.12);color:#e89aa0;}
+    /* masonry wall */
+    .lw-wall{column-count:3;column-gap:18px;}
+    @media(max-width:880px){.lw-wall{column-count:2;}}
+    @media(max-width:560px){.lw-wall{column-count:1;}.lw-title{font-size:30px;}}
+    .lw-card{break-inside:avoid;background:#0a0716;border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:18px;position:relative;}
+    .lw-card .quote{font-family:var(--serif);color:var(--fg);font-size:15px;line-height:1.62;}
+    .lw-card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
+    .lw-card .who{font-family:var(--mono);font-size:11px;letter-spacing:0.05em;color:var(--purple-light);text-transform:uppercase;}
+    .lw-card .where{font-family:var(--mono);font-size:10px;color:var(--fg-dimmer);}
+    .lw-empty{text-align:center;color:var(--fg-dimmer);padding:40px;font-style:italic;}
+    .lw-more{display:block;margin:24px auto 0;background:transparent;border:1px solid var(--purple);color:var(--purple-light);border-radius:9px;padding:11px 26px;font-size:13px;cursor:pointer;font-family:var(--mono);letter-spacing:0.06em;}
+  </style>
+  <div class="lw-inner">
+    <div class="lw-eyebrow">💜 The Living Letter Wall</div>
+    <h1 class="lw-title">Write Karmelo a <em>Letter.</em></h1>
+    <p class="lw-sub">Until he is settled and we begin the physical writing campaign, this wall <em>is</em> his mail. Leave him a word of strength — it posts publicly so he, and the world, can see he is not alone.</p>
+    <div class="lw-counter"><b id="lwCount">—</b> letters and counting</div>
+
+    <div class="lw-write">
+      <h3>Leave your letter</h3>
+      <p class="hint">Keep it kind, keep it about him. Anything hateful, prejudicial, or off-topic is filtered out before it ever posts.</p>
+      <form id="lwForm" autocomplete="off">
+        <div class="lw-row">
+          <div class="lw-field"><label>First name *</label><input name="first_name" maxlength="40" required placeholder="First"></div>
+          <div class="lw-field" style="max-width:90px"><label>Last initial</label><input name="last_initial" maxlength="1" placeholder="L"></div>
+        </div>
+        <div class="lw-row">
+          <div class="lw-field"><label>Email * (private)</label><input name="email" type="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="lw-row">
+          <div class="lw-field"><label>City</label><input name="city" maxlength="60" placeholder="City"></div>
+          <div class="lw-field" style="max-width:110px"><label>State</label><input name="state" maxlength="20" placeholder="ST"></div>
+        </div>
+        <div class="lw-field"><label>Your letter to Karmelo *</label><textarea name="letter_text" maxlength="2000" required placeholder="Karmelo, I'm standing with you because…"></textarea></div>
+        <input class="lw-hp" tabindex="-1" autocomplete="off" name="hp_field" placeholder="Leave this empty">
+        <button class="lw-btn" type="submit" id="lwBtn">Post My Letter to the Wall →</button>
+        <div class="lw-note">Your email stays private — used only to keep the wall free of spam and trolls. Your first name + city show publicly.</div>
+        <div class="lw-msg" id="lwMsg"></div>
+      </form>
+    </div>
+
+    <div class="lw-wall" id="lwWall"><div class="lw-empty">Loading the wall…</div></div>
+    <button class="lw-more" id="lwMore" style="display:none">Show more letters</button>
+  </div>
+
+  <script>
+  (function(){
+    var FN="https://sue-45c3e283.base44.app/functions/letterWallSubmit";
+    var rendered=0, ALL=[], PAGE=24;
+    var formShown=Date.now();
+    function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+    function card(l){
+      var where=[l.city,l.state].filter(Boolean).join(", ");
+      return '<div class="lw-card"><div class="quote">'+esc(l.text)+'</div><div class="meta"><span class="who">'+esc(l.name)+'</span><span class="where">'+esc(where)+'</span></div></div>';
+    }
+    function paint(){
+      var wall=document.getElementById("lwWall");
+      var slice=ALL.slice(0,rendered+PAGE);
+      wall.innerHTML = slice.length? slice.map(card).join("") : '<div class="lw-empty">Be the first to write Karmelo a letter. 💜</div>';
+      rendered=slice.length;
+      document.getElementById("lwMore").style.display = rendered<ALL.length? "block":"none";
+    }
+    function load(){
+      fetch(FN+"?mode=feed").then(function(r){return r.json();}).then(function(d){
+        ALL=d.letters||[]; document.getElementById("lwCount").textContent=(d.count||0).toLocaleString();
+        rendered=0; paint();
+      }).catch(function(){document.getElementById("lwWall").innerHTML='<div class="lw-empty">Wall is loading…</div>';});
+    }
+    document.getElementById("lwMore").onclick=paint;
+    document.getElementById("lwForm").onsubmit=function(e){
+      e.preventDefault();
+      var f=e.target, btn=document.getElementById("lwBtn"), msg=document.getElementById("lwMsg");
+      var data={first_name:f.first_name.value,last_initial:f.last_initial.value,email:f.email.value,city:f.city.value,state:f.state.value,letter_text:f.letter_text.value,hp_field:f.hp_field.value,t:Date.now()-formShown};
+      btn.disabled=true; btn.textContent="Posting…"; msg.className="lw-msg";
+      fetch(FN,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+        .then(function(r){return r.json();}).then(function(d){
+          btn.disabled=false; btn.textContent="Post My Letter to the Wall →";
+          if(d.ok){ msg.className="lw-msg ok"; msg.textContent=d.message||"Thank you 💜"; f.reset(); formShown=Date.now(); if(d.status==="approved") setTimeout(load,600); }
+          else { msg.className="lw-msg err"; msg.textContent=d.error||"Something went wrong — try again."; }
+        }).catch(function(){ btn.disabled=false; btn.textContent="Post My Letter to the Wall →"; msg.className="lw-msg err"; msg.textContent="Network error — try again."; });
+    };
+    load();
+  })();
+  </script>
+</section>
 
 
 <!-- FOOTER -->
