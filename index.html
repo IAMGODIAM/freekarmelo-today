@@ -1742,7 +1742,7 @@ io.observe(b);})();
     <div class="signup-head">
       <span class="eyebrow">✍️ Stand With Karmelo</span>
       <h2 class="signup-title">Leave him a message. <em>The world will see he's not alone.</em></h2>
-      <p class="signup-sub">Write a word of support and it posts straight to the public wall below — Karmelo and everyone watching will see it. Want to mail him a physical letter too? One tap and we'll send you his verified mailing address.</p>
+      <p class="signup-sub">Write a word of support and it posts straight to the public wall below — Karmelo and everyone watching will see it.</p>
     </div>
 
     <div class="form-card">
@@ -1800,10 +1800,6 @@ io.observe(b);})();
         </div>
 
         <!-- GET HIS ADDRESS — A BUTTON, NOT A SEPARATE FORM -->
-        <label class="manifesto-check" style="align-items:flex-start;">
-          <input type="checkbox" id="wantAddress" name="want_address" value="yes"/>
-          <span><strong>✉️ Also email me his verified mailing address.</strong><br/><span style="font-size:13px;opacity:.7;">Join the daily mail campaign — we send his address + a guided prompt so he gets real mail every day.</span></span>
-        </label>
 
         <label class="manifesto-check">
           <input type="checkbox" id="signManifesto" name="sign_manifesto" value="true" checked/>
@@ -1849,7 +1845,7 @@ io.observe(b);})();
     if(!g('message')){err.textContent='Please write your message to Karmelo.';err.style.display='block';return;}
     if(!g('firstName')||!g('lastName')||!g('email')){err.textContent='Please add your name and email.';err.style.display='block';return;}
     btn.disabled=true; btn.textContent='Posting…';
-    var wantAddr=document.getElementById('wantAddress').checked;
+    var wantAddr=false;
     var data={
       first_name:g('firstName'), last_name:g('lastName'), email:g('email'),
       city:g('city'), state:g('state'), message:g('message'),
@@ -1868,7 +1864,6 @@ io.observe(b);})();
       if(j.wall_status==='approved'){hd.textContent='Your message is live on the wall.';msg.textContent='Karmelo will know you stood with him.';}
       else if(j.wall_status==='held'){hd.textContent='Thank you — your message is in review.';msg.textContent='It will appear on the wall shortly after a quick board glance.';}
       else{hd.textContent='Your name is on the record.';msg.textContent='Thank you for standing with Karmelo. The fight continues until he is free.';}
-      if(wantAddr){msg.textContent+=' Check your email — his mailing address and a guided prompt are on the way.';}
       if(typeof loadWall==='function') setTimeout(loadWall,1500);
     }catch(ex){
       err.textContent=ex.message||'Network error. Please try again.'; err.style.display='block';
