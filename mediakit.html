@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Media Kit — Free Karmelo</title>
+<meta name="description" content="Free, ready-to-post graphics to stand with Karmelo Anthony. Download the full social kit or grab any image. Verified TDCJ details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#060410; --bg-1:#0d0a1e; --bg-2:#141028;
+    --fg:#f0eefc; --fg-dim:#9d98c0; --fg-dimmer:#5a5478;
+    --border:#1a1630; --border-2:#252040; --border-3:#342e58;
+    --purple:#9b59b6; --purple-2:#7d3c98; --purple-light:#c39bd3;
+    --purple-glow:rgba(155,89,182,0.13); --purple-soft:rgba(155,89,182,0.06);
+    --gold:#c9a84c; --gold-light:#d4b96a;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono','Menlo',monospace;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --container:1040px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:100;background:rgba(6,4,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  nav .brand{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.3px}
+  nav .brand b{color:var(--purple-light)}
+  nav .links{display:flex;gap:22px;font-size:14px;color:var(--fg-dim)}
+  nav .links a:hover{color:var(--fg)}
+  nav .cta{background:var(--purple);color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600}
+  @media(max-width:680px){nav .links{display:none}}
+  .hero{padding:72px 0 36px;text-align:center;background:radial-gradient(120% 100% at 50% -10%,var(--purple-soft),transparent 60%)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--purple-light);margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,56px);line-height:1.05;font-weight:700;letter-spacing:-.5px;margin:0}
+  .hero h1 .accent{background:linear-gradient(100deg,var(--purple-light),var(--gold-light));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .pull{margin:20px auto 0;font-family:var(--serif);font-style:italic;font-size:clamp(18px,3vw,24px);color:var(--fg);max-width:600px}
+  .downloadbar{margin:30px auto 0;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--border-3)}
+  .btn.primary{background:var(--purple);color:#fff;border-color:var(--purple)}
+  .btn.primary:hover{background:var(--purple-2)}
+  .btn.ghost{color:var(--fg-dim)}
+  .btn.ghost:hover{color:var(--fg);border-color:var(--purple-light)}
+  .verify{margin:26px auto 0;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--fg-dim);border:1px solid var(--border-2);border-radius:999px;padding:8px 18px;background:var(--bg-1)}
+  section.group{padding:46px 0 6px}
+  .grouphead{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;border-bottom:1px solid var(--border);padding-bottom:14px}
+  .grouphead h2{font-family:var(--serif);font-size:28px;font-weight:700;margin:0}
+  .grouphead .size{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--purple-light);text-transform:uppercase}
+  .grouphead .note{margin-left:auto;font-size:13px;color:var(--fg-dimmer)}
+  .grid{display:grid;gap:20px}
+  .grid.sq{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+  .grid.story{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+  .grid.wide{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .grid.car{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .asset{background:var(--bg-1);border:1px solid var(--border-2);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s}
+  .asset:hover{border-color:var(--purple-light);transform:translateY(-2px)}
+  .asset .imgwrap{background:#000;display:block}
+  .asset img{width:100%;display:block}
+  .asset .meta{padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .asset .meta .label{font-size:13px;font-weight:600;color:var(--fg)}
+  .asset .meta .dl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--purple-light);border:1px solid var(--border-3);border-radius:7px;padding:6px 11px;white-space:nowrap}
+  .asset .meta .dl:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+  .caption{margin:50px auto 0;background:var(--bg-1);border:1px solid var(--border-2);border-radius:16px;padding:28px 30px}
+  .caption h3{font-family:var(--serif);font-size:22px;margin:0 0 6px}
+  .caption .sub{font-size:13px;color:var(--fg-dimmer);margin-bottom:18px}
+  .caption pre{white-space:pre-wrap;font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--fg-dim);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:20px;margin:0}
+  .caption .copycap{margin-top:16px}
+  footer{margin-top:64px;border-top:1px solid var(--border);padding:30px 0;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--fg-dimmer)}
+  footer b{color:var(--purple-light)}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--purple);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;transition:.25s;pointer-events:none;z-index:200}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/">Free<b>Karmelo</b></a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/updates">Updates</a>
+      <a href="/statement">The Statement</a>
+      <a href="/mediakit">Media Kit</a>
+    </div>
+    <a class="cta" href="/#signup">Stand With Karmelo →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Share The Cause · Media Kit</div>
+    <h1>Help Us <span class="accent">Spread the Word</span></h1>
+    <p class="pull">Free, ready-to-post graphics for every platform. Download the full kit or grab any single image — then post it anywhere.</p>
+    <div class="downloadbar">
+      <a class="btn primary" href="https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/ad76dcbf7_FreeKarmelo-Social-Kit.zip" download>⬇ Download Full Kit (.zip)</a>
+      <a class="btn ghost" href="/#signup">Write Him a Letter</a>
+    </div>
+    <div class="verify">🛡 All details verified against the official TDCJ inmate record</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="group">
+    <div class="grouphead"><h2>Instagram & Facebook Posts</h2><span class="size">1080 × 1080</span><span class="note">Square — feed posts</span></div>
+    <div class="grid sq" id="g-square"></div>
+  </section>
+
+  <section class="group">
+    <div class="grouphead"><h2>Stories & Reels</h2><span class="size">1080 × 1920</span><span class="note">Vertical — IG/FB Stories, TikTok, Shorts</span></div>
+    <div class="grid story" id="g-story"></div>
+  </section>
+
+  <section class="group">
+    <div class="grouphead"><h2>X / Twitter & Facebook Cards</h2><span class="size">1600 × 900</span><span class="note">Landscape — link posts, headers</span></div>
+    <div class="grid wide" id="g-wide"></div>
+  </section>
+
+  <section class="group">
+    <div class="grouphead"><h2>Instagram Carousel</h2><span class="size">1080 × 1350</span><span class="note">Post all 4 in order — swipe sequence</span></div>
+    <div class="grid car" id="g-car"></div>
+  </section>
+
+  <div class="caption">
+    <h3>Ready-to-Post Caption</h3>
+    <div class="sub">Tap copy, paste into any post.</div>
+    <pre id="cap">Karmelo is at the Wallace Pack Unit. A letter or a few dollars on his commissary tells him he is not alone.
+
+✉️ WRITE HIM:
+Karmelo Anthony · TDCJ # 02617665
+Wallace Pack Unit, 2400 Wallace Pack Road, Navasota, TX 77868
+
+💜 PUT MONEY ON HIS BOOKS:
+Official Texas TDCJ portal → tdcj-ecommdirect.portal.texas.gov
+(You'll need his name + TDCJ # 02617665)
+
+⚠️ Always use the official TDCJ portal. Never a third-party fundraiser.
+
+freekarmelo.net · freekarmelo.today
+#BelieveKarmelo #FreeKarmelo</pre>
+    <div class="copycap"><button class="btn ghost" onclick="copyCap()" style="cursor:pointer;background:none">📋 Copy Caption</button></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">FREE<b>KARMELO</b> &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/updates">Updates</a> &nbsp;·&nbsp; <a href="/statement">The Statement</a> &nbsp;·&nbsp; #BelieveKarmelo</div>
+</footer>
+
+<div class="toast" id="toast">Caption copied ✓</div>
+
+<script>
+const ASSETS = {
+  square: [
+    ["Sovereign Dark","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/dd3a8097a_Instagram-Post_Sovereign-Dark_1080x1080.png"],
+    ["Editorial Paper","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/cb327f115_Instagram-Post_Editorial-Paper_1080x1080.png"],
+    ["Purple + Photo","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/4c388b288_Instagram-Post_Purple-Photo_1080x1080.png"],
+    ["Write Him","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/3dfdd9147_Instagram-Post_Write-Him_1080x1080.png"],
+    ["His Books","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/cd1d98986_Instagram-Post_His-Books_1080x1080.png"]
+  ],
+  story: [
+    ["Sovereign Dark","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/dda369d0b_Story-Reel_Sovereign-Dark_1080x1920.png"],
+    ["Purple + Photo","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/f6aefc3b2_Story-Reel_Purple-Photo_1080x1920.png"],
+    ["Editorial Paper","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/0d70364ca_Story-Reel_Editorial-Paper_1080x1920.png"]
+  ],
+  wide: [
+    ["Sovereign Dark","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/9ab8d5612_X-Facebook_Sovereign-Dark_1600x900.png"],
+    ["Purple + Photo","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/4dea9f76a_X-Facebook_Purple-Photo_1600x900.png"],
+    ["Editorial Paper","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/b7c5e43f0_X-Facebook_Editorial-Paper_1600x900.png"]
+  ],
+  car: [
+    ["1 · Cover","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/24fdc8523_IG-Carousel_1-Cover_1080x1350.png"],
+    ["2 · Write Him","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/bf62428fa_IG-Carousel_2-Write-Him_1080x1350.png"],
+    ["3 · His Books","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/d07cf8182_IG-Carousel_3-His-Books_1080x1350.png"],
+    ["4 · Verified / Share","https://base44.app/api/apps/69d7dd5e015cd1aa45c3e283/files/mp/public/69d7dd5e015cd1aa45c3e283/02ec1ac9e_IG-Carousel_4-Verified-Share_1080x1350.png"]
+  ]
+};
+function render(key, gid){
+  const g=document.getElementById(gid);
+  ASSETS[key].forEach(([label,url])=>{
+    const a=document.createElement('div');a.className='asset';
+    a.innerHTML='<a class="imgwrap" href="'+url+'" target="_blank" rel="noopener"><img loading="lazy" src="'+url+'" alt="'+label+'"></a>'+
+      '<div class="meta"><span class="label">'+label+'</span><a class="dl" href="'+url+'" download>Download</a></div>';
+    g.appendChild(a);
+  });
+}
+render('square','g-square');render('story','g-story');render('wide','g-wide');render('car','g-car');
+function copyCap(){
+  const t=document.getElementById('cap').innerText;
+  navigator.clipboard.writeText(t).then(()=>{const el=document.getElementById('toast');el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800);});
+}
+</script>
+</body>
+</html>
