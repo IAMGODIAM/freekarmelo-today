@@ -170,8 +170,9 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return; const el=e.target,t=+el.dataset.count; let n=0;
   const step=Math.max(1,Math.ceil(t/40)); const tick=()=>{n=Math.min(t,n+step);el.textContent=n;if(n<t)requestAnimationFrame(tick)};
   tick(); cio.unobserve(el);
-}),{threshold:.6});
+}),{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
 </script>
 </body>
 </html>
+
