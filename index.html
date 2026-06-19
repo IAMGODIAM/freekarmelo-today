@@ -100,6 +100,30 @@ body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-ser
 .web-links a.gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1206;border:none}
 footer{text-align:center;padding:50px 22px;color:var(--fg-dimmer);font-size:12px;border-top:1px solid var(--border)}
 footer a{color:var(--purple-light);text-decoration:none}
+
+/* ===== HERO B — LIVING MARQUEE WALL ===== */
+.hero-marquee{position:relative;overflow:hidden;padding:46px 0 30px;border-bottom:1px solid rgba(255,255,255,.08)}
+.hero-marquee .eyebrow{text-align:center}
+.hero-marquee h1{text-align:center;margin:6px auto 4px}
+.hero-marquee .hm-sub{text-align:center;max-width:640px;margin:0 auto 22px;opacity:.85;font-size:1.02rem;line-height:1.5}
+.hm-track-wrap{position:relative;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.hm-row{display:flex;gap:16px;width:max-content;animation:hm-scroll 60s linear infinite;will-change:transform}
+.hm-row.r2{animation-duration:80s;animation-direction:reverse;margin-top:14px}
+.hm-track-wrap:hover .hm-row{animation-play-state:paused}
+@keyframes hm-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hm-card{flex:0 0 auto;width:300px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(212,175,55,.18);border-radius:14px;padding:16px 18px;backdrop-filter:blur(4px)}
+.hm-card .hm-quote{font-size:.96rem;line-height:1.5;color:#f3ecff;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.hm-card .hm-who{margin-top:10px;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold,#d4af37);font-weight:600}
+.hm-card .hm-loc{font-size:.74rem;opacity:.6;margin-top:2px}
+.hm-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hm-cta-row a{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.96rem}
+.hm-add{background:linear-gradient(135deg,#d4af37,#b98e1f);color:#1a1024}
+.hm-read{border:1px solid rgba(255,255,255,.25);color:#fff}
+.hm-count{text-align:center;margin-top:14px;font-size:.86rem;opacity:.7}
+.hm-count b{color:var(--gold,#d4af37)}
+@media(max-width:560px){.hm-card{width:240px}.hero-marquee h1{font-size:2rem}}
+@media(prefers-reduced-motion:reduce){.hm-row{animation:none;flex-wrap:wrap;width:100%;justify-content:center}.hm-track-wrap{mask-image:none;-webkit-mask-image:none}.hm-row.r2{display:none}}
+
 </style>
 </head>
 <body>
@@ -114,16 +138,19 @@ footer a{color:var(--purple-light);text-decoration:none}
   </div>
 </nav>
 
-<header class="hero">
-  <div class="eyebrow">💜 The Appeal Is Live · Updated As It Happens</div>
-  <h1 class="serif">The Fight Moved to <em>Appeal.</em></h1>
-  <p class="sub">This is the living front of the movement. Every development — sourced, verified, dated. When something happens in Karmelo's case, it lands here first.</p>
-  <div class="stat-row">
-    <div class="stat"><div class="n" data-count="35">0</div><div class="l">Year Sentence Under Appeal</div></div>
-    <div class="stat"><div class="n" data-count="3">0</div><div class="l">Black Jurors Struck</div></div>
-    <div class="stat"><div class="n" data-count="0">0</div><div class="l">Black Jurors Seated</div></div>
+<header class="hero hero-marquee" id="wallhero">
+  <div class="eyebrow">💜 The Wall of Support · Real Voices, Coast to Coast</div>
+  <h1 class="serif">They Are Standing <em>With Him.</em></h1>
+  <p class="hm-sub">Every card is a real letter from a real person who refuses to look away. The fight moved to appeal — and the movement is answering.</p>
+  <div class="hm-track-wrap" id="hmWrap" aria-label="Wall of supporter letters">
+    <div class="hm-row" id="hmRow1"></div>
+    <div class="hm-row r2" id="hmRow2"></div>
   </div>
-  <div class="scroll-hint">Scroll for the latest</div>
+  <div class="hm-count" id="hmCount"></div>
+  <div class="hm-cta-row">
+    <a class="hm-add" href="https://e5enclave.com/justice/karmelo-anthony/#letterwall">Add Your Voice →</a>
+    <a class="hm-read" href="#updates">See the Latest News</a>
+  </div>
 </header>
 
 <section class="section" id="updates">
@@ -195,6 +222,34 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{
   tick(); cio.unobserve(el);
 }),{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
+
+/* ===== HERO B marquee — live wall feed ===== */
+(function(){
+  var WALL_URL="https://sue-45c3e283.base44.app/functions/letterWallSubmit?mode=feed";
+  var r1=document.getElementById('hmRow1'), r2=document.getElementById('hmRow2'), cnt=document.getElementById('hmCount');
+  if(!r1||!r2) return;
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
+  function card(l){
+    var who=esc(l.name||'A supporter');
+    var loc=[l.city,l.state].filter(Boolean).map(esc).join(', ');
+    var q=esc((l.text||'').trim());
+    return '<div class="hm-card"><div class="hm-quote">\u201c'+q+'\u201d</div><div class="hm-who">'+who+'</div>'+(loc?'<div class="hm-loc">'+loc+'</div>':'')+'</div>';
+  }
+  function paint(list){
+    if(!list.length){document.getElementById('wallhero').classList.remove('hero-marquee');return;}
+    // duplicate the set so the -50% loop is seamless
+    var half=list.map(card).join('');
+    r1.innerHTML=half+half;
+    var rev=list.slice().reverse().map(card).join('');
+    r2.innerHTML=rev+rev;
+    cnt.innerHTML='<b>'+list.length+'</b> voices on the wall and counting';
+  }
+  fetch(WALL_URL,{cache:'no-store'})
+    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
+    .then(function(d){var items=Array.isArray(d)?d:(d.items||d.letters||d.feed||[]);paint(items);})
+    .catch(function(){document.getElementById('wallhero').classList.remove('hero-marquee');});
+})();
+
 </script>
 </body>
 </html>
