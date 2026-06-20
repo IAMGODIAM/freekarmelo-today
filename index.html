@@ -157,6 +157,7 @@ footer a{color:var(--purple-light);text-decoration:none}
   <div class="section-head">
     <div class="eyebrow" style="color:var(--purple-light)">The Record, As It Moves</div>
     <h2 class="serif">Latest Developments</h2>
+    <div id="awUpdated" class="aw-updated" style="font-family:monospace;font-size:.72rem;letter-spacing:.06em;color:#9a8fb5;margin-top:6px;text-transform:uppercase;opacity:.85"></div>
   </div>
   <div class="timeline" id="tl"></div>
 </section>
@@ -212,6 +213,13 @@ fetch(FEED_URL,{cache:"no-store"})
   .then(data=>{
     const items = Array.isArray(data)?data:(data.items||data.feed||[]);
     if(Array.isArray(items) && items.length){ renderTimeline(items); }
+    try{
+      const st=document.getElementById("awUpdated");
+      const u=data && data.updated ? new Date(data.updated) : null;
+      if(st && u && !isNaN(u)){
+        st.textContent = "Updated "+u.toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"})+" ET";
+      }
+    }catch(e){}
   })
   .catch(()=>{ /* keep fallback on any failure — graceful degradation */ });
 /* reveal on scroll (observer hoisted above renderTimeline) */
