@@ -259,6 +259,31 @@ document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
 })();
 
 </script>
+<!-- ===== HIS MEDICINE — URGENT POPUP (Acolyte / board protocol medicine-campaign-2026-0626) ===== -->
+<div id="medAlert" role="dialog" aria-modal="true" aria-labelledby="medAlertTitle" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(3,2,10,.82);backdrop-filter:blur(6px);padding:20px;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+  <div style="position:relative;max-width:480px;width:100%;background:linear-gradient(180deg,#0d0a1e,#0a0715);border:1px solid #342e58;border-radius:18px;padding:30px 28px 26px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(155,89,182,.15);">
+    <button onclick="closeMedAlert()" aria-label="Close" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#5a5478;font-size:22px;line-height:1;cursor:pointer;">&times;</button>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,77,77,.12);border:1px solid rgba(255,77,77,.4);color:#ff8585;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:999px;font-family:'JetBrains Mono',ui-monospace,monospace;">⚠️ Urgent · Medical Emergency Risk</div>
+    <h2 id="medAlertTitle" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:700;color:#f0eefc;line-height:1.15;margin:16px 0 10px;">They have his medicine.<br><span style="background:linear-gradient(100deg,#c39bd3,#d4b96a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">They won&rsquo;t give it to him.</span></h2>
+    <p style="color:#9d98c0;font-size:15.5px;line-height:1.6;margin-bottom:20px;">Karmelo Anthony is 19 and epileptic. Texas holds his life-saving medication and the legal duty to deliver it &mdash; yet one missed dose can kill him. Every day without it is a day his life is on the line.</p>
+    <a href="/medicine" onclick="seenMedAlert()" style="display:block;text-align:center;background:#9b59b6;color:#fff;font-weight:700;font-size:15px;padding:14px;border-radius:10px;text-decoration:none;margin-bottom:10px;">See What&rsquo;s Happening &amp; Take Action &rarr;</a>
+    <button onclick="closeMedAlert()" style="display:block;width:100%;text-align:center;background:none;border:none;color:#5a5478;font-size:13px;cursor:pointer;padding:4px;">Not now</button>
+  </div>
+</div>
+<script>
+(function(){
+  function show(){var e=document.getElementById('medAlert');if(e)e.style.display='flex';}
+  window.closeMedAlert=function(){var e=document.getElementById('medAlert');if(e)e.style.display='none';try{sessionStorage.setItem('medAlertSeen','1');}catch(x){}};
+  window.seenMedAlert=function(){try{sessionStorage.setItem('medAlertSeen','1');}catch(x){}};
+  var seen=false;try{seen=sessionStorage.getItem('medAlertSeen')==='1';}catch(x){}
+  // Don't show the popup if the visitor is already ON the medicine page
+  var onMed=location.pathname.replace(/\/$/,'')==='/medicine';
+  if(!seen && !onMed){setTimeout(show,1800);}
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')window.closeMedAlert();});
+})();
+</script>
+<!-- ===== /HIS MEDICINE POPUP ===== -->
+
 </body>
 </html>
 
