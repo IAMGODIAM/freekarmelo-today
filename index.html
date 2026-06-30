@@ -163,6 +163,13 @@ footer a{color:var(--purple-light);text-decoration:none}
 .appeal-list li b{color:var(--fg)}
 .appeal-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:.85rem;color:var(--fg-dimmer);font-style:italic}
 
+
+/* ===== defense quote cards ===== */
+.quote-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:1000px;margin:0 auto}
+.qcard{background:rgba(212,175,55,.05);border-left:3px solid var(--gold);border-radius:0 14px 14px 0;padding:20px 22px;margin:0}
+.qcard p{font-family:'Fraunces',serif;font-size:1.12rem;line-height:1.4;color:var(--fg);font-style:italic;margin-bottom:12px}
+.qcard cite{font-style:normal;font-size:.78rem;color:var(--gold);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+.qsrc{text-align:center;margin-top:18px;font-size:.74rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
 </style>
 </head>
 <body>
@@ -233,7 +240,8 @@ footer a{color:var(--purple-light);text-decoration:none}
 
     <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 10, 2026</span><h4 style="color:var(--fav)">Appeal filed — one day later</h4><p>Notice of appeal filed the day after sentencing, with a pauper oath / indigency declaration and a request for court-appointed appellate counsel. Tier-A confirmed across six outlets.</p><span class="ct-src">WFAA · CBS · NBC DFW · ABC · FOX4 · KERA</span></div></div>
 
-    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 11–13, 2026</span><h4 style="color:var(--fav)">Docketed · counsel appointed · ground preserved</h4><p>Court records show the status as <b>appealed</b>; Anthony transferred to TDCJ custody pending appeal. Donny Perales appointed appellate counsel. The gag order lifted, putting documented racial animus into the record an appellate court reviews. In late May, the U.S. Supreme Court overturned a Mississippi conviction on the same Batson grounds.</p><span class="ct-src">USA Today · WFAA · DMN · Houston Public Media · Dallas Observer</span></div></div>
+    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 11–13, 2026</span><h4 style="color:var(--fav)">Docketed · case leaves Collin County · ground preserved</h4><p>Court records show the status as <b>appealed</b>; Anthony transferred to TDCJ custody pending appeal. The gag order lifted, putting documented racial animus into the record an appellate court reviews. In late May, the U.S. Supreme Court overturned a Mississippi conviction on the same Batson grounds — and the appeal moves to the <b>Fifth District Court of Appeals in Dallas</b>, out of the county that produced the all-white jury.</p><span class="ct-src">USA Today · WFAA · DMN · Houston Public Media · Dallas Observer</span></div></div>
+    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 22, 2026</span><h4 style="color:var(--fav)">A high-profile pro bono team takes the appeal</h4><p>Six attorneys announced they will represent Anthony <b>pro bono</b> for a fresh, independent review of the trial record — including former Dallas County prosecutor <b>Russell Wilson</b>, Texas NAACP President <b>Gary Bledsoe</b>, <b>Brooke Cluse</b> of Ben Crump Law, <b>Michael L. Ware</b>, <b>Sean Daredia</b>, and <b>Justin A. Moore</b>. Their words: <em>"Our responsibility is to determine whether a legal error occurred and to ensure that every issue supported by the record is fully and vigorously presented on appeal."</em> Trial exhibits — 911 calls, surveillance video, bodycam, crime-scene photos, previously jury-only — were released to the public.</p><span class="ct-src">NBC 5 DFW (Jun 22, upd. Jun 24)</span></div></div>
   </div>
 </section>
 
@@ -246,14 +254,29 @@ footer a{color:var(--purple-light);text-decoration:none}
   <div class="panel-grid">
     <div class="apanel"><div class="ap-no">01</div><h3>Trial Irregularities</h3><p>A murder case with a live self-defense claim moved from jury seating to guilty verdict to a 35-year sentence in a single trial — with guilt and punishment both returned the same night, by 9 p.m., after under three hours of deliberation.</p></div>
 
-    <div class="apanel"><div class="ap-no">02</div><h3>Witness Issues</h3><p>Witness accounts conflicted on who initiated physical contact — touched, grabbed, or pushed. A teammate testified Metcalf pushed Anthony first. The self-defense account sat in the record from the day of arrest. Anthony exercised his Fifth Amendment right and did not testify.</p></div>
+    <div class="apanel"><div class="ap-no">02</div><h3>Witness Issues</h3><p>Every student witness the State called was from Metcalf’s own school — the defense urged jurors to weigh that bias on the record. Accounts conflicted on who initiated contact; the encounter happened in a public venue, and the defense argued no one had a legal right to put hands on Anthony or shove him from a tent he was told to leave. He claimed self-defense from the day of arrest and never wavered. He exercised his Fifth Amendment right and did not testify.</p></div>
 
     <div class="apanel"><div class="ap-no">03</div><h3>Constitutional Concerns</h3><p>A preserved Batson challenge (Fourteenth Amendment equal protection). The Sixth Amendment right to an impartial jury drawn from a fair cross-section. A First Amendment tension in the April 18 order restricting press and public access. The Fifth Amendment right not to testify.</p></div>
 
     <div class="apanel watch"><div class="ap-no">04</div><h3>Racial Bias Indicators</h3><p>Three Black prospective jurors struck, none seated, in a county roughly 10–12% Black. An all-white jury a law professor called <em>"a choice, not inevitable."</em> Documented racial animus now part of the reviewable record — and a fresh U.S. Supreme Court reversal on the very same Batson ground.</p></div>
 
     <div class="apanel watch"><div class="ap-no">05</div><h3>Outside Business Hours</h3><p>The verdict was reached and the 35-year sentence imposed at roughly 9 p.m. — guilt and punishment both decided the same night, well past when courts normally sit. The record reflects a speed worth examining on its own.</p></div>
+    <div class="apanel"><div class="ap-no">06</div><h3>Preserved Charge Error</h3><p>Before closing, the defense objected to the jury instructions and the judge overruled it — preserving the issue. The court refused to let jurors consider criminally negligent homicide as a lesser charge, and at punishment the jury rejected a “sudden passion” finding that would have capped the sentence at 2–20 years. These rulings are now on the record for appellate review.</p></div>
   </div>
+</section>
+
+<!-- ============ THE DEFENSE CASE, IN THE RECORD ============ -->
+<section class="section" id="defense-record">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--gold)">In Open Court · On the Record</div>
+    <h2 class="serif">The Defense Case, In Their Own Words</h2>
+  </div>
+  <div class="quote-wrap">
+    <blockquote class="qcard"><p>“Karmelo is in a public place. Austin had no legal right to use force to eject Karmelo from the tent.”</p><cite>— Mike Howard, defense counsel, closing argument</cite></blockquote>
+    <blockquote class="qcard"><p>“How do you know in a split second of chaos when it is too late? If you wait too long to defend yourself, self-defense is meaningless.”</p><cite>— Mike Howard, on the right to self-defense</cite></blockquote>
+    <blockquote class="qcard"><p>“We should be on guard for bias — of course they would. Austin was their leader.”</p><cite>— on the State’s student witnesses, all from the victim’s school</cite></blockquote>
+  </div>
+  <p class="qsrc">Quotes as reported by Courthouse News Service, June 9, 2026.</p>
 </section>
 
 <!-- ============ APPEAL READINESS (honest posture) ============ -->
@@ -263,9 +286,12 @@ footer a{color:var(--purple-light);text-decoration:none}
     <h2 class="serif" style="margin:8px 0 14px">Where the Appeal Stands</h2>
     <ul class="appeal-list">
       <li><b>Filed &amp; docketed.</b> Notice of appeal filed June 10; court records show the status as appealed as of June 11.</li>
-      <li><b>Counsel appointed.</b> Donny Perales of Chesley &amp; Perales (McKinney) appointed appellate counsel, June 13.</li>
+      <li><b>High-profile pro bono team retained.</b> Six attorneys — including former Dallas County prosecutor Russell Wilson, Texas NAACP President Gary Bledsoe, and Brooke Cluse of Ben Crump Law — are conducting a fresh, independent review of the trial record.</li>
       <li><b>Indigency declared.</b> Pauper oath / indigency declaration filed alongside the notice of appeal.</li>
       <li><b>Batson ground preserved.</b> The race-based juror-exclusion challenge was raised and overruled at trial — making it a documented, preserved issue for appellate review.</li>
+      <li><b>Charge error preserved.</b> The defense objected to the jury instructions and was overruled; the court refused a lesser-included (criminally negligent homicide); the jury rejected sudden passion — all on the record.</li>
+      <li><b>Case caption &amp; venue.</b> <i>Karmelo Sincere Anthony</i>, 296th District Court, Collin County — appeal now before the Fifth District Court of Appeals in Dallas.</li>
+      <li><b>Evidence now public.</b> 911 calls, surveillance video, bodycam, and crime-scene photos — once jury-only — have been released for independent scrutiny.</li>
       <li><b>Direct precedent live.</b> The U.S. Supreme Court overturned a conviction on the same Batson grounds in late May 2026.</li>
     </ul>
     <p class="appeal-note">Honest note: the public record confirms the appeal is filed, docketed, and counsel-represented, and that the Batson ground is preserved. Certification that the full trial transcript and clerk's record are complete is the appellate counsel's certified-record process — not something this page independently audits. We report what the record shows.</p>
