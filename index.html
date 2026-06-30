@@ -124,6 +124,45 @@ footer a{color:var(--purple-light);text-decoration:none}
 @media(max-width:560px){.hm-card{width:240px}.hero-marquee h1{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){.hm-row{animation:none;flex-wrap:wrap;width:100%;justify-content:center}.hm-track-wrap{mask-image:none;-webkit-mask-image:none}.hm-row.r2{display:none}}
 
+
+/* ===== structured legal timeline (case-timeline) ===== */
+.ct-rail{position:relative;max-width:760px;margin:0 auto;padding-left:30px}
+.ct-rail::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--gold),var(--purple) 50%,var(--fav))}
+.ct-item{position:relative;margin-bottom:22px;opacity:0;transform:translateY(14px);transition:.6s}
+.ct-item.in{opacity:1;transform:none}
+.ct-dot{position:absolute;left:-30px;top:6px;width:16px;height:16px;border-radius:50%;
+  background:var(--purple);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--purple)}
+.ct-item.watch .ct-dot{background:var(--watch);box-shadow:0 0 0 2px var(--watch)}
+.ct-item.fav .ct-dot{background:var(--fav);box-shadow:0 0 0 2px var(--fav)}
+.ct-body{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.ct-item.watch .ct-body{border-color:rgba(209,140,90,.4)}
+.ct-item.fav .ct-body{border-color:rgba(90,209,154,.35)}
+.ct-date{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.05em;color:var(--gold);text-transform:uppercase}
+.ct-body h4{font-size:1.08rem;margin:6px 0 7px;font-weight:700;line-height:1.25}
+.ct-body p{color:var(--fg-dim);font-size:.93rem}
+.ct-body em{color:var(--fg);font-style:italic}
+.ct-src{display:block;margin-top:9px;font-size:.72rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
+
+/* ===== five analytical panels ===== */
+.panel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:1000px;margin:0 auto}
+.apanel{position:relative;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:16px;padding:24px 20px 22px;overflow:hidden}
+.apanel.watch{border-color:rgba(209,140,90,.4)}
+.ap-no{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:900;line-height:1;color:transparent;
+  -webkit-background-clip:text;background-clip:text;background:linear-gradient(120deg,var(--purple-light),var(--gold));opacity:.5;margin-bottom:8px}
+.apanel h3{font-size:1.12rem;margin-bottom:8px;font-weight:800}
+.apanel p{color:var(--fg-dim);font-size:.9rem}
+.apanel em{color:var(--fg);font-style:italic}
+
+/* ===== appeal readiness card ===== */
+.appeal-card{max-width:760px;margin:0 auto;background:linear-gradient(160deg,rgba(155,89,182,.12),rgba(212,175,55,.06));
+  border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:30px 28px}
+.appeal-list{list-style:none;margin:8px 0 0;display:flex;flex-direction:column;gap:11px}
+.appeal-list li{position:relative;padding-left:24px;color:var(--fg-dim);font-size:.95rem}
+.appeal-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--fav);font-weight:900}
+.appeal-list li b{color:var(--fg)}
+.appeal-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:.85rem;color:var(--fg-dimmer);font-style:italic}
+
 </style>
 </head>
 <body>
@@ -133,6 +172,7 @@ footer a{color:var(--purple-light);text-decoration:none}
   <div class="brand"><span class="live"></span>FREE KARMELO · LIVE</div>
   <div class="navlinks">
     <a href="#updates">Updates</a>
+    <a href="#case-timeline">Timeline</a>
     <a href="https://freekarmelo.net/">The Record</a>
     <a href="https://e5enclave.com/justice/karmelo-anthony/" class="cta">Stand With Him →</a>
   </div>
@@ -161,6 +201,77 @@ footer a{color:var(--purple-light);text-decoration:none}
   </div>
   <div class="timeline" id="tl"></div>
 </section>
+
+
+<!-- ============ STRUCTURED LEGAL TIMELINE (arrest → sentencing) ============ -->
+<section class="section" id="case-timeline">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--gold)">Arrest to Sentencing · The Full Record</div>
+    <h2 class="serif">How Fast It Moved</h2>
+    <p style="color:var(--fg-dim);max-width:60ch;margin-top:10px">From a track-meet altercation to a 35-year sentence imposed at <b style="color:var(--fg)">9&nbsp;p.m.</b> — every date below is sourced and verified. Read the speed.</p>
+  </div>
+
+  <div class="ct-rail">
+    <!-- spine items -->
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 2, 2025 · ~9:55 a.m.</span><h4>Stabbing at the Frisco track meet</h4><p>An altercation under a tent at Kuykendall Stadium. Both 17, from different schools, strangers. Anthony arrested the same day, charged with murder.</p><span class="ct-src">CBS Texas timeline</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 4, 2025</span><h4>Self-defense claim on the record from day one</h4><p>Frisco PD report: Anthony admitted the stabbing and said it was self-defense. Witnesses gave conflicting accounts of who touched or grabbed whom first.</p><span class="ct-src">CBS Texas / Frisco PD report</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 14, 2025</span><h4>Bond reduced, released to house arrest</h4><p>Bond cut from $1M to $250K; released the same day under house arrest at his parents' home.</p><span class="ct-src">CBS Texas</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 24, 2025</span><h4>Grand jury indicts on murder</h4><p>First-degree felony, 5–99 years or life. DA Greg Willis.</p><span class="ct-src">CBS Texas</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 18, 2026</span><h4 style="color:var(--watch)">Court restricts media &amp; public access</h4><p>Judge Roach bars livestreaming, audio/video recording, and cell phones; restricts attendee conduct and zones protests away from the courthouse.</p><span class="ct-src">CBS Texas · access &amp; transparency concern</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 1, 2026</span><h4>Jury selection begins</h4><p>Collin County. Roughly 600 prospective jurors summoned.</p><span class="ct-src">CBS / Dallas Morning News</span></div></div>
+
+    <div class="ct-item watch"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 1–2, 2026</span><h4 style="color:var(--watch)">Three Black jurors struck. Batson challenge overruled.</h4><p>Prosecutors struck three Black prospective jurors; the defense's Batson challenge was overruled. The seated jury — 12 plus 6 alternates — was all-white, none Black, in a county roughly 10–12% Black. An SMU law professor went on record: the all-white jury was <em>"a choice, not inevitable."</em></p><span class="ct-src">KWTX · KERA · Fox4 · CBS · DMN</span></div></div>
+
+    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Trial week</span><h4>Conflicting witness accounts; defense rests</h4><p>A teammate testified Metcalf pushed Anthony before the stabbing; another teen testified Metcalf said <em>"I'm not going to fight you at a track meet, dude."</em> The defense called six witnesses and rested. Anthony did not testify.</p><span class="ct-src">WFAA · NBC DFW · KIII</span></div></div>
+
+    <div class="ct-item watch"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 9, 2026 · ~9:00 p.m.</span><h4 style="color:var(--watch)">Guilty and sentenced the same night</h4><p>Guilty of murder after under three hours of deliberation. The same jury then set punishment, and the verdict was reached and the 35-year sentence imposed at roughly <b>9 p.m.</b> — well outside normal court hours.</p><span class="ct-src">WFAA live log · Fox26 · ABC · CNN</span></div></div>
+
+    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 10, 2026</span><h4 style="color:var(--fav)">Appeal filed — one day later</h4><p>Notice of appeal filed the day after sentencing, with a pauper oath / indigency declaration and a request for court-appointed appellate counsel. Tier-A confirmed across six outlets.</p><span class="ct-src">WFAA · CBS · NBC DFW · ABC · FOX4 · KERA</span></div></div>
+
+    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 11–13, 2026</span><h4 style="color:var(--fav)">Docketed · counsel appointed · ground preserved</h4><p>Court records show the status as <b>appealed</b>; Anthony transferred to TDCJ custody pending appeal. Donny Perales appointed appellate counsel. The gag order lifted, putting documented racial animus into the record an appellate court reviews. In late May, the U.S. Supreme Court overturned a Mississippi conviction on the same Batson grounds.</p><span class="ct-src">USA Today · WFAA · DMN · Houston Public Media · Dallas Observer</span></div></div>
+  </div>
+</section>
+
+<!-- ============ FIVE ANALYTICAL PANELS ============ -->
+<section class="section" id="case-analysis">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--purple-light)">What the Record Shows</div>
+    <h2 class="serif">The Grounds, Named</h2>
+  </div>
+  <div class="panel-grid">
+    <div class="apanel"><div class="ap-no">01</div><h3>Trial Irregularities</h3><p>A murder case with a live self-defense claim moved from jury seating to guilty verdict to a 35-year sentence in a single trial — with guilt and punishment both returned the same night, by 9 p.m., after under three hours of deliberation.</p></div>
+
+    <div class="apanel"><div class="ap-no">02</div><h3>Witness Issues</h3><p>Witness accounts conflicted on who initiated physical contact — touched, grabbed, or pushed. A teammate testified Metcalf pushed Anthony first. The self-defense account sat in the record from the day of arrest. Anthony exercised his Fifth Amendment right and did not testify.</p></div>
+
+    <div class="apanel"><div class="ap-no">03</div><h3>Constitutional Concerns</h3><p>A preserved Batson challenge (Fourteenth Amendment equal protection). The Sixth Amendment right to an impartial jury drawn from a fair cross-section. A First Amendment tension in the April 18 order restricting press and public access. The Fifth Amendment right not to testify.</p></div>
+
+    <div class="apanel watch"><div class="ap-no">04</div><h3>Racial Bias Indicators</h3><p>Three Black prospective jurors struck, none seated, in a county roughly 10–12% Black. An all-white jury a law professor called <em>"a choice, not inevitable."</em> Documented racial animus now part of the reviewable record — and a fresh U.S. Supreme Court reversal on the very same Batson ground.</p></div>
+
+    <div class="apanel watch"><div class="ap-no">05</div><h3>Outside Business Hours</h3><p>The verdict was reached and the 35-year sentence imposed at roughly 9 p.m. — guilt and punishment both decided the same night, well past when courts normally sit. The record reflects a speed worth examining on its own.</p></div>
+  </div>
+</section>
+
+<!-- ============ APPEAL READINESS (honest posture) ============ -->
+<section class="section" id="appeal-status">
+  <div class="appeal-card">
+    <div class="eyebrow" style="color:var(--gold)">Appeal Readiness</div>
+    <h2 class="serif" style="margin:8px 0 14px">Where the Appeal Stands</h2>
+    <ul class="appeal-list">
+      <li><b>Filed &amp; docketed.</b> Notice of appeal filed June 10; court records show the status as appealed as of June 11.</li>
+      <li><b>Counsel appointed.</b> Donny Perales of Chesley &amp; Perales (McKinney) appointed appellate counsel, June 13.</li>
+      <li><b>Indigency declared.</b> Pauper oath / indigency declaration filed alongside the notice of appeal.</li>
+      <li><b>Batson ground preserved.</b> The race-based juror-exclusion challenge was raised and overruled at trial — making it a documented, preserved issue for appellate review.</li>
+      <li><b>Direct precedent live.</b> The U.S. Supreme Court overturned a conviction on the same Batson grounds in late May 2026.</li>
+    </ul>
+    <p class="appeal-note">Honest note: the public record confirms the appeal is filed, docketed, and counsel-represented, and that the Batson ground is preserved. Certification that the full trial transcript and clerk's record are complete is the appellate counsel's certified-record process — not something this page independently audits. We report what the record shows.</p>
+  </div>
+</section>
+
 
 <div class="concentric-web">
   <p class="lbl">The Movement — One Network</p>
@@ -224,6 +335,7 @@ fetch(FEED_URL,{cache:"no-store"})
   .catch(()=>{ /* keep fallback on any failure — graceful degradation */ });
 /* reveal on scroll (observer hoisted above renderTimeline) */
 /* count-up stats */
+document.querySelectorAll('.ct-item').forEach(i=>io.observe(i));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return; const el=e.target,t=+el.dataset.count; let n=0;
   const step=Math.max(1,Math.ceil(t/40)); const tick=()=>{n=Math.min(t,n+step);el.textContent=n;if(n<t)requestAnimationFrame(tick)};
