@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Record — State v. Karmelo Anthony · The Appellate Case</title>
+<meta name="description" content="The full, sourced record of State v. Karmelo Anthony: preserved legal errors, the self-defense facts, the appellate team, and the atmosphere around the trial. Every claim cited. Every posture honest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060410; --bg2:#0c0820; --fg:#f0eefc; --fg-dim:#9d98c0; --fg-dimmer:#5a5478;
+  --border:#1a1630; --purple:#9b59b6; --purple-light:#c39bd3; --gold:#d4af37; --gold-soft:#b8860b;
+  --fav:#5ad19a; --neu:#7d9bd1; --watch:#d18c5a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Fraunces',Georgia,serif}
+a{color:inherit}
+/* nav */
+.topnav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(6,4,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.brand{font-weight:800;font-size:.95rem;letter-spacing:.04em;display:flex;align-items:center;gap:9px}
+.live{width:9px;height:9px;border-radius:50%;background:var(--fav);box-shadow:0 0 0 0 rgba(90,209,154,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(90,209,154,.6)}70%{box-shadow:0 0 0 10px rgba(90,209,154,0)}100%{box-shadow:0 0 0 0 rgba(90,209,154,0)}}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:.85rem;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--fg-dim);transition:color .2s}
+.navlinks a:hover{color:var(--fg)}
+.navlinks .cta{background:var(--gold);color:#1a1208;padding:9px 16px;border-radius:8px;font-weight:700}
+/* hero */
+.rhero{max-width:900px;margin:0 auto;padding:72px 28px 40px;text-align:center}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.rhero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:20px}
+.rhero h1 .em{background:linear-gradient(100deg,var(--purple-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.rhero .lede{font-size:1.12rem;color:var(--fg-dim);max-width:680px;margin:0 auto 8px}
+.casecap{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--fg-dimmer);margin-top:18px}
+/* honesty banner */
+.honesty{max-width:760px;margin:30px auto 0;background:rgba(125,155,209,.07);border:1px solid rgba(125,155,209,.25);border-radius:14px;padding:18px 22px;font-size:.9rem;color:var(--fg-dim);text-align:left}
+.honesty b{color:var(--neu)}
+/* section */
+.section{max-width:1060px;margin:0 auto;padding:56px 28px}
+.section-head{margin-bottom:34px;max-width:760px}
+.section-head .eyebrow{margin-bottom:14px}
+.section-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.1;letter-spacing:-.01em}
+.section-head p.sub{color:var(--fg-dim);margin-top:12px;font-size:1rem}
+/* ground cards (numbered evidentiary panels) */
+.grounds{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.ground{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px;position:relative;transition:transform .25s,border-color .25s}
+.ground:hover{transform:translateY(-3px);border-color:rgba(155,89,182,.4)}
+.ground .gno{font-family:'Fraunces',serif;font-weight:900;font-size:2.6rem;line-height:1;background:linear-gradient(135deg,var(--purple-light),var(--gold-soft));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.ground h3{font-size:1.08rem;font-weight:700;margin-bottom:9px}
+.ground p{font-size:.92rem;color:var(--fg-dim)}
+.ground .src{display:block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--fg-dimmer)}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:12px}
+.tag.preserved{background:rgba(90,209,154,.12);color:var(--fav);border:1px solid rgba(90,209,154,.3)}
+.tag.reported{background:rgba(209,140,90,.12);color:var(--watch);border:1px solid rgba(209,140,90,.3)}
+.tag.context{background:rgba(125,155,209,.12);color:var(--neu);border:1px solid rgba(125,155,209,.3)}
+/* quote cards */
+.quote-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.qcard{background:rgba(212,175,55,.05);border-left:3px solid var(--gold);border-radius:0 14px 14px 0;padding:22px}
+.qcard p{font-family:'Fraunces',serif;font-size:1.1rem;line-height:1.4;font-style:italic;margin-bottom:12px}
+.qcard cite{font-style:normal;font-size:.76rem;color:var(--gold);font-family:'JetBrains Mono',monospace}
+.qsrc{text-align:center;margin-top:18px;font-size:.72rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:6px}
+.tcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
+.tcard .nm{font-weight:700;font-size:1rem}
+.tcard .rl{font-size:.82rem;color:var(--gold);margin-top:3px}
+.teamquote{max-width:760px;margin:26px auto 0;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--fg-dim);line-height:1.45}
+/* divider band */
+.band{background:linear-gradient(180deg,transparent,rgba(155,89,182,.06),transparent);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+/* CTA */
+.endcta{text-align:center;padding:64px 28px 80px;max-width:720px;margin:0 auto}
+.endcta h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px}
+.endcta p{color:var(--fg-dim);margin-bottom:26px}
+.btn{display:inline-block;background:var(--gold);color:#1a1208;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;font-size:1rem}
+.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--fg);margin-left:10px}
+/* footer */
+footer{border-top:1px solid var(--border);padding:30px 28px;text-align:center;color:var(--fg-dimmer);font-size:.8rem;font-family:'JetBrains Mono',monospace}
+@media(max-width:600px){.navlinks a:not(.cta){display:none}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <div class="brand"><span class="live"></span>FREE KARMELO · LIVE</div>
+  <div class="navlinks">
+    <a href="/#updates">Updates</a>
+    <a href="/#case-timeline">Timeline</a>
+    <a href="/the-record">The Record</a>
+    <a href="https://e5enclave.com/justice/karmelo-anthony/" class="cta">Stand With Him →</a>
+  </div>
+</nav>
+
+<section class="rhero">
+  <div class="eyebrow">State v. Karmelo Anthony · The Appellate Case</div>
+  <h1 class="serif">The Record,<br><span class="em">Read in Full</span></h1>
+  <p class="lede">A track-meet altercation became a 35-year sentence imposed at 9 p.m. This is the documented case behind the appeal — the preserved errors, the self-defense facts, the team now reviewing the record, and the atmosphere the trial was held in.</p>
+  <div class="casecap">CAUSE: STATE v. KARMELO SINCERE ANTHONY · 296TH DISTRICT COURT, COLLIN COUNTY → 5TH COURT OF APPEALS, DALLAS</div>
+  <div class="honesty"><b>How to read this page.</b> Every fact below is drawn from published, Tier-A reporting and court records, and each carries its source. Where an issue is preserved for appeal, we say <b>preserved</b> — not "won." Where a filing is reported but not yet docket-confirmed, we say <b>reported</b>. Where a person is charged, they are <b>alleged</b>. This is the record as it stands — not a prediction of the outcome.</div>
+</section>
+
+<!-- I. PRESERVED LEGAL ERRORS -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--fav)">I · The Appellate Spine</div>
+    <h2 class="serif">Preserved Legal Errors</h2>
+    <p class="sub">Issues raised and ruled on at trial — now on the record an appellate court reviews. Preserved error is the foundation of any appeal.</p>
+  </div>
+  <div class="grounds">
+    <div class="ground"><div class="gno">01</div><span class="tag preserved">Preserved</span><h3>The Batson Challenge</h3><p>Three Black prospective jurors were struck; the defense's Batson challenge was overruled. The seated jury — 12 plus 6 alternates — was all-white, none Black, in a county roughly 10–12% Black. An SMU law professor called it "a choice, not inevitable." In late May, the U.S. Supreme Court overturned a Mississippi conviction on the same ground.<span class="src">KWTX · KERA · Fox4 · CBS · DMN</span></p></div>
+    <div class="ground"><div class="gno">02</div><span class="tag preserved">Preserved</span><h3>Jury-Instruction Objection</h3><p>Before closing arguments, the defense objected to the jury instructions. Judge Roach overruled the objection — preserving the issue for appellate review.<span class="src">NBC DFW</span></p></div>
+    <div class="ground"><div class="gno">03</div><span class="tag preserved">Preserved</span><h3>Lesser-Included Refused</h3><p>The defense asked the court to let jurors consider criminally negligent homicide (a 6-month-to-2-year range). Judge Roach refused. Denying a lesser-included that the evidence arguably supports is a recognized appellate ground.<span class="src">CBS Texas · Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">04</div><span class="tag preserved">Preserved</span><h3>Sudden Passion Rejected</h3><p>At punishment, the jury rejected a "sudden passion" finding that would have capped the sentence at 2–20 years — enabling the 35-year term. A preserved punishment-phase issue.<span class="src">Courthouse News · NBC5</span></p></div>
+    <div class="ground"><div class="gno">05</div><span class="tag reported">Reported</span><h3>Directed Verdict Denied</h3><p>Trial observers report the defense moved for a directed verdict, which was denied — a step that preserves a legal-sufficiency challenge on the self-defense evidence. Pending docket confirmation.<span class="src">Trial-watch reporting · docket pending</span></p></div>
+    <div class="ground"><div class="gno">06</div><span class="tag reported">Reported</span><h3>Motion to Recuse the Judge</h3><p>The new appellate team is reported to have filed a Motion to Recuse, arguing Judge Roach should no longer preside over post-conviction proceedings. Pending docket confirmation.<span class="src">DMN-sourced reporting · docket pending</span></p></div>
+  </div>
+</section>
+
+<!-- II. SELF-DEFENSE FACTS -->
+<div class="band">
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--gold)">II · What Happened</div>
+    <h2 class="serif">The Self-Defense Facts</h2>
+    <p class="sub">He claimed self-defense from the day of his arrest and never wavered. These facts sat in the record from the start.</p>
+  </div>
+  <div class="grounds">
+    <div class="ground"><div class="gno">07</div><h3>A Public Place, and a Shove</h3><p>At a rainy meet, Anthony's school had no tent. He was told to leave the other school's tent and was shoved. The defense: no one "had a legal right to use force to eject Karmelo… Karmelo is in a public place."<span class="src">Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">08</div><h3>Steadfast and Consistent</h3><p>From the April 4 police statement through trial, Anthony "steadfastly claimed" self-defense. The account never changed.<span class="src">Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">09</div><h3>Size and Split-Second Fear</h3><p>The defense pressed the size differential — "much bigger than you… do you turn your back?" — and the law's own logic: "If you wait too long to defend yourself, self-defense is meaningless."<span class="src">Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">10</div><h3>Witness Bias, on the Record</h3><p>Every student witness the State called came from the victim's school. The defense urged jurors to weigh that: "be on guard for bias… Austin was their leader."<span class="src">Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">11</div><span class="tag context">Neutral</span><h3>Conflicting Accounts</h3><p>Witness accounts conflicted on who initiated contact — touched, grabbed, or pushed. One witness corrected the timing of when Anthony was "surrounded." The record holds competing versions of the sequence; we present it as it stands.<span class="src">Courthouse News · CBS</span></p></div>
+  </div>
+</section>
+</div>
+
+<!-- The defense case, in their own words -->
+<section class="section" id="defense-words">
+  <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+    <div class="eyebrow" style="color:var(--gold)">In Open Court · On the Record</div>
+    <h2 class="serif">The Defense Case, In Their Own Words</h2>
+  </div>
+  <div class="quote-wrap">
+    <div class="qcard"><p>"Karmelo is in a public place. Austin had no legal right to use force to eject Karmelo from the tent."</p><cite>— Mike Howard, defense counsel, closing argument</cite></div>
+    <div class="qcard"><p>"How do you know in a split second of chaos when it is too late? If you wait too long to defend yourself, self-defense is meaningless."</p><cite>— Mike Howard, on the right to self-defense</cite></div>
+    <div class="qcard"><p>"We should be on guard for bias — of course they would. Austin was their leader."</p><cite>— on the State's student witnesses, all from the victim's school</cite></div>
+  </div>
+  <p class="qsrc">Quotes as reported by Courthouse News Service, June 9, 2026.</p>
+</section>
+
+<!-- III. PROCEDURAL / TRANSPARENCY -->
+<div class="band">
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--neu)">III · How the Trial Was Held</div>
+    <h2 class="serif">Access, Venue &amp; Transparency</h2>
+  </div>
+  <div class="grounds">
+    <div class="ground"><div class="gno">12</div><span class="tag context">Context</span><h3>The Media Blackout</h3><p>Judge Roach barred cameras, livestreaming, and phones, and limited the courtroom to roughly nine reporters. A Black independent journalist was removed from the courthouse. A First Amendment and public-access tension runs through the April 18 order.<span class="src">KWTX · DMN · The NC Beat</span></p></div>
+    <div class="ground"><div class="gno">13</div><h3>The Case Leaves Collin County</h3><p>The appeal moves to the Fifth District Court of Appeals in Dallas — out of the county that produced the all-white jury. It likely will not reach the 5th COA until later this year.<span class="src">NBC5</span></p></div>
+    <div class="ground"><div class="gno">14</div><h3>The Filing, Exactly</h3><p>The record reads: <em>Karmelo Sincere Anthony</em>, "Defendant's Notice of Appeal and Pauper Oath," in the 296th District Court, Collin County — filed one day after sentencing.<span class="src">Notice of Appeal (court filing)</span></p></div>
+    <div class="ground"><div class="gno">15</div><h3>The Evidence Is Now Public</h3><p>911 calls, surveillance video, police bodycam, and crime-scene photos — shown only to jurors because cameras were barred — have been released for independent scrutiny.<span class="src">NBC5</span></p></div>
+  </div>
+</section>
+</div>
+
+<!-- IV. ATMOSPHERE -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--watch)">IV · The Atmosphere Around the Trial</div>
+    <h2 class="serif">Race, Threats &amp; the Climate</h2>
+    <p class="sub">The trial did not happen in a vacuum. It happened under documented hostility.</p>
+  </div>
+  <div class="grounds">
+    <div class="ground"><div class="gno">16</div><span class="tag reported">Alleged</span><h3>A Death Threat Against Karmelo</h3><p>A January 6 pardonee, Jake Lang, was allegedly recorded on a livestream on the first day of testimony saying he would kill Anthony — "Headshot. Done." Asked, "you going to kill Karmelo Anthony?" he allegedly answered, "Yes. Yes, I will." He was identified by a state Fusion Center, arrested fleeing Texas, held on $1M bond, and charged with a terroristic threat. He had carried a "White Lives Matter / Austin Metcalf" sign and was barred from the courthouse.<span class="src">CBS Texas (exclusive) · NewsNation · DMN</span></p></div>
+    <div class="ground"><div class="gno">17</div><span class="tag context">Context</span><h3>Misinformation &amp; Racial Strife</h3><p>The defense criticized the "noise" and "completely false information" around the case — a national controversy driven in part by the white-victim, Black-defendant dynamic and online misinformation.<span class="src">Courthouse News</span></p></div>
+  </div>
+</section>
+
+<!-- V. APPELLATE TEAM -->
+<div class="band">
+<section class="section">
+  <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+    <div class="eyebrow" style="color:var(--fav)">V · Who Is Reviewing the Record</div>
+    <h2 class="serif">The Appellate Team</h2>
+    <p class="sub">Six attorneys — appellate, civil-rights, and criminal-defense — are representing Karmelo <b>pro bono</b> for a fresh, independent review of the trial record.</p>
+  </div>
+  <div class="team">
+    <div class="tcard"><div class="nm">Russell Wilson</div><div class="rl">Former Dallas County prosecutor</div></div>
+    <div class="tcard"><div class="nm">Gary Bledsoe</div><div class="rl">President, Texas NAACP</div></div>
+    <div class="tcard"><div class="nm">Brooke Cluse</div><div class="rl">Ben Crump Law</div></div>
+    <div class="tcard"><div class="nm">Michael L. Ware</div><div class="rl">Law Office of Michael Ware</div></div>
+    <div class="tcard"><div class="nm">Sean Daredia</div><div class="rl">Appellate counsel</div></div>
+    <div class="tcard"><div class="nm">Justin A. Moore</div><div class="rl">Appellate counsel</div></div>
+  </div>
+  <p class="teamquote">"Our responsibility is to determine whether a legal error occurred and to ensure that every issue supported by the record is fully and vigorously presented on appeal."</p>
+  <p class="qsrc">Statement via Stand with Karmelo, reported by NBC 5 DFW, June 22, 2026.</p>
+</section>
+</div>
+
+<!-- VI. THE PERSON -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--gold)">VI · The Person</div>
+    <h2 class="serif">Who He Is</h2>
+  </div>
+  <div class="grounds">
+    <div class="ground"><div class="gno">18</div><h3>Nineteen Now. Seventeen Then.</h3><p>Karmelo was 17 at the time of the altercation and is 19 now. He audibly sobbed when the verdict was read; his mother pled for mercy at sentencing.<span class="src">Courthouse News</span></p></div>
+    <div class="ground"><div class="gno">19</div><h3>Fourteen Months, No Incident</h3><p>Released pre-trial on a reduced bond ($1M → $250K) to house arrest with an ankle monitor, he complied fully for roughly fourteen months before trial.<span class="src">CBS · WFAA</span></p></div>
+    <div class="ground"><div class="gno">20</div><span class="tag context">Context</span><h3>"A Nice Young Man"</h3><p>In a post-trial interview, the presiding judge himself described Karmelo as "a nice young man."<span class="src">USA Today · WFAA</span></p></div>
+  </div>
+</section>
+
+<!-- end CTA -->
+<div class="band">
+<div class="endcta">
+  <h2 class="serif">The record is public. So is the fight.</h2>
+  <p>Every fact on this page is sourced and on the record an appellate court now reviews. Read it, share it, and stand with Karmelo as the appeal moves forward.</p>
+  <a href="https://e5enclave.com/justice/karmelo-anthony/" class="btn">Stand With Him →</a>
+  <a href="/#case-timeline" class="btn ghost">See the Timeline</a>
+</div>
+</div>
+
+<footer>
+  THE RECORD · STATE v. KARMELO SINCERE ANTHONY · COMPILED FROM PUBLISHED REPORTING &amp; COURT RECORDS · FREE KARMELO
+</footer>
+</body>
+</html>
