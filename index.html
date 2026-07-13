@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- GA4 — concentric tracking (DAG: anthony-concentric-2026-0615) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-05PYDYP5S0"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05PYDYP5S0');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05PYDYP5S0');window.fkTrackShare=function(surface,channel,context){var payload={event_category:'letter_wall_share',event_label:surface+':'+channel,share_surface:surface,share_channel:channel,share_context:context||'wall',page_location:window.location.href};if(typeof gtag==='function'){gtag('event','letter_wall_share',payload);}else{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:'letter_wall_share'},payload));}};</script>
 <style>
 :root{
   --bg:#060410; --bg2:#0c0820; --fg:#f0eefc; --fg-dim:#9d98c0; --fg-dimmer:#5a5478;
@@ -411,6 +411,7 @@ document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
   function hmToast(t){var el=document.getElementById('hmToast'); if(!el){el=document.createElement('div');el.id='hmToast';el.className='hm-toast';document.body.appendChild(el);} el.textContent=t; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},1800);}
   function hmShare(kind, letter){
     var text=hmShareText(letter), url=SHARE_URL;
+    if(window.fkTrackShare) window.fkTrackShare(letter ? 'today_letter_card' : 'today_wall_header', kind, letter ? 'letter' : 'wall');
     if(kind==='x') return window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank','noopener');
     if(kind==='facebook') return window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url),'_blank','noopener');
     if(kind==='whatsapp') return window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
