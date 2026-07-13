@@ -170,6 +170,12 @@ footer a{color:var(--purple-light);text-decoration:none}
 .qcard p{font-family:'Fraunces',serif;font-size:1.12rem;line-height:1.4;color:var(--fg);font-style:italic;margin-bottom:12px}
 .qcard cite{font-style:normal;font-size:.78rem;color:var(--gold);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
 .qsrc{text-align:center;margin-top:18px;font-size:.74rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
+
+.hm-share{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px auto 0;position:relative;z-index:5}
+.hm-share button,.hm-card-share{border:1px solid rgba(212,175,55,.35);background:rgba(10,7,22,.72);color:var(--fg);border-radius:999px;padding:10px 14px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+.hm-share button:hover,.hm-card-share:hover{border-color:var(--gold);color:var(--gold)}
+.hm-card-share{margin-top:10px;padding:7px 10px;font-size:.62rem;color:var(--gold)}
+.hm-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#0b0716;color:var(--fg);border:1px solid var(--gold);border-radius:999px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:.72rem;opacity:0;pointer-events:none;transition:opacity .22s ease}.hm-toast.show{opacity:1}
 </style>
 </head>
 <body>
@@ -196,6 +202,14 @@ footer a{color:var(--purple-light);text-decoration:none}
   <div class="hm-count" id="hmCount"></div>
   <div class="hm-cta-row">
     <a class="hm-add" href="https://e5enclave.com/justice/karmelo-anthony/#letterwall">Add Your Voice →</a>
+
+  <div class="hm-share" aria-label="Share the Letter Wall">
+    <button type="button" data-hm-share="x">Share on X</button>
+    <button type="button" data-hm-share="facebook">Facebook</button>
+    <button type="button" data-hm-share="whatsapp">WhatsApp</button>
+    <button type="button" data-hm-share="sms">Text it</button>
+    <button type="button" data-hm-share="copy">Copy link</button>
+  </div>
     <a class="hm-read" href="#updates">See the Latest News</a>
   </div>
 </header>
@@ -384,6 +398,26 @@ document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
   var WALL_URL="https://sue-45c3e283.base44.app/functions/letterWallSubmit?mode=feed";
   var r1=document.getElementById('hmRow1'), r2=document.getElementById('hmRow2'), cnt=document.getElementById('hmCount');
   if(!r1||!r2) return;
+
+  var SHARE_URL="https://freekarmelo.today/#wallhero";
+  function hmShareText(letter){
+    if(letter && letter.text){
+      var q=String(letter.text).replace(/\s+/g,' ').trim(); if(q.length>130) q=q.slice(0,127)+'…';
+      var who=(letter.name||'A supporter')+(letter.state?' from '+letter.state:'');
+      return '"'+q+'" — '+who+'\n\nAdd your voice to the Letter Wall for Karmelo: '+SHARE_URL+' #FreeKarmelo #JusticeForKarmelo';
+    }
+    return 'The Letter Wall for Karmelo is growing across the country. Add your voice and invite one more person to sign: '+SHARE_URL+' #FreeKarmelo #JusticeForKarmelo';
+  }
+  function hmToast(t){var el=document.getElementById('hmToast'); if(!el){el=document.createElement('div');el.id='hmToast';el.className='hm-toast';document.body.appendChild(el);} el.textContent=t; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},1800);}
+  function hmShare(kind, letter){
+    var text=hmShareText(letter), url=SHARE_URL;
+    if(kind==='x') return window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank','noopener');
+    if(kind==='facebook') return window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url),'_blank','noopener');
+    if(kind==='whatsapp') return window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
+    if(kind==='sms'){ window.location.href='sms:?&body='+encodeURIComponent(text); return; }
+    if(navigator.clipboard) return navigator.clipboard.writeText(text).then(function(){hmToast('Share text copied');});
+    window.prompt('Copy this share text:', text);
+  }
   function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
   function card(l){
     var who=esc(l.name||'A supporter');
@@ -391,10 +425,14 @@ document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
     var q=esc((l.text||'').trim());
     return '<div class="hm-card"><div class="hm-quote">\u201c'+q+'\u201d</div><div class="hm-who">'+who+'</div>'+(loc?'<div class="hm-loc">'+loc+'</div>':'')+'</div>';
   }
+
+  document.querySelectorAll('[data-hm-share]').forEach(function(btn){btn.addEventListener('click',function(){hmShare(btn.getAttribute('data-hm-share'));});});
+  document.getElementById('hmWrap').addEventListener('click',function(e){var btn=e.target.closest('[data-hm-card-share]'); if(!btn) return; var idx=parseInt(btn.getAttribute('data-hm-card-share'),10); hmShare('x',(window.__hmLetters||[])[idx]);});
   function paint(list){
+    window.__hmLetters=list;
     if(!list.length){document.getElementById('wallhero').classList.remove('hero-marquee');return;}
     // duplicate the set so the -50% loop is seamless
-    var half=list.map(card).join('');
+    var half=list.map(function(l,i){return card(l,i);}).join('');
     r1.innerHTML=half+half;
     var rev=list.slice().reverse().map(card).join('');
     r2.innerHTML=rev+rev;
