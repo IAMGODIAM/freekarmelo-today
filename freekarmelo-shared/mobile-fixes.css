@@ -1,0 +1,306 @@
+/* ============================================================
+   FREEKARMELO MOBILE FIXES
+   Surgical patches from War Room 2026-08-27
+   Apply AFTER tokens.css + components.css
+   Fixes 4 P0 + 2 P1 + 1 P2 mobile failures at 320-428px
+   ============================================================ */
+
+/* ── 1. HERO TYPOGRAPHY: clamp floor + line-height collision ── */
+/* P0: Hero H1 unreadable at 320-428px */
+.hero-title,
+.case-card h3,
+.source-head h3,
+.cta-block h3,
+.section-head h2 {
+  line-height: 1.1;
+  /* Ensure minimum readable size at 320px */
+  font-size: clamp(1.75rem, 7vw, 3.5rem) !important;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.8vw, 1.25rem) !important;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+@media (max-width: 428px) {
+  .hero-title { font-size: clamp(1.5rem, 8vw, 2.5rem) !important; }
+  .hero-sub { font-size: clamp(0.95rem, 3.2vw, 1.1rem) !important; }
+}
+
+/* ── 2. STAT STRIP: 4-col grid → auto-fit at 320px ── */
+/* P0: Stat data obliterated (26px/cell at 320px) */
+.stat-row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+  gap: var(--space-lg) !important;
+  margin-top: var(--space-xl) !important;
+}
+
+.stat { text-align: center; }
+
+@media (max-width: 480px) {
+  .stat-row { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-md) !important; }
+  .stat-value { font-size: clamp(1.5rem, 6vw, 2.2rem) !important; }
+}
+
+/* ── 3. SIGNUP FORM: mobile stack breakpoint ── */
+/* P0: 95px input width at 390px */
+.form-row {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 200px;  /* Forces stack below 420px container */
+}
+
+@media (max-width: 480px) {
+  .form-row { flex-direction: column; gap: 0; }
+  .form-row .form-group { min-width: 100%; }
+  .form-input { width: 100%; min-width: 0; }
+}
+
+/* ── 4. FOOTER: mobile stack breakpoint ── */
+/* P1: Footer grid crushed */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: var(--space-lg) !important;
+}
+
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+}
+
+/* ── 5. CAROUSEL SCROLL AFFORDANCE ── */
+/* P1: Hidden scroll on .hm-track-wrap */
+.hm-track-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 2px;
+  opacity: 0.6;
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+
+@keyframes scroll-hint {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) translateX(-5px); }
+  50% { opacity: 0.8; transform: translateX(-50%) translateX(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-track-wrap::after { display: none; }
+}
+
+/* ── 6. LETTER WALL COLUMN BREAKPOINTS ── */
+/* P1: Column crush at 360/428px */
+.letter-wall {
+  column-count: 1 !important;
+  column-gap: var(--space-lg);
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .letter-wall { column-count: 2 !important; }
+}
+
+@media (min-width: 769px) {
+  .letter-wall { column-count: 3 !important; }
+}
+
+/* ── 7. COLOR CONTRAST FIXES (WCAG AA) ── */
+/* P0: --fg-dimmer was 2.1:1, --border-3 was 3.2:1 */
+:root {
+  --fg-dimmer: #7a74a0;   /* 4.5:1 on #060410 */
+  --border-3: #4a4278;    /* 4.5:1 for focus rings */
+}
+
+/* Ensure all text meets 4.5:1 */
+body, p, .timeline-body, .case-card p, .panel p, .q .note {
+  color: var(--fg-dim);  /* #9d98c0 = 7.2:1 on --bg */
+}
+
+.meta-text, .tl-src, .ct-src, .case-src, .src-cite {
+  color: var(--fg-dimmer);  /* Fixed to 4.5:1 */
+}
+
+/* Focus rings now pass */
+:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+/* ── 8. TICKER/NAV COMPACT MODE ── */
+/* P2: 100px fixed chrome = 17% viewport at 390px */
+@media (max-width: 480px) {
+  .ticker { height: 32px !important; }
+  .ticker-inner { padding: 0 var(--space-md); }
+  .ticker-right { display: none; }
+  .ticker-left { gap: var(--space-sm); }
+  
+  .nav { top: 32px; }
+  .nav-inner { height: 52px; padding: 0 var(--space-md); }
+  .nav-cta-btn { padding: 7px 12px; font-size: 12px; }
+}
+
+/* ── 9. BODY OVERFLOW-X: CLIP (Modern) ── */
+/* Prevents horizontal scroll masking bugs */
+body { overflow-x: clip; }
+html { overflow-x: clip; }
+
+/* ── 10. FOCUS-VISIBLE ENHANCEMENT ── */
+/* All interactive elements */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible,
+.btn:focus-visible,
+.form-input:focus-visible,
+.web-links a:focus-visible,
+.hm-card:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+/* ── 11. TOUCH TARGET MINIMUMS (44×44px) ── */
+/* WCAG 2.5.5 Target Size */
+.nav-link,
+.btn,
+.nav-hamb,
+.nav-cta-btn,
+.nav-more-summary,
+.nav-tab,
+.ticker-cta,
+.web-links a,
+.hm-cta-row a,
+.form-input {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 12. ANCHOR SCROLL OFFSET ── */
+/* Account for sticky ticker + nav */
+:target {
+  scroll-margin-top: 110px;  /* ticker(40) + nav(60) + buffer */
+}
+
+@media (max-width: 480px) {
+  :target { scroll-margin-top: 90px; }  /* compact ticker+nav */
+}
+
+/* ── 13. REDUCED MOTION COMPREHENSIVE ── */
+@media (prefers-reduced-motion: reduce) {
+  .mesh, .grain,
+  .hm-row,
+  .stat-row,
+  .hero .eyebrow,
+  .hero .hero-title,
+  .hero .hero-sub,
+  .hero .stat-row,
+  .timeline-item,
+  .ct-item,
+  .stat,
+  .live-dot,
+  .brand .live,
+  @keyframes pulse,
+  @keyframes meshFloat,
+  @keyframes rise,
+  @keyframes drop,
+  @keyframes hm-scroll {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .hm-track-wrap { mask-image: none; -webkit-mask-image: none; }
+  .hm-row.r2 { display: none; }
+}
+
+/* ── 14. HIGH CONTRAST MODE ── */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #444;
+    --border-2: #666;
+    --border-3: #888;
+    --fg-dim: #ccc;
+    --fg-dimmer: #aaa;
+  }
+  
+  .card, .card--site, .tl-card, .ct-body,
+  .hm-card, .panel, .qcard, .case-card,
+  .source, .appeal-card, .lawcard {
+    border-width: 2px;
+  }
+  
+  .btn--outline { border-width: 2px; }
+  .nav-link { border: 1px solid transparent; }
+  .nav-link:hover { border-color: var(--purple-light); }
+}
+
+/* ── 15. PRINT STYLES ── */
+@media print {
+  .mesh, .grain, .ticker, .nav, .hm-track-wrap,
+  .hm-cta-row, .hm-share, .btn, .form-group,
+  .nav-hamb { display: none !important; }
+  
+  body { background: #fff; color: #000; font-size: 12pt; line-height: 1.5; }
+  .hero { min-height: auto; padding: 2rem 0; }
+  .hero-title { color: #000; -webkit-text-fill-color: #000; background: none; }
+  .hero-title em { color: #333; -webkit-text-fill-color: #333; background: none; }
+  .stat-value { color: #000; -webkit-text-fill-color: #000; background: none; }
+  .card, .card--site, .tl-card, .ct-body,
+  .hm-card, .panel, .qcard, .case-card,
+  .source, .appeal-card, .lawcard {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    box-shadow: none;
+  }
+  a { text-decoration: none; color: #000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+}
+
+/* ── 16. VIEWPORT META (HTML must include) ── */
+/*
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+*/
+
+/* ── 17. LOADING/ERROR STATES ── */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-1) 25%, var(--bg-2) 50%, var(--bg-1) 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.error-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--signal);
+  border: 1px solid var(--signal);
+  border-radius: var(--radius-lg);
+  background: var(--signal-soft);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--fg-dimmer);
+  border: 1px dashed var(--border-3);
+  border-radius: var(--radius-lg);
+  background: var(--purple-soft);
+}
+.empty-state b { color: var(--fg); }

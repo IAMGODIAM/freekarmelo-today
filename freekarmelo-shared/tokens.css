@@ -1,0 +1,129 @@
+/* ============================================================
+   FREEKARMELO SHARED DESIGN TOKENS
+   Unified design system for freekarmelo.today & freekarmelo.net
+   Extracted from both codebases — single source of truth
+   ============================================================ */
+
+:root {
+  /* ── Core Colors ── */
+  --bg:           #060410;
+  --bg-1:         #0d0a1e;     /* .site elevated surface */
+  --bg-2:         #141028;     /* .site card surface */
+  --bg-elevated:  #0c0820;     /* .today elevated surface */
+  
+  --fg:           #f0eefc;
+  --fg-dim:       #9d98c0;
+  --fg-dimmer:    #7a74a0;     /* FIXED: WCAG AA on --bg (was #5a5478 = 2.1:1) */
+  
+  --border:       #1a1630;
+  --border-2:     #252040;     /* .site subtle border */
+  --border-3:     #4a4278;     /* FIXED: WCAG AA for focus rings (was #342e58 = 3.2:1) */
+  
+  /* ── Brand Colors ── */
+  --purple:       #9b59b6;
+  --purple-2:     #7d3c98;     /* .site hover */
+  --purple-3:     #6c3483;     /* .site CTA border */
+  --purple-light: #c39bd3;
+  --purple-glow:  rgba(155,89,182,0.13);
+  --purple-soft:  rgba(155,89,182,0.06);
+  
+  --gold:         #c9a84c;     /* .site primary */
+  --gold-light:   #d4b96a;     /* .site light */
+  --gold-soft:    #b8860b;     /* .today gradient stop */
+  --gold-gradient: #d4af37;   /* .today primary */
+  
+  --fav:          #5ad19a;     /* .today live/success */
+  --neu:          #7d9bd1;     /* .today neutral tag */
+  --watch:        #d18c5a;     /* .today watch/warning */
+  --signal:       #ff4d4d;     /* .site live/alert */
+  
+  /* ── Semantic Colors ── */
+  --green:        #4caf7d;     /* .site success */
+  --green-soft:   rgba(76,175,125,0.08);
+  --signal-soft:  rgba(255,77,77,0.08);
+  
+  /* ── Typography ── */
+  --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --mono:  ui-monospace, 'SF Mono', 'Menlo', monospace;
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;  /* .site */
+  --serif-alt: 'Fraunces', serif;                                      /* .today */
+  
+  /* ── Spacing Scale ── */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   32px;
+  --space-2xl:  48px;
+  --space-3xl:  64px;
+  
+  /* ── Border Radius ── */
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+  --radius-full: 999px;
+  
+  /* ── Shadows ── */
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.4);
+  --shadow-lg:  0 18px 40px rgba(0,0,0,0.55);
+  --shadow-glow: 0 0 0 4px var(--purple-glow);
+  
+  /* ── Transitions ── */
+  --transition-fast:  150ms ease;
+  --transition-base:  250ms ease;
+  --transition-slow:  350ms cubic-bezier(.2,.7,.2,1);
+  
+  /* ── Z-Index ── */
+  --z-base:    1;
+  --z-sticky:  40;
+  --z-nav:     50;
+  --z-ticker:  60;
+  --z-dropdown: 70;
+  --z-toast:   9999;
+  
+  /* ── Container ── */
+  --container:  920px;
+  --container-wide: 1200px;
+  
+  /* ── Fluid Clamp Patterns ── */
+  --clamp-xs:  clamp(0.75rem, 1.5vw, 1rem);
+  --clamp-sm:  clamp(0.875rem, 2vw, 1.125rem);
+  --clamp-md:  clamp(1rem, 2.4vw, 1.375rem);
+  --clamp-lg:  clamp(1.25rem, 3vw, 1.75rem);
+  --clamp-xl:  clamp(1.75rem, 4vw, 2.5rem);
+  --clamp-2xl: clamp(2.5rem, 6vw, 4rem);
+  --clamp-3xl: clamp(3.5rem, 8vw, 6rem);
+}
+
+/* ── Base Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--purple); color: #fff; }
+
+/* ── Focus Visible (WCAG AA) ── */
+:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

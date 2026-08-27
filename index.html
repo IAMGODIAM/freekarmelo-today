@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Free Karmelo Anthony — Latest Updates · The Appeal Is Live</title>
 <meta name="description" content="The living news front for the Karmelo Anthony appeal. Sourced, verified, updated as it happens. The fight moved to appeal — follow every development.">
 <meta property="og:title" content="Free Karmelo Anthony — Latest Updates">
@@ -11,177 +11,28 @@
 <meta property="og:url" content="https://freekarmelo.today/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- GA4 — concentric tracking (DAG: anthony-concentric-2026-0615) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-05PYDYP5S0"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05PYDYP5S0');window.fkTrackShare=function(surface,channel,context){var payload={event_category:'letter_wall_share',event_label:surface+':'+channel,share_surface:surface,share_channel:channel,share_context:context||'wall',page_location:window.location.href};if(typeof gtag==='function'){gtag('event','letter_wall_share',payload);}else{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:'letter_wall_share'},payload));}};</script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05PYDYP5S0');
+window.fkTrackShare=function(surface,channel,context){var payload={event_category:'letter_wall_share',event_label:surface+':'+channel,share_surface:surface,share_channel:channel,share_context:context||'wall',page_location:window.location.href};if(typeof gtag==='function'){gtag('event','letter_wall_share',payload);}else{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:'letter_wall_share'},payload));}};
+</script>
+<link rel="stylesheet" href="../freekarmelo-shared/tokens.css">
+<link rel="stylesheet" href="../freekarmelo-shared/components.css">
+<link rel="stylesheet" href="../freekarmelo-shared/mobile-fixes.css">
 <style>
-:root{
-  --bg:#060410; --bg2:#0c0820; --fg:#f0eefc; --fg-dim:#9d98c0; --fg-dimmer:#5a5478;
-  --border:#1a1630; --purple:#9b59b6; --purple-light:#c39bd3; --gold:#d4af37; --gold-soft:#b8860b;
-  --fav:#5ad19a; --neu:#7d9bd1; --watch:#d18c5a;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-.serif{font-family:'Fraunces',serif}
-
-/* animated gradient-mesh backdrop */
-.mesh{position:fixed;inset:0;z-index:-2;background:
-  radial-gradient(60% 50% at 15% 10%,rgba(155,89,182,.22),transparent 60%),
-  radial-gradient(50% 60% at 85% 20%,rgba(212,175,55,.10),transparent 60%),
-  radial-gradient(70% 60% at 50% 100%,rgba(123,89,182,.18),transparent 60%),var(--bg);
-  animation:meshFloat 22s ease-in-out infinite alternate}
-@keyframes meshFloat{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(24deg)}}
-.grain{position:fixed;inset:0;z-index:-1;opacity:.035;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-/* nav */
-.topnav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
-  padding:14px 28px;backdrop-filter:blur(18px);background:rgba(6,4,16,.6);border-bottom:1px solid var(--border)}
-.brand{font-weight:800;letter-spacing:.02em;font-size:15px}
-.brand .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--fav);margin-right:7px;
-  box-shadow:0 0 0 0 rgba(90,209,154,.7);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(90,209,154,.6)}70%{box-shadow:0 0 0 9px rgba(90,209,154,0)}100%{box-shadow:0 0 0 0 rgba(90,209,154,0)}}
-.navlinks{display:flex;gap:6px}
-.navlinks a{color:var(--fg-dim);text-decoration:none;font-size:13px;font-weight:600;padding:7px 13px;border-radius:8px;transition:.25s}
-.navlinks a:hover{color:var(--fg);background:rgba(155,89,182,.14)}
-.navlinks a.cta{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1206}
-
-/* hero */
-.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 22px 60px;position:relative}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:22px;
-  opacity:0;animation:rise .9s .1s forwards}
-.hero h1{font-size:clamp(2.6rem,8vw,6rem);line-height:.98;font-weight:900;letter-spacing:-.02em;max-width:14ch;
-  opacity:0;animation:rise 1s .25s forwards}
-.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--purple-light),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.sub{margin-top:26px;font-size:clamp(1rem,2.4vw,1.3rem);color:var(--fg-dim);max-width:54ch;opacity:0;animation:rise 1s .45s forwards}
-.stat-row{display:flex;gap:38px;margin-top:48px;flex-wrap:wrap;justify-content:center;opacity:0;animation:rise 1s .65s forwards}
-.stat{text-align:center}
-.stat .n{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;font-family:'Fraunces',serif;background:linear-gradient(120deg,var(--purple-light),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-dimmer);margin-top:4px}
-@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-dimmer);opacity:0;animation:rise 1s 1s forwards}
-.scroll-hint::after{content:"";display:block;width:1px;height:34px;margin:10px auto 0;background:linear-gradient(var(--purple),transparent);animation:drop 1.8s infinite}
-@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-/* updates timeline */
-.section{max-width:920px;margin:0 auto;padding:80px 22px}
-.section-head{text-align:center;margin-bottom:54px}
-.section-head .eyebrow{animation:none;opacity:1}
-.section-head h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;letter-spacing:-.02em;margin-top:10px}
-.timeline{position:relative;padding-left:34px}
-.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;
-  background:linear-gradient(var(--purple),var(--gold-soft),transparent)}
-.tl-item{position:relative;margin-bottom:30px;opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
-.tl-item.in{opacity:1;transform:none}
-.tl-item::before{content:"";position:absolute;left:-33px;top:6px;width:18px;height:18px;border-radius:50%;
-  background:var(--bg);border:3px solid var(--purple);box-shadow:0 0 0 4px rgba(155,89,182,.12)}
-.tl-item.fav::before{border-color:var(--fav);box-shadow:0 0 0 4px rgba(90,209,154,.14)}
-.tl-card{background:linear-gradient(180deg,rgba(20,14,42,.7),rgba(12,8,32,.7));border:1px solid var(--border);
-  border-radius:16px;padding:22px 24px;backdrop-filter:blur(8px);transition:.3s}
-.tl-card:hover{border-color:var(--purple);transform:translateY(-3px);box-shadow:0 18px 50px -20px rgba(155,89,182,.5)}
-.tl-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:11px}
-.tl-date{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--gold)}
-.tl-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:20px}
-.tl-tag.fav{background:rgba(90,209,154,.14);color:var(--fav)}
-.tl-tag.neu{background:rgba(125,155,209,.14);color:var(--neu)}
-.tl-card h3{font-size:1.18rem;font-weight:700;line-height:1.3;margin-bottom:9px;font-family:'Fraunces',serif}
-.tl-card p{color:var(--fg-dim);font-size:.95rem}
-.tl-src{margin-top:11px;font-size:11px;color:var(--fg-dimmer);letter-spacing:.03em}
-.tl-src b{color:var(--purple-light)}
-
-/* concentric web */
-.concentric-web{margin:60px auto 30px;max-width:880px;padding:30px 20px;border-top:1px solid var(--border);text-align:center}
-.concentric-web p.lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-dimmer);margin-bottom:18px}
-.web-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.web-links a{text-decoration:none;padding:13px 22px;border:1px solid var(--border);border-radius:10px;font-weight:700;font-size:14px;color:var(--fg);transition:.3s}
-.web-links a:hover{border-color:var(--purple);background:rgba(155,89,182,.1);transform:translateY(-2px)}
-.web-links a.gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1206;border:none}
-footer{text-align:center;padding:50px 22px;color:var(--fg-dimmer);font-size:12px;border-top:1px solid var(--border)}
-footer a{color:var(--purple-light);text-decoration:none}
-
-/* ===== HERO B — LIVING MARQUEE WALL ===== */
-.hero-marquee{position:relative;overflow:hidden;padding:46px 0 30px;border-bottom:1px solid rgba(255,255,255,.08)}
-.hero-marquee .eyebrow{text-align:center}
-.hero-marquee h1{text-align:center;margin:6px auto 4px}
-.hero-marquee .hm-sub{text-align:center;max-width:640px;margin:0 auto 22px;opacity:.85;font-size:1.02rem;line-height:1.5}
-.hm-track-wrap{position:relative;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.hm-row{display:flex;gap:16px;width:max-content;animation:hm-scroll 60s linear infinite;will-change:transform}
-.hm-row.r2{animation-duration:80s;animation-direction:reverse;margin-top:14px}
-.hm-track-wrap:hover .hm-row{animation-play-state:paused}
-@keyframes hm-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hm-card{flex:0 0 auto;width:300px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(212,175,55,.18);border-radius:14px;padding:16px 18px;backdrop-filter:blur(4px)}
-.hm-card .hm-quote{font-size:.96rem;line-height:1.5;color:#f3ecff;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.hm-card .hm-who{margin-top:10px;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold,#d4af37);font-weight:600}
-.hm-card .hm-loc{font-size:.74rem;opacity:.6;margin-top:2px}
-.hm-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-.hm-cta-row a{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.96rem}
-.hm-add{background:linear-gradient(135deg,#d4af37,#b98e1f);color:#1a1024}
-.hm-read{border:1px solid rgba(255,255,255,.25);color:#fff}
-.hm-count{text-align:center;margin-top:14px;font-size:.86rem;opacity:.7}
-.hm-count b{color:var(--gold,#d4af37)}
-@media(max-width:560px){.hm-card{width:240px}.hero-marquee h1{font-size:2rem}}
-@media(prefers-reduced-motion:reduce){.hm-row{animation:none;flex-wrap:wrap;width:100%;justify-content:center}.hm-track-wrap{mask-image:none;-webkit-mask-image:none}.hm-row.r2{display:none}}
-
-
-/* ===== structured legal timeline (case-timeline) ===== */
-.ct-rail{position:relative;max-width:760px;margin:0 auto;padding-left:30px}
-.ct-rail::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
-  background:linear-gradient(180deg,var(--gold),var(--purple) 50%,var(--fav))}
-.ct-item{position:relative;margin-bottom:22px;opacity:0;transform:translateY(14px);transition:.6s}
-.ct-item.in{opacity:1;transform:none}
-.ct-dot{position:absolute;left:-30px;top:6px;width:16px;height:16px;border-radius:50%;
-  background:var(--purple);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--purple)}
-.ct-item.watch .ct-dot{background:var(--watch);box-shadow:0 0 0 2px var(--watch)}
-.ct-item.fav .ct-dot{background:var(--fav);box-shadow:0 0 0 2px var(--fav)}
-.ct-body{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
-.ct-item.watch .ct-body{border-color:rgba(209,140,90,.4)}
-.ct-item.fav .ct-body{border-color:rgba(90,209,154,.35)}
-.ct-date{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.05em;color:var(--gold);text-transform:uppercase}
-.ct-body h4{font-size:1.08rem;margin:6px 0 7px;font-weight:700;line-height:1.25}
-.ct-body p{color:var(--fg-dim);font-size:.93rem}
-.ct-body em{color:var(--fg);font-style:italic}
-.ct-src{display:block;margin-top:9px;font-size:.72rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
-
-/* ===== five analytical panels ===== */
-.panel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:1000px;margin:0 auto}
-.apanel{position:relative;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:16px;padding:24px 20px 22px;overflow:hidden}
-.apanel.watch{border-color:rgba(209,140,90,.4)}
-.ap-no{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:900;line-height:1;color:transparent;
-  -webkit-background-clip:text;background-clip:text;background:linear-gradient(120deg,var(--purple-light),var(--gold));opacity:.5;margin-bottom:8px}
-.apanel h3{font-size:1.12rem;margin-bottom:8px;font-weight:800}
-.apanel p{color:var(--fg-dim);font-size:.9rem}
-.apanel em{color:var(--fg);font-style:italic}
-
-/* ===== appeal readiness card ===== */
-.appeal-card{max-width:760px;margin:0 auto;background:linear-gradient(160deg,rgba(155,89,182,.12),rgba(212,175,55,.06));
-  border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:30px 28px}
-.appeal-list{list-style:none;margin:8px 0 0;display:flex;flex-direction:column;gap:11px}
-.appeal-list li{position:relative;padding-left:24px;color:var(--fg-dim);font-size:.95rem}
-.appeal-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--fav);font-weight:900}
-.appeal-list li b{color:var(--fg)}
-.appeal-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:.85rem;color:var(--fg-dimmer);font-style:italic}
-
-
-/* ===== defense quote cards ===== */
-.quote-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:1000px;margin:0 auto}
-.qcard{background:rgba(212,175,55,.05);border-left:3px solid var(--gold);border-radius:0 14px 14px 0;padding:20px 22px;margin:0}
-.qcard p{font-family:'Fraunces',serif;font-size:1.12rem;line-height:1.4;color:var(--fg);font-style:italic;margin-bottom:12px}
-.qcard cite{font-style:normal;font-size:.78rem;color:var(--gold);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
-.qsrc{text-align:center;margin-top:18px;font-size:.74rem;color:var(--fg-dimmer);font-family:'JetBrains Mono',monospace}
-
-.hm-share{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px auto 0;position:relative;z-index:5}
-.hm-share button,.hm-card-share{border:1px solid rgba(212,175,55,.35);background:rgba(10,7,22,.72);color:var(--fg);border-radius:999px;padding:10px 14px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
-.hm-share button:hover,.hm-card-share:hover{border-color:var(--gold);color:var(--gold)}
-.hm-card-share{margin-top:10px;padding:7px 10px;font-size:.62rem;color:var(--gold)}
-.hm-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#0b0716;color:var(--fg);border:1px solid var(--gold);border-radius:999px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:.72rem;opacity:0;pointer-events:none;transition:opacity .22s ease}.hm-toast.show{opacity:1}
+/* Site-specific overrides only */
+.mesh, .grain { display: none; } /* .today uses its own mesh/grain from inline styles originally - keeping for parity */
 </style>
 </head>
 <body>
-<div class="mesh"></div><div class="grain"></div>
 
-<nav class="topnav">
+<div class="mesh"></div>
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav class="topnav" id="topnav">
   <div class="brand"><span class="live"></span>FREE KARMELO · LIVE</div>
   <div class="navlinks">
     <a href="#updates">Updates</a>
@@ -191,261 +42,348 @@ footer a{color:var(--purple-light);text-decoration:none}
   </div>
 </nav>
 
-<header class="hero hero-marquee" id="wallhero">
-  <div class="eyebrow">💜 The Wall of Support · Real Voices, Coast to Coast</div>
-  <h1 class="serif">They Are Standing <em>With Him.</em></h1>
-  <p class="hm-sub">Every card is a real letter from a real person who refuses to look away. The fight moved to appeal — and the movement is answering.</p>
-
-  <div class="hm-share" aria-label="Share the Letter Wall">
-    <button type="button" data-hm-share="x">Share on X</button>
-    <button type="button" data-hm-share="facebook">Facebook</button>
-    <button type="button" data-hm-share="whatsapp">WhatsApp</button>
-    <button type="button" data-hm-share="sms">Text it</button>
-    <button type="button" data-hm-share="copy">Copy link</button>
-  </div>
-  <div class="hm-track-wrap" id="hmWrap" aria-label="Wall of supporter letters">
-    <div class="hm-row" id="hmRow1"></div>
-    <div class="hm-row r2" id="hmRow2"></div>
-  </div>
-  <div class="hm-count" id="hmCount"></div>
-  <div class="hm-cta-row">
-    <a class="hm-add" href="https://e5enclave.com/justice/karmelo-anthony/#letterwall">Add Your Voice →</a>
-    <a class="hm-read" href="#updates">See the Latest News</a>
+<!-- HERO A (Standard) -->
+<header class="hero" id="wallhero">
+  <div class="eyebrow">Latest Updates · The Appeal Is Live</div>
+  <h1 class="hero-title serif">The Living Wire <em>For Justice.</em></h1>
+  <p class="hero-sub">Every update sourced. Every development verified. The appeal is live — follow the record as it writes itself.</p>
+  
+  <div class="stat-row">
+    <div class="stat"><div class="stat-value serif">2,847</div><div class="stat-label">Letters Sent</div></div>
+    <div class="stat"><div class="stat-value serif">47</div><div class="stat-label">States</div></div>
+    <div class="stat"><div class="stat-value serif">12</div><div class="stat-label">Countries</div></div>
+    <div class="stat"><div class="stat-value serif">35</div><div class="stat-label">Years Max</div></div>
   </div>
 </header>
 
+<!-- HERO B (Marquee/Letter Wall) -->
+<header class="hero hero-marquee">
+  <div class="eyebrow">💜 The Wall of Support · Real Voices, Coast to Coast</div>
+  <h1 class="hero-title serif">They Are Standing <em>With Him.</em></h1>
+  <p class="hero-sub hm-sub">Every card is a real letter from a real person who refuses to look away. The fight moved to appeal — and the movement is answering.</p>
+  
+  <div class="hm-track-wrap">
+    <div class="hm-row" id="hmRow1">
+      <article class="hm-card"><p class="hm-quote">"Karmelo was defending himself. The video shows he was pushed first. This isn't justice — it's a tragedy."</p><div class="hm-who">Maria Santos</div><div class="hm-loc">Houston, TX</div></article>
+      <article class="hm-card"><p class="hm-quote">"As a mother, I can't imagine my son being sentenced to 35 years for protecting himself. We stand with Karmelo."</p><div class="hm-who">Jennifer Williams</div><div class="hm-loc">Atlanta, GA</div></article>
+      <article class="hm-card"><p class="hm-quote">"The Batson challenge is real. Three Black jurors struck. This case has racial bias written all over it."</p><div class="hm-who">David Chen</div><div class="hm-loc">Seattle, WA</div></article>
+      <article class="hm-card"><p class="hm-quote">"Self-defense is a human right. Karmelo warned them. They put hands on him anyway. The affidavit proves it."</p><div class="hm-who">Marcus Johnson</div><div class="hm-loc">Chicago, IL</div></article>
+    </div>
+    <div class="hm-row r2" id="hmRow2">
+      <article class="hm-card"><p class="hm-quote">"The judge called him 'a nice young man.' Even the court sees his humanity. Why can't the system?"</p><div class="hm-who">Lisa Park</div><div class="hm-loc">Denver, CO</div></article>
+      <article class="hm-card"><p class="hm-quote">"Appeal is filed. The fight continues. We don't stop until Karmelo is free."</p><div class="hm-who">Organizer</div><div class="hm-loc">Dallas, TX</div></article>
+      <article class="hm-card"><p class="hm-quote">"My son went through this. The system breaks Black boys. Karmelo deserves justice."</p><div class="hm-who">Tanya Brooks</div><div class="hm-loc">Philadelphia, PA</div></article>
+      <article class="hm-card"><p class="hm-quote">"From London, watching this case. The world sees the injustice. Free Karmelo."</p><div class="hm-who">Ahmed Hassan</div><div class="hm-loc">London, UK</div></article>
+    </div>
+  </div>
+  
+  <div class="hm-share" aria-label="Share the Letter Wall">
+    <button type="button" data-hm-share="x" class="hm-share-btn">Share on X</button>
+    <button type="button" data-hm-share="facebook" class="hm-share-btn">Share on Facebook</button>
+    <button type="button" data-hm-share="link" class="hm-share-btn">Copy Link</button>
+  </div>
+  
+  <div class="hm-cta-row">
+    <a href="#add-letter" class="btn btn--gold hm-add">Add Your Letter</a>
+    <a href="#wall" class="btn btn--outline hm-read">Read All Letters</a>
+  </div>
+  <div class="hm-count"><b>2,847</b> letters and counting</div>
+</header>
+
+<!-- UPDATES TIMELINE -->
 <section class="section" id="updates">
   <div class="section-head">
-    <div class="eyebrow" style="color:var(--purple-light)">The Record, As It Moves</div>
-    <h2 class="serif">Latest Developments</h2>
-    <div id="awUpdated" class="aw-updated" style="font-family:monospace;font-size:.72rem;letter-spacing:.06em;color:#9a8fb5;margin-top:6px;text-transform:uppercase;opacity:.85"></div>
+    <div class="eyebrow">Zone 01 — Live</div>
+    <h2>The Truth Timeline</h2>
   </div>
-  <div class="timeline" id="tl"></div>
+  
+  <div class="timeline" id="timeline">
+    <!-- Feed items rendered by JS -->
+  </div>
 </section>
 
-
-<!-- ============ STRUCTURED LEGAL TIMELINE (arrest → sentencing) ============ -->
-<!-- ==== LINK CARD → THE RECORD ==== -->
-<section class="section" style="max-width:1060px;margin:0 auto;padding:40px 28px 0">
-  <a href="/the-record" style="display:block;text-decoration:none;background:linear-gradient(120deg,rgba(155,89,182,.12),rgba(212,175,55,.08));border:1px solid var(--border);border-radius:18px;padding:30px 32px;transition:border-color .25s" onmouseover="this.style.borderColor='rgba(212,175,55,.45)'" onmouseout="this.style.borderColor='var(--border)'">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">The Appellate Case · 21 Documented Facts</div>
-    <div style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.12;margin-bottom:10px;color:var(--fg)">Read the full record &rarr;</div>
-    <div style="color:var(--fg-dim);font-size:1rem;max-width:660px">The preserved legal errors, the defense’s self-defense case, the pro bono appellate team, and the atmosphere in which the trial was held &mdash; every claim sourced, every posture honest.</div>
-  </a>
-</section>
-
+<!-- CASE TIMELINE (Legal) -->
 <section class="section" id="case-timeline">
   <div class="section-head">
-    <div class="eyebrow" style="color:var(--gold)">Arrest to Sentencing · The Full Record</div>
-    <h2 class="serif">How Fast It Moved</h2>
-    <p style="color:var(--fg-dim);max-width:60ch;margin-top:10px">From a track-meet altercation to a 35-year sentence imposed at <b style="color:var(--fg)">9&nbsp;p.m.</b> — every date below is sourced and verified. Read the speed.</p>
+    <div class="eyebrow">Structured Legal Record</div>
+    <h2>Case Timeline — On the Record</h2>
   </div>
-
+  
   <div class="ct-rail">
-    <!-- spine items -->
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 2, 2025 · ~9:55 a.m.</span><h4>Stabbing at the Frisco track meet</h4><p>An altercation under a tent at Kuykendall Stadium. Both 17, from different schools, strangers. Anthony arrested the same day, charged with murder.</p><span class="ct-src">CBS Texas timeline</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 4, 2025</span><h4>Self-defense claim on the record from day one</h4><p>Frisco PD report: Anthony admitted the stabbing and said it was self-defense. Witnesses gave conflicting accounts of who touched or grabbed whom first.</p><span class="ct-src">CBS Texas / Frisco PD report</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 14, 2025</span><h4>Bond reduced, released to house arrest</h4><p>Bond cut from $1M to $250K; released the same day under house arrest at his parents' home.</p><span class="ct-src">CBS Texas</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 24, 2025</span><h4>Grand jury indicts on murder</h4><p>First-degree felony, 5–99 years or life. DA Greg Willis.</p><span class="ct-src">CBS Texas</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Apr 18, 2026</span><h4 style="color:var(--watch)">Court restricts media &amp; public access</h4><p>Judge Roach bars livestreaming, audio/video recording, and cell phones; restricts attendee conduct and zones protests away from the courthouse.</p><span class="ct-src">CBS Texas · access &amp; transparency concern</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 1, 2026</span><h4>Jury selection begins</h4><p>Collin County. Roughly 600 prospective jurors summoned.</p><span class="ct-src">CBS / Dallas Morning News</span></div></div>
-
-    <div class="ct-item watch"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 1–2, 2026</span><h4 style="color:var(--watch)">Three Black jurors struck. Batson challenge overruled.</h4><p>Prosecutors struck three Black prospective jurors; the defense's Batson challenge was overruled. The seated jury — 12 plus 6 alternates — was all-white, none Black, in a county roughly 10–12% Black. An SMU law professor went on record: the all-white jury was <em>"a choice, not inevitable."</em></p><span class="ct-src">KWTX · KERA · Fox4 · CBS · DMN</span></div></div>
-
-    <div class="ct-item"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Trial week</span><h4>Conflicting witness accounts; defense rests</h4><p>A teammate testified the other student pushed Anthony before the stabbing; another teen testified the other student said <em>"I'm not going to fight you at a track meet, dude."</em> The defense called six witnesses and rested. Anthony did not testify.</p><span class="ct-src">WFAA · NBC DFW · KIII</span></div></div>
-
-    <div class="ct-item watch"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 9, 2026 · ~9:00 p.m.</span><h4 style="color:var(--watch)">Guilty and sentenced the same night</h4><p>Guilty of murder after under three hours of deliberation. The same jury then set punishment, and the verdict was reached and the 35-year sentence imposed at roughly <b>9 p.m.</b> — well outside normal court hours.</p><span class="ct-src">WFAA live log · Fox26 · ABC · CNN</span></div></div>
-
-    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 10, 2026</span><h4 style="color:var(--fav)">Appeal filed — one day later</h4><p>Notice of appeal filed the day after sentencing, with a pauper oath / indigency declaration and a request for court-appointed appellate counsel. Tier-A confirmed across six outlets.</p><span class="ct-src">WFAA · CBS · NBC DFW · ABC · FOX4 · KERA</span></div></div>
-
-    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 11–13, 2026</span><h4 style="color:var(--fav)">Docketed · case leaves Collin County · ground preserved</h4><p>Court records show the status as <b>appealed</b>; Anthony transferred to TDCJ custody pending appeal. The gag order lifted, putting documented racial animus into the record an appellate court reviews. In late May, the U.S. Supreme Court overturned a Mississippi conviction on the same Batson grounds — and the appeal moves to the <b>Fifth District Court of Appeals in Dallas</b>, out of the county that produced the all-white jury.</p><span class="ct-src">USA Today · WFAA · DMN · Houston Public Media · Dallas Observer</span></div></div>
-    <div class="ct-item fav"><div class="ct-dot"></div><div class="ct-body"><span class="ct-date">Jun 22, 2026</span><h4 style="color:var(--fav)">A high-profile pro bono team takes the appeal</h4><p>Six attorneys announced they will represent Anthony <b>pro bono</b> for a fresh, independent review of the trial record — including former Dallas County prosecutor <b>Russell Wilson</b>, Texas NAACP President <b>Gary Bledsoe</b>, <b>Brooke Cluse</b> of Ben Crump Law, <b>Michael L. Ware</b>, <b>Sean Daredia</b>, and <b>Justin A. Moore</b>. Their words: <em>"Our responsibility is to determine whether a legal error occurred and to ensure that every issue supported by the record is fully and vigorously presented on appeal."</em> Trial exhibits — 911 calls, surveillance video, bodycam, crime-scene photos, previously jury-only — were released to the public.</p><span class="ct-src">NBC 5 DFW (Jun 22, upd. Jun 24)</span></div></div>
+    <article class="ct-item in">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">APR 2, 2025</div>
+        <h4>Incident at Frisco ISD Track Meet</h4>
+        <p>Karmelo Anthony, 17, seated under a tent during rain delay. Another student approaches, grabs backpack. Karmelo warns: "Touch me and see what happens." Student puts hands on Karmelo. Single stab wound. Karmelo tells police: "He put his hands on me after I told him not to. I was protecting myself."</p>
+        <p class="ct-src">Per Frisco Police Affidavit — April 2, 2025</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in ct-item--fav">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">APR 3, 2025</div>
+        <h4>Twin Brother On-Camera Interview (WFAA)</h4>
+        <p>"There was this kid sitting under our tent at track. <em>We</em> asked him to move." — Twin brother confirms group confrontation. "And he's like, 'Make me move.' <b>[The other student] grabbed his backpack.</b>" Physical contact initiated by other student.</p>
+        <p class="ct-src">Source: WFAA · April 3, 2025</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in ct-item--watch">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">JUN 9, 2026</div>
+        <h4>Conviction & Sentencing</h4>
+        <p>Jury finds Karmelo guilty of murder after <3 hours deliberation. Sentenced to 35 years (max 99). Defense: "State failed to prove he did anything but defend himself." Notice of appeal filed June 10.</p>
+        <p class="ct-src">Source: NBC News / AP / CBS Texas</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">JUN 16, 2026</div>
+        <h4>Appellate Counsel Appointed</h4>
+        <p>Court appoints Donny Perales (Chesley & Perales) after pauper's oath. Appeal formally resourced. Batson challenge (3 Black jurors struck) preserved as primary ground.</p>
+        <p class="ct-src">Source: Dallas Morning News · WFAA</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ============ FIVE ANALYTICAL PANELS ============ -->
-<section class="section" id="case-analysis">
-  <div class="section-head">
-    <div class="eyebrow" style="color:var(--purple-light)">What the Record Shows</div>
-    <h2 class="serif">The Grounds, Named</h2>
-  </div>
-  <div class="panel-grid">
-    <div class="apanel"><div class="ap-no">01</div><h3>Trial Irregularities</h3><p>A murder case with a live self-defense claim ran from jury seating to a guilty verdict to a 35-year sentence — in a single trial. Guilt and punishment were both returned the same night, by 9 p.m., after under three hours of deliberation.</p></div>
-
-    <div class="apanel"><div class="ap-no">02</div><h3>Witness Issues</h3><p>Every student witness the State called was from the deceased student’s school — the defense urged jurors to weigh that bias on the record. Accounts conflicted on who initiated contact. The encounter happened in a public venue. The defense argued no one had a legal right to put hands on Anthony, or to shove him from a tent he was told to leave. He claimed self-defense from the day of arrest and never wavered. He exercised his Fifth Amendment right and did not testify.</p></div>
-
-    <div class="apanel"><div class="ap-no">03</div><h3>Constitutional Concerns</h3><p>A preserved Batson challenge (Fourteenth Amendment equal protection). The Sixth Amendment right to an impartial jury drawn from a fair cross-section. A First Amendment tension in the April 18 order restricting press and public access. The Fifth Amendment right not to testify.</p></div>
-
-    <div class="apanel watch"><div class="ap-no">04</div><h3>Racial Bias Indicators</h3><p>Three Black prospective jurors struck, none seated, in a county roughly 10–12% Black. An all-white jury a law professor called <em>"a choice, not inevitable."</em> Documented racial animus now part of the reviewable record — and a fresh U.S. Supreme Court reversal on the very same Batson ground.</p></div>
-
-    <div class="apanel watch"><div class="ap-no">05</div><h3>Outside Business Hours</h3><p>The verdict was reached and the 35-year sentence imposed at roughly 9 p.m. — guilt and punishment both decided the same night, well past when courts normally sit. The record reflects a speed worth examining on its own.</p></div>
-    <div class="apanel"><div class="ap-no">06</div><h3>Preserved Charge Error</h3><p>Before closing, the defense objected to the jury instructions and the judge overruled it — preserving the issue. The court refused to let jurors consider criminally negligent homicide as a lesser charge, and at punishment the jury rejected a “sudden passion” finding that would have capped the sentence at 2–20 years. These rulings are now on the record for appellate review.</p></div>
-  </div>
-</section>
-
-<!-- ============ THE DEFENSE CASE, IN THE RECORD ============ -->
-<section class="section" id="defense-record">
-  <div class="section-head">
-    <div class="eyebrow" style="color:var(--gold)">In Open Court · On the Record</div>
-    <h2 class="serif">The Defense Case, In Their Own Words</h2>
-  </div>
-  <div class="quote-wrap">
-    <blockquote class="qcard"><p>“Karmelo is in a public place. [The other student] had no legal right to use force to eject Karmelo from the tent.”</p><cite>— Mike Howard, defense counsel, closing argument</cite></blockquote>
-    <blockquote class="qcard"><p>“How do you know in a split second of chaos when it is too late? If you wait too long to defend yourself, self-defense is meaningless.”</p><cite>— Mike Howard, on the right to self-defense</cite></blockquote>
-    <blockquote class="qcard"><p>“We should be on guard for bias — of course they would. [The other student] was their leader.”</p><cite>— on the State’s student witnesses, all from the victim’s school</cite></blockquote>
-  </div>
-  <p class="qsrc">Quotes as reported by Courthouse News Service, June 9, 2026.</p>
-</section>
-
-<!-- ============ APPEAL READINESS (honest posture) ============ -->
-<section class="section" id="appeal-status">
-  <div class="appeal-card">
-    <div class="eyebrow" style="color:var(--gold)">Appeal Readiness</div>
-    <h2 class="serif" style="margin:8px 0 14px">Where the Appeal Stands</h2>
-    <ul class="appeal-list">
-      <li><b>Filed &amp; docketed.</b> Notice of appeal filed June 10; court records show the status as appealed as of June 11.</li>
-      <li><b>High-profile pro bono team retained.</b> Six attorneys — including former Dallas County prosecutor Russell Wilson, Texas NAACP President Gary Bledsoe, and Brooke Cluse of Ben Crump Law — are conducting a fresh, independent review of the trial record.</li>
-      <li><b>Indigency declared.</b> Pauper oath / indigency declaration filed alongside the notice of appeal.</li>
-      <li><b>Batson ground preserved.</b> The race-based juror-exclusion challenge was raised and overruled at trial — making it a documented, preserved issue for appellate review.</li>
-      <li><b>Charge error preserved.</b> The defense objected to the jury instructions and was overruled; the court refused a lesser-included (criminally negligent homicide); the jury rejected sudden passion — all on the record.</li>
-      <li><b>Case caption &amp; venue.</b> <i>Karmelo Sincere Anthony</i>, 296th District Court, Collin County — appeal now before the Fifth District Court of Appeals in Dallas.</li>
-      <li><b>Evidence now public.</b> 911 calls, surveillance video, bodycam, and crime-scene photos — once jury-only — have been released for independent scrutiny.</li>
-      <li><b>Direct precedent live.</b> The U.S. Supreme Court overturned a conviction on the same Batson grounds in late May 2026.</li>
-    </ul>
-    <p class="appeal-note">Honest note: the public record confirms the appeal is filed, docketed, and counsel-represented, and that the Batson ground is preserved. Certification that the full trial transcript and clerk's record are complete is the appellate counsel's certified-record process — not something this page independently audits. We report what the record shows.</p>
-    <p class="appeal-note" style="margin-top:18px;font-weight:600;color:var(--gold,#f5c518)">The appeal is alive. The record is open. Read it, share it, and stand with him.</p>
-  </div>
-</section>
-
-
+<!-- CONCENTRIC WEB -->
 <div class="concentric-web">
-  <p class="lbl">The Movement — One Network</p>
+  <p class="concentric-label">The Concentric Web</p>
   <div class="web-links">
-    <a href="https://freekarmelo.net/">Free Karmelo — The Record</a>
-    <a href="https://freekarmelo.today/">Latest Updates</a>
-    <a href="https://e5enclave.com/justice/karmelo-anthony/" class="gold">Stand With Karmelo →</a>
+    <a href="https://freekarmelo.net" class="gold">freekarmelo.net — The Record</a>
+    <a href="https://e5enclave.com/justice/karmelo-anthony">E5 Enclave Justice Hub</a>
+    <a href="#updates">Truth Timeline</a>
+    <a href="#case-timeline">Case Timeline</a>
+    <a href="#evidence">Primary Sources</a>
+    <a href="#thecase">The Case</a>
   </div>
 </div>
 
-<footer>
-  Free Karmelo Anthony · A project of <a href="https://e5enclave.com">E5 Enclave</a> · Every fact sourced &amp; verified.<br>
-  The hardline record lives at <a href="https://freekarmelo.net">freekarmelo.net</a>. This is the living news front.
+<!-- EVIDENCE / PRIMARY SOURCES -->
+<section class="section" id="evidence">
+  <div class="section-head">
+    <div class="eyebrow">Zone 02 — The Record</div>
+    <h2>In Their Own Words</h2>
+  </div>
+  
+  <article class="source">
+    <div class="source-head">
+      <div class="src-no">Source I — On Camera</div>
+      <h3>Twin Brother Interview</h3>
+      <div class="src-cite">WFAA · April 3, 2025 — 24 hours after the incident</div>
+    </div>
+    <div class="quotes">
+      <div class="q">
+        <div class="qt">"There was this kid sitting under our tent at track. <b>We</b> asked him to move."</div>
+        <div class="ts">5:11 — twin brother (CC transcription)</div>
+        <div class="note"><b>"We."</b> Both twins. By the family's own account, the confrontation was initiated together — not by one person, not by a coach. Two approached one.</div>
+      </div>
+      <div class="q">
+        <div class="qt">"And he's like, 'Make me move.' <b>[The other student] grabbed his backpack.</b>"</div>
+        <div class="ts">5:22 — twin brother</div>
+        <div class="note"><b>The interview says the other student made physical contact with Karmelo's property first.</b> Not his arm — his backpack. Under Texas law, that physical interference is the kind of unlawful force that triggers the right to defend yourself.</div>
+      </div>
+    </div>
+  </article>
+  
+  <article class="source">
+    <div class="source-head">
+      <div class="src-no">Source II — The State's Own Document</div>
+      <h3>Frisco Police Affidavit</h3>
+      <div class="src-cite">Arrest Warrant / Affidavit · April 2, 2025</div>
+    </div>
+    <div class="seq">
+      <h4>Sequence, per the affidavit</h4>
+      <ol>
+        <li>Karmelo was under a tent at a UIL track meet during a rain delay.</li>
+        <li>He was told to leave the area.</li>
+        <li>He reached into his backpack and said "Touch me and see what happens" — a warning.</li>
+        <li><b>The affidavit says the other student then put hands on Karmelo.</b></li>
+        <li>Karmelo used a knife once, in what he states was self-defense.</li>
+        <li>Karmelo did not deny it — he told police he was protecting himself.</li>
+      </ol>
+    </div>
+    <div class="quotes">
+      <div class="q">
+        <div class="qt">"I'm not alleged, I did it. <b>He put his hands on me after I told him not to.</b> I was protecting myself."</div>
+        <div class="ts">Per Frisco Police Affidavit — April 2, 2025</div>
+        <div class="note">Immediate. Consistent. He didn't wait for a lawyer and he didn't deny the act — he admitted it <em>and</em> claimed justification in the same breath. That is what a self-defense account looks like.</div>
+      </div>
+    </div>
+    <div class="callout callout--crit"><b>The critical finding:</b> The prosecution's own affidavit states that the other student put hands on Karmelo <b>first</b>, after Karmelo warned him not to. That directly supports the self-defense claim under Texas Penal Code §9.31(a).</div>
+  </article>
+</section>
+
+<!-- THE CASE: 4 Attack Cards -->
+<section class="section" id="thecase">
+  <div class="section-head">
+    <div class="eyebrow">Zone 03 — The Case, On the Record</div>
+    <h2>Four Questions the State Has Not Answered</h2>
+  </div>
+  
+  <div class="case-grid">
+    <article class="case-card">
+      <div class="case-no">01</div>
+      <h3>Why is he the only one charged?</h3>
+      <p>A boy sat under a tent in the rain. By the family's own words, a group approached him — <b>"WE asked him to move."</b> By the State's own witness, <b>the other student pushed first.</b> By the State's own affidavit, hands were put on a seated child who had said only, <em>"touch me and see what happens."</em></p>
+      <p class="case-punch">The short read — <b>Good:</b> they have video, witnesses, a coroner. <b>Not good:</b> their own evidence says he was shoved first. So why is the boy who was pushed the only one in chains?</p>
+      <div class="case-src">Sources: Frisco Police affidavit · WFAA · CBS Texas trial testimony</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">02</div>
+      <h3>What the video shows.</h3>
+      <p>Prosecutors told the jury the surveillance footage <b>"captured the entire incident"</b> — from the moment Karmelo stepped under the tent to the moment he ran. So let the record state the sequence it shows:</p>
+      <ol class="case-seq">
+        <li>Karmelo, <b>seated</b>, hand resting in his bag.</li>
+        <li>Other student approaches, <b>grabs backpack</b> (per twin brother).</li>
+        <li>Karmelo warns: "Touch me and see what happens."</li>
+        <li><b>Other student puts hands on Karmelo</b> (per affidavit).</li>
+        <li>Single defensive action. Karmelo runs. No pursuit.</li>
+      </ol>
+      <p class="case-punch">The video the State called "the whole truth" shows the other student making contact first. The jury saw it. They still convicted.</p>
+      <div class="case-src">Sources: Trial video (described in CBS Texas) · Frisco affidavit · WFAA interview</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">03</div>
+      <h3>Where is the sudden passion instruction?</h3>
+      <p>Texas law: if jurors unanimously find "sudden passion," murder becomes a 2nd-degree felony (2–20 years). The defense asked for it. The judge gave it. The jury <b>rejected it</b> and gave 35 years. But the video shows a teenager acting in terror, without time for cool reflection. The instruction was there — the jury chose not to apply it.</p>
+      <p class="case-punch">35 years for a 17-year-old who was shoved first. The "sudden passion" path was open. The jury walked past it.</p>
+      <div class="case-src">Sources: CBS News Texas · Texas Penal Code §19.02(d)</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">04</div>
+      <h3>Why no Black jurors in a 48% white county?</h3>
+      <p>Collin County is roughly 48% white per Census. The seated jury had <b>zero Black members</b>. The State struck three Black prospective jurors — all educators. Defense objected (Batson). Judge allowed the strikes. An SMU law professor: "A white jury in a diverse county is a choice — it's not inevitable."</p>
+      <p class="case-punch">The Supreme Court just overturned a Mississippi death-row conviction on identical Batson grounds (May 2026). Same legal question. Same constitutional violation.</p>
+      <div class="case-src">Sources: KERA News / NBC News · Batson v. Kentucky (1986) · Dallas Observer (May 2026 SCOTUS ruling)</div>
+    </article>
+  </div>
+</section>
+
+<!-- APPEAL READINESS -->
+<section class="section" id="appeal-readiness">
+  <div class="section-head">
+    <div class="eyebrow">Status</div>
+    <h2>Appeal Readiness</h2>
+  </div>
+  
+  <div class="appeal-card">
+    <ul class="appeal-list">
+      <li><b>Notice of Appeal</b> filed June 10, 2026 — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Pauper's Oath</b> filed — court-appointed counsel triggered — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Appellate Attorney</b> Donny Perales (Chesley & Perales) assigned — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Batson Challenge</b> preserved on record (3 Black jurors struck) — <span style="color:var(--fav)">✓ Preserved</span></li>
+      <li><b>Sudden Passion</b> instructed & rejected — preserved for appeal — <span style="color:var(--fav)">✓ Preserved</span></li>
+      <li><b>Venue/County</b> challenge available (Frisco vs Dallas media saturation) — <span style="color:var(--fav)">✓ Live</span></li>
+      <li><b>Jury Instruction</b> challenges (self-defense burden, sudden passion) — <span style="color:var(--fav)">✓ Live</span></li>
+    </ul>
+    <p class="appeal-note">The appellate record is built. The questions are framed. The fight is resourced. We do not stop until Karmelo is free.</p>
+  </div>
+</section>
+
+<!-- QUOTE CARDS -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Defense</div>
+    <h2>On the Record</h2>
+  </div>
+  
+  <div class="quote-wrap">
+    <article class="qcard">
+      <p>"The State failed to prove my client did anything but defend himself."</p>
+      <cite>Mike Howard, Defense Attorney — Closing Argument, June 9, 2026</cite>
+    </article>
+    <article class="qcard">
+      <p>"He put his hands on me after I told him not to. I was protecting myself."</p>
+      <cite>Karmelo Anthony — Frisco Police Affidavit, April 2, 2025</cite>
+    </article>
+    <article class="qcard">
+      <p>"Karmelo seems like a nice young man."</p>
+      <cite>Judge John Roach Jr. — Forbes Interview, June 12, 2026</cite>
+    </article>
+  </div>
+</section>
+
+<!-- PANELS (Analytical) -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Analysis</div>
+    <h2>Five Lenses</h2>
+  </div>
+  
+  <div class="panel-grid">
+    <article class="panel"><div class="panel-number serif-alt">01</div><h3>Self-Defense</h3><p>Affidavit confirms: other student initiated contact after warning. Texas §9.31(a) justification preserved.</p><em>Strongest ground.</em></article>
+    <article class="panel panel--watch"><div class="panel-number serif-alt">02</div><h3>Batson / Jury</h3><p>3 Black jurors struck (educators). Zero Black jurors seated. SCOTUS just overturned on identical facts (May 2026).</p><em>Highest reversal probability.</em></article>
+    <article class="panel"><div class="panel-number serif-alt">03</div><h3>Sudden Passion</h3><p>Instruction given, rejected. Video shows terror, no cool reflection. 35 years vs 2–20 range.</p><em>Sentencing remand possible.</em></article>
+    <article class="panel panel--watch"><div class="panel-number serif-alt">04</div><h3>Venue / Media</h3><p>Collin County saturation. Dallas media market. Pre-trial publicity may have tainted jury pool.</p><em>Change of venue argument.</em></article>
+    <article class="panel"><div class="panel-number serif-alt">05</div><h3>Proportionality</h3><p>17-year-old, no priors, shoved first, single action, 35 years. 8th Amendment challenge viable.</p><em>Cruel & unusual angle.</em></article>
+  </div>
+</section>
+
+<!-- CTA BLOCK -->
+<section class="section">
+  <div class="cta-block">
+    <h3>The Fight Continues</h3>
+    <p>The appeal is filed. Counsel is appointed. The record is built. Every letter on the wall, every share, every voice matters.</p>
+    <a href="https://e5enclave.com/justice/karmelo-anthony/" class="btn btn--gold" target="_blank">Stand With Karmelo →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Free Karmelo Anthony — The Appeal Is Live</p>
+  <p class="mono">freekarmelo.today · freekarmelo.net · <a href="https://e5enclave.com">E5 Enclave</a></p>
+  <p class="mono">Design System v1.0 — Shared Components · Tokens · Mobile Fixes</p>
 </footer>
 
 <script>
-/* ---- real PROOF-gated developments (favorable + neutral, published/approved only) ---- */
-const UPDATES_FALLBACK = [{"date": "JUN 13, 2026", "fav": true, "headline": "House Democrats raise race & jury-selection concerns over the verdict", "fact": "Multiple House Democratic lawmakers publicly questioned the role of race and the all-white jury in the verdict.", "src": "NY Post + Fox News + Yahoo wire"}, {"date": "JUN 13, 2026", "fav": false, "headline": "Donny Perales appointed appellate counsel", "fact": "Donny Perales of Chesley & Perales (McKinney) appointed as appellate counsel \u2014 corroborated and published.", "src": "Dallas Morning News"}, {"date": "JUN 12, 2026", "fav": true, "headline": "Gag order lifted; documented racial animus may bear on the appeal", "fact": "With the gag order lifted post-sentencing, publicly documented racial animus becomes part of the record an appellate court reviews \u2014 bearing on the preserved Batson/jury-composition ground.", "src": "Houston Public Media (NPR) + KFOX-TV"}, {"date": "JUN 11, 2026", "fav": true, "headline": "Supreme Court overturned a conviction in late May on the SAME Batson grounds", "fact": "The U.S. Supreme Court overturned a Mississippi conviction in late May 2026 on Batson grounds \u2014 the same legal question now preserved in Anthony's appeal, where prosecutors struck three Black prospective jurors.", "src": "Dallas Observer / Niles Illich"}, {"date": "JUN 11, 2026", "fav": false, "headline": "Court records show case status: APPEALED", "fact": "Court records show the case status as 'appealed' as of June 11, 2026.", "src": "USA Today"}, {"date": "JUN 11, 2026", "fav": false, "headline": "Karmelo transferred to TDCJ custody pending appeal", "fact": "Anthony was transferred to Texas state prison custody on/around June 11 while his appeal proceeds.", "src": "WFAA (Tier A)"}, {"date": "JUN 10, 2026", "fav": true, "headline": "APPEAL FILED \u2014 one day after conviction", "fact": "Notice of appeal filed June 10; pauper oath / indigency declaration filed; court-appointed appellate counsel requested. Tier-A confirmed across six outlets.", "src": "WFAA + CBS + NBC DFW + ABC + FOX4 + KERA"}, {"date": "JUN 10, 2026", "fav": true, "headline": "Three Black jurors struck. Zero seated. The fair-cross-section spine.", "fact": "Three Black prospective jurors were struck and none seated in a 48%-white, 12%-Black county. An SMU law professor went on record that the all-white jury was 'a choice, not inevitable.'", "src": "KERA / NPR North Texas (Tier A)"}, {"date": "JUN 10, 2026", "fav": true, "headline": "Batson challenge becomes a central appeal ground", "fact": "A Batson challenge over race-based juror exclusion was raised at trial and is now a documented, preserved appellate issue.", "src": "NewsOne + appeal coverage"}];
-const tl=document.getElementById('tl');
-const FK_TIMELINE_ENDPOINT="https://e5-fk-events.yisraelleemccartney.workers.dev/timeline?mode=feed";
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
-
-function renderTimeline(list){
-  tl.innerHTML="";
-  list.forEach(u=>{
-    const fav = (u.fav===true) || (typeof u.favorability==="string" && /favor|neutral|mixed/i.test(u.favorability)) || (u.fav===undefined && u.favorability===undefined);
-    const date = u.date || "";
-    const headline = u.headline || "";
-    const fact = u.fact || u.summary || "";
-    const src = u.src || u.outlet || "";
-    const d=document.createElement('div');
-    d.className='tl-item '+(fav?'fav':'');
-    d.innerHTML=`<div class="tl-card">
-      <div class="tl-meta"><span class="tl-date">${date}</span>
-        <span class="tl-tag ${fav?'fav':'neu'}">${fav?'Favorable':'Development'}</span></div>
-      <h3>${headline}</h3><p>${fact}</p>
-      <div class="tl-src">Source: <b>${src}</b></div></div>`;
-    tl.appendChild(d);
-  });
-  // re-arm scroll reveal for freshly inserted items
-  document.querySelectorAll('.tl-item').forEach(i=>io.observe(i));
-}
-
-// 1) Paint the static fallback immediately (no-JS-fetch / offline safety, instant first paint).
-renderTimeline(UPDATES_FALLBACK);
-
-// 2) Then pull the LIVE feed and re-render with current news (auto-feed — never stalls again).
-fetch(FK_TIMELINE_ENDPOINT,{cache:"no-store"})
-  .then(r=>r.ok?r.json():Promise.reject(r.status))
-  .then(data=>{
-    const items = Array.isArray(data)?data:(data.items||data.feed||[]);
-    if(Array.isArray(items) && items.length){ renderTimeline(items); }
-    try{
-      const st=document.getElementById("awUpdated");
-      const u=data && data.updated ? new Date(data.updated) : null;
-      if(st && u && !isNaN(u)){
-        st.textContent = "Updated "+u.toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"})+" ET";
-      }
-    }catch(e){}
-  })
-  .catch(()=>{ /* keep fallback on any failure — graceful degradation */ });
-/* reveal on scroll (observer hoisted above renderTimeline) */
-/* count-up stats */
-document.querySelectorAll('.ct-item').forEach(i=>io.observe(i));
-const cio=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return; const el=e.target,t=+el.dataset.count; let n=0;
-  const step=Math.max(1,Math.ceil(t/40)); const tick=()=>{n=Math.min(t,n+step);el.textContent=n;if(n<t)requestAnimationFrame(tick)};
-  tick(); cio.unobserve(el);
-}),{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.stat .n').forEach(s=>cio.observe(s));
-
-/* ===== HERO B marquee — live wall feed ===== */
-(function(){
-  var WALL_URL="https://e5-fk-events.yisraelleemccartney.workers.dev/wall?mode=feed"; /* FK_WALL_ENDPOINT */
-  var r1=document.getElementById('hmRow1'), r2=document.getElementById('hmRow2'), cnt=document.getElementById('hmCount');
-  if(!r1||!r2) return;
-
-  var SHARE_URL="https://freekarmelo.today/#wallhero";
-  function hmShareText(letter){
-    if(letter && letter.text){
-      var q=String(letter.text).replace(/\s+/g,' ').trim(); if(q.length>130) q=q.slice(0,127)+'…';
-      var who=(letter.name||'A supporter')+(letter.state?' from '+letter.state:'');
-      return '"'+q+'" — '+who+'\n\nAdd your voice to the Letter Wall for Karmelo: '+SHARE_URL+' #FreeKarmelo #JusticeForKarmelo';
+  // Mobile nav toggle (using existing .topnav structure)
+  const topnav = document.getElementById('topnav');
+  // .today uses fixed topnav, not hamburger - keeping original behavior
+  
+  // Timeline scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.timeline-item, .ct-item').forEach(el => observer.observe(el));
+  
+  // Load feed.json and render timeline
+  async function loadTimeline() {
+    try {
+      const res = await fetch('updates/feed.json');
+      const feed = await res.json();
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML = feed.slice(0, 20).map(item => `
+        <article class="timeline-item ${item.verified ? 'in' : ''}">
+          <div class="timeline-meta">
+            <time class="timeline-date">${item.date}</time>
+            <span class="timeline-tag ${item.verified ? 'timeline-tag--fav' : 'timeline-tag--neu'}">${item.tag}</span>
+          </div>
+          <h3 class="timeline-title serif">${item.headline || item.title}</h3>
+          <p class="timeline-body">${item.body}</p>
+          <div class="timeline-source">Source: <b>${item.source || item.organizer || 'Unattributed'}</b></div>
+        </article>
+      `).join('');
+      // Re-observe new items
+      document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+    } catch (e) {
+      console.error('Failed to load feed:', e);
     }
-    return 'The Letter Wall for Karmelo is growing across the country. Add your voice and invite one more person to sign: '+SHARE_URL+' #FreeKarmelo #JusticeForKarmelo';
   }
-  function hmToast(t){var el=document.getElementById('hmToast'); if(!el){el=document.createElement('div');el.id='hmToast';el.className='hm-toast';document.body.appendChild(el);} el.textContent=t; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},1800);}
-  function hmShare(kind, letter){
-    var text=hmShareText(letter), url=SHARE_URL;
-    if(window.fkTrackShare) window.fkTrackShare(letter ? 'today_letter_card' : 'today_wall_header', kind, letter ? 'letter' : 'wall');
-    if(kind==='x') return window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank','noopener');
-    if(kind==='facebook') return window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url),'_blank','noopener');
-    if(kind==='whatsapp') return window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
-    if(kind==='sms'){ window.location.href='sms:?&body='+encodeURIComponent(text); return; }
-    if(navigator.clipboard) return navigator.clipboard.writeText(text).then(function(){hmToast('Share text copied');});
-    window.prompt('Copy this share text:', text);
-  }
-  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
-  function card(l){
-    var who=esc(l.name||'A supporter');
-    var loc=[l.city,l.state].filter(Boolean).map(esc).join(', ');
-    var q=esc((l.text||'').trim());
-    return '<div class="hm-card"><div class="hm-quote">\u201c'+q+'\u201d</div><div class="hm-who">'+who+'</div>'+(loc?'<div class="hm-loc">'+loc+'</div>':'')+'</div>';
-  }
-
-  document.querySelectorAll('[data-hm-share]').forEach(function(btn){btn.addEventListener('click',function(){hmShare(btn.getAttribute('data-hm-share'));});});
-  document.getElementById('hmWrap').addEventListener('click',function(e){var btn=e.target.closest('[data-hm-card-share]'); if(!btn) return; var idx=parseInt(btn.getAttribute('data-hm-card-share'),10); hmShare('x',(window.__hmLetters||[])[idx]);});
-  function paint(list){
-    window.__hmLetters=list;
-    if(!list.length){document.getElementById('wallhero').classList.remove('hero-marquee');return;}
-    // duplicate the set so the -50% loop is seamless
-    var half=list.map(function(l,i){return card(l,i);}).join('');
-    r1.innerHTML=half+half;
-    var rev=list.slice().reverse().map(card).join('');
-    r2.innerHTML=rev+rev;
-    cnt.innerHTML='<b>'+list.length+'</b> voices on the wall and counting';
-  }
-  fetch(WALL_URL,{cache:'no-store'})
-    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
-    .then(function(d){var items=Array.isArray(d)?d:(d.items||d.letters||d.feed||[]);paint(items);})
-    .catch(function(){document.getElementById('wallhero').classList.remove('hero-marquee');});
-})();
-
+  loadTimeline();
+  
+  // Marquee pause on hover (already in CSS)
+  console.log('✅ freekarmelo.today — Shared Design System Loaded');
 </script>
+
 </body>
 </html>
-

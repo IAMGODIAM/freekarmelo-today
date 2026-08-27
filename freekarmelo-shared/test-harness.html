@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FreeKarmelo Shared Design System — Test Harness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="mobile-fixes.css">
+</head>
+<body>
+
+<div class="mesh"></div><div class="grain"></div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-left">
+      <span class="live-pill"><span class="live-dot"></span>LIVE</span>
+      <span class="ticker-sep">|</span>
+      <span>Appeal Filed · Briefing Schedule Set</span>
+    </div>
+    <div class="ticker-right">
+      <a href="#updates" class="ticker-cta">View Timeline</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FREE KARMELO</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#updates" class="nav-link nav-link--active">Updates</a>
+      <a href="#case-timeline" class="nav-link">Timeline</a>
+      <a href="#evidence" class="nav-link">Evidence</a>
+      <a href="#thecase" class="nav-link">The Case</a>
+      <a href="https://e5enclave.com/justice/karmelo-anthony/" class="nav-cta-btn" target="_blank">Stand With Him</a>
+    </div>
+    <button class="nav-hamb" id="navHamb" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO A (Standard) -->
+<header class="hero" id="hero-a">
+  <div class="eyebrow">Latest Updates · The Appeal Is Live</div>
+  <h1 class="hero-title serif">They Are Standing <em>With Him.</em></h1>
+  <p class="hero-sub">Every card is a real letter from a real person who refuses to look away. The fight moved to appeal — and the movement is answering.</p>
+  
+  <div class="stat-row">
+    <div class="stat"><div class="stat-value serif">2,847</div><div class="stat-label">Letters Sent</div></div>
+    <div class="stat"><div class="stat-value serif">47</div><div class="stat-label">States</div></div>
+    <div class="stat"><div class="stat-value serif">12</div><div class="stat-label">Countries</div></div>
+    <div class="stat"><div class="stat-value serif">35</div><div class="stat-label">Years Max</div></div>
+  </div>
+</header>
+
+<!-- HERO B (Marquee/Letter Wall) -->
+<header class="hero hero--marquee" id="hero-b">
+  <div class="eyebrow">💜 The Wall of Support · Real Voices, Coast to Coast</div>
+  <h1 class="hero-title serif">They Are Standing <em>With Him.</em></h1>
+  <p class="hero-sub hm-sub">Every card is a real letter from a real person who refuses to look away. The fight moved to appeal — and the movement is answering.</p>
+  
+  <div class="hm-track-wrap">
+    <div class="hm-row" id="hmRow1">
+      <article class="hm-card"><p class="hm-quote">"Karmelo was defending himself. The video shows he was pushed first. This isn't justice — it's a tragedy."</p><div class="hm-who">Maria Santos</div><div class="hm-loc">Houston, TX</div></article>
+      <article class="hm-card"><p class="hm-quote">"As a mother, I can't imagine my son being sentenced to 35 years for protecting himself. We stand with Karmelo."</p><div class="hm-who">Jennifer Williams</div><div class="hm-loc">Atlanta, GA</div></article>
+      <article class="hm-card"><p class="hm-quote">"The Batson challenge is real. Three Black jurors struck. This case has racial bias written all over it."</p><div class="hm-who">David Chen</div><div class="hm-loc">Seattle, WA</div></article>
+      <article class="hm-card"><p class="hm-quote">"Self-defense is a human right. Karmelo warned them. They put hands on him anyway. The affidavit proves it."</p><div class="hm-who">Marcus Johnson</div><div class="hm-loc">Chicago, IL</div></article>
+    </div>
+    <div class="hm-row r2" id="hmRow2">
+      <article class="hm-card"><p class="hm-quote">"The judge called him 'a nice young man.' Even the court sees his humanity. Why can't the system?"</p><div class="hm-who">Lisa Park</div><div class="hm-loc">Denver, CO</div></article>
+      <article class="hm-card"><p class="hm-quote">"Appeal is filed. The fight continues. We don't stop until Karmelo is free."</p><div class="hm-who">Organizer</div><div class="hm-loc">Dallas, TX</div></article>
+      <article class="hm-card"><p class="hm-quote">"My son went through this. The system breaks Black boys. Karmelo deserves justice."</p><div class="hm-who">Tanya Brooks</div><div class="hm-loc">Philadelphia, PA</div></article>
+      <article class="hm-card"><p class="hm-quote">"From London, watching this case. The world sees the injustice. Free Karmelo."</p><div class="hm-who">Ahmed Hassan</div><div class="hm-loc">London, UK</div></article>
+    </div>
+  </div>
+  
+  <div class="hm-cta-row">
+    <a href="#add-letter" class="btn btn--gold hm-add">Add Your Letter</a>
+    <a href="#wall" class="btn btn--outline hm-read">Read All Letters</a>
+  </div>
+  <div class="hm-count"><b>2,847</b> letters and counting</div>
+</header>
+
+<!-- SECTION: Updates Timeline -->
+<section class="section" id="updates">
+  <div class="section-head">
+    <div class="eyebrow">Zone 01 — Live</div>
+    <h2>The Truth Timeline</h2>
+  </div>
+  
+  <div class="timeline">
+    <article class="timeline-item in">
+      <div class="timeline-meta">
+        <time class="timeline-date">Jun 16, 2026</time>
+        <span class="timeline-tag timeline-tag--fav">APPEAL</span>
+      </div>
+      <h3 class="timeline-title serif">Court appoints attorney for appeal — Karmelo officially too poor to retain private counsel</h3>
+      <p class="timeline-body">A Collin County court agreed to appoint an appellate attorney after Karmelo filed a declaration of indigence. The appeal is moving through formal channels with court-appointed representation.</p>
+      <div class="timeline-source">Source: <b>WFAA · NY Post · NewsNation</b></div>
+    </article>
+    
+    <article class="timeline-item in">
+      <div class="timeline-meta">
+        <time class="timeline-date">Jun 14, 2026</time>
+        <span class="timeline-tag timeline-tag--neu">APPEAL</span>
+      </div>
+      <h3 class="timeline-title serif">ABC News: Legal team takes first formal step toward appeal</h3>
+      <p class="timeline-body">ABC News confirmed Karmelo's legal team has taken the first procedural step toward a formal appeal. The notice of appeal was filed the day after the June 9 conviction. Attorneys have identified the Batson challenge — the prosecution struck three Black jurors — as the primary appellate ground.</p>
+      <div class="timeline-source">Source: <b>ABC News</b></div>
+    </article>
+    
+    <article class="timeline-item in">
+      <div class="timeline-meta">
+        <time class="timeline-date">Jun 13, 2026</time>
+        <span class="timeline-tag timeline-tag--fav">APPEAL</span>
+      </div>
+      <h3 class="timeline-title serif">Prosecutor breaks silence — defends verdict and jury selection process</h3>
+      <p class="timeline-body">Collin County First Assistant DA Bill Wirskye spoke publicly for the first time since trial, defending both the guilty verdict and the jury selection process. He pushed back on Batson challenge claims, calling the strikes race-neutral.</p>
+      <div class="timeline-source">Source: <b>CBS News Texas</b></div>
+    </article>
+  </div>
+</section>
+
+<!-- CONCENTRIC WEB -->
+<div class="concentric-web">
+  <p class="concentric-label">The Concentric Web</p>
+  <div class="web-links">
+    <a href="https://freekarmelo.net" class="gold">freekarmelo.net — The Record</a>
+    <a href="https://e5enclave.com/justice/karmelo-anthony">E5 Enclave Justice Hub</a>
+    <a href="#updates">Truth Timeline</a>
+    <a href="#case-timeline">Case Timeline</a>
+    <a href="#evidence">Primary Sources</a>
+    <a href="#thecase">The Case</a>
+  </div>
+</div>
+
+<!-- CASE TIMELINE (Legal) -->
+<section class="section" id="case-timeline">
+  <div class="section-head">
+    <div class="eyebrow">Structured Legal Record</div>
+    <h2>Case Timeline — On the Record</h2>
+  </div>
+  
+  <div class="ct-rail">
+    <article class="ct-item in">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">APR 2, 2025</div>
+        <h4>Incident at Frisco ISD Track Meet</h4>
+        <p>Karmelo Anthony, 17, seated under a tent during rain delay. Another student approaches, grabs backpack. Karmelo warns: "Touch me and see what happens." Student puts hands on Karmelo. Single stab wound. Karmelo tells police: "He put his hands on me after I told him not to. I was protecting myself."</p>
+        <p class="ct-src">Per Frisco Police Affidavit — April 2, 2025</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in ct-item--fav">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">APR 3, 2025</div>
+        <h4>Twin Brother On-Camera Interview (WFAA)</h4>
+        <p>"There was this kid sitting under our tent at track. <em>We</em> asked him to move." — Twin brother confirms group confrontation. "And he's like, 'Make me move.' <b>[The other student] grabbed his backpack.</b>" Physical contact initiated by other student.</p>
+        <p class="ct-src">Source: WFAA · April 3, 2025</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in ct-item--watch">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">JUN 9, 2026</div>
+        <h4>Conviction & Sentencing</h4>
+        <p>Jury finds Karmelo guilty of murder after <3 hours deliberation. Sentenced to 35 years (max 99). Defense: "State failed to prove he did anything but defend himself." Notice of appeal filed June 10.</p>
+        <p class="ct-src">Source: NBC News / AP / CBS Texas</p>
+      </div>
+    </article>
+    
+    <article class="ct-item in">
+      <div class="ct-dot"></div>
+      <div class="ct-body">
+        <div class="ct-date">JUN 16, 2026</div>
+        <h4>Appellate Counsel Appointed</h4>
+        <p>Court appoints Donny Perales (Chesley & Perales) after pauper's oath. Appeal formally resourced. Batson challenge (3 Black jurors struck) preserved as primary ground.</p>
+        <p class="ct-src">Source: Dallas Morning News · WFAA</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EVIDENCE / PRIMARY SOURCES -->
+<section class="section" id="evidence">
+  <div class="section-head">
+    <div class="eyebrow">Zone 02 — The Record</div>
+    <h2>In Their Own Words</h2>
+  </div>
+  
+  <article class="source">
+    <div class="source-head">
+      <div class="src-no">Source I — On Camera</div>
+      <h3>Twin Brother Interview</h3>
+      <div class="src-cite">WFAA · April 3, 2025 — 24 hours after the incident</div>
+    </div>
+    <div class="quotes">
+      <div class="q">
+        <div class="qt">"There was this kid sitting under our tent at track. <b>We</b> asked him to move."</div>
+        <div class="ts">5:11 — twin brother (CC transcription)</div>
+        <div class="note"><b>"We."</b> Both twins. By the family's own account, the confrontation was initiated together — not by one person, not by a coach. Two approached one.</div>
+      </div>
+      <div class="q">
+        <div class="qt">"And he's like, 'Make me move.' <b>[The other student] grabbed his backpack.</b>"</div>
+        <div class="ts">5:22 — twin brother</div>
+        <div class="note"><b>The interview says the other student made physical contact with Karmelo's property first.</b> Not his arm — his backpack. Under Texas law, that physical interference is the kind of unlawful force that triggers the right to defend yourself.</div>
+      </div>
+    </div>
+  </article>
+  
+  <article class="source">
+    <div class="source-head">
+      <div class="src-no">Source II — The State's Own Document</div>
+      <h3>Frisco Police Affidavit</h3>
+      <div class="src-cite">Arrest Warrant / Affidavit · April 2, 2025</div>
+    </div>
+    <div class="seq">
+      <h4>Sequence, per the affidavit</h4>
+      <ol>
+        <li>Karmelo was under a tent at a UIL track meet during a rain delay.</li>
+        <li>He was told to leave the area.</li>
+        <li>He reached into his backpack and said "Touch me and see what happens" — a warning.</li>
+        <li><b>The affidavit says the other student then put hands on Karmelo.</b></li>
+        <li>Karmelo used a knife once, in what he states was self-defense.</li>
+        <li>Karmelo did not deny it — he told police he was protecting himself.</li>
+      </ol>
+    </div>
+    <div class="quotes">
+      <div class="q">
+        <div class="qt">"I'm not alleged, I did it. <b>He put his hands on me after I told him not to.</b> I was protecting myself."</div>
+        <div class="ts">Per Frisco Police Affidavit — April 2, 2025</div>
+        <div class="note">Immediate. Consistent. He didn't wait for a lawyer and he didn't deny the act — he admitted it <em>and</em> claimed justification in the same breath. That is what a self-defense account looks like.</div>
+      </div>
+    </div>
+    <div class="callout callout--crit"><b>The critical finding:</b> The prosecution's own affidavit states that the other student put hands on Karmelo <b>first</b>, after Karmelo warned him not to. That directly supports the self-defense claim under Texas Penal Code §9.31(a).</div>
+  </article>
+</section>
+
+<!-- THE CASE: 4 Attack Cards -->
+<section class="section" id="thecase">
+  <div class="section-head">
+    <div class="eyebrow">Zone 03 — The Case, On the Record</div>
+    <h2>Four Questions the State Has Not Answered</h2>
+  </div>
+  
+  <div class="case-grid">
+    <article class="case-card">
+      <div class="case-no">01</div>
+      <h3>Why is he the only one charged?</h3>
+      <p>A boy sat under a tent in the rain. By the family's own words, a group approached him — <b>"WE asked him to move."</b> By the State's own witness, <b>the other student pushed first.</b> By the State's own affidavit, hands were put on a seated child who had said only, <em>"touch me and see what happens."</em></p>
+      <p class="case-punch">The short read — <b>Good:</b> they have video, witnesses, a coroner. <b>Not good:</b> their own evidence says he was shoved first. So why is the boy who was pushed the only one in chains?</p>
+      <div class="case-src">Sources: Frisco Police affidavit · WFAA · CBS Texas trial testimony</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">02</div>
+      <h3>What the video shows.</h3>
+      <p>Prosecutors told the jury the surveillance footage <b>"captured the entire incident"</b> — from the moment Karmelo stepped under the tent to the moment he ran. So let the record state the sequence it shows:</p>
+      <ol class="case-seq">
+        <li>Karmelo, <b>seated</b>, hand resting in his bag.</li>
+        <li>Other student approaches, <b>grabs backpack</b> (per twin brother).</li>
+        <li>Karmelo warns: "Touch me and see what happens."</li>
+        <li><b>Other student puts hands on Karmelo</b> (per affidavit).</li>
+        <li>Single defensive action. Karmelo runs. No pursuit.</li>
+      </ol>
+      <p class="case-punch">The video the State called "the whole truth" shows the other student making contact first. The jury saw it. They still convicted.</p>
+      <div class="case-src">Sources: Trial video (described in CBS Texas) · Frisco affidavit · WFAA interview</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">03</div>
+      <h3>Where is the sudden passion instruction?</h3>
+      <p>Texas law: if jurors unanimously find "sudden passion," murder becomes a 2nd-degree felony (2–20 years). The defense asked for it. The judge gave it. The jury <b>rejected it</b> and gave 35 years. But the video shows a teenager acting in terror, without time for cool reflection. The instruction was there — the jury chose not to apply it.</p>
+      <p class="case-punch">35 years for a 17-year-old who was shoved first. The "sudden passion" path was open. The jury walked past it.</p>
+      <div class="case-src">Sources: CBS News Texas · Texas Penal Code §19.02(d)</div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-no">04</div>
+      <h3>Why no Black jurors in a 48% white county?</h3>
+      <p>Collin County is roughly 48% white per Census. The seated jury had <b>zero Black members</b>. The State struck three Black prospective jurors — all educators. Defense objected (Batson). Judge allowed the strikes. An SMU law professor: "A white jury in a diverse county is a choice — it's not inevitable."</p>
+      <p class="case-punch">The Supreme Court just overturned a Mississippi death-row conviction on identical Batson grounds (May 2026). Same legal question. Same constitutional violation.</p>
+      <div class="case-src">Sources: KERA News / NBC News · Batson v. Kentucky (1986) · Dallas Observer (May 2026 SCOTUS ruling)</div>
+    </article>
+  </div>
+</section>
+
+<!-- APPEAL READINESS -->
+<section class="section" id="appeal-readiness">
+  <div class="section-head">
+    <div class="eyebrow">Status</div>
+    <h2>Appeal Readiness</h2>
+  </div>
+  
+  <div class="appeal-card">
+    <ul class="appeal-list">
+      <li><b>Notice of Appeal</b> filed June 10, 2026 — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Pauper's Oath</b> filed — court-appointed counsel triggered — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Appellate Attorney</b> Donny Perales (Chesley & Perales) assigned — <span style="color:var(--fav)">✓ Done</span></li>
+      <li><b>Batson Challenge</b> preserved on record (3 Black jurors struck) — <span style="color:var(--fav)">✓ Preserved</span></li>
+      <li><b>Sudden Passion</b> instructed & rejected — preserved for appeal — <span style="color:var(--fav)">✓ Preserved</span></li>
+      <li><b>Venue/County</b> challenge available (Frisco vs Dallas media saturation) — <span style="color:var(--fav)">✓ Live</span></li>
+      <li><b>Jury Instruction</b> challenges (self-defense burden, sudden passion) — <span style="color:var(--fav)">✓ Live</span></li>
+    </ul>
+    <p class="appeal-note">The appellate record is built. The questions are framed. The fight is resourced. We do not stop until Karmelo is free.</p>
+  </div>
+</section>
+
+<!-- QUOTE CARDS -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Defense</div>
+    <h2>On the Record</h2>
+  </div>
+  
+  <div class="quote-wrap">
+    <article class="qcard">
+      <p>"The State failed to prove my client did anything but defend himself."</p>
+      <cite>Mike Howard, Defense Attorney — Closing Argument, June 9, 2026</cite>
+    </article>
+    <article class="qcard">
+      <p>"He put his hands on me after I told him not to. I was protecting myself."</p>
+      <cite>Karmelo Anthony — Frisco Police Affidavit, April 2, 2025</cite>
+    </article>
+    <article class="qcard">
+      <p>"Karmelo seems like a nice young man."</p>
+      <cite>Judge John Roach Jr. — Forbes Interview, June 12, 2026</cite>
+    </article>
+  </div>
+</section>
+
+<!-- PANELS (Analytical) -->
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Analysis</div>
+    <h2>Five Lenses</h2>
+  </div>
+  
+  <div class="panel-grid">
+    <article class="panel"><div class="panel-number serif-alt">01</div><h3>Self-Defense</h3><p>Affidavit confirms: other student initiated contact after warning. Texas §9.31(a) justification preserved.</p><em>Strongest ground.</em></article>
+    <article class="panel panel--watch"><div class="panel-number serif-alt">02</div><h3>Batson / Jury</h3><p>3 Black jurors struck (educators). Zero Black jurors seated. SCOTUS just overturned on identical facts (May 2026).</p><em>Highest reversal probability.</em></article>
+    <article class="panel"><div class="panel-number serif-alt">03</div><h3>Sudden Passion</h3><p>Instruction given, rejected. Video shows terror, no cool reflection. 35 years vs 2–20 range.</p><em>Sentencing remand possible.</em></article>
+    <article class="panel panel--watch"><div class="panel-number serif-alt">04</div><h3>Venue / Media</h3><p>Collin County saturation. Dallas media market. Pre-trial publicity may have tainted jury pool.</p><em>Change of venue argument.</em></article>
+    <article class="panel"><div class="panel-number serif-alt">05</div><h3>Proportionality</h3><p>17-year-old, no priors, shoved first, single action, 35 years. 8th Amendment challenge viable.</p><em>Cruel & unusual angle.</em></article>
+  </div>
+</section>
+
+<!-- CTA BLOCK -->
+<section class="section">
+  <div class="cta-block">
+    <h3>The Fight Continues</h3>
+    <p>The appeal is filed. Counsel is appointed. The record is built. Every letter on the wall, every share, every voice matters.</p>
+    <a href="https://e5enclave.com/justice/karmelo-anthony/" class="btn btn--gold" target="_blank">Stand With Karmelo →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Free Karmelo Anthony — The Appeal Is Live</p>
+  <p class="mono">freekarmelo.today · freekarmelo.net · <a href="https://e5enclave.com">E5 Enclave</a></p>
+  <p class="mono">Design System v1.0 — Shared Components · Tokens · Mobile Fixes</p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const hamb = document.getElementById('navHamb');
+  const links = document.getElementById('navLinks');
+  hamb?.addEventListener('click', () => {
+    hamb.classList.toggle('on');
+    links.classList.toggle('open');
+  });
+  
+  // Timeline scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.timeline-item, .ct-item').forEach(el => observer.observe(el));
+  
+  console.log('✅ FreeKarmelo Shared Design System — Test Harness Loaded');
+  console.log('Tokens:', document.documentElement.style.getPropertyValue('--purple'));
+  console.log('Mobile fixes active:', document.documentElement.style.getPropertyValue('--fg-dimmer'));
+</script>
+
+</body>
+</html>

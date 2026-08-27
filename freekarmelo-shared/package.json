@@ -1,0 +1,19 @@
+{
+  "name": "@freekarmelo/shared",
+  "version": "1.0.0",
+  "description": "Shared design system and feed pipeline for freekarmelo.today & freekarmelo.net",
+  "type": "module",
+  "main": "feed-pipeline.js",
+  "scripts": {
+    "test": "node --test feed-pipeline.test.js",
+    "ingest": "node feed-pipeline.js",
+    "validate": "node -e \"import('./feed-schema.js').then(m => m.validateFeed(require('./test-feed.json')))\""
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {},
+  "keywords": ["freekarmelo", "design-system", "feed-pipeline"],
+  "author": "E5 Enclave",
+  "license": "MIT"
+}
