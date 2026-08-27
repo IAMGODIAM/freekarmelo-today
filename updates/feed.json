@@ -1,6 +1,17 @@
 [
   {
-    "id": "0725e892-13fd-4ed4-9f2b-7bc29cf09073",
+    "id": "c6627ac7-5676-4561-b89b-18f3e08e7211",
+    "date": "August 28, 2026",
+    "tag": "APPEAL — LEGAL TEAM EXPANDS",
+    "headline": "Second appellate attorney joins Karmelo's defense — former Texas Court of Criminal Appeals clerk",
+    "body": "The appellate team has expanded with the addition of Sarah Martinez, former clerk to Judge Kevin Yeary on the Texas Court of Criminal Appeals. Martinez brings deep experience in post-conviction habeas corpus and Batson jurisprudence. She will work alongside Donny Perales (Chesley & Perales) on the Fifth Circuit briefing. The team now includes trial counsel Mike Howard as consulting attorney.",
+    "source": "Defense Team Press Release",
+    "source_url": "https://freekarmelo.today/press/legal-team-expands",
+    "verified": true,
+    "created_at": "2026-08-27T13:42:43.997Z",
+    "updated_at": "2026-08-27T13:42:43.997Z"
+  },
+  {
     "date": "August 27, 2026",
     "tag": "APPEAL — BRIEFING SCHEDULE",
     "headline": "Fifth Circuit sets briefing schedule — Karmelo's opening brief due October 15",
@@ -8,6 +19,7 @@
     "source": "Fifth Circuit Clerk's Office · Court Docket",
     "source_url": "https://www.ca5.uscourts.gov/",
     "verified": true,
+    "id": "0725e892-13fd-4ed4-9f2b-7bc29cf09073",
     "created_at": "2026-08-27T12:43:59.394Z",
     "updated_at": "2026-08-27T12:43:59.394Z"
   },
